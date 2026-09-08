@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEXI Protocol FAQ: Credentials, Reliance, Staking</title>
+<meta name="description" content="What LEXI is, what a credential contains, who co-signs, what can slash a stake, and how protocol revenue works. Answers for protocols and professionals.">
+<link rel="canonical" href="https://lexiprotocol.com/faq/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol: questions and answers">
+<meta property="og:description" content="What LEXI is, what a credential contains, who co-signs, what can slash a stake, and how protocol revenue works. Answers for protocols and professionals.">
+<meta property="og:url" content="https://lexiprotocol.com/faq/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol: questions and answers">
+<meta name="twitter:description" content="What LEXI is, what a credential contains, who co-signs, what can slash a stake, and how protocol revenue works. Answers for protocols and professionals.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://lexiprotocol.com/#organization",
+   "name": "LEXI Protocol",
+   "url": "https://lexiprotocol.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lexiprotocol.com/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
+   "email": "info@lexiprotocol.com",
+   "sameAs": [
+    "https://x.com/LEXIprotocol",
+    "https://github.com/Lexi-Protocol"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://lexiprotocol.com/#website",
+   "url": "https://lexiprotocol.com/",
+   "name": "LEXI Protocol",
+   "publisher": {
+    "@id": "https://lexiprotocol.com/#organization"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://lexiprotocol.com/faq/#webpage",
+   "url": "https://lexiprotocol.com/faq/",
+   "name": "FAQ | LEXI Protocol",
+   "isPartOf": {
+    "@id": "https://lexiprotocol.com/#website"
+   },
+   "about": {
+    "@id": "https://lexiprotocol.com/#organization"
+   },
+   "datePublished": "2026-07-03",
+   "dateModified": "2026-09-08"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://lexiprotocol.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "FAQ",
+     "item": "https://lexiprotocol.com/faq/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://lexiprotocol.com/faq/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is LEXI Protocol?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base. An engine prepares the first pass; a licensed legal professional runs their own diligence and co-signs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the AI output a legal opinion?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The engine produces a compliance checklist, a document review and a risk read as work product only. A licensed legal professional reviews that work product, runs their own diligence, and co-signs the legal opinion. No AI signs anything at LEXI."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does a LEXI credential contain?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On-chain: the firm, the signatory, the jurisdiction, the as-of date, expiry, status, reliance mode, governing law, and hash commitments binding the scope and the opinion text. The opinion body stays off-chain and encrypted, readable by the credential's named reliers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is a LEXI credential a licence or a regulator approval?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. A credential records a licensed professional's scoped legal opinion. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by any regulator."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which jurisdictions does LEXI cover first?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "V0 is live on Base Sepolia (testnet) with VARA in Dubai as the base jurisdiction. V1 adds the EU (MiCA) and India (FIU-IND), and one opinion can then span several jurisdictions. US coverage is on the roadmap. The corridor focus is India, the UAE and the US."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do reliers verify a credential?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "With a single read against Base: check the status is Live, check the scope and opinion hashes match the documents provided, and check the relier is named. Reliance attaches only after the relier accepts the reliance terms."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need $LEXI to use LEXI?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All services are priced in USDC. Protocols pay USDC per credential and reliers pay USDC for reliance access. Only legal professionals interact with the token, as a USD-pegged eligibility stake."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where does the opinion itself live?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Off-chain, encrypted, in an EU-hosted confidential store. Only hash commitments go on-chain. That split keeps the chain as the integrity layer while deletion and erasure requests under laws like the DPDP Act and GDPR can be honoured."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does clearance take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on the documentation and the jurisdiction, so LEXI does not print a universal number. Early protocols get an honest scoped estimate for their case before committing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who can co-sign a LEXI opinion?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Licensed legal professionals: lawyers and qualified compliance officers who pass a licensure check, join through their firm, and post the eligibility stake. Each engagement has one assigned signatory whose own signature mints the credential."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What do legal professionals stake?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A USD-pegged amount of $LEXI, about $5,000, re-pegged against price so the dollar cost stays stable. The stake becomes operative when the token launches, and unstaking has a 14-day unbonding period."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What can slash a professional's stake?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Only proven misconduct, adjudicated by a committee, capped in basis points. Reliers can flag disputes but cannot slash anyone directly, and an unpopular conclusion is not misconduct."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the co-signing professional get paid from protocol revenue?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The protocol retains the professional's firm and pays the retainer directly, outside LEXI. LEXI shares 0% of its USDC fee with the co-signing professional, which keeps the opinion's economics independent of the protocol's."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who is the professional's client?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The protocol, exactly as in a normal engagement. The firm is retained directly by the protocol; LEXI coordinates the flow and records the credential but does not sit inside the attorney-client relationship."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does the protocol make money, and where does revenue go?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Revenue is USDC fees for credentials and reliance access. 40% is used to buy $LEXI on-market and burn it, 60% funds the treasury and operations, and 0% goes to the co-signing professional, whose retainer is paid separately by the protocol."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is $LEXI live? Can I buy it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. The token has not launched, no sale is open, and no launch date is announced on this site. Nothing on this site is an offer or solicitation in any jurisdiction."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What chain is LEXI built on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Base. Credentials, reliance records and the staking and buyback contracts are designed for Base, and V0 is Base-only."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is $LEXI an investment?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Treat it as protocol plumbing: a staking bond and a governance asset. It is not equity or a share of revenue, this site offers nothing for sale, and virtual assets carry risk, including the loss of their entire value."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap"><div class="navrow">
+    <a class="brand" href="/" aria-label="LEXI Protocol home">
+      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
+      LEXI<span class="dot">.</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
+    <div class="nl" id="nav-list">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/vara-compliance/">VARA compliance</a>
+      <a href="/protocols/">For protocols</a>
+      <a href="/legal-professionals/">For legal professionals</a>
+      <a href="/token/">$LEXI</a>
+      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
+    </div>
+  </div></div>
+</nav>
+
+<main id="main">
+<header class="pagehead wrap">
+  <p class="crumbs"><a href="/">Home</a> / FAQ</p>
+  <p class="eyebrow">FAQ</p>
+  <h1>Questions and answers</h1>
+  <p class="lede">Short answers, with links to the page that carries the depth. If yours is not here, <a href="/contact/">ask us directly</a>.</p>
+</header>
+
+<section style="padding-top:30px"><div class="wrap" style="max-width:820px">
+  <h2 class="mt16" style="font-size:1.3rem">For protocols</h2>
+  <div class="mt16">
+    <details><summary>What is LEXI Protocol?</summary><div class="a">LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base. An engine prepares the first pass; a licensed legal professional runs their own diligence and co-signs.</div></details>
+    <details><summary>Is the AI output a legal opinion?</summary><div class="a">No. The engine produces a compliance checklist, a document review and a risk read as work product only. A licensed legal professional reviews that work product, runs their own diligence, and co-signs the legal opinion. No AI signs anything at LEXI.</div></details>
+    <details><summary>What does a LEXI credential contain?</summary><div class="a">On-chain: the firm, the signatory, the jurisdiction, the as-of date, expiry, status, reliance mode, governing law, and hash commitments binding the scope and the opinion text. The opinion body stays off-chain and encrypted, readable by the credential's named reliers. Full anatomy on <a href="/credential/">the credential page</a>.</div></details>
+    <details><summary>Is a LEXI credential a licence or a regulator approval?</summary><div class="a">No. A credential records a licensed professional's scoped legal opinion. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by any regulator.</div></details>
+    <details><summary>Which jurisdictions does LEXI cover first?</summary><div class="a">V0 is live on Base Sepolia (testnet) with <a href="/vara-compliance/">VARA in Dubai</a> as the base jurisdiction. V1 adds the EU (MiCA) and India (FIU-IND), and one opinion can then span several jurisdictions. US coverage is on the roadmap. The corridor focus is India, the UAE and the US.</div></details>
+    <details><summary>How do reliers verify a credential?</summary><div class="a">With a single read against Base: check the status is Live, check the scope and opinion hashes match the documents provided, and check the relier is named. Reliance attaches only after the relier accepts the reliance terms.</div></details>
+    <details><summary>Do I need $LEXI to use LEXI?</summary><div class="a">No. All services are priced in USDC. Protocols pay USDC per credential and reliers pay USDC for reliance access. Only legal professionals interact with the token, as a USD-pegged eligibility stake.</div></details>
+    <details><summary>Where does the opinion itself live?</summary><div class="a">Off-chain, encrypted, in an EU-hosted confidential store. Only hash commitments go on-chain. That split keeps the chain as the integrity layer while deletion and erasure requests under laws like the DPDP Act and GDPR can be honoured.</div></details>
+    <details><summary>How long does clearance take?</summary><div class="a">It depends on the documentation and the jurisdiction, so LEXI does not print a universal number. Early protocols get an honest scoped estimate for their case before committing.</div></details>
+  </div>
+
+  <h2 class="mt40" style="font-size:1.3rem">For legal professionals</h2>
+  <div class="mt16">
+    <details><summary>Who can co-sign a LEXI opinion?</summary><div class="a">Licensed legal professionals: lawyers and qualified compliance officers who pass a licensure check, join through their firm, and post the eligibility stake. Each engagement has one assigned signatory whose own signature mints the credential. Details on <a href="/legal-professionals/">the legal professionals page</a>.</div></details>
+    <details><summary>What do legal professionals stake?</summary><div class="a">A USD-pegged amount of $LEXI, about $5,000, re-pegged against price so the dollar cost stays stable. The stake becomes operative when the token launches, and unstaking has a 14-day unbonding period.</div></details>
+    <details><summary>What can slash a professional's stake?</summary><div class="a">Only proven misconduct, adjudicated by a committee, capped in basis points. Reliers can flag disputes but cannot slash anyone directly, and an unpopular conclusion is not misconduct.</div></details>
+    <details><summary>Does the co-signing professional get paid from protocol revenue?</summary><div class="a">No. The protocol retains the professional's firm and pays the retainer directly, outside LEXI. LEXI shares 0% of its USDC fee with the co-signing professional, which keeps the opinion's economics independent of the protocol's.</div></details>
+    <details><summary>Who is the professional's client?</summary><div class="a">The protocol, exactly as in a normal engagement. The firm is retained directly by the protocol; LEXI coordinates the flow and records the credential but does not sit inside the attorney-client relationship.</div></details>
+  </div>
+
+  <h2 class="mt40" style="font-size:1.3rem">Token and protocol economics</h2>
+  <div class="mt16">
+    <details><summary>How does the protocol make money, and where does revenue go?</summary><div class="a">Revenue is USDC fees for credentials and reliance access. 40% is used to buy $LEXI on-market and burn it, 60% funds the treasury and operations, and 0% goes to the co-signing professional, whose retainer is paid separately by the protocol. Documentation on <a href="/token/">the token page</a>.</div></details>
+    <details><summary>Is $LEXI live? Can I buy it?</summary><div class="a">No. The token has not launched, no sale is open, and no launch date is announced on this site. Nothing on this site is an offer or solicitation in any jurisdiction.</div></details>
+    <details><summary>What chain is LEXI built on?</summary><div class="a">Base. Credentials, reliance records and the staking and buyback contracts are designed for Base, and V0 is Base-only.</div></details>
+    <details><summary>Is $LEXI an investment?</summary><div class="a">Treat it as protocol plumbing: a staking bond and a governance asset. It is not equity or a share of revenue, this site offers nothing for sale, and virtual assets carry risk, including the loss of their entire value.</div></details>
+  </div>
+
+  <div class="mt40" style="display:flex;gap:14px;flex-wrap:wrap">
+    <a class="btn primary" href="/contact/" data-event="cta-faq-page">Ask something else</a>
+  </div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
+        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET SEPT-OCT 2026</span>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Audiences</div>
+        <ul>
+          <li><a href="/protocols/">For protocols</a></li>
+          <li><a href="/legal-professionals/">For legal professionals</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/#team">Team</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>
