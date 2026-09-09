@@ -258,7 +258,7 @@ details .a{padding:0 24px 20px;color:var(--dim);font-weight:300;font-size:.97rem
 details .a a{border-bottom:1px solid rgba(95,160,255,.35)}
 
 /* ---------- Team ---------- */
-.team{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .member{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
 .member .av{width:56px;height:56px;border-radius:50%;background:var(--void);border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:600;color:var(--sky);margin-bottom:16px;font-size:15px}
 .member .role{font-size:12px;color:var(--sky);font-family:var(--mono);letter-spacing:.08em;margin-bottom:10px}
