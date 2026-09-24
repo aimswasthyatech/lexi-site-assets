@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lexiprotocol.com/</loc><lastmod>2026-09-09</lastmod></url>
-  <url><loc>https://lexiprotocol.com/how-it-works/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://lexiprotocol.com/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://lexiprotocol.com/about/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://lexiprotocol.com/how-it-works/</loc><lastmod>2026-07-03</lastmod></url>
   <url><loc>https://lexiprotocol.com/protocols/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/legal-professionals/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://lexiprotocol.com/legal-professionals/</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://lexiprotocol.com/vara-compliance/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/credential/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/crypto-legal-opinion/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/token/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://lexiprotocol.com/credential/</loc><lastmod>2026-07-03</lastmod></url>
+  <url><loc>https://lexiprotocol.com/crypto-legal-opinion/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://lexiprotocol.com/token/</loc><lastmod>2026-07-03</lastmod></url>
   <url><loc>https://lexiprotocol.com/faq/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/insights/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/insights/uae-cma-2026/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/contact/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/privacy/</loc><lastmod>2026-09-08</lastmod></url>
-  <url><loc>https://lexiprotocol.com/terms/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://lexiprotocol.com/insights/</loc><lastmod>2026-08-11</lastmod></url>
+  <url><loc>https://lexiprotocol.com/insights/uae-cma-2026/</loc><lastmod>2026-07-03</lastmod></url>
+  <url><loc>https://lexiprotocol.com/contact/</loc><lastmod>2026-07-03</lastmod></url>
+  <url><loc>https://lexiprotocol.com/privacy/</loc><lastmod>2026-07-03</lastmod></url>
+  <url><loc>https://lexiprotocol.com/terms/</loc><lastmod>2026-07-03</lastmod></url>
 </urlset>

@@ -1,4 +1,4 @@
-/* LEXI Protocol — Gateway design system, website v2
+/* LEXI Protocol: Gateway design system, website v2
    Palette and type are brand law (Brand Guidelines v2).
    Aqua #18E0C6 is reserved for verified/live states; at launch it appears
    only in the mark's node and the wordmark dot. Nothing pulses pre-launch. */
@@ -189,7 +189,7 @@ section{padding:110px 0;position:relative}
 .play .specimen{animation:rise .7s .5s var(--ease) both}
 @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-/* Hero gate ring — the mark at architectural scale, framing the specimen (v2.1).
+/* Hero gate ring: the mark at architectural scale, framing the specimen (v2.1).
    Continuous slow orbit is sanctioned brand motion, not a live-status signal. */
 .herogate{position:absolute;top:calc(50% - 20px);left:51%;transform:translate(-50%,-50%);width:clamp(660px,64vw,980px);aspect-ratio:1;z-index:0;pointer-events:none;filter:drop-shadow(0 0 34px rgba(24,224,198,.26)) drop-shadow(0 0 96px rgba(46,107,255,.16))}
 .herogate .ring{stroke-dasharray:100;stroke-dashoffset:100}
@@ -293,7 +293,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;position:relative;z-
 .fmeta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--faint);font-size:12.5px;font-family:var(--mono)}
 
 /* ---------- Page headers (subpages) ---------- */
-.pagehead{padding:84px 0 30px}
+.pagehead{padding-top:84px;padding-bottom:30px}
 .pagehead .lede{margin-top:6px}
 .crumbs{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--faint);margin-bottom:26px}
 .crumbs a{color:var(--faint)}
@@ -355,3 +355,12 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;position:relative;z-
   .bg,.bggrid,.grain,.nav,.ctas,footer .fgrid{display:none}
   body{background:#fff;color:#0A0C12}
 }
+.glance{display:grid;grid-template-columns:minmax(150px,210px) 1fr;border-top:1px solid var(--line);margin:0 0 1.4em}
+.glance dt,.glance dd{padding:12px 0;border-bottom:1px solid var(--line)}
+.glance dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-right:18px;padding-top:15px}
+.glance dd{color:var(--dim)}
+@media(max-width:640px){.glance{grid-template-columns:1fr}.glance dt{border-bottom:none;padding-bottom:0}}
+.prose sup{font-size:.68em;line-height:0;margin-left:1px}
+.prose sup a{border-bottom:none;color:var(--sky)}
+.srcs{font-size:.86rem}
+.srcs li{color:var(--faint)}

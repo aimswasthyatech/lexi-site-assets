@@ -1,6 +1,6 @@
 # Pricing: LEXI Protocol
 
-Last updated: 2026-09-08
+Last updated: 2026-09-24
 
 ## Model
 
@@ -12,6 +12,7 @@ Last updated: 2026-09-08
 ## Status
 
 - LEXI is pre-launch. V0 is live on Base Sepolia (testnet) with VARA (Dubai) as the base jurisdiction; mainnet is targeted for September to October 2026. USDC price points publish here at mainnet.
+- Proof of concept on testnet: a modest USDC pilot fee under a short pilot agreement, credited in full toward the first mainnet credential.
 - Early protocols can request a scoped quote now: info@lexiprotocol.com
 
 ## For legal professionals
