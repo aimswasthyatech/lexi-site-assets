@@ -11,7 +11,7 @@ Last updated: 2026-09-24
 
 ## Status
 
-- LEXI is pre-launch. V0 is live on Base Sepolia (testnet) with VARA (Dubai) as the base jurisdiction; mainnet is targeted for September to October 2026. USDC price points publish here at mainnet.
+- LEXI is pre-launch. V0 is live on Base Sepolia (testnet) with VARA (Dubai) as the base jurisdiction; mainnet is targeted for the fourth week of October 2026. USDC price points publish here at mainnet.
 - Proof of concept on testnet: a modest USDC pilot fee under a short pilot agreement, credited in full toward the first mainnet credential.
 - Early protocols can request a scoped quote now: info@lexiprotocol.com
 
