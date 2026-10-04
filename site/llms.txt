@@ -1,6 +1,6 @@
 # LEXI Protocol
 
-Last updated: 2026-09-24
+Last updated: 2026-10-04
 
 > LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base. An engine, in development on a proprietary corpus of real regulatory work, prepares the first-pass analysis as work product; a licensed legal professional runs their own diligence and co-signs the legal opinion; the opinion becomes a credential on Base that named reliers can verify in one call.
 

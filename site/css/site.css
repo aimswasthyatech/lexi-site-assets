@@ -19,7 +19,7 @@
   --line:rgba(234,240,255,.08); --line-strong:rgba(234,240,255,.14);
   /* brand */
   --blue:#2E6BFF; --aqua:#18E0C6; --sky:#5FA0FF; --ink:#EAF0FF;
-  --dim:#8A93B2; --faint:#5A647A;
+  --dim:#8A93B2; --faint:#7A849E;
   --grad:linear-gradient(105deg,#2E6BFF 0%,#18E0C6 100%);
   /* type */
   --disp:'Space Grotesk','SG Fallback',sans-serif;
@@ -70,7 +70,7 @@ main{position:relative;z-index:2}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:.03em;color:var(--ink)}
 .brand:hover{color:var(--ink)}
 .brand .dot{color:var(--aqua)}
-.nl{display:flex;gap:26px;align-items:center;font-size:14.5px}
+.nl{display:flex;gap:20px;align-items:center;font-size:14.5px}
 .nl a{color:var(--dim)}
 .nl a:hover,.nl a[aria-current="page"]{color:var(--ink)}
 .nl a[aria-current="page"]{border-bottom:1px solid var(--blue);padding-bottom:2px}
@@ -299,6 +299,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;position:relative;z-
 .crumbs a{color:var(--faint)}
 .crumbs a:hover{color:var(--sky)}
 .updated{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:18px}
+.updated a,.ul a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(95,160,255,.55)}
 
 /* ---------- Forms ---------- */
 .form{display:flex;flex-direction:column;gap:18px;max-width:640px}
@@ -335,6 +336,13 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;position:relative;z-
 }
 @media(min-width:961px) and (max-width:1160px){
   .steps{grid-template-columns:repeat(2,1fr)}
+}
+/* Nav: 7 links + CTA need ~1090px of row; collapse to the menu below 1161px (added 2026-10-04) */
+.nl a{white-space:nowrap}
+@media(max-width:1160px){
+  .nl{display:none}
+  .nl.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--void);border-bottom:1px solid var(--line);padding:20px 30px;gap:18px;align-items:flex-start;z-index:60}
+  .menu-btn{display:block}
 }
 
 /* ---------- Reduced motion: everything settles instantly ---------- */
