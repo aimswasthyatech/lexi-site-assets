@@ -1,6 +1,6 @@
 # Pricing: LEXI Protocol
 
-Last updated: 2026-09-24
+Last updated: 2026-09-28
 
 ## Model
 
@@ -17,7 +17,7 @@ Last updated: 2026-09-24
 
 ## For legal professionals
 
-- Eligibility stake: a USD-pegged $5,000 in $LEXI, operative at token launch.
+- Eligibility stake (protocol design): a USD-pegged $5,000 in $LEXI. No $LEXI token has been issued.
 - Slashing: committee-adjudicated, for proven misconduct only, capped; reliers flag disputes, they do not slash.
 
 Nothing in this file is an offer or solicitation. No token is currently offered for sale.
