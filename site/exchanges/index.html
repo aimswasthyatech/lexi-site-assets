@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Exchanges and VASPs: Read a LEXI Credential | LEXI</title>
+<meta name="description" content="How a listing or compliance team reads a lawyer co-signed legal opinion credential on Base: the three-step check, costs, and what it is not. Testnet today.">
+<link rel="canonical" href="https://lexiprotocol.com/exchanges/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol · For exchanges, VASPs and Licensed Distributors: how to read a LEXI credential">
+<meta property="og:description" content="How a listing or compliance team reads a lawyer co-signed legal opinion credential on Base: the three-step check, costs, and what it is not. Testnet today.">
+<meta property="og:url" content="https://lexiprotocol.com/exchanges/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol · For exchanges, VASPs and Licensed Distributors: how to read a LEXI credential">
+<meta name="twitter:description" content="How a listing or compliance team reads a lawyer co-signed legal opinion credential on Base: the three-step check, costs, and what it is not. Testnet today.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
+    },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#lex-arbitrage", "name": "Lex Arbitrage", "alternateName": "@lex_arbitrage", "jobTitle": "Co-Founder and CEO", "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.", "url": "https://lexiprotocol.com/about/#lex-arbitrage", "sameAs": ["https://x.com/lex_arbitrage"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#karthik", "name": "Karthik", "jobTitle": "Co-Founder and CTO", "url": "https://lexiprotocol.com/about/#karthik", "sameAs": ["https://x.com/implied_vol"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "name": "Ben Dhaya Ahmed", "jobTitle": "Co-Founder and CGO", "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "WebSite", "@id": "https://lexiprotocol.com/#website", "url": "https://lexiprotocol.com/", "name": "LEXI Protocol", "alternateName": "LEXI", "publisher": { "@id": "https://lexiprotocol.com/#organization" }, "inLanguage": "en" },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/exchanges/#webpage",
+      "url": "https://lexiprotocol.com/exchanges/",
+      "name": "For Exchanges and VASPs: Read a LEXI Credential | LEXI",
+      "description": "How a listing or compliance team reads a lawyer co-signed legal opinion credential on Base: the three-step check, costs, and what it is not. Testnet today.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/exchanges/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/exchanges/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "For exchanges", "item": "https://lexiprotocol.com/exchanges/" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://lexiprotocol.com/exchanges/#service",
+      "name": "LEXI reliance access",
+      "serviceType": "Credential verification and reliance access",
+      "description": "LEXI reliance access is the relier side of LEXI's credential infrastructure: reading a credential's public on-chain metadata, which is free, and reliance access, a fixed USDC fee for the gated opinion body plus an on-chain reliance record. Price points publish at mainnet. V0 runs on Base Sepolia testnet.",
+      "url": "https://lexiprotocol.com/exchanges/",
+      "provider": { "@id": "https://lexiprotocol.com/#organization" },
+      "areaServed": "The India, UAE and US corridor. VARA (Dubai) first, on Base Sepolia testnet today.",
+      "audience": { "@type": "Audience", "audienceType": "Exchanges, VASPs, launchpads, Licensed Distributors and their compliance teams" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lexiprotocol.com/exchanges/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does reading a LEXI credential cost an exchange anything?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Reading the public on-chain metadata is free for anyone. Reliance access, meaning the gated opinion body plus an on-chain reliance record, is a fixed USDC fee paid by the relier. Price points publish at mainnet. Holding $LEXI is never required." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is LEXI a listing agent, and is there a $LEXI token to list?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No on both counts. LEXI has not issued a token and is not a listing agent. Any token trading under the names LEXI, Lexi, LEXI Protocol or LexiAI, on any chain, is not issued by LEXI Protocol and has no connection to it. If you are an exchange, you are a relier: this page shows how a credential is read." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a listing team rely on a credential recorded on Base Sepolia testnet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. V0 runs on Base Sepolia testnet and nothing is on mainnet. Testnet credentials exist so that design-partner reliers can test the three-step check and the reliance-terms wording; none of them is a credential to rely on. Mainnet is targeted post-audit, Q4 2026." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a LEXI credential mean a regulator has approved the asset?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by VARA. A status of Live means the credential is unexpired and unrevoked; it does not mean the opinion is a current legal conclusion. The as-of date and the regulator events after it tell you that." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/" aria-current="page">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
+
+<main id="main">
+
+<header class="pagehead wrap">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">For exchanges</li>
+  </ol>
+  <p class="eyebrow">For exchanges, VASPs and Licensed Distributors</p>
+  <h1>For exchanges, VASPs and Licensed Distributors: how to read a LEXI credential</h1>
+  <p class="lede">A LEXI credential is a licensed lawyer's co-signed legal opinion, recorded on Base so the parties it names can check it in one call. This page is the relier's side: what it is and is not, the three-step check, what reading costs, who signs, and where it runs today. V0 runs on Base Sepolia testnet.</p>
+  <div class="ctas mt24">
+    <a class="btn pri lg" href="/contact/?you=an%20exchange" data-event="cta-exch-talk">Talk to us</a>
+    <a class="btn lg" href="/credential/" data-event="cta-exch-verify">Verify a credential</a>
+  </div>
+  <p class="disc mt16">LEXI is not a law firm and gives no legal advice. A credential is not a licence, a registration, or an approval by any regulator.</p>
+  <p class="route" style="max-width:72ch"><b>LEXI <a href="/token/" data-event="route-token">has not issued a token</a> and is not a listing agent.</b> If you are an exchange, you are a relier: <a href="#check-h" data-event="route-check">here is how a credential is read</a>.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
+</header>
+
+<!-- ===== WHAT YOU ARE READING: the definition chunk in the first 30%, the limits, the contrast ===== -->
+<section aria-labelledby="what-h" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">The credential</p>
+      <h2 id="what-h"><span class="fade">What you are reading, and what you are not.</span></h2>
+    </div>
+    <div class="split">
+      <div class="prose">
+        <div class="chunk" id="definition">
+          <div class="k">Definition</div>
+          <p>A LEXI credential is a co-signed legal opinion committed on-chain. It records who signed, for which jurisdiction, as of which date, until when, under which governing law and for whom, and it binds the opinion's scope and text with two hashes. It is not a licence, a registration, or an approval by any regulator.</p>
+        </div>
+        <p>LEXI never sits in the listing decision; it tells you what the opinion covers, who signed it and whether it is still live. Compliance officers and listing teams read credentials; they never sign them. The opinion belongs to the licensed lawyer who co-signed it, its body stays off-chain and encrypted, and reading the public on-chain metadata is free.</p>
+        <p>Some listing teams require an opinion in writing; most run an internal legal review and keep a file. A PDF in that file cannot tell you whether the opinion is still current, whether the documents changed after signing, or whether your entity may rely on it. The credential records those three facts as a <a href="/glossary/#status">status</a>, two hash commitments and a <a href="/glossary/#named-relier">named-relier</a> list. What listing pages publish is in the briefing <a href="/insights/how-exchanges-verify-a-token-legal-opinion/" data-event="what-briefing">how exchanges verify a token legal opinion</a>.</p>
+      </div>
+      <div class="rv d1">
+        <div class="prose">
+          <ul>
+            <li><strong>Not a licence, a registration, or an approval by any regulator.</strong> LEXI is not licensed or endorsed by VARA.</li>
+            <li><strong>Not a listing signal.</strong> Whether an asset should be listed stays your decision.</li>
+            <li><strong>Not a compliance score.</strong> Nothing on-chain rates the asset; the record holds the opinion's hashes and its status.</li>
+            <li><strong>Not transferable.</strong> The token standard is undecided, so none is named here.</li>
+          </ul>
+        </div>
+        <div class="contrast">
+          <div><div class="k">Coinbase Verifications, on Base</div><p>Their README says the attestations <q>should not be relied upon for any legal, compliance, or contractual purpose</q>.</p></div>
+          <div><div class="k">A LEXI credential</div><p><b>Names the parties that may rely on it</b>, carries a licensed lawyer's signature, and expires.</p></div>
+        </div>
+        <p class="fig"><b>Fig. 01</b> Two different jobs on the same chain. The Coinbase sentence is quoted from the coinbase/verifications README.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== YOUR FILE, ON THE CREDENTIAL: the two-column mapping table ===== -->
+<section aria-labelledby="file-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Your file, on the credential</p>
+      <h2 id="file-h" class="pkh">What your file asks for today, and where it sits.</h2>
+      <p>A compliance file already asks for most of what the credential records. Each item becomes a field you read without calling the firm.</p>
+    </div>
+    <div class="tblwrap rv d1">
+      <table>
+        <caption>Compliance file items mapped to LEXI credential fields · V0 target schema · Last reviewed <time datetime="2026-10-16">2026-10-16</time></caption>
+        <thead><tr><th scope="col">What your file asks for today</th><th scope="col">Where it sits on the credential</th></tr></thead>
+        <tbody>
+          <tr><td>A named signing lawyer and firm</td><td><a href="/glossary/#signatory-and-firm-id">Signatory and firm ID</a>, public on-chain. Check the licence with the issuing bar or register.</td></tr>
+          <tr><td>An issue date</td><td><a href="/glossary/#as-of-date">As-of date</a>, on-chain, with an <a href="/glossary/#expiry">expiry</a> beside it. The opinion speaks as of that date.</td></tr>
+          <tr><td>Signed and dated, on letterhead</td><td>The licensed lawyer's co-signature, with the on-chain hash commitments standing behind it.</td></tr>
+          <tr><td>The document version annexed</td><td><a href="/glossary/#scope-hash">Scope hash</a>: a commitment to the document set the opinion covers, and an <a href="/glossary/#opinion-hash">opinion hash</a> for the text.</td></tr>
+          <tr><td>No edits after signing</td><td>Nothing is edited after signing. A refreshed opinion is a <a href="/glossary/#re-issue-bring-down">re-issue</a> with its own credential; the old one expires or is revoked.</td></tr>
+          <tr><td>Authorisation to rely</td><td><a href="/glossary/#reliance-mode">Reliance mode</a> (Open or Selective) and a <a href="/glossary/#reliance-record">reliance record</a> once your entity accepts the terms.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice mono mt16 rv d1">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+  </div>
+</section>
+
+<!-- ===== THE THREE-STEP CHECK beside the pricing model ===== -->
+<section class="rel" aria-labelledby="check-h">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="sh rv" style="margin-bottom:28px">
+          <p class="eyebrow">The three-step check</p>
+          <h2 id="check-h"><span class="fade">Read a credential in three steps.</span></h2>
+          <p>One call against the credential record. Each step reads one on-chain field; the <a href="/glossary/#three-step-relier-check">glossary</a> defines the check in full.</p>
+        </div>
+        <ol class="check rv d1">
+          <li><div><h3>Status is Live, not Expired or Revoked.</h3><p>As-of date, expiry and revocation are on-chain.<i>Does it still speak as of a date I accept?</i></p></div></li>
+          <li><div><h3>The scope and opinion hashes match the documents you hold.</h3><p>Hash the PDF and the scope text and compare them with the on-chain commitments.<i>Is this the document the lawyer signed?</i></p></div></li>
+          <li><div><h3>Your entity is a named relier and has accepted the reliance terms.</h3><p>The credential names who may rely on it; the reliance record shows you accepted the terms.<i>Am I expressly authorised to rely?</i></p></div></li>
+        </ol>
+        <p class="dimp mt24" style="max-width:62ch;font-size:.98rem">Live means unexpired and unrevoked, not that the opinion is a current legal conclusion; the as-of date and the regulator events after it tell you that. The specimen and the verify page, as designed, are on <a href="/credential/" data-event="check-credential">the credential page</a>.</p>
+      </div>
+      <div class="rv d2">
+        <p class="dimp" style="font-size:.98rem;margin-bottom:18px">Reliance access is the relier side of LEXI's credential infrastructure. Reading a credential's public on-chain metadata is free. Reliance access, the gated opinion body plus an on-chain reliance record, is a fixed USDC fee. One credential records one cleared jurisdiction, and clearing a jurisdiction means obtaining a co-signed legal opinion covering it. Price points publish at mainnet. V0 runs on Base Sepolia testnet.</p>
+        <div class="price">
+          <div class="k"><b>The pricing model</b><span>price points publish at mainnet</span></div>
+          <dl>
+            <dt>Reading public on-chain metadata</dt><dd>free</dd>
+            <dt>Reliance access: the gated body plus an on-chain reliance record</dt><dd>fixed USDC fee</dd>
+            <dt>Credential issuance, paid by the protocol</dt><dd>USDC, per credential</dd>
+            <dt>One credential</dt><dd>one cleared jurisdiction</dd>
+            <dt>Holding $LEXI</dt><dd>never required</dd>
+          </dl>
+          <div class="ctas">
+            <a class="btn pri" href="/credential/" data-event="cta-price-verify">Verify a credential</a>
+            <a class="btn" href="/insights/how-exchanges-verify-a-token-legal-opinion/" data-event="cta-price-briefing">Read the briefing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO SIGNS, AND WHERE IT RUNS: three hairline columns ===== -->
+<section aria-labelledby="signs-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Who signs, and where it runs</p>
+      <h2 id="signs-h" class="pkh">A licensed lawyer signs. VARA runs on testnet today.</h2>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>Who signs</h3>
+        <p>One assigned licensed lawyer co-signs each credential: they review the LEXI engine's work product, run their own diligence and sign with a USD-pegged stake of about $5,000 in $LEXI behind the signature. No AI signs anything. Compliance officers at reliers read credentials; they do not sign them. What a co-signer takes on: <a href="/legal-professionals/" data-event="signs-lawyers">for legal professionals</a>.</p>
+      </div>
+      <div>
+        <h3>Where it runs today</h3>
+        <p><span class="lab">[On testnet]</span> V0 records credentials for VARA (Dubai) on Base Sepolia, Base's public testnet. Nothing is on mainnet; mainnet is targeted post-audit, Q4 2026, and no testnet credential is one to rely on. The regulator page: <a href="/vara-compliance/" data-event="signs-vara">VARA compliance (Dubai)</a>.</p>
+      </div>
+      <div>
+        <h3>What is next</h3>
+        <p><span class="lab">[In development]</span> V1, next up: the EU (MiCA) and India (FIU-IND), so one opinion can span several jurisdictions. US coverage is on the roadmap. Dated entries sit in the <a href="/updates/" data-event="signs-updates">build log</a>; the roadmap describes intent, not a commitment to any feature by any date.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE LICENSED DISTRIBUTOR: a worked relier under VARA's Broker-Dealer Services Rulebook ===== -->
+<section aria-labelledby="ld-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">A worked relier</p>
+      <h2 id="ld-h"><span class="fade">The Licensed Distributor, under VARA's Broker-Dealer Services Rulebook.</span></h2>
+    </div>
+    <div class="split">
+      <div class="prose rv d1">
+        <p>A Licensed Distributor is a VASP that VARA has licensed to carry out Broker-Dealer Services. Part IV of the Broker-Dealer Services Rulebook makes it satisfy itself about an asset before distributing it, keep its due diligence current, and redo and resubmit that diligence on a material change, through a fifteen Working Day Submission Period that is never a VARA approval. VARA asks for no legal opinion in that package; it asks for a third-party smart-contract audit.</p>
+        <p>What VARA does ask for is a file that stays current, and a dated opinion with a status fits that file: the as-of date says when the opinion spoke, the expiry and status say whether it still stands, and a material change means a re-issue, never an edit. A LEXI credential does not satisfy any VARA rule and is not a VARA approval. It is one dated, checkable item in a file that has to stay current.</p>
+      </div>
+      <div class="rv d2">
+        <dl class="glance">
+          <dt>Rule IV.B.1</dt><dd>Satisfy itself "beyond all reasonable doubt" before distributing a virtual asset.</dd>
+          <dt>Rule IV.D.2</dt><dd>A fifteen Working Day Submission Period for the distributor's submission to VARA.</dd>
+          <dt>Rule IV.D.7</dt><dd>Nothing in the submission process is a VARA approval of the asset.</dd>
+          <dt>Rule IV.E.1</dt><dd>Due diligence kept "up-to-date and accurate at all times".</dd>
+          <dt>Rule IV.E.3</dt><dd>Redo and resubmit the due diligence on a material change.</dd>
+          <dt>Part VIII, Market Conduct</dt><dd>Every VARA-licensed VASP publishes its own virtual-asset standards, keeps diligence records for eight years, and tells VARA when an asset no longer meets them.</dd>
+          <dt>Source</dt><dd><a href="https://rulebooks.vara.ae/entiresection/441" rel="noopener" target="_blank">VARA Broker-Dealer Services Rulebook, Part IV<span class="sr"> (opens in a new tab)</span></a> and the <a href="https://rulebooks.vara.ae/entiresection/211" rel="noopener" target="_blank">Market Conduct Rulebook, Part VIII<span class="sr"> (opens in a new tab)</span></a>, both in the versions dated 19 May 2025.</dd>
+        </dl>
+        <p class="fig"><b>Fig. 02</b> Rule references are LEXI's summary of the published rulebook text, not legal advice. LEXI is not licensed or endorsed by VARA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== DESIGN-PARTNER RELIERS: an expression of interest, shaped as three hairline columns ===== -->
+<section aria-labelledby="dp-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Design-partner reliers</p>
+      <h2 id="dp-h" class="pkh">Read test credentials with us, before mainnet.</h2>
+      <p>An expression of interest, open to exchanges, VASPs, launchpads and Licensed Distributors. Nothing is signed and nothing is paid.</p>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>The shape</h3>
+        <p>Non-paying, and VARA first. Everything runs on Base Sepolia testnet, for a fixed term. Mainnet is targeted post-audit, Q4 2026.</p>
+      </div>
+      <div>
+        <h3>The people</h3>
+        <p>A named compliance contact and one technical contact on each side, and a fortnightly 30-minute call with the founders.</p>
+      </div>
+      <div>
+        <h3>The work</h3>
+        <p>You read test credentials with the three-step check and tell us where the verify page and the reliance-terms wording fail your file. No reliance on any testnet credential.</p>
+      </div>
+    </div>
+    <div class="ctas mt40 rv d2">
+      <a class="btn pri" href="/contact/?you=an%20exchange" data-event="cta-dp-talk">Talk to us</a>
+      <a class="btn" href="/credential/" data-event="cta-dp-verify">Verify a credential</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VERIFIED CHANNELS: the one framed fact block on this page ===== -->
+<section aria-labelledby="ch-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Verified channels</p>
+      <h2 id="ch-h" class="pkh">Official channels only.</h2>
+      <p>Every exchange we studied keeps an official verification page and ignores unsolicited intermediaries. LEXI's only channels are lexiprotocol.com, x.com/LEXIprotocol, linkedin.com/company/lexi-protocol and info@lexiprotocol.com. Nobody approaches an exchange on LEXI's behalf; the impostor-token notice is on the <a href="/token/" data-event="ch-token">$LEXI documentation page</a>.</p>
+    </div>
+    <div class="registry rv d1"><span class="xh" aria-hidden="true"></span>
+      <div class="rh">Verified channels <span>LEXI Protocol</span></div>
+      <div class="rr"><span class="k">Website</span><span>lexiprotocol.com <em>· the only domain</em></span></div>
+      <div class="rr"><span class="k">X</span><span><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">x.com/LEXIprotocol<span class="sr"> (opens in a new tab)</span></a> <em>· the company account</em></span></div>
+      <div class="rr"><span class="k">LinkedIn</span><span><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">linkedin.com/company/lexi-protocol<span class="sr"> (opens in a new tab)</span></a> <em>· the company page only</em></span></div>
+      <div class="rr"><span class="k">Email</span><span><a href="mailto:info@lexiprotocol.com">info@lexiprotocol.com</a> <em>· a founder reads every message</em></span></div>
+      <div class="rr"><span class="k">Intermediaries</span><span>None <em>· no listing agents, no market makers, no token</em></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ: native details; the schema mirrors this text verbatim ===== -->
+<section aria-labelledby="faq-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h" class="pkh">What listing and compliance teams ask first.</h2>
+    </div>
+    <div class="faq maxw rv d1">
+      <details id="faq-cost">
+        <summary>Does reading a LEXI credential cost an exchange anything?</summary>
+        <div class="a"><p>No. Reading the public on-chain metadata is free for anyone. Reliance access, meaning the gated opinion body plus an on-chain reliance record, is a fixed USDC fee paid by the relier. Price points publish at mainnet. Holding $LEXI is never required.</p></div>
+      </details>
+      <details id="faq-listing">
+        <summary>Is LEXI a listing agent, and is there a $LEXI token to list?</summary>
+        <div class="a"><p>No on both counts. LEXI has not issued a token and is not a listing agent. Any token trading under the names LEXI, Lexi, LEXI Protocol or LexiAI, on any chain, is not issued by LEXI Protocol and has no connection to it. If you are an exchange, you are a relier: this page shows how a credential is read.</p></div>
+      </details>
+      <details id="faq-testnet">
+        <summary>Can a listing team rely on a credential recorded on Base Sepolia testnet?</summary>
+        <div class="a"><p>No. V0 runs on Base Sepolia testnet and nothing is on mainnet. Testnet credentials exist so that design-partner reliers can test the three-step check and the reliance-terms wording; none of them is a credential to rely on. Mainnet is targeted post-audit, Q4 2026.</p></div>
+      </details>
+      <details id="faq-approval">
+        <summary>Does a LEXI credential mean a regulator has approved the asset?</summary>
+        <div class="a"><p>No. A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by VARA. A status of Live means the credential is unexpired and unrevoked; it does not mean the opinion is a current legal conclusion. The as-of date and the regulator events after it tell you that.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top arc--r" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="rv">The trust layer for institutional Web3.</h2>
+    <p class="rv d1">Tell us which credentials you would read. V0 runs on Base Sepolia testnet; mainnet is targeted post-audit, Q4 2026.</p>
+    <div class="ctas rv d2">
+      <a class="btn pri lg" href="/contact/?you=an%20exchange" data-event="cta-final-talk">Talk to us</a>
+      <a class="btn lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">For</div>
+        <ul>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

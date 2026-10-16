@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Co-Sign On-Chain Legal Opinions | LEXI Protocol</title>
-<meta name="description" content="Co-signing for licensed lawyers: the client relationship stays direct, opinions are scope-bound, slashing is committee-adjudicated.">
+<title>Co-Sign On-Chain Legal Opinions as a Licensed Lawyer | LEXI</title>
+<meta name="description" content="What a licensed lawyer signs on LEXI, who the client is, the USD-pegged ~$5,000 stake, committee-adjudicated slashing, what you get, and the open items.">
 <link rel="canonical" href="https://lexiprotocol.com/legal-professionals/">
 <meta name="theme-color" content="#0A0C12">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LEXI Protocol">
-<meta property="og:title" content="Co-sign Web3 legal opinions. Keep your client, your diligence, and your standards.">
-<meta property="og:description" content="Co-signing for licensed lawyers: the client relationship stays direct, opinions are scope-bound, slashing is committee-adjudicated.">
+<meta property="og:title" content="LEXI Protocol · Co-sign Web3 legal opinions. Keep your client, your diligence, and your standards.">
+<meta property="og:description" content="What a licensed lawyer signs on LEXI, who the client is, the USD-pegged ~$5,000 stake, committee-adjudicated slashing, what you get, and the open items.">
 <meta property="og:url" content="https://lexiprotocol.com/legal-professionals/">
 <meta property="og:image" content="https://lexiprotocol.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,77 +24,116 @@
 <meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LEXIprotocol">
-<meta name="twitter:title" content="Co-sign Web3 legal opinions. Keep your client, your diligence, and your standards.">
-<meta name="twitter:description" content="Co-signing for licensed lawyers: the client relationship stays direct, opinions are scope-bound, slashing is committee-adjudicated.">
+<meta name="twitter:title" content="LEXI Protocol · Co-sign Web3 legal opinions. Keep your client, your diligence, and your standards.">
+<meta name="twitter:description" content="What a licensed lawyer signs on LEXI, who the client is, the USD-pegged ~$5,000 stake, committee-adjudicated slashing, what you get, and the open items.">
 <meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
 <meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://lexiprotocol.com/#organization",
-   "name": "LEXI Protocol",
-   "alternateName": "LEXI",
-   "url": "https://lexiprotocol.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://lexiprotocol.com/apple-touch-icon.png",
-    "width": 180,
-    "height": 180
-   },
-   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
-   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed legal professionals' co-signed legal opinions as verifiable on-chain credentials. It is not a law firm, and it has not launched a token.",
-   "email": "info@lexiprotocol.com",
-   "sameAs": [
-    "https://x.com/LEXIprotocol",
-    "https://www.linkedin.com/company/lexi-protocol/",
-    "https://github.com/Lexi-Protocol"
-   ]
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://lexiprotocol.com/#website",
-   "url": "https://lexiprotocol.com/",
-   "name": "LEXI Protocol",
-   "publisher": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "inLanguage": "en"
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://lexiprotocol.com/legal-professionals/#webpage",
-   "url": "https://lexiprotocol.com/legal-professionals/",
-   "name": "Co-Sign On-Chain Legal Opinions | LEXI Protocol",
-   "isPartOf": {
-    "@id": "https://lexiprotocol.com/#website"
-   },
-   "about": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "datePublished": "2026-07-03",
-   "dateModified": "2026-09-28"
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://lexiprotocol.com/"
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "For legal professionals",
-     "item": "https://lexiprotocol.com/legal-professionals/"
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "name": "Lex Arbitrage",
+      "alternateName": "@lex_arbitrage",
+      "jobTitle": "Co-Founder and CEO",
+      "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+      "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "sameAs": ["https://x.com/lex_arbitrage"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#karthik",
+      "name": "Karthik",
+      "jobTitle": "Co-Founder and CTO",
+      "url": "https://lexiprotocol.com/about/#karthik",
+      "sameAs": ["https://x.com/implied_vol"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "name": "Ben Dhaya Ahmed",
+      "jobTitle": "Co-Founder and CGO",
+      "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lexiprotocol.com/#website",
+      "url": "https://lexiprotocol.com/",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/legal-professionals/#webpage",
+      "url": "https://lexiprotocol.com/legal-professionals/",
+      "name": "Co-Sign On-Chain Legal Opinions as a Licensed Lawyer | LEXI",
+      "description": "What a licensed lawyer signs on LEXI, who the client is, the USD-pegged ~$5,000 stake, committee-adjudicated slashing, what you get, and the open items.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/legal-professionals/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/legal-professionals/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "For legal professionals", "item": "https://lexiprotocol.com/legal-professionals/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lexiprotocol.com/legal-professionals/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why are LEXI's co-signers licensed lawyers only?",
+          "acceptedAnswer": { "@type": "Answer", "text": "LEXI's co-signers are licensed lawyers because a legal opinion is a professional act that bar and registration rules reserve to lawyers, and because the one VARA rule that names a signer (Annex 2 of the Issuance Rulebook, asset-referenced virtual assets) names a duly registered practising lawyer and excludes internal counsel. Compliance officers do not stake or co-sign on LEXI. They appear as readers: the people at exchanges and VASPs who check a credential before relying on it." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LEXI take a share of a co-signing lawyer's fee?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The protocol retains your firm directly and pays the retainer outside LEXI. LEXI takes no share of your fee, and 0% of protocol revenue goes to the co-signing lawyer. The economics of your practice do not route through a token." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a relier slash a co-signing lawyer's stake?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Reliers flag disputes; a committee adjudicates them. Slashing requires proven misconduct and is capped in basis points. Nobody is slashed because a regulator disagrees with an opinion, and $LEXI holders never vote on whether a protocol is compliant." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a licensed lawyer apply before mainnet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LEXI is onboarding a small founding panel of licensed lawyers before mainnet, VARA (Dubai) first. V0 runs on Base Sepolia (testnet) and mainnet is targeted post-audit, Q4 2026. Applying commits you to nothing. No $LEXI token has been issued, so no stake is posted today." }
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -102,101 +142,251 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap"><div class="navrow">
-    <a class="brand" href="/" aria-label="LEXI Protocol home">
-      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
-      LEXI<span class="dot">.</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-    <div class="nl" id="nav-list">
-      <a href="/how-it-works/">How it works</a>
-      <a href="/crypto-legal-opinion/">Legal opinions</a>
-      <a href="/vara-compliance/">VARA compliance</a>
-      <a href="/protocols/">For protocols</a>
-      <a href="/legal-professionals/" aria-current="page">For legal professionals</a>
-      <a href="/token/">$LEXI</a>
-      <a href="/about/">About</a>
-      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
-    </div>
-  </div></div>
-</nav>
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/" aria-current="page">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
 
 <main id="main">
+
 <header class="pagehead wrap">
-  <p class="crumbs"><a href="/">Home</a> / For legal professionals</p>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">For legal professionals</li>
+  </ol>
   <p class="eyebrow">For legal professionals</p>
   <h1>Co-sign Web3 legal opinions. Keep your client, your diligence, and your standards.</h1>
-  <p class="lede">You already write opinions for crypto clients on this corridor. LEXI makes the opinion verifiable and your track record portable, without changing who your client is or whose judgment controls. Here is the whole arrangement, liabilities first.</p>
+  <p class="lede">You already write opinions for crypto clients on this corridor. LEXI makes the opinion verifiable and your record of practice portable, without changing who your client is or whose judgment controls. Here is the whole arrangement, liabilities first. V0 runs on Base Sepolia (testnet); mainnet is targeted post-audit, Q4 2026.</p>
+  <div class="ctas mt24">
+    <a class="btn pri lg" href="/contact/?you=a%20licensed" data-event="cta-head-cosign">Apply to co-sign</a>
+    <a class="btn lg" href="/how-it-works/" data-event="cta-head-how">See how it works</a>
+  </div>
+  <p class="disc mt24">LEXI is not a law firm. A credential is not a licence, a registration, or an approval by any regulator. Co-signers on LEXI are licensed lawyers only.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
 </header>
 
-<section style="padding-top:30px"><div class="wrap prose">
-  <h2 id="what-you-sign">1. What exactly you are signing</h2>
-  <p>A legal opinion, in your name, on a question you scoped. The engine's output reaches you as input material: a checklist, a document review, a risk read. It is work product, and it is labelled that way. You review it, run your own diligence, and co-sign only what your own judgment supports. No opinion exists until you sign it.</p>
-
-  <h2 id="client">2. Who your client is</h2>
-  <p>Your firm's client is the protocol, exactly as it would be without LEXI. Collaboration runs on an engagement, a workspace tied to one protocol, one firm and one jurisdiction. Your firm assigns the signatory: the qualified individual authorized to co-sign. The protocol retains your firm directly and pays your retainer outside LEXI. LEXI takes no share of your fee, and you take no share of LEXI's. The economics of your practice do not route through a token.</p>
-
-  <h2 id="exposure">3. What your exposure looks like</h2>
-  <p>Tighter than an opinion letter you would write today, by design:</p>
-  <ul>
-    <li><strong>Scope is hashed.</strong> The credential binds the precise question covered and what is excluded. Nobody can quietly stretch what you opined on.</li>
-    <li><strong>Reliers are named.</strong> Reliance attaches only after a named relier accepts the reliance terms, and every reliance is recorded. By default you whitelist who may rely (Selective mode). Open reliance, if you ever choose it, requires a defined liability cap in the terms before it is offered.</li>
-    <li><strong>It is dated and it expires.</strong> Your opinion speaks as of its date, and its on-chain status (Live, Expired, Revoked) is public. No one relies on a stale opinion by accident.</li>
-  </ul>
-
-  <h2 id="stake">4. The stake, and what can and cannot slash it</h2>
-  <p>To be eligible to co-sign, professionals post a stake of about $5,000, USD-pegged, in $LEXI. It is a good-faith bond in the protocol design. No $LEXI token has been issued. The rules around the stake are deliberately narrow:</p>
-  <ul>
-    <li>Slashing requires <strong>proven misconduct</strong>, adjudicated by a committee. A relier who dislikes your conclusion cannot touch your stake; reliers flag disputes, they do not decide them.</li>
-    <li>Slashing is capped in basis points, up to a hard cap. It is not all-or-nothing.</li>
-    <li>Unstaking has a 14-day unbonding period. Falling below the minimum after a slash deactivates eligibility rather than compounding penalties.</li>
-    <li>There is no on-chain "risk score" attached to you or your opinions. Your public record is what you signed and its status, nothing else.</li>
-  </ul>
-
-  <h2 id="get">5. What you get</h2>
-  <ul>
-    <li><strong>Deal flow on a corridor you already serve.</strong> Protocols arrive with documentation already structured and a first pass already run, so your hours go into judgment, not collation.</li>
-    <li><strong>A portable, on-chain track record.</strong> Every credential you co-sign is a dated, public artifact of practice. That record follows you, not a directory listing.</li>
-    <li><strong>A voice in governance.</strong> Staked professionals participate in governing jurisdiction expansion, fee parameters and slashing conditions.</li>
-  </ul>
-
-  <h2 id="open-items">6. The open items, stated plainly</h2>
-  <p>Two questions deserve a direct conversation rather than marketing copy: how co-signing interacts with your professional indemnity cover, and how your bar or licensing body treats participation. The answers differ by jurisdiction, and we would rather work through your specifics than publish a blanket assurance. Raise them in your application and we will address them before you commit anything.</p>
-
-  <h2 id="process">7. The founding panel, and what happens after you apply</h2>
-  <p>We are onboarding a small founding panel of licensed lawyers before mainnet, VARA-first. The process:</p>
-  <ol>
-    <li><strong>Application.</strong> Name, jurisdictions of licensure, registration reference, one line on your practice.</li>
-    <li><strong>Licensure and conflicts check.</strong> Manual and human, in V0.</li>
-    <li><strong>Panel onboarding.</strong> Terms in writing, engagement walkthrough, and the credential schema before it is final. Founding professionals set the standard the panel is held to.</li>
-  </ol>
-  <p>Want the arrangement in writing before applying? Ask for the signatory terms overview in your message and we will send what exists today, marked draft where it is draft.</p>
-
-  <div class="mt40" style="display:flex;gap:14px;flex-wrap:wrap">
-    <a class="btn primary" href="/contact/?path=professional" data-event="cta-apply-cosign">Apply to co-sign</a>
-    <a class="btn" href="/credential/">See what a credential contains</a>
+<!-- ===== 1. WHAT YOU SIGN, WHO YOUR CLIENT IS, YOUR EXPOSURE: three hairline columns ===== -->
+<section aria-labelledby="sign-h">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">What you sign</p>
+      <h2 id="sign-h"><span class="fade">A legal opinion, in your name, on a question you scoped.</span></h2>
+      <p>The LEXI engine's first pass reaches you as input material: a checklist, a document review, a risk read. It is work product, labelled that way, and it is never the opinion. No opinion exists until you sign it, and no AI signs anything.</p>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>What exactly you are signing</h3>
+        <p>A <a href="/glossary/#co-signed-legal-opinion">co-signed legal opinion</a>: your conclusion, after your own diligence, on the question your scope defines. You review the <a href="/glossary/#engine-first-pass">engine first pass</a>, test it, and co-sign only what your own judgment supports. The engine is in development on a proprietary corpus of real regulatory work; its output is prepared for you, not for the client.</p>
+      </div>
+      <div>
+        <h3>Who your client is</h3>
+        <p>Your firm's client is the protocol, exactly as it would be without LEXI. Collaboration runs on an engagement: a workspace tied to one protocol, one firm and one jurisdiction. Your firm assigns the signatory, the licensed lawyer authorised to co-sign. The protocol retains your firm directly and pays the retainer outside LEXI. LEXI takes no share of your fee, and 0% of protocol revenue goes to the co-signing lawyer.</p>
+      </div>
+      <div>
+        <h3>What your exposure looks like</h3>
+        <p>Tighter than an opinion letter you would write today, by design. <b>Scope is hashed:</b> the credential binds the precise question covered and what is excluded, so nobody can quietly stretch what you opined on. <b>Reliers are named:</b> reliance attaches only after a named relier accepts the reliance terms, and every reliance is recorded. By default you whitelist who may rely (Selective mode); Open reliance, if you ever choose it, requires a defined liability cap in the terms before it is offered. <b>It is dated and it expires:</b> your opinion speaks as of its date, and its on-chain status (Live, Expired, Revoked) is public, so no one relies on a stale opinion by accident.</p>
+      </div>
+    </div>
+    <p class="fig rv d2"><b>Fig. 01</b> The three facts a relier reads before relying: status, hashes, named reliers. What a credential records and what stays off-chain: <a href="/credential/">the LEXI credential</a>.</p>
   </div>
-  <div class="notice mt24">Contacting LEXI does not create an attorney-client relationship, and applying commits you to nothing. Please do not include confidential or privileged information at this stage.</div>
-</div></section>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== 2. THE STAKE AND THE NARROW SLASHING RULES: copy beside a crosshair registry panel ===== -->
+<section aria-labelledby="stake-h" style="overflow:clip">
+  <div class="bloom" aria-hidden="true" style="width:900px;height:900px;left:calc(50% - 640px - 420px);top:50%;transform:translateY(-50%);background:radial-gradient(circle,rgba(46,107,255,.14),transparent 62%)"></div>
+  <svg class="gate gate--left" viewBox="0 0 200 200" aria-hidden="true"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg>
+  <div class="wrap" style="z-index:1">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">The stake</p>
+        <h2 id="stake-h"><span class="fade">A bond behind the signature, and narrow rules on what can touch it.</span></h2>
+        <p class="dimp" style="margin-top:20px;max-width:52ch">To be eligible to co-sign, a licensed lawyer posts an <a href="/glossary/#eligibility-stake">eligibility stake</a>: a USD-pegged amount of about $5,000 in $LEXI, re-pegged so the dollar cost stays stable, with a 14-day unbonding period. It is a good-faith bond in the protocol design. No $LEXI token has been issued, so no stake is posted today.</p>
+        <p class="dimp" style="margin-top:16px;max-width:52ch">The rules are deliberately narrow. Slashing is <a href="/glossary/#committee-adjudicated-slashing">committee-adjudicated</a> for proven misconduct only, capped in basis points. Reliers flag disputes; they do not decide them, and they cannot slash. Nobody is slashed because a regulator disagrees with an opinion. The slashing conditions are a governance matter.</p>
+        <p class="shield">Customers never need $LEXI; only co-signers stake. Stake documentation, without price, value or return talk: <a href="/token/">how $LEXI works</a>.</p>
+      </div>
+      <div class="rv d1">
+        <div class="registry"><span class="xh" aria-hidden="true"></span>
+          <div class="rh">Stake and slashing rules <span>protocol design</span></div>
+          <div class="rr"><span class="k">Eligibility stake</span><span>About $5,000, USD-pegged, posted in $LEXI <em>· re-pegged so the dollar cost stays stable</em></span></div>
+          <div class="rr"><span class="k">Who stakes</span><span>Licensed lawyers who co-sign <em>· customers and reliers never need $LEXI</em></span></div>
+          <div class="rr"><span class="k">Unbonding</span><span>14 days</span></div>
+          <div class="rr"><span class="k">Slashing trigger</span><span>Proven misconduct only <em>· never a regulator's disagreement with a conclusion</em></span></div>
+          <div class="rr"><span class="k">Who decides</span><span>A committee adjudicates <em>· reliers flag disputes, they do not slash</em></span></div>
+          <div class="rr"><span class="k">How much</span><span>Capped in basis points <em>· never all-or-nothing</em></span></div>
+          <div class="rr"><span class="k">After a slash</span><span>Falling below the minimum deactivates eligibility <em>· the slashed stake goes to the treasury</em></span></div>
+          <div class="rr"><span class="k">Your public record</span><span>What you signed and its status <em>· no on-chain risk score attaches to you or your opinions</em></span></div>
+          <div class="rr"><span class="k">Token status</span><span>No $LEXI token has been issued <em>· nothing on this site is an offer of one</em></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. WHAT YOU GET: three hairline columns ===== -->
+<section class="for" aria-labelledby="get-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:34px">
+      <p class="eyebrow">What you get</p>
+      <h2 id="get-h" class="pkh">Your hours go into judgment, not collation.</h2>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>Work that arrives prepared</h3>
+        <p>A protocol submits once. Its documentation is already structured and the engine's first pass is already run when the matter reaches you, on a corridor you already serve. The questions left are the ones only a licensed lawyer can answer.</p>
+      </div>
+      <div>
+        <h3>A portable record of practice</h3>
+        <p>Every credential you co-sign is a dated, public artifact: the <a href="/glossary/#signatory-and-firm-id">signatory and firm ID</a>, the jurisdiction, the as-of date and the status are on-chain. That record follows you, not a directory listing. The opinion body itself stays off-chain, encrypted, open only to named reliers.</p>
+      </div>
+      <div>
+        <h3>A voice in governance</h3>
+        <p>Staked lawyers take part in governing jurisdiction expansion, fee parameters, slashing conditions and the treasury. Holders never vote on whether a protocol is compliant; that question is yours alone, in the opinion you sign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. THE OPEN ITEMS, STATED PLAINLY ===== -->
+<section class="pt0" aria-labelledby="open-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">The open items</p>
+        <h2 id="open-h" class="pkh">Two questions deserve a direct conversation, not marketing copy.</h2>
+      </div>
+      <div class="rv d1">
+        <div class="notice"><b>Professional indemnity cover, and your bar's view.</b> How co-signing interacts with your professional indemnity insurance, and how your bar or licensing body treats participation, differ by jurisdiction. We would rather work through your specifics than publish a blanket assurance. Raise them in your application and we will address them before you commit anything.</div>
+        <p class="dimp mt16" style="font-size:.95rem;max-width:60ch">For context, not endorsement: VARA's Regulations 2023 (Part IV.A.5) treat duly registered practising lawyers as professionals authorised by a competent professional body who maintain professional indemnity insurance, which is the same bar LEXI's licensure check and the open insurance item describe. LEXI is not licensed or endorsed by VARA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== 5. THE FOUNDING PANEL: three numbered steps, then the public lookup a relier can run ===== -->
+<section aria-labelledby="panel-h">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="sh rv" style="margin-bottom:28px">
+          <p class="eyebrow">The founding panel</p>
+          <h2 id="panel-h"><span class="fade">What happens after you apply.</span></h2>
+          <p>LEXI is onboarding a small founding panel of licensed lawyers before mainnet, VARA (Dubai) first. The EU (MiCA) and India (FIU-IND) are V1, next up, and lawyers licensed there are welcome to apply now.</p>
+        </div>
+        <ol class="check rv d1">
+          <li><div><h3>Application.</h3><p>Name, jurisdictions of licensure, registration reference, one line on your practice. Please do not include confidential or privileged information at this stage.<i>What we ask for: who you are and where you are licensed.</i></p></div></li>
+          <li><div><h3>Licensure and conflicts check.</h3><p>Manual and human, in V0. We verify your registration with the issuing bar or register and check for conflicts against the engagement before any matter reaches you.<i>What we check: that you are a practising lawyer in good standing.</i></p></div></li>
+          <li><div><h3>Panel onboarding.</h3><p>Terms in writing, an engagement walkthrough, and the credential schema before it is final. Founding lawyers set the standard the panel is held to.<i>What you get: the arrangement in writing, marked draft where it is draft.</i></p></div></li>
+        </ol>
+      </div>
+      <div class="rv d2">
+        <div class="cardp">
+          <span class="idx">The lookup a relier can run</span>
+          <h3>Your licence is checkable by anyone who relies on you.</h3>
+          <p>The signatory and firm ID are public on-chain fields. A relier can check the signatory's licence with the issuing bar or register. For a Dubai-registered signatory, the Government of Dubai Legal Affairs Department publishes a public directory of advocates and legal consultants showing status, registration number and licence expiry. Registration-number lookups work; the directory covers Dubai (onshore) registrations only.</p>
+          <ul>
+            <li><a href="https://lpsprd.legal.dubai.gov.ae/dlad-directory" rel="noopener" target="_blank" data-event="lp-dlad">Dubai Legal Affairs Department directory<span class="sr"> (opens in a new tab)</span></a></li>
+            <li>VARA (Dubai) is the V0 jurisdiction, on Base Sepolia (testnet). What LEXI does and does not do there: <a href="/vara-compliance/">VARA compliance (Dubai)</a>.</li>
+          </ul>
+          <a class="btn sm" href="/credential/" data-event="lp-credential">Verify a credential</a>
+        </div>
+        <p class="route">Want the arrangement in writing before applying? Ask for the signatory terms overview in your message and we will send what exists today, marked draft where it is draft. Applying commits you to nothing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. FAQ: native details, mirrored verbatim by the FAQPage node ===== -->
+<section class="pt0" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Questions licensed lawyers ask</p>
+      <h2 id="faq-h" class="pkh">Four short answers.</h2>
+    </div>
+    <div class="faq maxw rv d1">
+      <details id="why-lawyers">
+        <summary>Why are LEXI's co-signers licensed lawyers only?</summary>
+        <div class="a"><p>LEXI's co-signers are licensed lawyers because a legal opinion is a professional act that bar and registration rules reserve to lawyers, and because the one VARA rule that names a signer (Annex 2 of the Issuance Rulebook, asset-referenced virtual assets) names a duly registered practising lawyer and excludes internal counsel. Compliance officers do not stake or co-sign on LEXI. They appear as readers: the people at exchanges and VASPs who check a credential before relying on it.</p></div>
+      </details>
+      <details id="fee-share">
+        <summary>Does LEXI take a share of a co-signing lawyer's fee?</summary>
+        <div class="a"><p>No. The protocol retains your firm directly and pays the retainer outside LEXI. LEXI takes no share of your fee, and 0% of protocol revenue goes to the co-signing lawyer. The economics of your practice do not route through a token.</p></div>
+      </details>
+      <details id="relier-slash">
+        <summary>Can a relier slash a co-signing lawyer's stake?</summary>
+        <div class="a"><p>No. Reliers flag disputes; a committee adjudicates them. Slashing requires proven misconduct and is capped in basis points. Nobody is slashed because a regulator disagrees with an opinion, and $LEXI holders never vote on whether a protocol is compliant.</p></div>
+      </details>
+      <details id="before-mainnet">
+        <summary>Can a licensed lawyer apply before mainnet?</summary>
+        <div class="a"><p>Yes. LEXI is onboarding a small founding panel of licensed lawyers before mainnet, VARA (Dubai) first. V0 runs on Base Sepolia (testnet) and mainnet is targeted post-audit, Q4 2026. Applying commits you to nothing. No $LEXI token has been issued, so no stake is posted today.</p></div>
+      </details>
+    </div>
+    <p class="tlink rv d2" style="margin-top:24px">More short answers, including who the lawyer's client is and what a credential contains: <a href="/faq/" data-event="lp-faq">the LEXI FAQ</a></p>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">The trust layer for institutional Web3.</h2>
+    <p>Apply with your jurisdictions of licensure and one line on your practice. A founder reads every application. Contacting LEXI does not create an attorney-client relationship, and applying commits you to nothing.</p>
+    <div class="ctas"><a class="btn pri lg" href="/contact/?you=a%20licensed" data-event="cta-final-cosign">Apply to co-sign</a><a class="btn lg" href="/contact/" data-event="cta-final-talk">Talk to us</a></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
-          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
           LEXI<span class="dot">.</span>
         </a>
-        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
-        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET OCT 2026, WEEK 4</span>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
       </div>
       <div>
         <div class="fh">Protocol</div>
@@ -204,27 +394,29 @@
           <li><a href="/how-it-works/">How it works</a></li>
           <li><a href="/credential/">The credential</a></li>
           <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
-          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
           <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
         </ul>
       </div>
       <div>
-        <div class="fh">Audiences</div>
+        <div class="fh">For</div>
         <ul>
-          <li><a href="/protocols/">For protocols</a></li>
-          <li><a href="/legal-professionals/">For legal professionals</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
           <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Company</div>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#team">Team</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
-          <li><a href="https://www.linkedin.com/company/lexi-protocol/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/terms/">Terms</a></li>
         </ul>
@@ -237,6 +429,8 @@
       <div class="fmeta">
         <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
         <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
       </div>
     </div>
   </div>

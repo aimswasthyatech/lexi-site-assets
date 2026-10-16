@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>$LEXI Token: Staking, Buyback-and-Burn, Governance</title>
-<meta name="description" content="The $LEXI token design: USDC pricing, the 40/60 split with buyback-and-burn, the signatory stake, governance. No token is currently offered for sale.">
+<title>$LEXI Token Documentation: No Token Is Live | LEXI Protocol</title>
+<meta name="description" content="How $LEXI is designed: USDC pricing, 40/60/0 revenue use, the lawyer stake, governance scope. No $LEXI token has been issued and none is offered for sale.">
 <link rel="canonical" href="https://lexiprotocol.com/token/">
 <meta name="theme-color" content="#0A0C12">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LEXI Protocol">
-<meta property="og:title" content="$LEXI: how the token works">
-<meta property="og:description" content="The $LEXI token design: USDC pricing, the 40/60 split with buyback-and-burn, the signatory stake, governance. No token is currently offered for sale.">
+<meta property="og:title" content="LEXI Protocol · How $LEXI works">
+<meta property="og:description" content="How $LEXI is designed: USDC pricing, 40/60/0 revenue use, the lawyer stake, governance scope. No $LEXI token has been issued and none is offered for sale.">
 <meta property="og:url" content="https://lexiprotocol.com/token/">
 <meta property="og:image" content="https://lexiprotocol.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,77 +24,57 @@
 <meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LEXIprotocol">
-<meta name="twitter:title" content="$LEXI: how the token works">
-<meta name="twitter:description" content="The $LEXI token design: USDC pricing, the 40/60 split with buyback-and-burn, the signatory stake, governance. No token is currently offered for sale.">
+<meta name="twitter:title" content="LEXI Protocol · How $LEXI works">
+<meta name="twitter:description" content="How $LEXI is designed: USDC pricing, 40/60/0 revenue use, the lawyer stake, governance scope. No $LEXI token has been issued and none is offered for sale.">
 <meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
 <meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://lexiprotocol.com/#organization",
-   "name": "LEXI Protocol",
-   "alternateName": "LEXI",
-   "url": "https://lexiprotocol.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://lexiprotocol.com/apple-touch-icon.png",
-    "width": 180,
-    "height": 180
-   },
-   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
-   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed legal professionals' co-signed legal opinions as verifiable on-chain credentials. It is not a law firm, and it has not launched a token.",
-   "email": "info@lexiprotocol.com",
-   "sameAs": [
-    "https://x.com/LEXIprotocol",
-    "https://www.linkedin.com/company/lexi-protocol/",
-    "https://github.com/Lexi-Protocol"
-   ]
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://lexiprotocol.com/#website",
-   "url": "https://lexiprotocol.com/",
-   "name": "LEXI Protocol",
-   "publisher": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "inLanguage": "en"
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://lexiprotocol.com/token/#webpage",
-   "url": "https://lexiprotocol.com/token/",
-   "name": "$LEXI Token: Staking, Buyback-and-Burn, Governance",
-   "isPartOf": {
-    "@id": "https://lexiprotocol.com/#website"
-   },
-   "about": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "datePublished": "2026-07-03",
-   "dateModified": "2026-07-03"
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://lexiprotocol.com/"
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
+    },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#lex-arbitrage", "name": "Lex Arbitrage", "alternateName": "@lex_arbitrage", "jobTitle": "Co-Founder and CEO", "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.", "url": "https://lexiprotocol.com/about/#lex-arbitrage", "sameAs": ["https://x.com/lex_arbitrage"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#karthik", "name": "Karthik", "jobTitle": "Co-Founder and CTO", "url": "https://lexiprotocol.com/about/#karthik", "sameAs": ["https://x.com/implied_vol"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "name": "Ben Dhaya Ahmed", "jobTitle": "Co-Founder and CGO", "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "WebSite", "@id": "https://lexiprotocol.com/#website", "url": "https://lexiprotocol.com/", "name": "LEXI Protocol", "alternateName": "LEXI", "publisher": { "@id": "https://lexiprotocol.com/#organization" }, "inLanguage": "en" },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/token/#webpage",
+      "url": "https://lexiprotocol.com/token/",
+      "name": "$LEXI Token Documentation: No Token Is Live | LEXI Protocol",
+      "description": "How $LEXI is designed: USDC pricing, 40/60/0 revenue use, the lawyer stake, governance scope. No $LEXI token has been issued and none is offered for sale.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/token/#breadcrumb" }
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "$LEXI token",
-     "item": "https://lexiprotocol.com/token/"
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/token/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "$LEXI token", "item": "https://lexiprotocol.com/token/" }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -102,92 +83,195 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap"><div class="navrow">
-    <a class="brand" href="/" aria-label="LEXI Protocol home">
-      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
-      LEXI<span class="dot">.</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-    <div class="nl" id="nav-list">
-      <a href="/how-it-works/">How it works</a>
-      <a href="/crypto-legal-opinion/">Legal opinions</a>
-      <a href="/vara-compliance/">VARA compliance</a>
-      <a href="/protocols/">For protocols</a>
-      <a href="/legal-professionals/">For legal professionals</a>
-      <a href="/token/" aria-current="page">$LEXI</a>
-      <a href="/about/">About</a>
-      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
-    </div>
-  </div></div>
-</nav>
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
 
 <main id="main">
+
+<!-- Impostor-token notice: Sky on Surface, never aqua. Draft wording from BRIEF section 4; founder sign-off pending. -->
+<div class="banner"><div class="wrap"><span class="badge">[NOTICE]</span><p><b>LEXI Protocol has not issued a token.</b> Any token trading under the names LEXI, Lexi, LEXI Protocol or LexiAI, on any chain, is not issued by LEXI Protocol and has no connection to it. Our only channels are lexiprotocol.com, x.com/LEXIprotocol and linkedin.com/company/lexi-protocol.</p></div></div>
+
 <header class="pagehead wrap">
-  <p class="crumbs"><a href="/">Home</a> / $LEXI token</p>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">$LEXI token</li>
+  </ol>
   <p class="eyebrow">Token documentation</p>
   <h1>How $LEXI works</h1>
-  <p class="lede">This page documents the token's design role in the protocol. It is written as documentation, not promotion.</p>
-  <div class="notice mt24"><strong>No token is live.</strong> $LEXI has not launched, no sale is open, and no launch date is announced on this site. Nothing on this page is an offer, a solicitation, or advice of any kind, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</div>
+  <p class="lede">The token's design role in the protocol, as documentation: what it is for, where protocol revenue goes, what the stake is, and what governance covers. No $LEXI token has been issued.</p>
+  <div class="notice mt24"><b>No token is live.</b> No $LEXI token has been issued and no public sale is open. Nothing on this page is an offer, a solicitation, or advice of any kind, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</div>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
 </header>
 
-<section style="padding-top:30px"><div class="wrap prose">
-  <h2 id="usdc">Customers pay in USDC, not $LEXI</h2>
-  <p>Every service on LEXI is priced in USDC: protocols pay a USDC fee per credential, and reliers pay a fixed USDC fee for reliance access. Neither a protocol nor a relier ever needs to hold $LEXI. This is deliberate: a compliance bill should not float with a token price. The pricing model is documented at <a href="/pricing.md">/pricing.md</a>.</p>
-
-  <h2 id="split">Where protocol revenue goes</h2>
-  <p>The protocol's USDC revenue follows a fixed split, set at genesis and adjustable by governance after launch:</p>
-  <div class="tblwrap mt16" style="max-width:640px">
-    <table>
-      <thead><tr><th scope="col">Share</th><th scope="col">Destination</th><th scope="col">What it does</th></tr></thead>
-      <tbody>
-        <tr><td class="mono">40%</td><td>Buyback and burn</td><td>Used to buy $LEXI on a Base DEX and burn it, with slippage and TWAP guards</td></tr>
-        <tr><td class="mono">60%</td><td>Treasury</td><td>Funds engine costs, audits and operations</td></tr>
-        <tr><td class="mono">0%</td><td>Co-signing professional</td><td>The professional's firm is retained by the protocol separately, outside LEXI</td></tr>
-      </tbody>
-    </table>
+<!-- ===== 1. STATUS: the liftable passage beside the token facts panel ===== -->
+<section class="pt32" aria-labelledby="status-h">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="split">
+      <div class="prose">
+        <h2 id="status-h" style="margin-top:0">Status</h2>
+        <div class="chunk">
+          <div class="k">As of 2026-10-16</div>
+          <p>No token is live. No $LEXI token has been issued and no public sale is open. $LEXI is designed as the protocol's staking and governance asset on Base: a fixed supply of one billion, burnable, with no new issuance. Customers never need it. V0 runs on Base Sepolia (testnet), and the token contracts are not deployed.</p>
+        </div>
+        <p>The mechanics on this page are protocol design, published so that anyone doing diligence can read them. They can change through the audit and the governance process. When something here changes, the page changes and its reviewed date moves.</p>
+        <p>Other companies and tokens use the names LEXI, Lexi or LexiAI. None is connected to LEXI Protocol, and the notice at the top of this page says so. The namesakes are listed in <a href="/about/#namesake">the key facts</a>. Short answers on the token's status and the stake are in <a href="/faq/#token">the LEXI FAQ</a>.</p>
+      </div>
+      <div class="rv d1">
+        <div class="registry"><span class="xh" aria-hidden="true"></span>
+          <div class="rh">Token facts <span>protocol design</span></div>
+          <div class="rr"><span class="k">Name</span><span>$LEXI <em>· the protocol's staking and governance asset, as designed</em></span></div>
+          <div class="rr"><span class="k">Chain</span><span>Base <em>· token contracts not deployed; V0 runs on Base Sepolia (testnet)</em></span></div>
+          <div class="rr"><span class="k">Supply</span><span>One billion, fixed <em>· burnable, no new issuance</em></span></div>
+          <div class="rr"><span class="k">Needed by customers</span><span>Never <em>· services are priced in USDC</em></span></div>
+          <div class="rr"><span class="k">Needed to co-sign</span><span>An eligibility stake of about $5,000, USD-pegged <em>· 14-day unbonding</em></span></div>
+          <div class="rr"><span class="k">Governance scope</span><span>Jurisdictions, fees, slashing conditions, treasury <em>· never whether a protocol is compliant</em></span></div>
+          <div class="rr"><span class="k">Status</span><span>No $LEXI token has been issued <em>· no public sale is open</em></span></div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <h2 id="roles">What the token is for</h2>
-  <ul>
-    <li><strong>Staking.</strong> Legal professionals stake a USD-pegged amount of $LEXI, about $5,000, to be eligible to co-sign. The requirement is re-pegged against price so the dollar cost of participation stays stable. The stake is the bond that committee-adjudicated slashing acts on, with a 14-day unbonding period.</li>
-    <li><strong>Governance.</strong> Holders govern jurisdiction expansion, fee parameters, slashing conditions and treasury actions. Token holders never vote on whether a protocol is compliant; that judgment belongs to the licensed professional who signs.</li>
-  </ul>
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
 
-  <h2 id="supply">Supply facts</h2>
-  <ul>
-    <li>Fixed supply of one billion $LEXI, on Base. The token is burnable; burned supply is gone.</li>
-    <li>No new issuance mechanism. The buyback module burns what it buys.</li>
-  </ul>
-
-  <h2 id="why-token">Why a token at all</h2>
-  <p>Two reasons, stated flatly. First, permissionless participation: a licensed professional anywhere can stake and join the panel without signing a commercial contract with us, which a SaaS seat cannot do. Second, the stake gives the co-signature economic weight that a directory listing does not have: a bond that misconduct can forfeit, under a committee's judgment, not an algorithm's.</p>
-
-  <div class="truth mt40" style="max-width:640px">
-    <p class="k">What is true today</p>
-    <p>The token contracts are part of the V0/V1 build and are not deployed. The mechanics above are protocol design, published for transparency, and they can change through the audit and governance process. When something on this page changes, the page changes.</p>
+<!-- ===== 2. WHERE REVENUE GOES: the 40/60/0 split as a table, stated neutrally ===== -->
+<section aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Where revenue goes</p>
+      <h2 id="rev-h"><span class="fade">Protocol USDC revenue, as designed.</span></h2>
+      <p>Every service on LEXI is priced in USDC: protocols pay a USDC fee per credential, and reliers pay a fixed USDC fee for reliance access. Neither a protocol nor a relier ever needs to hold $LEXI, so a compliance bill is never denominated in the token. The protocol's USDC revenue then follows a fixed split. The split is a protocol parameter, and changing it is a governance matter.</p>
+    </div>
+    <div class="tblwrap rv d1" style="max-width:860px">
+      <table>
+        <caption>Protocol USDC revenue split, as designed · Page last reviewed <time datetime="2026-10-16">2026-10-16</time></caption>
+        <thead><tr><th scope="col">Share</th><th scope="col">Destination</th><th scope="col">What it does</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">40%</td><td>Acquired on-market and retired</td><td>Used to acquire $LEXI on-market and retire it. Retired supply is gone; the design includes slippage and time-weighted price guards on the purchase.</td></tr>
+          <tr><td class="mono">60%</td><td>Treasury and operations</td><td>Funds the treasury and operations.</td></tr>
+          <tr><td class="mono">0%</td><td>The co-signing lawyer</td><td>The lawyer's firm is retained by the protocol separately, outside LEXI. No fee routes through the token.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fig rv d2"><b>Fig. 01</b> Services are priced in USDC. Customers never need $LEXI. The pricing model, without price points, is documented at <a href="/pricing.md">/pricing.md</a>; price points publish at mainnet.</p>
   </div>
+</section>
 
-  <p class="updated">Last updated: 2026-07-03</p>
-</div></section>
+<!-- ===== 3. WHAT THE TOKEN IS FOR: staking, governance, and what holders never decide ===== -->
+<section class="for" aria-labelledby="roles-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:34px">
+      <p class="eyebrow">What the token is for</p>
+      <h2 id="roles-h" class="pkh">Two roles: staking and governance.</h2>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>Staking</h3>
+        <p>A licensed lawyer posts an eligibility stake, a USD-pegged amount of about $5,000 in $LEXI, to be eligible to co-sign. The requirement is re-pegged so the dollar cost of participation stays stable, and unbonding takes 14 days. The stake is the bond that committee-adjudicated slashing acts on: proven misconduct only, capped in basis points. Reliers flag disputes; they do not slash. Only co-signers stake. What a licensed lawyer signs and stakes: <a href="/legal-professionals/">for legal professionals</a>.</p>
+      </div>
+      <div>
+        <h3>Governance</h3>
+        <p>Holders govern jurisdiction expansion, fee parameters, slashing conditions and treasury actions. Those four matters are the whole scope. The slashing conditions and the revenue split above are parameters that governance can change.</p>
+      </div>
+      <div>
+        <h3>What holders never decide</h3>
+        <p>Whether a protocol is compliant. That judgment belongs to the licensed lawyer who co-signs the opinion, and no vote changes it. No AI signs anything, and no holder vote stands in for a signature. Nothing about the token is needed to obtain, read or rely on a credential.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== 4. WHY A TOKEN AT ALL: stated flatly ===== -->
+<section class="pt32" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">Why a token at all</p>
+        <h2 id="why-h" class="pkh">Two reasons, stated flatly.</h2>
+      </div>
+      <div class="prose rv d1">
+        <p>First, an open eligibility rule. Any licensed lawyer who passes the licensure check can post the stake and become eligible to co-sign. The rule is the same for every firm.</p>
+        <p>Second, the stake gives the co-signature economic weight that a directory listing does not have: a bond that misconduct can forfeit, under a committee's judgment, not an algorithm's.</p>
+        <p>Neither reason needs a customer to hold the token. Protocols pay in USDC, reliers pay in USDC, and reading public on-chain metadata is free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. WHAT IS TRUE TODAY ===== -->
+<section class="truthsec pt0" aria-labelledby="truth-h">
+  <div class="wrap">
+    <div class="truth rv">
+      <h2 class="k" id="truth-h">What is true today</h2>
+      <p>What is true today: a working cross-border legal practice, a proprietary corpus of real regulatory opinions, and a warm pipeline. V0 is live on Base Sepolia (testnet), end to end: documentation in, engine first pass, co-signature flow, credential minted. Nothing is live on mainnet yet, and this page will say so until it is.</p>
+    </div>
+    <p class="dimp rv d1" style="max-width:760px;margin:24px auto 0;text-align:left;font-size:.98rem">The token contracts are part of the build and are not deployed. No $LEXI token has been issued, no stake is posted today, and no public sale is open. $LEXI is designed as the protocol's staking and governance asset; nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction.</p>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">The trust layer for institutional Web3.</h2>
+    <p>This page is documentation. For what is built, where it runs, the team, the architecture and the roadmap, read the key facts. Questions about the stake or the token's status go to a founder, one to one.</p>
+    <div class="ctas"><a class="btn pri lg" href="/about/" data-event="cta-final-facts">Read the key facts</a><a class="btn lg" href="/contact/" data-event="cta-final-talk">Talk to us</a></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
-          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
           LEXI<span class="dot">.</span>
         </a>
-        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
-        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET OCT 2026, WEEK 4</span>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
       </div>
       <div>
         <div class="fh">Protocol</div>
@@ -195,27 +279,29 @@
           <li><a href="/how-it-works/">How it works</a></li>
           <li><a href="/credential/">The credential</a></li>
           <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
-          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
           <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
         </ul>
       </div>
       <div>
-        <div class="fh">Audiences</div>
+        <div class="fh">For</div>
         <ul>
-          <li><a href="/protocols/">For protocols</a></li>
-          <li><a href="/legal-professionals/">For legal professionals</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
           <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Company</div>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#team">Team</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
-          <li><a href="https://www.linkedin.com/company/lexi-protocol/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/terms/">Terms</a></li>
         </ul>
@@ -228,6 +314,8 @@
       <div class="fmeta">
         <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
         <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
       </div>
     </div>
   </div>

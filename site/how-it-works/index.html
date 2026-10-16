@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How LEXI Works: AI First Pass, Lawyer Co-Sign, Credential</title>
-<meta name="description" content="The LEXI flow: submit documentation once, the engine runs the first pass as work product, a licensed professional co-signs, the credential mints on Base.">
+<title>How LEXI Works: Engine First Pass, Lawyer Co-Sign | LEXI</title>
+<meta name="description" content="One submission, one assigned licensed lawyer, one credential on Base. V0 covers VARA (Dubai) on Base Sepolia testnet; MiCA and FIU-IND are V1, next up.">
 <link rel="canonical" href="https://lexiprotocol.com/how-it-works/">
 <meta name="theme-color" content="#0A0C12">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LEXI Protocol">
-<meta property="og:title" content="How LEXI works, from documentation to on-chain credential">
-<meta property="og:description" content="The LEXI flow: submit documentation once, the engine runs the first pass as work product, a licensed professional co-signs, the credential mints on Base.">
+<meta property="og:title" content="LEXI Protocol · How LEXI works: from documentation to on-chain credential">
+<meta property="og:description" content="One submission, one assigned licensed lawyer, one credential on Base. V0 covers VARA (Dubai) on Base Sepolia testnet; MiCA and FIU-IND are V1, next up.">
 <meta property="og:url" content="https://lexiprotocol.com/how-it-works/">
 <meta property="og:image" content="https://lexiprotocol.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,77 +24,112 @@
 <meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LEXIprotocol">
-<meta name="twitter:title" content="How LEXI works, from documentation to on-chain credential">
-<meta name="twitter:description" content="The LEXI flow: submit documentation once, the engine runs the first pass as work product, a licensed professional co-signs, the credential mints on Base.">
+<meta name="twitter:title" content="LEXI Protocol · How LEXI works: from documentation to on-chain credential">
+<meta name="twitter:description" content="One submission, one assigned licensed lawyer, one credential on Base. V0 covers VARA (Dubai) on Base Sepolia testnet; MiCA and FIU-IND are V1, next up.">
 <meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
 <meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://lexiprotocol.com/#organization",
-   "name": "LEXI Protocol",
-   "alternateName": "LEXI",
-   "url": "https://lexiprotocol.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://lexiprotocol.com/apple-touch-icon.png",
-    "width": 180,
-    "height": 180
-   },
-   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
-   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed legal professionals' co-signed legal opinions as verifiable on-chain credentials. It is not a law firm, and it has not launched a token.",
-   "email": "info@lexiprotocol.com",
-   "sameAs": [
-    "https://x.com/LEXIprotocol",
-    "https://www.linkedin.com/company/lexi-protocol/",
-    "https://github.com/Lexi-Protocol"
-   ]
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://lexiprotocol.com/#website",
-   "url": "https://lexiprotocol.com/",
-   "name": "LEXI Protocol",
-   "publisher": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "inLanguage": "en"
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://lexiprotocol.com/how-it-works/#webpage",
-   "url": "https://lexiprotocol.com/how-it-works/",
-   "name": "How LEXI Works: AI First Pass, Lawyer Co-Sign, Credential",
-   "isPartOf": {
-    "@id": "https://lexiprotocol.com/#website"
-   },
-   "about": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "datePublished": "2026-07-03",
-   "dateModified": "2026-09-28"
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://lexiprotocol.com/"
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "How it works",
-     "item": "https://lexiprotocol.com/how-it-works/"
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "name": "Lex Arbitrage",
+      "alternateName": "@lex_arbitrage",
+      "jobTitle": "Co-Founder and CEO",
+      "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+      "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "sameAs": ["https://x.com/lex_arbitrage"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#karthik",
+      "name": "Karthik",
+      "jobTitle": "Co-Founder and CTO",
+      "url": "https://lexiprotocol.com/about/#karthik",
+      "sameAs": ["https://x.com/implied_vol"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "name": "Ben Dhaya Ahmed",
+      "jobTitle": "Co-Founder and CGO",
+      "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lexiprotocol.com/#website",
+      "url": "https://lexiprotocol.com/",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/how-it-works/#webpage",
+      "url": "https://lexiprotocol.com/how-it-works/",
+      "name": "How LEXI Works: Engine First Pass, Lawyer Co-Sign | LEXI",
+      "description": "One submission, one assigned licensed lawyer, one credential on Base. V0 covers VARA (Dubai) on Base Sepolia testnet; MiCA and FIU-IND are V1, next up.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/how-it-works/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/how-it-works/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How it works", "item": "https://lexiprotocol.com/how-it-works/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lexiprotocol.com/how-it-works/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the engine's output a legal opinion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The LEXI engine's first pass is work product: a checklist, a document review and a risk read prepared for the licensed lawyer. It is never the legal opinion, it never goes on-chain as a verdict, and there is no published compliance score. The engine is in development on a proprietary corpus of real regulatory work. No AI signs anything at LEXI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who signs the legal opinion?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One assigned licensed lawyer. They review the engine's work product, run their own diligence and co-sign the legal opinion, with a USD-pegged stake of about $5,000 in $LEXI behind the signature. Compliance officers do not co-sign; they read the credential. Today, on Base Sepolia testnet, that means a lawyer for VARA (Dubai). The EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued."
+          }
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -102,83 +138,202 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap"><div class="navrow">
-    <a class="brand" href="/" aria-label="LEXI Protocol home">
-      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
-      LEXI<span class="dot">.</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-    <div class="nl" id="nav-list">
-      <a href="/how-it-works/" aria-current="page">How it works</a>
-      <a href="/crypto-legal-opinion/">Legal opinions</a>
-      <a href="/vara-compliance/">VARA compliance</a>
-      <a href="/protocols/">For protocols</a>
-      <a href="/legal-professionals/">For legal professionals</a>
-      <a href="/token/">$LEXI</a>
-      <a href="/about/">About</a>
-      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
-    </div>
-  </div></div>
-</nav>
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/" aria-current="page">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
 
 <main id="main">
+
+<!-- ===== PAGE HEADER ===== -->
 <header class="pagehead wrap">
-  <p class="crumbs"><a href="/">Home</a> / How it works</p>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">How it works</li>
+  </ol>
   <p class="eyebrow">The flow</p>
   <h1>How LEXI works: from documentation to on-chain credential</h1>
-  <p class="lede">One submission, one assigned professional per jurisdiction, one verifiable artifact at the end. Here is each step, including the parts that stay human.</p>
+  <p class="lede">One submission, one assigned licensed lawyer. V0 covers VARA (Dubai) on Base Sepolia testnet; MiCA and FIU-IND are V1, next up. Here is each step, including the parts that stay human: the engine's output is work product, not an opinion, and no AI signs anything.</p>
+  <p class="disc">LEXI is not a law firm. A credential is not a licence, a registration, or an approval by any regulator.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
 </header>
 
-<section style="padding-top:30px"><div class="wrap prose">
-  <h2 id="step-1">Step 1. Submit once, pick your jurisdictions</h2>
-  <p>You open an engagement on the LEXI portal, upload your documentation to encrypted storage, and select the jurisdictions you want covered. Every participant carries a LEXI ID, a unique on-chain identity, so the engagement has named parties from the start. An engagement is a workspace shared by your team and the assigned firm; either side can open one and invite the other.</p>
-  <p>Your documents live in an encrypted store, not on-chain. Only hash commitments ever touch the chain, which is what lets the system honour deletion and erasure requests under laws like India's DPDP Act and the GDPR.</p>
-
-  <h2 id="step-2">Step 2. The engine runs the first pass</h2>
-  <p>A fine-tuned engine, in development on a proprietary corpus of real regulatory work, monitors each selected jurisdiction. It builds the compliance checklist for your case, checks your documentation against it, and produces an internal risk read.</p>
-  <p><strong>All of this output is work product.</strong> It is never the opinion, it never goes on-chain as a verdict, and there is no published "compliance score". Anything the engine is not confident about routes to the human who owns the judgment. No AI signs anything at LEXI.</p>
-
-  <h2 id="step-3">Step 3. A licensed professional takes over</h2>
-  <p>A qualified legal professional, assigned to your engagement and staked to participate, reviews the work product, runs their own diligence, and co-signs <a href="/crypto-legal-opinion/">the legal opinion</a>.</p>
-  <p>The professional's firm is retained by your project directly, the way legal engagements already work. LEXI coordinates the flow; it does not sit between you and your counsel. More on the professional's side of the table on the <a href="/legal-professionals/">legal professionals page</a>.</p>
-
-  <h2 id="step-4">Step 4. The opinion becomes a credential</h2>
-  <p>The core contracts verify the co-signed attestation and mint a credential on Base, one per cleared jurisdiction. "Cleared" here means exactly this: a licensed professional has co-signed a scoped legal opinion covering that jurisdiction. The credential is dated, scope-bound, non-transferable, and it names who may rely on it.</p>
-  <p>On-chain, the credential carries the firm, the signatory, the jurisdiction, the dates, the status, the reliance mode, the governing law, and hash commitments that bind the exact opinion text. The opinion body itself stays off-chain and encrypted, readable by the credential's named reliers. Anyone you name can <a href="/credential/">verify the credential on-chain</a> in a single call.</p>
-
-  <h2 id="after">What happens after</h2>
-  <ul>
-    <li><strong>Reliance is explicit.</strong> A relier accepts the reliance terms before reliance attaches, and each reliance is recorded on-chain. By default the professional whitelists who may rely (Selective mode).</li>
-    <li><strong>Status is live.</strong> A credential reads Live, Expired, or Revoked. Counterparties always see the current state, not a stale PDF.</li>
-    <li><strong>Disputes have a path.</strong> Reliers can flag a dispute. A committee adjudicates it, and a professional's stake can be slashed for proven misconduct. Nobody slashes anybody unilaterally.</li>
-  </ul>
-
-  <div class="notice mt24">Timelines depend on your documentation and the jurisdiction. We would rather quote your case honestly than print a number here that pretends every case is the same.</div>
-
-  <div class="mt40" style="display:flex;gap:14px;flex-wrap:wrap">
-    <a class="btn primary" href="/contact/" data-event="cta-how-page">Request early access</a>
-    <a class="btn" href="/vara-compliance/">Start with VARA compliance</a>
+<!-- ===== THE FLOW: four steps on one rail; each indicator is the same ring, drawn a quarter further ===== -->
+<section class="flow pt32" aria-labelledby="flow-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="flow-h"><span class="fade">From documents to credential, in one flow.</span></h2>
+    </div>
+    <ol class="rail">
+      <li class="step rv"><div class="rk"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#gpm" class="track"/><use href="#gpm" style="stroke-dasharray:25 100"/></svg><span class="n">01</span></div><h3>Submit once</h3><p>Upload documentation to encrypted storage and pick the jurisdictions you need. VARA (Dubai) today, on testnet.</p></li>
+      <li class="step rv d1"><div class="rk"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#gpm" class="track"/><use href="#gpm" style="stroke-dasharray:50 100"/></svg><span class="n">02</span></div><h3>The engine runs the first pass</h3><p>Checklist, document review, risk read. The output is <b>work product, not an opinion</b>. No AI signs anything.</p></li>
+      <li class="step rv d2"><div class="rk"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#gpm" class="track"/><use href="#gpm" style="stroke-dasharray:75 100"/></svg><span class="n">03</span></div><h3>A licensed lawyer takes over</h3><p>They review the work product, run their own diligence, and co-sign the legal opinion with a stake behind the signature.</p></li>
+      <li class="step rv d3"><div class="rk"><svg viewBox="0 0 200 200" aria-hidden="true"><use href="#gpm"/><circle cx="151" cy="151" r="9" fill="#18E0C6"/></svg><span class="n">04</span></div><h3>The opinion becomes a credential</h3><p>Dated, scope-bound, naming its reliers. Hash commitments go to Base, and reliers verify in one call.</p></li>
+    </ol>
+    <p class="fig rv"><b>Fig. 01</b> The flow. One submission, one assigned licensed lawyer, one credential per cleared jurisdiction, where clearing means obtaining a co-signed legal opinion covering that jurisdiction. Runs on Base Sepolia testnet today; nothing is live on mainnet.</p>
+    <div class="after rv">
+      <p>AI-assisted, lawyer co-signed legal opinions, recorded as verifiable credentials on Base; the flow runs on Base Sepolia testnet today. The LEXI engine is in development on a proprietary corpus of real regulatory work. One assigned licensed lawyer co-signs each credential.</p>
+      <a class="btn" href="/credential/" data-event="cta-flow-verify">Verify a credential</a>
+    </div>
   </div>
-</div></section>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== EACH STEP, IN DETAIL ===== -->
+<section class="pt32" aria-labelledby="detail-h">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Each step, in detail</p>
+      <h2 id="detail-h" class="pkh">What happens at each step, and who does it.</h2>
+    </div>
+    <div class="prose">
+      <h3 id="step-1">Step 1. Submit once, pick your jurisdictions</h3>
+      <p>You open an engagement on the LEXI portal, upload your documentation to encrypted storage, and select the jurisdictions you want covered. Today, on Base Sepolia testnet, that means VARA (Dubai); the EU (MiCA) and India (FIU-IND) are V1, next up. Every participant carries a LEXI ID, an on-chain identity, so the engagement has named parties from the start. An engagement is a workspace shared by your team and the assigned firm; either side can open one and invite the other.</p>
+      <p>Your documents live in the encrypted <a href="/glossary/#confidential-store">confidential store</a>, not on-chain. Only hash commitments ever touch the chain, which is what lets the store honour deletion and erasure requests under laws such as India's DPDP Act and the GDPR.</p>
+
+      <h3 id="step-2">Step 2. The engine runs the first pass</h3>
+      <p>The LEXI engine, in development on a proprietary corpus of real regulatory work, works from each selected jurisdiction's rulebooks. It builds the compliance checklist for your case, checks your documentation against it, and produces an internal risk read. That output is the <a href="/glossary/#engine-first-pass">engine first pass</a>.</p>
+      <p><strong>All of it is work product.</strong> It is never the opinion, it never goes on-chain as a verdict, and there is no published compliance score. Anything the engine is not confident about routes to the lawyer who owns the judgment. No AI signs anything at LEXI.</p>
+
+      <h3 id="step-3">Step 3. A licensed lawyer takes over</h3>
+      <p>One licensed lawyer, assigned to your engagement and staked to co-sign, reviews the work product, runs their own diligence, and co-signs the <a href="/glossary/#co-signed-legal-opinion">legal opinion</a>. The opinion is theirs. The stake is USD-pegged, about $5,000 in $LEXI, with a 14-day unbonding period. No $LEXI token has been issued.</p>
+      <p>The lawyer's firm is retained by your project directly, outside LEXI, the way legal engagements already work. LEXI coordinates the flow; it does not sit between you and your counsel, and none of LEXI's revenue goes to the co-signing lawyer. Compliance officers at the parties that rely on the opinion read the credential; they do not co-sign it. More on the lawyer's side of the table on the <a href="/legal-professionals/">legal professionals page</a>.</p>
+
+      <h3 id="step-4">Step 4. The opinion becomes a credential</h3>
+      <p>The co-signed opinion is recorded on Base as a credential, one per <a href="/glossary/#cleared-jurisdiction">cleared jurisdiction</a>. "Cleared" means exactly this: a licensed lawyer has co-signed a scoped legal opinion covering that jurisdiction. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA. The credential is dated, scope-bound and non-transferable (the exact token standard is undecided), and it names who may rely on it.</p>
+      <p>On-chain, the credential carries the firm ID, the signatory, the jurisdiction, the as-of date and expiry, the status, the reliance mode, the governing law, and the scope and opinion hashes that bind the exact text. The opinion body stays off-chain and encrypted, readable by the reliers the credential names. Anyone you name can <a href="/credential/">verify the credential on-chain</a> in one call. On testnet today every credential is a test record; nothing is live on mainnet, and contract addresses publish once the CTO confirms them.</p>
+
+      <h3 id="time">How long it takes</h3>
+      <p>Sequential counsel on the corridor takes 8 to 12 weeks, one engagement after another. LEXI's design target is about 5 days. Design target from complete documents, unmeasured. Your own timeline depends on your documentation and the jurisdiction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT HAPPENS AFTER: three keyed facts in hairline columns ===== -->
+<section class="pt32" aria-labelledby="after-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:34px">
+      <p class="eyebrow">After the credential is recorded</p>
+      <h2 id="after-h" class="pkh">What happens after.</h2>
+    </div>
+    <div class="cols3 rv">
+      <div><h3>Reliance is explicit.</h3><p>A relier accepts the reliance terms before reliance attaches, and each acceptance is recorded on-chain. By default the lawyer names who may rely (Selective mode). Reading the public on-chain metadata is free; reliance access is a fixed USDC fee.</p></div>
+      <div><h3>Status is on-chain.</h3><p>A credential reads Live, Expired or Revoked. Counterparties see the current state, not a stale PDF. Live means unexpired and unrevoked; it never means a regulator approved anything.</p></div>
+      <div><h3>Disputes have a path.</h3><p>Reliers can flag a dispute. A committee adjudicates it, and a lawyer's stake can be slashed for proven misconduct, capped in basis points. Nobody slashes anybody unilaterally.</p></div>
+    </div>
+    <p class="tlink rv" style="margin-top:28px">Reading a credential as an exchange, VASP or Licensed Distributor? <a href="/exchanges/" data-event="after-exchanges">Here is how a credential is read</a></p>
+  </div>
+</section>
+
+<div class="arc arc--top arc--r" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== ARCHITECTURE: three tiers around the Base contracts ===== -->
+<section class="pt32" aria-labelledby="arch-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <p class="eyebrow">Architecture</p>
+        <h2 id="arch-h"><span class="fade">Three tiers around the Base contracts.</span></h2>
+        <p class="dimp" style="margin-top:20px;max-width:46ch">Signing stays client-side. On-chain holds only the hashes. The opinion body lives in an encrypted, EU-hosted confidential store. Built on Base, and Base only.</p>
+        <p class="tlink" style="margin-top:20px">What runs on testnet today, dated: <a href="/updates/" data-event="arch-updates">the build log</a></p>
+      </div>
+      <div class="arch rv d1" style="margin-top:0">
+        <ol>
+          <li><span class="k">Client-side frontend</span><span><b>Protocols, firms and signatories sign their own transactions.</b> The client holds no infrastructure credentials.</span></li>
+          <li><span class="k">EU-hosted backend</span><span>Self-hosted in the EU. <b>Relays signed transactions and owns gas, nonces and retries</b>, so chain flakiness never reaches the client.</span></li>
+          <li><span class="k">Confidential store</span><span>Encrypted opinion bodies, addressed by the backend. <b>On-chain holds only hashes.</b> Base only.</span></li>
+        </ol>
+        <div class="chain"><b>Base contracts</b><span>Base Sepolia (testnet) today</span><span>credential ids and hash commitments only</span><span>mainnet targeted post-audit, Q4 2026</span></div>
+        <p class="fig"><b>Fig. 02</b> Three tiers around the Base contracts. Contracts are audited before mainnet; no auditor is engaged yet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ: two native details; the schema mirrors them verbatim ===== -->
+<section class="pt32" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h" class="pkh">Two questions, answered.</h2>
+    </div>
+    <div class="faq maxw rv">
+      <details id="engine-output">
+        <summary>Is the engine's output a legal opinion?</summary>
+        <div class="a"><p>No. The LEXI engine's first pass is work product: a checklist, a document review and a risk read prepared for the licensed lawyer. It is never the legal opinion, it never goes on-chain as a verdict, and there is no published compliance score. The engine is in development on a proprietary corpus of real regulatory work. No AI signs anything at LEXI.</p></div>
+      </details>
+      <details id="who-signs">
+        <summary>Who signs the legal opinion?</summary>
+        <div class="a"><p>One assigned licensed lawyer. They review the engine's work product, run their own diligence and co-sign the legal opinion, with a USD-pegged stake of about $5,000 in $LEXI behind the signature. Compliance officers do not co-sign; they read the credential. Today, on Base Sepolia testnet, that means a lawyer for VARA (Dubai). The EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.</p></div>
+      </details>
+    </div>
+    <p class="tlink rv" style="margin-top:24px">Building a protocol and want the buyer's view? <a href="/protocols/" data-event="faq-protocols">Multi-jurisdiction compliance, VARA first</a></p>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h" class="rv">The trust layer for institutional Web3.</h2>
+    <p class="rv d1">Early access is a conversation with the founding team about your jurisdictions and your documents. Nothing is live on mainnet yet.</p>
+    <div class="ctas rv d2">
+      <a class="btn pri lg" href="/contact/" data-event="cta-final-access">Request early access</a>
+      <a class="btn lg" href="/legal-professionals/" data-event="cta-final-cosign">Apply to co-sign</a>
+    </div>
+    <p class="tlink rv d3" style="margin-top:24px">Relier, press or diligence? <a href="/contact/" data-event="cta-final-talk">Talk to us</a></p>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
-          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
           LEXI<span class="dot">.</span>
         </a>
-        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
-        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET OCT 2026, WEEK 4</span>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
       </div>
       <div>
         <div class="fh">Protocol</div>
@@ -186,27 +341,29 @@
           <li><a href="/how-it-works/">How it works</a></li>
           <li><a href="/credential/">The credential</a></li>
           <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
-          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
           <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
         </ul>
       </div>
       <div>
-        <div class="fh">Audiences</div>
+        <div class="fh">For</div>
         <ul>
-          <li><a href="/protocols/">For protocols</a></li>
-          <li><a href="/legal-professionals/">For legal professionals</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
           <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Company</div>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#team">Team</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
-          <li><a href="https://www.linkedin.com/company/lexi-protocol/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/terms/">Terms</a></li>
         </ul>
@@ -219,6 +376,8 @@
       <div class="fmeta">
         <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
         <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
       </div>
     </div>
   </div>

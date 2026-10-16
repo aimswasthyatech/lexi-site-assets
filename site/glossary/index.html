@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEXI Glossary: On-Chain Legal Opinion Terms Defined</title>
+<meta name="description" content="Twenty terms LEXI uses, each defined in one paragraph: credential, named relier, reliance mode, as-of date, status, scope hash, stake, the relier check.">
+<link rel="canonical" href="https://lexiprotocol.com/glossary/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* Glossary only: the "Used on" row under each definition, a mono cross-link rail. */
+.glossary .uses{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:8px;display:flex;flex-wrap:wrap;gap:0 10px;align-items:center;line-height:1.4}
+.glossary .uses a{color:var(--sky);border-bottom:0;min-height:36px;display:inline-flex;align-items:center}
+.glossary .uses a:hover{color:var(--ink)}
+.glossary dd code{font-family:var(--mono);font-size:.92em;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol · Glossary: the words LEXI uses, defined">
+<meta property="og:description" content="Twenty terms LEXI uses, each defined in one paragraph: credential, named relier, reliance mode, as-of date, status, scope hash, stake, the relier check.">
+<meta property="og:url" content="https://lexiprotocol.com/glossary/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol · Glossary: the words LEXI uses, defined">
+<meta name="twitter:description" content="Twenty terms LEXI uses, each defined in one paragraph: credential, named relier, reliance mode, as-of date, status, scope hash, stake, the relier check.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://lexiprotocol.com/#organization",
+   "name": "LEXI Protocol",
+   "alternateName": "LEXI",
+   "url": "https://lexiprotocol.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://lexiprotocol.com/apple-touch-icon.png",
+    "width": 180,
+    "height": 180
+   },
+   "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+   "sameAs": [
+    "https://x.com/LEXIprotocol",
+    "https://www.linkedin.com/company/lexi-protocol",
+    "https://github.com/Lexi-Protocol"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "info@lexiprotocol.com",
+    "contactType": "general enquiries"
+   },
+   "founder": [
+    {
+     "@id": "https://lexiprotocol.com/about/#lex-arbitrage"
+    },
+    {
+     "@id": "https://lexiprotocol.com/about/#karthik"
+    },
+    {
+     "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed"
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+   "name": "Lex Arbitrage",
+   "alternateName": "@lex_arbitrage",
+   "jobTitle": "Co-Founder and CEO",
+   "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+   "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+   "sameAs": [
+    "https://x.com/lex_arbitrage"
+   ],
+   "worksFor": {
+    "@id": "https://lexiprotocol.com/#organization"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://lexiprotocol.com/about/#karthik",
+   "name": "Karthik",
+   "jobTitle": "Co-Founder and CTO",
+   "url": "https://lexiprotocol.com/about/#karthik",
+   "sameAs": [
+    "https://x.com/implied_vol"
+   ],
+   "worksFor": {
+    "@id": "https://lexiprotocol.com/#organization"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+   "name": "Ben Dhaya Ahmed",
+   "jobTitle": "Co-Founder and CGO",
+   "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+   "worksFor": {
+    "@id": "https://lexiprotocol.com/#organization"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://lexiprotocol.com/#website",
+   "url": "https://lexiprotocol.com/",
+   "name": "LEXI Protocol",
+   "alternateName": "LEXI",
+   "publisher": {
+    "@id": "https://lexiprotocol.com/#organization"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://lexiprotocol.com/glossary/#webpage",
+   "url": "https://lexiprotocol.com/glossary/",
+   "name": "LEXI Glossary: On-Chain Legal Opinion Terms Defined",
+   "description": "Twenty terms LEXI uses, each defined in one paragraph: credential, named relier, reliance mode, as-of date, status, scope hash, stake, the relier check.",
+   "isPartOf": {
+    "@id": "https://lexiprotocol.com/#website"
+   },
+   "about": {
+    "@id": "https://lexiprotocol.com/#organization"
+   },
+   "inLanguage": "en",
+   "datePublished": "2026-10-12",
+   "dateModified": "2026-10-16",
+   "breadcrumb": {
+    "@id": "https://lexiprotocol.com/glossary/#breadcrumb"
+   },
+   "mainEntity": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://lexiprotocol.com/glossary/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://lexiprotocol.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Glossary",
+     "item": "https://lexiprotocol.com/glossary/"
+    }
+   ]
+  },
+  {
+   "@type": "DefinedTermSet",
+   "@id": "https://lexiprotocol.com/glossary/#set",
+   "name": "LEXI Protocol glossary",
+   "url": "https://lexiprotocol.com/glossary/",
+   "description": "Twenty terms LEXI Protocol uses, each defined in one paragraph.",
+   "inLanguage": "en",
+   "publisher": {
+    "@id": "https://lexiprotocol.com/#organization"
+   },
+   "hasDefinedTerm": [
+    {
+     "@id": "https://lexiprotocol.com/glossary/#as-of-date"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#cleared-jurisdiction"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#co-signed-legal-opinion"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#committee-adjudicated-slashing"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#confidential-store"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#credential-id"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#eligibility-stake"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#engine-first-pass"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#expiry"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#lexi-credential"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#named-relier"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#opinion-hash"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#re-issue-bring-down"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#reliance-letter"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#reliance-mode"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#reliance-record"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#scope-hash"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#signatory-and-firm-id"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#status"
+    },
+    {
+     "@id": "https://lexiprotocol.com/glossary/#three-step-relier-check"
+    }
+   ]
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#as-of-date",
+   "name": "As-of date",
+   "description": "The as-of date is the date on which a co-signed legal opinion speaks. It is recorded on-chain in the LEXI credential and shown to anyone who reads it. Opinion practice holds that a closing opinion \"speaks as of its date\" and that the giver has no duty to update it; LEXI makes that date machine-readable instead of leaving it in a PDF footer. A relier compares the as-of date with the events in the corridor tracker to see what changed after the opinion was given.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#as-of-date"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#cleared-jurisdiction",
+   "name": "Cleared jurisdiction",
+   "description": "A jurisdiction is \"cleared\" when a licensed lawyer has co-signed a scoped legal opinion covering it. On LEXI, one credential equals one cleared jurisdiction, and protocols pay per credential in USDC. \"Clearing\" is LEXI's word for obtaining that co-signed opinion; it is not a licence, a registration or an approval by any regulator, and no regulator takes part in it. V0 clears VARA (Dubai) on Base Sepolia testnet; the EU (MiCA) and India (FIU-IND) are V1, next up.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#cleared-jurisdiction"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#co-signed-legal-opinion",
+   "name": "Co-signed legal opinion",
+   "description": "A co-signed legal opinion is a legal opinion that a licensed lawyer has reviewed, tested with their own diligence and signed with a stake behind the signature. The LEXI engine's first pass is work product that the lawyer may use; the opinion is the lawyer's, and no AI signs anything. The opinion body stays off-chain in an encrypted store; its scope and text are bound to the credential by hash commitments on Base.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#co-signed-legal-opinion"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#committee-adjudicated-slashing",
+   "name": "Committee-adjudicated slashing",
+   "description": "Slashing is the loss of part of a lawyer's eligibility stake for proven misconduct, decided by a committee and capped in basis points. Reliers can flag a dispute; they cannot slash. Nobody is slashed for a regulator disagreeing with an opinion, and holders of $LEXI never vote on whether a protocol is compliant. The slashing conditions are a governance matter.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#committee-adjudicated-slashing"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#confidential-store",
+   "name": "Confidential store",
+   "description": "The confidential store is where the opinion body lives: an encrypted, EU-hosted store that only named reliers who have accepted the reliance terms can open. On-chain holds only hashes; the store holds the document they bind. The client holds no infrastructure credentials; a self-hosted backend in the EU relays access. Reading the public on-chain metadata is free; opening the body is reliance access and carries a fixed USDC fee.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#confidential-store"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#credential-id",
+   "name": "Credential id",
+   "description": "A credential id is the 32-byte identifier under which a credential is recorded on Base. It is not a transaction hash and not a token id, and it does not resolve on a block explorer's transaction page. The id shown on this site, 0x8df7…7747, is a V0 test credential id from Base Sepolia (testnet). Contract addresses and transaction links are published once the founding team confirms them.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#credential-id"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#eligibility-stake",
+   "name": "Eligibility stake",
+   "description": "The eligibility stake is the amount a licensed lawyer locks in $LEXI to be eligible to co-sign: a USD-pegged amount of about $5,000, re-pegged so the dollar cost stays stable, with a 14-day unbonding period. Customers never need $LEXI; only co-signers stake. No $LEXI token has been issued, and nothing on this site is an offer of one.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#eligibility-stake"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#engine-first-pass",
+   "name": "Engine first pass",
+   "description": "The engine first pass is the LEXI engine's work product on a submission: a checklist, a document review and a risk read against the jurisdiction's rulebooks. It is prepared for the licensed lawyer, not for the client, and it is never the legal opinion. The engine is in development on a proprietary corpus of real regulatory work. No compliance score is published, on-chain or off.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#engine-first-pass"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#expiry",
+   "name": "Expiry",
+   "description": "Expiry is the date after which a credential's status reads Expired. It is set when the credential is recorded and shown on-chain beside the as-of date. An expired credential still exists, with its hashes and its named reliers; it no longer says the opinion is current. A new opinion means a new credential, never an edit to the old one.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#expiry"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#lexi-credential",
+   "name": "LEXI credential",
+   "description": "A LEXI credential is a co-signed legal opinion committed on-chain: the opinion's firm ID, signatory, jurisdiction, as-of date, expiry, status, reliance mode, governing law, scope hash and opinion hash are recorded on Base, the scope text, assumptions and reservations and permitted-use terms are public off-chain, and the opinion body is encrypted and gated to named reliers. It is non-transferable; the token standard is undecided. It is not a licence, a registration, or an approval by any regulator.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#lexi-credential"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#named-relier",
+   "name": "Named relier",
+   "description": "A named relier is a party the credential lists as entitled to rely on the opinion. Opinion practice limits reliance to the addressee \"and any other person expressly authorized to rely\"; the credential puts that list on-chain. Being named is the third of the three-step check. A party that is not named may read the public metadata but cannot rely on the opinion and cannot open its body.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#named-relier"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#opinion-hash",
+   "name": "Opinion hash",
+   "description": "The opinion hash is a cryptographic commitment to the full text of the co-signed legal opinion, recorded on-chain. A relier who holds the opinion can hash it and compare; if a single character differs, the hashes do not match. This is how a relier knows the document in hand is the one the lawyer signed, without asking the firm and without the text itself touching the chain.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#opinion-hash"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#re-issue-bring-down",
+   "name": "Re-issue (bring-down)",
+   "description": "A re-issue is a new credential recorded when an opinion is refreshed after a change in facts or law. In opinion practice a \"bring-down\" letter updates an earlier letter to a later date; Dubai's VARA expects a revised or supplemental opinion on material change for asset-referenced issuances. On LEXI, nothing is edited after signing: the old credential is left to expire or is revoked, and the new opinion gets its own credential and date.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#re-issue-bring-down"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#reliance-letter",
+   "name": "Reliance letter",
+   "description": "A reliance letter is the document a law firm issues to let a party other than the addressee rely on a PDF opinion, often \"only as of the original date\" and sometimes \"delivered to, but not relied upon\". A LEXI credential replaces the letter with a reliance mode, a named-relier list and an on-chain reliance record, so the question \"may we rely on this?\" has a recorded answer.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#reliance-letter"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#reliance-mode",
+   "name": "Reliance mode",
+   "description": "Reliance mode is the on-chain field that says who may rely: Open or Selective. Selective means only the reliers named on the credential. Open means any party may become a relier by accepting the reliance terms on record and paying the USDC reliance fee. In both modes the reliance is recorded on-chain and the terms are accepted before reliance attaches; nobody relies by reading alone.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#reliance-mode"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#reliance-record",
+   "name": "Reliance record",
+   "description": "A reliance record is the on-chain entry created when a named relier accepts the reliance terms and gains access to the gated opinion body. It is an on-chain transaction signed by the relier, carries a fixed USDC fee, and is the proof that reliance was granted on a given date. Reading the public metadata needs no record and costs nothing.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#reliance-record"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#scope-hash",
+   "name": "Scope hash",
+   "description": "The scope hash is a cryptographic commitment to the document set the opinion covers: the whitepaper version, the structure documents and the facts the lawyer relied on. It is recorded on-chain beside the opinion hash. If the project changes a document after signing, the hash no longer matches, which is the second of the three-step check and the reason the credential cannot be quietly stretched to cover new facts.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#scope-hash"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#signatory-and-firm-id",
+   "name": "Signatory and firm ID",
+   "description": "The signatory is the licensed lawyer who co-signed the opinion; the firm ID identifies the firm through which the lawyer joined LEXI. Both are public on-chain fields. A relier can check the signatory's licence with the issuing bar or register; for a Dubai-registered lawyer, the Government of Dubai Legal Affairs Department publishes a public directory with status and licence expiry. The specimen on this site shows \"A. Signatory\", a fictional placeholder.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#signatory-and-firm-id"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#status",
+   "name": "Status",
+   "description": "Status is the on-chain field that reads Live, Expired or Revoked. Live means the credential is unexpired and unrevoked; it does not mean the opinion is a current legal conclusion, which only the as-of date and the later events can tell you. Expired means the expiry date has passed. Revoked means the credential was withdrawn before its expiry. Status is the first of the three-step check.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#status"
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://lexiprotocol.com/glossary/#three-step-relier-check",
+   "name": "Three-step relier check",
+   "description": "The three-step relier check is how a named relier verifies a LEXI credential in one call: (1) the status is Live, not Expired or Revoked; (2) the scope and opinion hashes match the documents you hold; (3) your entity is a named relier and has accepted the reliance terms. Reading the public on-chain metadata is free; reliance access (the gated body plus an on-chain reliance record) is a fixed USDC fee. V0 runs on Base Sepolia testnet.",
+   "inDefinedTermSet": {
+    "@id": "https://lexiprotocol.com/glossary/#set"
+   },
+   "url": "https://lexiprotocol.com/glossary/#three-step-relier-check"
+  }
+ ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
+
+<main id="main">
+
+<header class="pagehead wrap">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">Glossary</li>
+  </ol>
+  <p class="eyebrow">Glossary</p>
+  <h1>Glossary: the words LEXI uses, defined</h1>
+  <p class="lede">Twenty terms LEXI uses, in alphabetical order, each defined in one paragraph that stands on its own. Every term maps to a field on the credential or a step in the flow. V0 runs on Base Sepolia testnet; nothing is live on mainnet.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
+</header>
+
+<!-- ===== DEFINITION: the liftable chunk in the first 30% ===== -->
+<section aria-labelledby="def-h" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">Definition</p>
+      <h2 id="def-h"><span class="fade">The one definition the other nineteen hang off.</span></h2>
+    </div>
+    <div class="prose">
+      <div class="chunk" id="definition">
+        <div class="k">Definition</div>
+        <p>A LEXI credential is a co-signed legal opinion committed on-chain. It records who signed, for which jurisdiction, as of which date, until when, under which governing law and for whom, and it binds the opinion's scope and text with two hashes. It is not a licence, a registration, or an approval by any regulator.</p>
+      </div>
+      <p>This glossary defines the words LEXI uses for that record and for the flow that produces it. Each entry is one paragraph, opens with a sentence that stands on its own, and ends with a "Used on" line pointing to the pages where the term does work. Four entries come from opinion practice (the <a href="#as-of-date">as-of date</a>, the <a href="#reliance-letter">reliance letter</a>, <a href="#re-issue-bring-down">re-issue</a> and the <a href="#named-relier">named relier</a>); they are here because each one maps to a credential field or a step in the <a href="#three-step-relier-check">three-step relier check</a>.</p>
+      <p>Nothing here is legal advice. LEXI is not a law firm, and a licensed lawyer, not LEXI, gives the opinion a credential records. The field set is the V0 target schema; V0 records credentials on Base Sepolia, Base's public testnet, and mainnet is targeted post-audit, Q4 2026. The credential's anatomy is on <a href="/credential/">the credential</a>; the flow is on <a href="/how-it-works/">how LEXI works</a>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== THE TWENTY TERMS ===== -->
+<section aria-labelledby="terms-h">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">The terms</p>
+      <h2 id="terms-h" class="pkh">Twenty terms, A to Z.</h2>
+      <p>Each heading carries an anchor, so any page or briefing can link straight to a term.</p>
+    </div>
+    <nav class="az" aria-label="Terms"><a href="#as-of-date">As-of date</a><a href="#cleared-jurisdiction">Cleared jurisdiction</a><a href="#co-signed-legal-opinion">Co-signed legal opinion</a><a href="#committee-adjudicated-slashing">Committee-adjudicated slashing</a><a href="#confidential-store">Confidential store</a><a href="#credential-id">Credential id</a><a href="#eligibility-stake">Eligibility stake</a><a href="#engine-first-pass">Engine first pass</a><a href="#expiry">Expiry</a><a href="#lexi-credential">LEXI credential</a><a href="#named-relier">Named relier</a><a href="#opinion-hash">Opinion hash</a><a href="#re-issue-bring-down">Re-issue (bring-down)</a><a href="#reliance-letter">Reliance letter</a><a href="#reliance-mode">Reliance mode</a><a href="#reliance-record">Reliance record</a><a href="#scope-hash">Scope hash</a><a href="#signatory-and-firm-id">Signatory and firm ID</a><a href="#status">Status</a><a href="#three-step-relier-check">Three-step relier check</a></nav>
+    <dl class="glossary">
+  <div class="term" id="as-of-date">
+    <dt><span class="idx">01</span>As-of date<a class="anchor" href="#as-of-date" aria-label="Link to this term: As-of date">#</a></dt>
+    <dd>The as-of date is the date on which a co-signed legal opinion speaks. It is recorded on-chain in the <a href="#lexi-credential">LEXI credential</a> and shown to anyone who reads it. Opinion practice holds that a closing opinion "speaks as of its date" and that the giver has no duty to update it; LEXI makes that date machine-readable instead of leaving it in a PDF footer. A relier compares the as-of date with the events in the <a href="/insights/corridor-tracker-2026/">corridor tracker</a> to see what changed after the opinion was given.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/insights/corridor-tracker-2026/">Corridor tracker</a></dd>
+  </div>
+  <div class="term" id="cleared-jurisdiction">
+    <dt><span class="idx">02</span>Cleared jurisdiction<a class="anchor" href="#cleared-jurisdiction" aria-label="Link to this term: Cleared jurisdiction">#</a></dt>
+    <dd>A jurisdiction is "cleared" when a licensed lawyer has co-signed a scoped legal opinion covering it. On LEXI, one credential equals one cleared jurisdiction, and protocols pay per credential in USDC. "Clearing" is LEXI's word for obtaining that co-signed opinion; it is not a licence, a registration or an approval by any regulator, and no regulator takes part in it. V0 clears VARA (Dubai) on Base Sepolia testnet; the EU (MiCA) and India (FIU-IND) are V1, next up.</dd>
+    <dd class="uses"><span>Used on</span><a href="/protocols/">For protocols</a> <span aria-hidden="true">·</span> <a href="/how-it-works/">How it works</a> <span aria-hidden="true">·</span> <a href="/vara-compliance/">VARA compliance (Dubai)</a></dd>
+  </div>
+  <div class="term" id="co-signed-legal-opinion">
+    <dt><span class="idx">03</span>Co-signed legal opinion<a class="anchor" href="#co-signed-legal-opinion" aria-label="Link to this term: Co-signed legal opinion">#</a></dt>
+    <dd>A co-signed legal opinion is a legal opinion that a licensed lawyer has reviewed, tested with their own diligence and signed with a stake behind the signature. The LEXI engine's <a href="#engine-first-pass">first pass</a> is work product that the lawyer may use; the opinion is the lawyer's, and no AI signs anything. The opinion body stays off-chain in an encrypted store; its scope and text are bound to the credential by hash commitments on Base.</dd>
+    <dd class="uses"><span>Used on</span><a href="/how-it-works/">How it works</a> <span aria-hidden="true">·</span> <a href="/legal-professionals/">For legal professionals</a> <span aria-hidden="true">·</span> <a href="/crypto-legal-opinion/">Crypto legal opinions</a></dd>
+  </div>
+  <div class="term" id="committee-adjudicated-slashing">
+    <dt><span class="idx">04</span>Committee-adjudicated slashing<a class="anchor" href="#committee-adjudicated-slashing" aria-label="Link to this term: Committee-adjudicated slashing">#</a></dt>
+    <dd>Slashing is the loss of part of a lawyer's <a href="#eligibility-stake">eligibility stake</a> for proven misconduct, decided by a committee and capped in basis points. Reliers can flag a dispute; they cannot slash. Nobody is slashed for a regulator disagreeing with an opinion, and holders of $LEXI never vote on whether a protocol is compliant. The slashing conditions are a governance matter.</dd>
+    <dd class="uses"><span>Used on</span><a href="/legal-professionals/">For legal professionals</a> <span aria-hidden="true">·</span> <a href="/token/">$LEXI documentation</a></dd>
+  </div>
+  <div class="term" id="confidential-store">
+    <dt><span class="idx">05</span>Confidential store<a class="anchor" href="#confidential-store" aria-label="Link to this term: Confidential store">#</a></dt>
+    <dd>The confidential store is where the opinion body lives: an encrypted, EU-hosted store that only <a href="#named-relier">named reliers</a> who have accepted the reliance terms can open. On-chain holds only hashes; the store holds the document they bind. The client holds no infrastructure credentials; a self-hosted backend in the EU relays access. Reading the public on-chain metadata is free; opening the body is reliance access and carries a fixed USDC fee.</dd>
+    <dd class="uses"><span>Used on</span><a href="/how-it-works/">How it works</a> <span aria-hidden="true">·</span> <a href="/credential/">The credential</a></dd>
+  </div>
+  <div class="term" id="credential-id">
+    <dt><span class="idx">06</span>Credential id<a class="anchor" href="#credential-id" aria-label="Link to this term: Credential id">#</a></dt>
+    <dd>A credential id is the 32-byte identifier under which a credential is recorded on Base. It is not a transaction hash and not a token id, and it does not resolve on a block explorer's transaction page. The id shown on this site, <code>0x8df7&hellip;7747</code>, is a V0 test credential id from Base Sepolia (testnet). Contract addresses and transaction links are published once the founding team confirms them.</dd>
+    <dd class="uses"><span>Used on</span><a href="/updates/">Build log</a> <span aria-hidden="true">·</span> <a href="/credential/">The credential</a></dd>
+  </div>
+  <div class="term" id="eligibility-stake">
+    <dt><span class="idx">07</span>Eligibility stake<a class="anchor" href="#eligibility-stake" aria-label="Link to this term: Eligibility stake">#</a></dt>
+    <dd>The eligibility stake is the amount a licensed lawyer locks in $LEXI to be eligible to co-sign: a USD-pegged amount of about $5,000, re-pegged so the dollar cost stays stable, with a 14-day unbonding period. Customers never need $LEXI; only co-signers stake. No $LEXI token has been issued, and nothing on this site is an offer of one.</dd>
+    <dd class="uses"><span>Used on</span><a href="/legal-professionals/">For legal professionals</a> <span aria-hidden="true">·</span> <a href="/token/">$LEXI documentation</a></dd>
+  </div>
+  <div class="term" id="engine-first-pass">
+    <dt><span class="idx">08</span>Engine first pass<a class="anchor" href="#engine-first-pass" aria-label="Link to this term: Engine first pass">#</a></dt>
+    <dd>The engine first pass is the LEXI engine's work product on a submission: a checklist, a document review and a risk read against the jurisdiction's rulebooks. It is prepared for the licensed lawyer, not for the client, and it is never the legal opinion. The engine is in development on a proprietary corpus of real regulatory work. No compliance score is published, on-chain or off.</dd>
+    <dd class="uses"><span>Used on</span><a href="/how-it-works/">How it works</a> <span aria-hidden="true">·</span> <a href="/protocols/">For protocols</a></dd>
+  </div>
+  <div class="term" id="expiry">
+    <dt><span class="idx">09</span>Expiry<a class="anchor" href="#expiry" aria-label="Link to this term: Expiry">#</a></dt>
+    <dd>Expiry is the date after which a credential's <a href="#status">status</a> reads Expired. It is set when the credential is recorded and shown on-chain beside the <a href="#as-of-date">as-of date</a>. An expired credential still exists, with its hashes and its named reliers; it no longer says the opinion is current. A new opinion means a new credential, never an edit to the old one.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a></dd>
+  </div>
+  <div class="term" id="lexi-credential">
+    <dt><span class="idx">10</span>LEXI credential<a class="anchor" href="#lexi-credential" aria-label="Link to this term: LEXI credential">#</a></dt>
+    <dd>A LEXI credential is a co-signed legal opinion committed on-chain: the opinion's firm ID, signatory, jurisdiction, as-of date, expiry, status, reliance mode, governing law, scope hash and opinion hash are recorded on Base, the scope text, assumptions and reservations and permitted-use terms are public off-chain, and the opinion body is encrypted and gated to named reliers. It is non-transferable; the token standard is undecided. It is not a licence, a registration, or an approval by any regulator.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/how-it-works/">How it works</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a></dd>
+  </div>
+  <div class="term" id="named-relier">
+    <dt><span class="idx">11</span>Named relier<a class="anchor" href="#named-relier" aria-label="Link to this term: Named relier">#</a></dt>
+    <dd>A named relier is a party the credential lists as entitled to rely on the opinion. Opinion practice limits reliance to the addressee "and any other person expressly authorized to rely"; the credential puts that list on-chain. Being named is the third of the <a href="#three-step-relier-check">three-step check</a>. A party that is not named may read the public metadata but cannot rely on the opinion and cannot open its body.</dd>
+    <dd class="uses"><span>Used on</span><a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/credential/">The credential</a></dd>
+  </div>
+  <div class="term" id="opinion-hash">
+    <dt><span class="idx">12</span>Opinion hash<a class="anchor" href="#opinion-hash" aria-label="Link to this term: Opinion hash">#</a></dt>
+    <dd>The opinion hash is a cryptographic commitment to the full text of the co-signed legal opinion, recorded on-chain. A relier who holds the opinion can hash it and compare; if a single character differs, the hashes do not match. This is how a relier knows the document in hand is the one the lawyer signed, without asking the firm and without the text itself touching the chain.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a></dd>
+  </div>
+  <div class="term" id="re-issue-bring-down">
+    <dt><span class="idx">13</span>Re-issue (bring-down)<a class="anchor" href="#re-issue-bring-down" aria-label="Link to this term: Re-issue (bring-down)">#</a></dt>
+    <dd>A re-issue is a new credential recorded when an opinion is refreshed after a change in facts or law. In opinion practice a "bring-down" letter updates an earlier letter to a later date; Dubai's VARA expects a revised or supplemental opinion on material change for asset-referenced issuances. On LEXI, nothing is edited after signing: the old credential is left to expire or is revoked, and the new opinion gets its own credential and date.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/crypto-legal-opinion/">Crypto legal opinions</a> <span aria-hidden="true">·</span> <a href="/insights/corridor-tracker-2026/">Corridor tracker</a></dd>
+  </div>
+  <div class="term" id="reliance-letter">
+    <dt><span class="idx">14</span>Reliance letter<a class="anchor" href="#reliance-letter" aria-label="Link to this term: Reliance letter">#</a></dt>
+    <dd>A reliance letter is the document a law firm issues to let a party other than the addressee rely on a PDF opinion, often "only as of the original date" and sometimes "delivered to, but not relied upon". A LEXI credential replaces the letter with a <a href="#reliance-mode">reliance mode</a>, a named-relier list and an on-chain <a href="#reliance-record">reliance record</a>, so the question "may we rely on this?" has a recorded answer.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/crypto-legal-opinion/">Crypto legal opinions</a></dd>
+  </div>
+  <div class="term" id="reliance-mode">
+    <dt><span class="idx">15</span>Reliance mode<a class="anchor" href="#reliance-mode" aria-label="Link to this term: Reliance mode">#</a></dt>
+    <dd>Reliance mode is the on-chain field that says who may rely: Open or Selective. Selective means only the reliers named on the credential. Open means any party may become a relier by accepting the reliance terms on record and paying the USDC reliance fee. In both modes the reliance is recorded on-chain and the terms are accepted before reliance attaches; nobody relies by reading alone.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a></dd>
+  </div>
+  <div class="term" id="reliance-record">
+    <dt><span class="idx">16</span>Reliance record<a class="anchor" href="#reliance-record" aria-label="Link to this term: Reliance record">#</a></dt>
+    <dd>A reliance record is the on-chain entry created when a named relier accepts the reliance terms and gains access to the gated opinion body. It is an on-chain transaction signed by the relier, carries a fixed USDC fee, and is the proof that reliance was granted on a given date. Reading the public metadata needs no record and costs nothing.</dd>
+    <dd class="uses"><span>Used on</span><a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/credential/">The credential</a></dd>
+  </div>
+  <div class="term" id="scope-hash">
+    <dt><span class="idx">17</span>Scope hash<a class="anchor" href="#scope-hash" aria-label="Link to this term: Scope hash">#</a></dt>
+    <dd>The scope hash is a cryptographic commitment to the document set the opinion covers: the whitepaper version, the structure documents and the facts the lawyer relied on. It is recorded on-chain beside the <a href="#opinion-hash">opinion hash</a>. If the project changes a document after signing, the hash no longer matches, which is the second of the <a href="#three-step-relier-check">three-step check</a> and the reason the credential cannot be quietly stretched to cover new facts.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/protocols/">For protocols</a></dd>
+  </div>
+  <div class="term" id="signatory-and-firm-id">
+    <dt><span class="idx">18</span>Signatory and firm ID<a class="anchor" href="#signatory-and-firm-id" aria-label="Link to this term: Signatory and firm ID">#</a></dt>
+    <dd>The signatory is the licensed lawyer who co-signed the opinion; the firm ID identifies the firm through which the lawyer joined LEXI. Both are public on-chain fields. A relier can check the signatory's licence with the issuing bar or register; for a Dubai-registered lawyer, the Government of Dubai Legal Affairs Department publishes a <a href="https://lpsprd.legal.dubai.gov.ae/dlad-directory" rel="noopener" target="_blank">public directory<span class="sr"> (opens in a new tab)</span></a> with status and licence expiry. The specimen on this site shows "A. Signatory", a fictional placeholder.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/legal-professionals/">For legal professionals</a></dd>
+  </div>
+  <div class="term" id="status">
+    <dt><span class="idx">19</span>Status<a class="anchor" href="#status" aria-label="Link to this term: Status">#</a></dt>
+    <dd>Status is the on-chain field that reads Live, Expired or Revoked. Live means the credential is unexpired and unrevoked; it does not mean the opinion is a current legal conclusion, which only the <a href="#as-of-date">as-of date</a> and the later events can tell you. Expired means the <a href="#expiry">expiry</a> date has passed. Revoked means the credential was withdrawn before its expiry. Status is the first of the <a href="#three-step-relier-check">three-step check</a>.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a></dd>
+  </div>
+  <div class="term" id="three-step-relier-check">
+    <dt><span class="idx">20</span>Three-step relier check<a class="anchor" href="#three-step-relier-check" aria-label="Link to this term: Three-step relier check">#</a></dt>
+    <dd>The three-step relier check is how a named relier verifies a LEXI credential in one call: (1) the <a href="#status">status</a> is Live, not Expired or Revoked; (2) the <a href="#scope-hash">scope</a> and <a href="#opinion-hash">opinion hashes</a> match the documents you hold; (3) your entity is a <a href="#named-relier">named relier</a> and has accepted the reliance terms. Reading the public on-chain metadata is free; reliance access (the gated body plus an on-chain reliance record) is a fixed USDC fee. V0 runs on Base Sepolia testnet.</dd>
+    <dd class="uses"><span>Used on</span><a href="/credential/">The credential</a> <span aria-hidden="true">·</span> <a href="/exchanges/">For exchanges</a> <span aria-hidden="true">·</span> <a href="/how-it-works/">How it works</a></dd>
+  </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== WHAT THIS GLOSSARY DOES NOT DO ===== -->
+<section aria-labelledby="scope-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="prose">
+      <h2 id="scope-h" class="pkh" style="margin-top:0">What this glossary does not do</h2>
+      <p>It defines LEXI's own vocabulary and nothing else. It does not define a regulator's terms, does not classify any token, and does not say what a jurisdiction requires. Regulator terms appear, dated and sourced, in the <a href="/insights/">corridor briefings</a> and the <a href="/insights/corridor-tracker-2026/">corridor regulation tracker</a>, where each event is tied to what it does to an opinion's scope or date. Where an entry mentions a regulator, it does so in passing and in the narrow form the source supports.</p>
+      <div class="notice mono">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+      <p class="cap mt16">Edition 1, twenty terms. New terms arrive as new entries with their own anchors; existing entries are not re-dated without a change in wording. Page last reviewed: <time datetime="2026-10-16">2026-10-16</time>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h"><div class="wrap">
+  <h2 id="final-h">The trust layer for institutional Web3.</h2>
+  <p>The terms above describe one record. The credential page shows the specimen and the three-step check; the flow page shows how a submission becomes a credential.</p>
+  <div class="ctas"><a class="btn pri lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a><a class="btn lg" href="/how-it-works/" data-event="cta-final-how">See how it works</a></div>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">For</div>
+        <ul>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

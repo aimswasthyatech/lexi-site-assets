@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Log: What Runs on Base Sepolia Testnet | LEXI Protocol</title>
+<meta name="description" content="A dated build log of what LEXI runs on Base Sepolia testnet, labelled On testnet, In development or Planned, with reasons for delays. Newest first.">
+<link rel="canonical" href="https://lexiprotocol.com/updates/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* Build log entries: the registry panel used as a dated entry. Nothing here exists in site.css. */
+.log .registry+.registry{margin-top:22px}
+.log .registry .rh span:first-child{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.log .registry h2{font-size:1.35rem;line-height:1.25;margin:10px 0 8px;max-width:34ch}
+.log .registry p{color:var(--dim);font-size:.98rem;line-height:1.6;max-width:72ch}
+.log .registry p+p{margin-top:10px}
+.log .registry .record{margin-top:18px}
+.log .registry p a{color:var(--sky)}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol · Build log: what runs on testnet today">
+<meta property="og:description" content="A dated build log of what LEXI runs on Base Sepolia testnet, labelled On testnet, In development or Planned, with reasons for delays. Newest first.">
+<meta property="og:url" content="https://lexiprotocol.com/updates/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol · Build log: what runs on testnet today">
+<meta name="twitter:description" content="A dated build log of what LEXI runs on Base Sepolia testnet, labelled On testnet, In development or Planned, with reasons for delays. Newest first.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
+    },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#lex-arbitrage", "name": "Lex Arbitrage", "alternateName": "@lex_arbitrage", "jobTitle": "Co-Founder and CEO", "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.", "url": "https://lexiprotocol.com/about/#lex-arbitrage", "sameAs": ["https://x.com/lex_arbitrage"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#karthik", "name": "Karthik", "jobTitle": "Co-Founder and CTO", "url": "https://lexiprotocol.com/about/#karthik", "sameAs": ["https://x.com/implied_vol"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "name": "Ben Dhaya Ahmed", "jobTitle": "Co-Founder and CGO", "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "WebSite", "@id": "https://lexiprotocol.com/#website", "url": "https://lexiprotocol.com/", "name": "LEXI Protocol", "alternateName": "LEXI", "publisher": { "@id": "https://lexiprotocol.com/#organization" }, "inLanguage": "en" },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/updates/#webpage",
+      "url": "https://lexiprotocol.com/updates/",
+      "name": "Build Log: What Runs on Base Sepolia Testnet | LEXI Protocol",
+      "description": "A dated build log of what LEXI runs on Base Sepolia testnet, labelled On testnet, In development or Planned, with reasons for delays. Newest first.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "mainEntity": { "@id": "https://lexiprotocol.com/updates/#blog" },
+      "inLanguage": "en",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/updates/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/updates/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Build log", "item": "https://lexiprotocol.com/updates/" }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://lexiprotocol.com/updates/#blog",
+      "url": "https://lexiprotocol.com/updates/",
+      "name": "LEXI Protocol build log",
+      "description": "Dated entries on what LEXI runs on Base Sepolia testnet, what is in progress and what is next. Build state, never traction.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lexiprotocol.com/updates/#2026-10-10",
+          "url": "https://lexiprotocol.com/updates/#2026-10-10",
+          "headline": "Mainnet target moved to post-audit, Q4 2026",
+          "description": "Mainnet is now targeted post-audit, Q4 2026, VARA first. Hardening and a security audit come before any mainnet deployment, and no auditor is engaged yet, so the date follows the audit rather than the calendar.",
+          "datePublished": "2026-10-10T00:00:00+00:00",
+          "dateModified": "2026-10-10T00:00:00+00:00",
+          "author": { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+          "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+          "isPartOf": { "@id": "https://lexiprotocol.com/updates/#blog" },
+          "mainEntityOfPage": { "@id": "https://lexiprotocol.com/updates/#webpage" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lexiprotocol.com/updates/#2026-09-24",
+          "url": "https://lexiprotocol.com/updates/#2026-09-24",
+          "headline": "Co-signers are licensed lawyers only",
+          "description": "From this date a legal professional on LEXI means a licensed lawyer. Compliance officers do not stake and do not co-sign; they still appear where they belong, as readers of credentials at exchanges and other reliers.",
+          "datePublished": "2026-09-24T00:00:00+00:00",
+          "dateModified": "2026-09-24T00:00:00+00:00",
+          "author": { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+          "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+          "isPartOf": { "@id": "https://lexiprotocol.com/updates/#blog" },
+          "mainEntityOfPage": { "@id": "https://lexiprotocol.com/updates/#webpage" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lexiprotocol.com/updates/#2026-09-08",
+          "url": "https://lexiprotocol.com/updates/#2026-09-08",
+          "headline": "Roadmap set: V0 VARA on testnet, V1 the LEXI Agent with MiCA and FIU-IND, V2 connectors and an API",
+          "description": "The roadmap now has three versions. V0, on testnet: opinion issuance as an on-chain credential, VARA (Dubai) first. V1, next up: a refreshed LEXI Agent and new jurisdictions starting with the EU (MiCA) and India (FIU-IND). V2, after V1: agent connectors and a standalone LEXI Verification Service API. US coverage is on the roadmap.",
+          "datePublished": "2026-09-08T00:00:00+00:00",
+          "dateModified": "2026-09-08T00:00:00+00:00",
+          "author": { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+          "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+          "isPartOf": { "@id": "https://lexiprotocol.com/updates/#blog" },
+          "mainEntityOfPage": { "@id": "https://lexiprotocol.com/updates/#webpage" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://lexiprotocol.com/updates/#2026-08-04",
+          "url": "https://lexiprotocol.com/updates/#2026-08-04",
+          "headline": "V0 runs end to end on Base Sepolia (testnet)",
+          "description": "V0 runs end to end on Base Sepolia (testnet), confirmed by the founding team on 2026-08-04: documentation in, engine first pass, co-signature flow, credential minted. Credential id 0x8df7…7747 is a V0 test credential id, not a transaction hash.",
+          "datePublished": "2026-08-04T00:00:00+00:00",
+          "dateModified": "2026-08-04T00:00:00+00:00",
+          "author": { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+          "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+          "isPartOf": { "@id": "https://lexiprotocol.com/updates/#blog" },
+          "mainEntityOfPage": { "@id": "https://lexiprotocol.com/updates/#webpage" },
+          "inLanguage": "en"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
+
+<main id="main">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+
+  <header class="pagehead wrap">
+    <ol class="crumbs" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li aria-current="page">Build log</li>
+    </ol>
+    <p class="eyebrow">Build log</p>
+    <h1>Build log: what runs on testnet today</h1>
+    <p class="lede" style="max-width:60ch">Dated entries on what LEXI runs on Base Sepolia (testnet), what is in progress and what is next. Each entry carries a date, a label and an author, and says why anything is delayed. Newest first.</p>
+    <p class="status-inline"><span class="dt" aria-hidden="true"></span>Nothing is live on mainnet. Every entry on this page describes Base Sepolia (testnet) unless it says otherwise.</p>
+    <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
+  </header>
+
+  <section aria-label="What runs today" style="padding:24px 0 48px">
+    <div class="wrap">
+      <div class="prose">
+        <div class="chunk">
+          <div class="k">What runs today</div>
+          <p>LEXI's V0 prototype runs end to end on Base Sepolia, Base's public testnet (chain ID 84532): a protocol submits documentation, the LEXI engine produces a first-pass work product, a co-signature flow runs, and a credential is recorded on-chain as a 32-byte credential id with hash commitments. The flow was confirmed end to end on 2026-08-04. Nothing is live on Base mainnet; mainnet is targeted post-audit, Q4 2026, VARA first.</p>
+        </div>
+      </div>
+      <div class="registry mt24"><span class="xh" aria-hidden="true"></span>
+        <div class="rh">Network facts <span>Base</span></div>
+        <div class="rr"><span class="k">Base Sepolia (testnet)</span><span>chain ID 84532 · RPC https://sepolia.base.org · explorers sepolia.basescan.org and base-sepolia.blockscout.com <em>· source: <a href="https://docs.base.org/get-started/connect-to-base" rel="noopener" target="_blank">Base docs, connect to Base<span class="sr"> (opens in a new tab)</span></a></em></span></div>
+        <div class="rr"><span class="k">Base mainnet</span><span>chain ID 8453 <em>· nothing is live on mainnet</em></span></div>
+        <div class="rr"><span class="k">Why Base Sepolia</span><span>Base Sepolia received the Azul upgrade on 20 April 2026, about five weeks before Base mainnet (28 May 2026, per Base's own upgrade page), so the testnet carries each network change first and V0 is tested against it before mainnet. <em>· source: <a href="https://docs.base.org/upgrades/azul/overview" rel="noopener" target="_blank">Base docs, Azul overview<span class="sr"> (opens in a new tab)</span></a></em></span></div>
+        <div class="rr"><span class="k">V0 contracts</span><span>Deployed on Base Sepolia (testnet). <em>· addresses and explorer links publish once the CTO confirms them</em></span></div>
+      </div>
+      <p class="fig"><b>Fig. 01</b> Network facts as published by Base. Explorer links follow address confirmation; until then no address or transaction hash appears on this site.</p>
+    </div>
+  </section>
+
+  <section class="log" aria-labelledby="log-h" style="padding-top:24px">
+    <div class="wrap">
+      <h2 class="eyebrow" id="log-h">The log, newest first</h2>
+
+      <article class="registry" id="2026-10-10"><span class="xh" aria-hidden="true"></span>
+        <div class="rh"><span><time datetime="2026-10-10">2026-10-10</time> · <span class="pill">Planned</span></span><span>Lex Arbitrage</span></div>
+        <h2>Mainnet target moved to post-audit, Q4 2026</h2>
+        <p>Mainnet is now targeted post-audit, Q4 2026, VARA first. The earlier public target was a fixed week in late October 2026. Hardening and a security audit come before any mainnet deployment, and no auditor is engaged yet, so the date now follows the audit rather than the calendar.</p>
+        <p>The status line on every page reads: PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026. Nothing is live on mainnet, and this page will say so until it is.</p>
+      </article>
+
+      <article class="registry" id="2026-09-24"><span class="xh" aria-hidden="true"></span>
+        <div class="rh"><span><time datetime="2026-09-24">2026-09-24</time> · <span class="pill">Decision</span></span><span>Lex Arbitrage</span></div>
+        <h2>Co-signers are licensed lawyers only</h2>
+        <p>From this date a legal professional on LEXI means a licensed lawyer. Compliance officers do not stake and do not co-sign, and no page on this site lists them as a co-signer type. They still appear where they belong: as the people at exchanges and other reliers who read credentials.</p>
+        <p>One assigned licensed lawyer co-signs each credential. No AI signs anything. What a co-signing lawyer signs, stakes and is exposed to is on <a href="/legal-professionals/">the page for legal professionals</a>.</p>
+      </article>
+
+      <article class="registry" id="2026-09-08"><span class="xh" aria-hidden="true"></span>
+        <div class="rh"><span><time datetime="2026-09-08">2026-09-08</time> · <span class="pill">Decision</span></span><span>Lex Arbitrage</span></div>
+        <h2>Roadmap set: V0 VARA on testnet, V1 the LEXI Agent with MiCA and FIU-IND, V2 connectors and an API</h2>
+        <p>The roadmap now has three versions. V0, on testnet: opinion issuance as an on-chain credential, VARA (Dubai) the base jurisdiction. V1, next up: a refreshed LEXI Agent built for long-horizon diligence, with persistent memory and iterative agentic search across many rulebooks, plus new jurisdictions starting with the EU (MiCA) and India (FIU-IND), so one opinion can span several. V2, after V1: agent connectors (DocuSign, GitHub) to cross-check protocol-asserted facts, and a standalone LEXI Verification Service API for enterprise compliance and KYB. US coverage is on the roadmap.</p>
+        <p>The same three versions appear on <a href="/about/">the key facts page</a>, with the maturity of each.</p>
+      </article>
+
+      <article class="registry" id="2026-08-04"><span class="xh" aria-hidden="true"></span>
+        <div class="rh"><span><time datetime="2026-08-04">2026-08-04</time> · <span class="pill on">On testnet</span></span><span>Lex Arbitrage</span></div>
+        <h2>V0 runs end to end on Base Sepolia (testnet)</h2>
+        <p>V0 runs end to end on Base Sepolia (testnet), confirmed by the founding team on 2026-08-04: documentation in, engine first pass, co-signature flow, credential minted. Credential id 0x8df7&hellip;7747 is a V0 test credential id, not a transaction hash.</p>
+        <p>The date is the founding team's confirmation of the end-to-end flow, not a chain event. The engine's first pass is work product, never the opinion. What a credential records, and the three-step check a relier runs, is on <a href="/credential/">the credential page</a>.</p>
+        <div class="record">
+          <div class="bar"><b>Illustration · V0 testnet record</b><span>Base Sepolia (testnet) · chain ID 84532</span></div>
+          <dl>
+            <dt>credential id</dt><dd>0x8df7&hellip;7747 <span class="de">· a V0 test credential id, not a transaction hash</span></dd>
+            <dt>firm id</dt><dd class="de">lexi:firm:0x0000</dd>
+            <dt>subject</dt><dd class="de">protocol:0x0000&hellip;0000</dd>
+            <dt>signatory</dt><dd class="de">0x0000&hellip;0000 · licensed lawyer</dd>
+            <dt>opinion hash</dt><dd class="de">0x0000&hellip;0000</dd>
+          </dl>
+          <p class="cap">Illustration of a V0 testnet record. Addresses publish once confirmed by the CTO.</p>
+        </div>
+      </article>
+
+      <div class="notice mono mt24">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+    </div>
+  </section>
+
+  <section aria-labelledby="progress-h" style="padding-top:48px">
+    <div class="wrap">
+      <div class="sh rv"><p class="eyebrow">In progress</p><h2 id="progress-h" class="pkh">Hardening, then the audit.</h2></div>
+      <div class="cols3 rv d1">
+        <div><h3>Hardening</h3><p>The V0 flow is being hardened before any mainnet deployment. Protocols, firms and signatories sign their own transactions in the client; an EU-hosted backend relays them and owns gas, nonces and retries. The field set on <a href="/credential/">the credential page</a> is the V0 target schema.</p></div>
+        <div><h3>The audit</h3><p>Contracts are audited before mainnet. No auditor is engaged yet. Mainnet follows the audit, not the other way round, and this log will carry the engagement as an entry when it happens.</p></div>
+        <div><h3>Mainnet, post-audit</h3><p>Targeted Q4 2026, VARA (Dubai) first. USDC price points publish at mainnet. Until then every credential on this site is a specimen or a testnet record, and there is nothing on mainnet to rely on.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="next-h" style="padding-top:48px">
+    <div class="wrap">
+      <div class="sh rv"><p class="eyebrow">What is next</p><h2 id="next-h" class="pkh">Build state by version.</h2></div>
+      <div class="registry rv d1"><span class="xh" aria-hidden="true"></span>
+        <div class="rh">Build state <span>labels describe build state, never traction</span></div>
+        <div class="rr"><span class="k">V0 · VARA (Dubai)</span><span><span class="pill on">On testnet</span> <em>· opinion issuance as an on-chain credential, end to end on Base Sepolia (testnet)</em></span></div>
+        <div class="rr"><span class="k">V1 · next up</span><span><span class="pill">In development</span> <em>· the refreshed LEXI Agent; the EU (MiCA) and India (FIU-IND); one opinion spanning several jurisdictions</em></span></div>
+        <div class="rr"><span class="k">V2 · after V1</span><span><span class="pill">Planned</span> <em>· agent connectors (DocuSign, GitHub); the LEXI Verification Service API</em></span></div>
+        <div class="rr"><span class="k">US coverage</span><span><span class="pill">Planned</span> <em>· on the roadmap, no date</em></span></div>
+        <div class="rr"><span class="k">Mainnet</span><span><span class="pill">Planned</span> <em>· targeted post-audit, Q4 2026, VARA first</em></span></div>
+      </div>
+      <p class="dimp rv d2" style="margin-top:22px;font-size:13.5px;color:var(--faint);max-width:78ch;line-height:1.6">Maturity labels describe build state, never traction. This roadmap describes intent. It is not a commitment to deliver any feature by any date, and nothing here should be relied on for a purchasing or investment decision. The log gains an entry for each real milestone or decision, and a delay is recorded with its reason.</p>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="final-h">
+    <div class="wrap">
+      <h2 id="final-h">The trust layer for institutional Web3.</h2>
+      <p>What is built and where it runs is on this page. What the credential records, and who built it, is one link away.</p>
+      <div class="ctas"><a class="btn pri lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a><a class="btn lg" href="/about/" data-event="cta-final-facts">Read the key facts</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">For</div>
+        <ul>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

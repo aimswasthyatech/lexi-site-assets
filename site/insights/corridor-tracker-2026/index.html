@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corridor Regulation Tracker 2026, Edition 1 | LEXI Protocol</title>
+<meta name="description" content="Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion&#x27;s scope or date. Edition 1, CSV.">
+<link rel="canonical" href="https://lexiprotocol.com/insights/corridor-tracker-2026/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-10-12">
+<meta property="article:modified_time" content="2026-10-16">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol · Corridor regulation tracker 2026, edition 1">
+<meta property="og:description" content="Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion&#x27;s scope or date. Edition 1, CSV.">
+<meta property="og:url" content="https://lexiprotocol.com/insights/corridor-tracker-2026/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol · Corridor regulation tracker 2026, edition 1">
+<meta name="twitter:description" content="Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion&#x27;s scope or date. Edition 1, CSV.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lexiprotocol.com/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": [
+        "https://x.com/LEXIprotocol",
+        "https://www.linkedin.com/company/lexi-protocol",
+        "https://github.com/Lexi-Protocol"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@lexiprotocol.com",
+        "contactType": "general enquiries"
+      },
+      "founder": [
+        {
+          "@id": "https://lexiprotocol.com/about/#lex-arbitrage"
+        },
+        {
+          "@id": "https://lexiprotocol.com/about/#karthik"
+        },
+        {
+          "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "name": "Lex Arbitrage",
+      "alternateName": "@lex_arbitrage",
+      "jobTitle": "Co-Founder and CEO",
+      "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+      "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "sameAs": [
+        "https://x.com/lex_arbitrage"
+      ],
+      "worksFor": {
+        "@id": "https://lexiprotocol.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#karthik",
+      "name": "Karthik",
+      "jobTitle": "Co-Founder and CTO",
+      "url": "https://lexiprotocol.com/about/#karthik",
+      "sameAs": [
+        "https://x.com/implied_vol"
+      ],
+      "worksFor": {
+        "@id": "https://lexiprotocol.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "name": "Ben Dhaya Ahmed",
+      "jobTitle": "Co-Founder and CGO",
+      "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "worksFor": {
+        "@id": "https://lexiprotocol.com/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lexiprotocol.com/#website",
+      "url": "https://lexiprotocol.com/",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "publisher": {
+        "@id": "https://lexiprotocol.com/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#webpage",
+      "url": "https://lexiprotocol.com/insights/corridor-tracker-2026/",
+      "name": "Corridor Regulation Tracker 2026, Edition 1 | LEXI Protocol",
+      "description": "Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion's scope or date. Edition 1, CSV.",
+      "isPartOf": {
+        "@id": "https://lexiprotocol.com/#website"
+      },
+      "about": {
+        "@id": "https://lexiprotocol.com/#organization"
+      },
+      "inLanguage": "en",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-16",
+      "breadcrumb": {
+        "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#dataset"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lexiprotocol.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Briefings",
+          "item": "https://lexiprotocol.com/insights/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Corridor tracker 2026",
+          "item": "https://lexiprotocol.com/insights/corridor-tracker-2026/"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#dataset",
+      "name": "Corridor regulation tracker 2026, edition 1",
+      "description": "Corridor regulation tracker 2026, edition 1: 55 dated regulator, statute, gazette and parliamentary events on the India, UAE, US and EU corridor, each with its source URL, its as-of date where it is a snapshot, and what the event does to a legal opinion's scope or date. Edition 1 covers 30 December 2024 to 16 October 2026 and was re-read at every source on 11 October 2026 and verified again on 16 October 2026; 7 earlier standing instruments are included and marked baseline. India rows come only from regulator, statute, Gazette or parliamentary sources; US rows only from official sources. Published by LEXI Protocol as a CSV with the columns date, jurisdiction, regulator, event, source_url, source_date, as_of_date, effect_on_opinion, verified_by and row_type.",
+      "url": "https://lexiprotocol.com/insights/corridor-tracker-2026/",
+      "version": "Edition 1",
+      "isAccessibleForFree": true,
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "keywords": [
+        "crypto regulation tracker",
+        "VARA",
+        "UAE Capital Market Authority",
+        "MiCA",
+        "ESMA register",
+        "FIU-IND",
+        "SEC",
+        "CFTC",
+        "legal opinion as-of date"
+      ],
+      "temporalCoverage": "2023-03-07/2026-10-16",
+      "spatialCoverage": [
+        {
+          "@type": "Place",
+          "name": "United Arab Emirates"
+        },
+        {
+          "@type": "Place",
+          "name": "European Union"
+        },
+        {
+          "@type": "Place",
+          "name": "India"
+        },
+        {
+          "@type": "Place",
+          "name": "United States"
+        }
+      ],
+      "creator": {
+        "@id": "https://lexiprotocol.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://lexiprotocol.com/#organization"
+      },
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-16",
+      "inLanguage": "en",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://lexiprotocol.com/insights/corridor-tracker-2026/tracker-2026.csv"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#article",
+      "headline": "Corridor regulation tracker 2026, edition 1",
+      "description": "Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion's scope or date. Edition 1, CSV.",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-10-16",
+      "image": "https://lexiprotocol.com/og.jpg",
+      "author": {
+        "@id": "https://lexiprotocol.com/about/#lex-arbitrage"
+      },
+      "publisher": {
+        "@id": "https://lexiprotocol.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#webpage"
+      },
+      "about": {
+        "@id": "https://lexiprotocol.com/insights/corridor-tracker-2026/#dataset"
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Tracker: six-column event table (site.css sets no column widths and stacks .stack tables at every width); rows stack with mono labels up to 1180 px, where the nav also collapses. */
+@media(min-width:1181px){.tracker{min-width:1060px}}
+@media(min-width:1280px){.tracker{min-width:1180px}}
+.tracker td:nth-child(2),.tracker td:nth-child(3){min-width:9ch}
+.tracker .event{min-width:36ch;max-width:62ch}
+.tracker .effect{min-width:26ch;max-width:44ch}
+.tracker .src{min-width:16ch;max-width:26ch}
+.tracker .bl,.tracker .np{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--faint);line-height:1.6;white-space:normal;max-width:14ch}
+.tracker .np{color:var(--dim);font-size:12px}
+.tracker caption{white-space:normal}
+.jur{scroll-margin-top:96px}
+.jur .lead2{color:var(--dim);max-width:72ch;margin:0 0 20px;line-height:1.65}
+.jur .lead2 a{border-bottom:1px solid rgba(95,160,255,.35)}
+@media(max-width:1180px){
+  .tracker thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tracker thead tr,.tracker th{display:block;width:1px;overflow:hidden}
+  .tracker tbody tr{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+  .tracker tbody tr:last-child{border-bottom:0}
+  .tracker td,.tracker .event,.tracker .effect,.tracker .src{display:block;border:0;padding:6px 16px;min-width:0;max-width:none;white-space:normal}
+  .tracker td::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--faint);text-transform:uppercase;margin-bottom:2px}
+  .tracker .bl,.tracker .np{display:inline;max-width:none;margin-left:8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/" aria-current="page">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
+
+<main id="main">
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="pagehead wrap">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Briefings</a></li>
+    <li aria-current="page">Corridor tracker 2026</li>
+  </ol>
+  <p class="eyebrow">Corridor tracker · Edition 1</p>
+  <h1>Corridor regulation tracker 2026, edition 1</h1>
+  <p class="lede" style="max-width:66ch">Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion's scope or date. 55 rows, re-read at every source on 11 October 2026 and verified again on 16 October 2026, with the same rows as a CSV.</p>
+  <p class="byline">By <a href="https://x.com/lex_arbitrage" rel="noopener" target="_blank">Lex Arbitrage<span class="sr"> (opens in a new tab)</span></a>, Co-Founder and CEO · Published <time datetime="2026-10-12">2026-10-12</time> · Last updated <time datetime="2026-10-16">2026-10-16</time></p>
+  <p class="dl-row"><a href="/insights/corridor-tracker-2026/tracker-2026.csv" data-event="tracker-csv-top">Download the CSV</a><span>·</span><span>55 rows · UTF-8 · Dataset markup on this page</span></p>
+  <p class="disc">The tracker follows the regulators wherever they move. LEXI's own coverage is narrower: VARA (Dubai) on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up; US coverage is on the roadmap. Nothing is on mainnet. LEXI is not a law firm, and nothing here is legal advice.</p>
+</header>
+
+<!-- ===== WHAT THIS TRACKER IS ===== -->
+<section class="pt32" aria-labelledby="what-h">
+  <div class="wrap">
+    <div class="prose">
+      <h2 id="what-h" style="margin-top:0">What this tracker is</h2>
+      <div class="chunk">
+        <div class="k">Definition</div>
+        <p>The corridor tracker lists dated regulator events on the India, UAE, US and EU corridor and states, for each, what it does to a legal opinion's scope or date. Edition 1 covers 30 December 2024 to 16 October 2026 and was re-read at every source on 11 October 2026 and verified again on 16 October 2026. An opinion speaks as of its date; this tracker tells a relier which rules changed after that date. 7 earlier standing instruments that the window's rows depend on are included and marked baseline.</p>
+      </div>
+      <div class="toc">
+        <div class="k">On this page</div>
+        <ol>
+          <li><a href="#what-h">What this tracker is</a></li>
+          <li><a href="#cma">UAE: federal (CMA)</a></li>
+          <li><a href="#vara">UAE: Dubai (VARA)</a></li>
+          <li><a href="#eu">European Union</a></li>
+          <li><a href="#india">India</a></li>
+          <li><a href="#us">United States</a></li>
+          <li><a href="#read">How to read a row against a credential</a></li>
+          <li><a href="#download">Download and licence</a></li>
+          <li><a href="#changes">Changes since the last edition</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ol>
+      </div>
+      <h3>What "effect on an opinion" means</h3>
+      <p>A legal opinion answers a defined question under named law, on stated facts, as of its date. Two things can go wrong with it later: the law it read can change (a <strong>scope</strong> effect) or the facts it relied on can move (a <strong>date</strong> effect). The effect column labels each row with one or both. It says what a relier reading an opinion dated before the event should check, in verification terms only. It does not say whether any project is licensable, and it describes no licensing or registration steps. That is a question for counsel, not a conclusion LEXI gives.</p>
+      <h3>The snapshot rule</h3>
+      <p>Some rows are counts rather than events: a register size, a list of orders, an absence of orders. Each is a snapshot with its own as-of date, printed in the date cell, and none is presented as stable. A negative row (no order listed, no text published) is stated with the date it was checked and re-checked in the next edition. Where a regulator has not published an instrument's text, the date cell reads "not published at source" rather than a guess, on the page and in the CSV.</p>
+      <h3>Where the rows come from</h3>
+      <p>Every row names the regulator, statute, Official Journal, Gazette or parliamentary document it was read from, with the URL. No law-firm summary is cited in any row. India rows come only from FIU-IND, the Gazette, SEBI and parliamentary answers; US rows only from official sources. Two FIU-IND documents are scanned images; their rows were OCR-verified against the scans and are marked so in the CSV.</p>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== UAE: federal (CMA) ===== -->
+<section class="jur pt56" id="cma" aria-labelledby="cma-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <h2 id="cma-h" class="pkh" style="margin-bottom:14px">UAE: federal (CMA)</h2>
+    <p class="lead2">The federal layer changed on 1 January 2026. The resolution that carries the federal VASP activities sits on the CMA Rulebook with its dates, so its row is dated like any other. The <a href="/insights/uae-cma-2026/" data-event="tracker-cma-briefing">UAE CMA briefing</a> reads the same rows in prose.</p>
+<div class="tblwrap">
+<table class="tracker">
+<caption>Corridor regulation tracker 2026, edition 1 · UAE, federal (CMA) · 4 rows · every row re-read at source on 2026-10-11 and verified again on 2026-10-16</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Jurisdiction</th><th scope="col">Regulator</th><th scope="col">Event</th><th scope="col">Effect on an opinion</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Date"><time datetime="2026-01-01">2026-01-01</time></td><td data-label="Jurisdiction">UAE (federal)</td><td data-label="Regulator">CMA</td><td class="event" data-label="Event">Federal Decree-Law No. (32) of 2025 (the CMA replaces and renames the SCA, Art. 2(2) and (3); in force under Art. 30) and Federal Decree-Law No. (33) of 2025 on the Regulation of the Capital Market (issued 1 October 2025; in force under Art. 85) enter into force. FDL 33 defines Virtual Assets (Art. 1), lists Promotion (Art. 3(1)(i)) and activities and services related to Virtual Assets (Art. 3(1)(y)) as licensable, reaches any person targeting clients within the State (Art. 2(1)(d)), excludes Financial Free Zones and Central Bank-licensed activities (Art. 2(4)), ties trading to an official list plus CMA registration (Art. 39) and gives one year to adjust status, extendable by the Board (Art. 83). FDL 32 Art. 27(3) keeps Cabinet Resolutions 111 and 112 of 2022 in force until replaced.</td><td class="effect" data-label="Effect on an opinion">Scope and date. A UAE-federal opinion dated on or after 1 January 2026 names the CMA, not the SCA, and reads FDL 33 Arts 2(1)(d), 3 and 39. An earlier opinion cites the SCA and the 2022 Cabinet Resolutions, which stay in force until repealed, amended or replaced. The Art. 83 adjustment period runs to 1 January 2027 by arithmetic and the Board may extend it.</td><td class="src" data-label="Source"><a href="https://www.uaecma.gov.ae/en/new-cma-law" rel="noopener" target="_blank">uaecma.gov.ae (new CMA law)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.uaecma.gov.ae/assets/7bf42556/federal-decree-law-no-32-of-2025-en.aspx" rel="noopener" target="_blank">FDL 32 of 2025 (EN)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.uaecma.gov.ae/assets/56e3ab56/federal-decree-law-no-33-of-2025-en-final-copy-2722026.aspx" rel="noopener" target="_blank">FDL 33 of 2025 (EN)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-02-28">2026-02-28</time></td><td data-label="Jurisdiction">UAE (federal)</td><td data-label="Regulator">CMA</td><td class="event" data-label="Event">Resolution No. (04/Chairman) of 2026 Concerning the Regulation of Virtual Assets Service Providers and the Alternative Trading System Operator (also cited as 4/R.M of 2026). Board approval 26 December 2025; issued 13 February 2026; Official Gazette 27 February 2026; in force 28 February 2026 (Art. 7, the day after publication). Three modules (Art. 1), a one-year regularisation period (Art. 3), and Art. 6 repeals Decision No. (26/Chairman) of 2023 and the Rulebook VASP provisions. The General Module's Art. 12 lists eight financial activities. The record sits on the CMA Rulebook; it is not on the CMA's Latest Regulations page, which listed only Decisions 11 and 13 and Resolutions 16 and 18 of 2026 on 16 October 2026.</td><td class="effect" data-label="Effect on an opinion">Scope and date. An opinion on CMA-perimeter VASP activity dated on or after 28 February 2026 reads this resolution, not Decision 26/2023; one dated before it read the 2023 decision and needs re-reading. The one-year regularisation period under Art. 3 is a dated fact to check.</td><td class="src" data-label="Source"><a href="https://legislation.uaecma.gov.ae/en/chairman-authority%E2%80%99s-board-directors%E2%80%99-resolution-no-04-chairman-2026" rel="noopener" target="_blank">CMA Rulebook, Resolution 04/2026<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.uaecma.gov.ae/assets/4091c81b/1626-en.aspx" rel="noopener" target="_blank">Resolution 16/2026 (EN recital)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-04-13">2026-04-13</time></td><td data-label="Jurisdiction">UAE (federal)</td><td data-label="Regulator">CMA</td><td class="event" data-label="Event">Press release: the CMA issues the Virtual Assets Framework, five core modules (General Requirements; Conduct of Business; Alternative Trading System; Anti-Money Laundering and Counter-Terrorist Financing; Prudential Requirements) and eight regulated activities, expanded from three. The release names no decision number and no effective date. Commentators identify the framework with Resolution 04/2026; the CMA does not say so.</td><td class="effect" data-label="Effect on an opinion">Scope. An activity mapping written against the earlier regime's three activities needs re-reading against eight. The release itself fixes no date.</td><td class="src" data-label="Source"><a href="https://www.uaecma.gov.ae/en/media-center/news/13/4/2026/%D9%87%D9%8A%D8%A6%D8%A9-%D8%B3%D9%88%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84-%D8%AA%D8%B5%D8%AF%D8%B1-%D8%A5%D8%B7%D8%A7%D8%B1-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D9%84-%D8%A7%D9%84%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A%D8%A9-%D9%85%D8%A4%D8%B3%D9%91%D9%90%D8%B3%D8%A9%D9%8B-%D9%86%D8%B8%D8%A7%D9%85%D8%A7%D9%8B-%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A7%D9%8B-%D9%8A%D8%AA%D9%83%D9%88%D9%91%D9%86-%D9%85%D9%86-%D8%AE%D9%85%D8%B3-%D9%88%D8%AD%D8%AF%D8%A7%D8%AA" rel="noopener" target="_blank">uaecma.gov.ae press release, 13 April 2026<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-06-25">2026-06-25</time></td><td data-label="Jurisdiction">UAE (federal)</td><td data-label="Regulator">CMA</td><td class="event" data-label="Event">Resolution No. (16/Chairman) of 2026 (Board approval 9 June 2026; in force on issuance): entities licensed by the Central Bank, other than insurance companies, may practise the activities under Resolution 04/2026.</td><td class="effect" data-label="Effect on an opinion">Scope. Banks and payment firms can be federal virtual-asset activity providers, so the set of counterparties an opinion may name widens. Not a marketing instrument.</td><td class="src" data-label="Source"><a href="https://www.uaecma.gov.ae/assets/4091c81b/1626-en.aspx" rel="noopener" target="_blank">Resolution 16/2026 (EN)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+</tbody>
+</table>
+</div>
+  </div>
+</section>
+
+<!-- ===== UAE: Dubai (VARA) ===== -->
+<section class="jur pt56" id="vara" aria-labelledby="vara-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <h2 id="vara-h" class="pkh" style="margin-bottom:14px">UAE: Dubai (VARA)</h2>
+    <p class="lead2">Dubai outside the DIFC. VARA licenses per activity under dated rulebooks; the rows are the 2025 and 2026 instruments, the 2026 notices, and a dated register snapshot. VARA (Dubai) is the jurisdiction V0 runs on, on Base Sepolia testnet; see <a href="/vara-compliance/" data-event="tracker-vara">VARA compliance (Dubai)</a>.</p>
+<div class="tblwrap">
+<table class="tracker">
+<caption>Corridor regulation tracker 2026, edition 1 · UAE, Dubai (VARA) · 9 rows · every row re-read at source on 2026-10-11 and verified again on 2026-10-16</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Jurisdiction</th><th scope="col">Regulator</th><th scope="col">Event</th><th scope="col">Effect on an opinion</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Date"><time datetime="2024-10-01">2024-10-01</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Regulations on the Marketing of Virtual Assets and Related Activities 2024, current version, effective from 1 October 2024.</td><td class="effect" data-label="Effect on an opinion">Scope. A standing fact for any Dubai-facing communication an opinion describes; stated here, not applied.</td><td class="src" data-label="Source"><a href="https://rulebooks.vara.ae/node/419" rel="noopener" target="_blank">rulebooks.vara.ae (node 419)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-05-19">2025-05-19</time><span class="bl">effective 2025-06-19</span></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Virtual Asset Issuance Rulebook, current version (cover 19 May 2025; site: effective 19 June 2025). Category 1 issuance needs a VARA licence; Category 2 needs no licence but all placement and distribution runs through a Licensed Distributor (Rule I.E.1), and no Category 2 asset is deemed approved by VARA (Rule I.E.5); Exempt VAs have no prior requirement. Annex 2 (asset-referenced virtual assets): a legal opinion from a duly registered lawyer "may be required" (Rule III.B.2) and "shall be required" for ARVA issuers holding Reserve Assets (Rule III.C.4). The 7 February 2023, 19 September 2023 and 1 October 2024 versions had no Annex 2.</td><td class="effect" data-label="Effect on an opinion">Scope and date. A Dubai issuance opinion dated after 19 June 2025 categorises the issuance under this version. The lawyer-signed opinion rule exists only for ARVAs under Annex 2.</td><td class="src" data-label="Source"><a href="https://rulebooks.vara.ae/rulebook/virtual-asset-issuance-rulebook" rel="noopener" target="_blank">rulebooks.vara.ae (Issuance Rulebook)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_293_VER20250519.pdf" rel="noopener" target="_blank">PDF, 19 May 2025<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-31">2026-03-31</time></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Exchange Services Rulebook effective (prior versions 7 February 2023 and 19 May 2025); Part V adds the exchange-traded derivatives rules.</td><td class="effect" data-label="Effect on an opinion">Date. An opinion on Dubai exchange services dated before 31 March 2026 predates the derivatives rules.</td><td class="src" data-label="Source"><a href="https://rulebooks.vara.ae/rulebook/exchange-services-rulebook" rel="noopener" target="_blank">rulebooks.vara.ae (Exchange Services Rulebook)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-04-09">2026-04-09</time></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Guidance on the Virtual Asset Issuance Rulebook (indicative under Regulation I.B.4). Items 32 and 34, on Annex 2 opinions: the opinion is prepared and signed by a "duly registered practising lawyer", not the issuer's internal counsel; it is dated, signed and on letterhead; it states its assumptions and sources; a revised or supplemental opinion follows any material change. Example D: a 15 Working Day Submission Period for Category 2 distributions, and VARA's silence is not approval. The date is from the PDF cover and the revision feed (at least 12 entries dated 9 April 2026); the HTML pages are undated.</td><td class="effect" data-label="Effect on an opinion">Scope and date. For ARVA issuances the signer, form and currency expectations are now written down; an undated or in-house opinion falls outside the guidance. The guidance calls itself indicative and no substitute for independent legal advice.</td><td class="src" data-label="Source"><a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_516_VER1.pdf" rel="noopener" target="_blank">PDF, 9 April 2026<span class="sr"> (opens in a new tab)</span></a> · <a href="https://rulebooks.vara.ae/rulebook/i-guidance-topic-0" rel="noopener" target="_blank">rulebooks.vara.ae (guidance, Part I)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-05-19">2026-05-19</time></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Federal AML/CFT Laws page updated (revision feed). Only this feed entry is verified; earlier feed dates are not.</td><td class="effect" data-label="Effect on an opinion">Date. AML references in an opinion point at the May 2026 version.</td><td class="src" data-label="Source"><a href="https://rulebooks.vara.ae/view-revision-updates" rel="noopener" target="_blank">rulebooks.vara.ae (revision feed)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-06-12">2026-06-12</time></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">AML/CFT Business Risk Assessment Guidance published.</td><td class="effect" data-label="Effect on an opinion">Context for a VASP's own file. No effect on the form of a legal opinion.</td><td class="src" data-label="Source"><a href="https://media.umbraco.io/dwtc/thylprns/vara-amlctf-business-risk-assessment-guidance.pdf" rel="noopener" target="_blank">vara.ae guidance PDF<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-06-22">2026-06-22</time><span class="bl">to 2026-07-24</span></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Notices of Fines on the regulatory notices page: CoinMENA FZE and MX Global LTD (MEXC) on 22 June 2026, Peken Global Limited (KuCoin) on 24 June 2026, Shelbit General Trading L.L.C on 24 July 2026. Amounts are not on the listing page.</td><td class="effect" data-label="Effect on an opinion">Date. Where a counterparty's status matters, a relier reads the notices page as of the opinion's date and again as of the date of reliance.</td><td class="src" data-label="Source"><a href="https://www.vara.ae/en/regulations/regulatory-notices/" rel="noopener" target="_blank">vara.ae regulatory notices<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-06">2026-10-06</time></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Circular regarding Reserve Assets Audit Report: minimum expectations for the independent audit of Reserve Assets after a thematic review of 2025 reports. Not about legal opinions.</td><td class="effect" data-label="Effect on an opinion">Context. Assurance expectations for custodians and exchanges rise; no change to the form of an opinion.</td><td class="src" data-label="Source"><a href="https://media.umbraco.io/dwtc/p1zdm1ig/circular-regarding-reserve-assets-audit-report.pdf" rel="noopener" target="_blank">vara.ae circular PDF<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-16">2026-10-16</time><span class="bl">snapshot, as of 2026-10-16</span></td><td data-label="Jurisdiction">UAE (Dubai)</td><td data-label="Regulator">VARA</td><td class="event" data-label="Event">Public register snapshot: 59 licensed VASPs, every entry Active with licence type VASP Licence; newest licence 6 October 2026 (Payward FZCO, VL/26/10/002), after Rain MENA FZE on 5 October 2026 (VL/26/10/001); earliest 28 July 2023 (Laser Digital Middle East FZE). The register states that applicants holding an In-Principle Approval are strictly prohibited from initiating operations.</td><td class="effect" data-label="Effect on an opinion">Date. The register row a relier checks against a credential's as-of date. The count read 57 on 11 October 2026 and 59 on 16 October 2026, and will move again; it is re-read each edition.</td><td class="src" data-label="Source"><a href="https://www.vara.ae/en/licenses-and-register/public-register/" rel="noopener" target="_blank">vara.ae public register<span class="sr"> (opens in a new tab)</span></a></td></tr>
+</tbody>
+</table>
+</div>
+  </div>
+</section>
+
+<!-- ===== European Union ===== -->
+<section class="jur pt56" id="eu" aria-labelledby="eu-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <h2 id="eu-h" class="pkh" style="margin-bottom:14px">European Union</h2>
+    <p class="lead2">MiCA. The CASP transition ended on 1 July 2026; the rows date the ESMA statements that fixed it, the national cut-offs, and the register a relier checks. On LEXI the EU (MiCA) is V1, next up; nothing is on mainnet.</p>
+<div class="tblwrap">
+<table class="tracker">
+<caption>Corridor regulation tracker 2026, edition 1 · European Union · 15 rows · every row re-read at source on 2026-10-11 and verified again on 2026-10-16</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Jurisdiction</th><th scope="col">Regulator</th><th scope="col">Event</th><th scope="col">Effect on an opinion</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Date"><time datetime="2024-12-10">2024-12-10</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA, EBA, EIOPA</td><td class="event" data-label="Event">Joint Guidelines JC 2024 28 under MiCA Art. 97 (apply from 12 May 2025): Annex A, the explanation for Art. 8(4); Annex B, the legal-opinion template for asset-referenced tokens under Arts 17(1)(b)(ii) and 18(2)(e); Annex C, the standardised test. Paragraph 16 lets an in-house or external legal adviser complete the opinion.</td><td class="effect" data-label="Effect on an opinion">Scope. An ART opinion follows the Annex B field list: date issued, the adviser's evidence of ability, a conflicts declaration, the dated final white paper attached, Member States, applicable law. The template has no expiry and names no reliers. MiCA asks for a legal opinion only for asset-referenced tokens.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2025-03/JC_2024_28_Guidelines_on_explanations_and_opinions__and_the_standardised_test_for_crypto-assets_under_MiCA.pdf" rel="noopener" target="_blank">esma.europa.eu JC 2024 28 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2024-12-17">2024-12-17</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Final report on the reverse-solicitation guidelines (ESMA35-1872330276-1899): the Art. 61 exemption is "very narrowly framed"; Art. 61(2) bars marketing new types of crypto-assets or services on the back of a client's own initiative.</td><td class="effect" data-label="Effect on an opinion">Date. The reverse-solicitation position in an EU opinion is an as-of judgment under these guidelines.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/ESMA35-1872330276-1899_-_Final_report_on_GLs_on_reverse_solicitation_under_MiCA.pdf" rel="noopener" target="_blank">esma.europa.eu final report (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2024-12-17">2024-12-17</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Statement on MiCA transitional measures (ESMA75-453128700-1396): where a CASP obtains authorisation in one Member State after a shorter transitional period has ended in another, an interim period of up to six months can arise in which it lacks the authorisation to serve clients there.</td><td class="effect" data-label="Effect on an opinion">Date. Shows why an opinion's date matters more than its jurisdiction label during a transition.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/ESMA75-453128700-1396_Statement_on_MiCA_transitional_measures.pdf" rel="noopener" target="_blank">esma.europa.eu statement (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2024-12-30">2024-12-30</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">EU (MiCA)</td><td class="event" data-label="Event">The CASP provisions of Regulation (EU) 2023/1114 apply (Art. 149(2)). Art. 143(3): a provider operating lawfully before this date may continue until 1 July 2026 or until authorisation is granted or refused, whichever is sooner, and Member States may shorten the period; Art. 143(6): a simplified procedure for applications made between 30 December 2024 and 1 July 2026; Art. 110: ESMA's register of non-compliant entities.</td><td class="effect" data-label="Effect on an opinion">Date. The baseline date for every EU row and the start of the edition window.</td><td class="src" data-label="Source"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1114" rel="noopener" target="_blank">eur-lex.europa.eu, Regulation (EU) 2023/1114<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-03-19">2025-03-19</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Guidelines on the qualification of crypto-assets as financial instruments (ESMA75453128700-1323), applying 60 days after publication of the translations: substance over form; three cumulative criteria for transferable securities; the examples are not a definitive classification.</td><td class="effect" data-label="Effect on an opinion">Date. The Art. 2(5) classification in an EU opinion is an as-of judgment under these guidelines; an opinion predating them was written against no common test.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2025-03/ESMA75453128700-1323_Guidelines_on_the_conditions_and_criteria_for_the_qualification_of_CAs_as_FIs.pdf" rel="noopener" target="_blank">esma.europa.eu guidelines (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-12-04">2025-12-04</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Statement on the end of the transitional periods (ESMA75-113276571-1631): unauthorised CASPs keep wind-down plans ready; national authorities treat last-minute applications with considerable caution. ESMA Q&amp;A 2220 (4 July 2024): a pending application does not extend the right to operate past the national cut-off.</td><td class="effect" data-label="Effect on an opinion">Date. A counterparty still in the queue after its national cut-off is unauthorised, and an opinion says so as of its date.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2025-12/ESMA75-113276571-1631_Statement_on_end_of_MiCA_transitional_periods.pdf" rel="noopener" target="_blank">esma.europa.eu statement (PDF)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.esma.europa.eu/publications-data/questions-answers/2220" rel="noopener" target="_blank">ESMA Q&amp;A 2220<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-12-29">2025-12-29</time><span class="bl">page also prints 2025-12-31</span></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">Central Bank of Ireland</td><td class="event" data-label="Event">Ireland's 12-month transitional period ended (the same page also prints 31 December 2025).</td><td class="effect" data-label="Effect on an opinion">Date. A national cut-off example; both dates are printed until the Bank reconciles them.</td><td class="src" data-label="Source"><a href="https://www.centralbank.ie/regulation/markets-in-crypto-assets-regulation" rel="noopener" target="_blank">centralbank.ie MiCA page<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-04-17">2026-04-17</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Statement (ESMA75-113276571-1679): the transitional period expires across the EU on 1 July 2026, whether or not MiCA has been implemented in a Member State; after that date an unauthorised provider must cease.</td><td class="effect" data-label="Effect on an opinion">Date. Fixes the EU-wide date.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf" rel="noopener" target="_blank">esma.europa.eu statement (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-06-23">2026-06-23</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA (CSSF copy)</td><td class="event" data-label="Event">Public statement (ESMA75-113276571-1710): unauthorised CASPs stop onboarding EU clients and wind down; some significant providers may not be authorised by the deadline.</td><td class="effect" data-label="Effect on an opinion">Date. A counterparty's status on 1 July 2026 is a dated fact an opinion pins.</td><td class="src" data-label="Source"><a href="https://www.cssf.lu/wp-content/uploads/C_ESMA75-113276571-1710_Public_Statement_MiCA_transitional_period_ends_240626.pdf" rel="noopener" target="_blank">cssf.lu copy of the ESMA statement (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-07-01">2026-07-01</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">EU (MiCA Art. 143(3))</td><td class="event" data-label="Event">End of the CASP transitional backstop. National periods per ESMA's list (file dated 19 May 2026): six EU states used 6 months (Latvia, Hungary, the Netherlands, Poland, Slovenia, Finland; ended 30 June 2025 by LEXI's arithmetic); five used 12 months (Germany, Ireland, Lithuania, Austria, Slovakia; ended 30 December 2025); Norway (EEA) 12 months; Sweden 9 months; the rest 18 months. Application deadlines stated in the list: Bulgaria before 8 October 2025 for VASP-registered entities, Czechia before 31 July 2025, Denmark before 30 December 2024, Italy by 30 December 2025. ESMA warns that some periods may not have been incorporated into national law yet. No deadline is attributed to Belgium.</td><td class="effect" data-label="Effect on an opinion">Scope and date. An EU-scope opinion dated after 1 July 2026 cannot rest on a national VASP registration. A relier checks the ESMA register row's authorisation date against the credential's as-of date.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/List_of_MiCA_grandfathering_periods_art._143_3.pdf" rel="noopener" target="_blank">esma.europa.eu list of grandfathering periods (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-07-06">2026-07-06</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">AMF (France)</td><td class="event" data-label="Event">The AMF reports 31 CASPs authorised in France and 283 in the EU as of early July 2026, with a few authorisations being finalised.</td><td class="effect" data-label="Effect on an opinion">Date. A national data point on the AMF's own date, never presented as an ESMA figure.</td><td class="src" data-label="Source"><a href="https://www.amf-france.org/fr/actualites-publications/communiques/communiques-de-lamf/crypto-actifs-la-fin-de-la-periode-de-transition-entre-la-loi-pacte-et-le-reglement-europeen-mica" rel="noopener" target="_blank">amf-france.org communiqué<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-24">2026-09-24</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">EBA</td><td class="event" data-label="Event">Response to the MiCA review: the press release reports 39 e-money tokens issued and no asset-referenced tokens authorised as at 1 September 2026; the response itself notes product launches delayed by protracted processes involving legal opinions and supervisory dialogues to establish regulatory classification.</td><td class="effect" data-label="Effect on an opinion">Context. Annex B legal opinions are rare in practice as of that date.</td><td class="src" data-label="Source"><a href="https://www.eba.europa.eu/publications-and-media/press-releases/eba-identifies-priorities-review-mica" rel="noopener" target="_blank">eba.europa.eu press release<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.eba.europa.eu/sites/default/files/2026-09/12cb4f01-0d51-46bf-a561-165ac486698f/EBA%20response%20to%20EC%20targeted%20consultation%20on%20MiCA%20review.pdf" rel="noopener" target="_blank">eba.europa.eu response (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-30">2026-09-30</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Response to the MiCA review (ESMA75-113276571-1721): proposals for binding ESMA opinions on token classification, simplified white-paper notification procedures, stricter marketing rules including for promotion by influencers, reinforced supervisory powers over third-country firms soliciting EU investors, and explicit rules against regulated firms offering services linked to non-compliant stablecoins.</td><td class="effect" data-label="Effect on an opinion">Date. Classification judgments in current opinions may be superseded by Level 1 change; the as-of date carries that risk.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/press-news/esma-news/esma-calls-changes-make-mica-clearer-safer-and-ready-emerging-services" rel="noopener" target="_blank">esma.europa.eu news<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-07">2026-10-07</time><span class="bl">snapshot, as of 2026-10-07</span></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Interim MiCA register snapshot: 370 CASP rows (367 distinct names) across 27 home states (24 EU Member States plus Iceland, Liechtenstein and Norway; Hungary, Poland and Romania have no rows); 173 non-compliant entity rows (Italy 164, Belgium 6, Czechia 1, the Netherlands 1, Slovakia 1; last update 16 September 2026). Weekly updates; one row carries a 2028 date.</td><td class="effect" data-label="Effect on an opinion">Date. The two lists a relier checks in one visit; a credential names which list was checked and when.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv" rel="noopener" target="_blank">ESMA CASPS.csv<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv" rel="noopener" target="_blank">ESMA NCASP.csv<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-08">2026-10-08</time></td><td data-label="Jurisdiction">EU</td><td data-label="Regulator">ESMA</td><td class="event" data-label="Event">Opinion (ESMA75-113276571-1742): CASPs should cease providing services related to non-MiCA-compliant asset-referenced and e-money tokens to EU clients; national authorities should require remediation of remaining pre-existing exposures no later than three months after the opinion's publication; any continuation is limited to liquidation, conversion, withdrawal, transfer or safekeeping and stays time-limited and supervised.</td><td class="effect" data-label="Effect on an opinion">Date. A stablecoin-scope opinion dates the ESMA position.</td><td class="src" data-label="Source"><a href="https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised" rel="noopener" target="_blank">esma.europa.eu news<span class="sr"> (opens in a new tab)</span></a></td></tr>
+</tbody>
+</table>
+</div>
+  </div>
+</section>
+
+<!-- ===== India ===== -->
+<section class="jur pt56" id="india" aria-labelledby="india-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <h2 id="india-h" class="pkh" style="margin-bottom:14px">India</h2>
+    <p class="lead2">Regulator, statute, Gazette and parliamentary sources only. FIU-IND publishes no register of registered VDA service providers; the counts come from FIU-IND's own annual report and two parliamentary answers, each with its as-of date. On LEXI India (FIU-IND) is V1, next up; nothing is on mainnet.</p>
+<div class="tblwrap">
+<table class="tracker">
+<caption>Corridor regulation tracker 2026, edition 1 · India · 16 rows · every row re-read at source on 2026-10-11 and verified again on 2026-10-16</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Jurisdiction</th><th scope="col">Regulator</th><th scope="col">Event</th><th scope="col">Effect on an opinion</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Date"><time datetime="2023-03-07">2023-03-07</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">Department of Revenue</td><td class="event" data-label="Event">Notification S.O. 1072(E): five virtual digital asset activities notified under the PMLA (exchange between VDAs and fiat currencies; exchange between VDAs; transfer; safekeeping or administration; participation in and provision of financial services related to an issuer's offer and sale). Read in FIU-IND's 15 September 2025 circular and 8 January 2026 guidelines, which cite it.</td><td class="effect" data-label="Effect on an opinion">Scope. Defines the reporting-entity perimeter an India-scope opinion describes.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/downloads/VDASP15092025.pdf" rel="noopener" target="_blank">FIU-IND circular, 15 September 2025 (PDF)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://fiuindia.gov.in/pdfs/downloads/VDA08012026.pdf" rel="noopener" target="_blank">FIU-IND guidelines, 8 January 2026 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2024-03-22">2024-03-22</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Order 08/DIR/FIU-IND/2024, Peken Global Limited (KuCoin): penalty of Rs 34,50,000.</td><td class="effect" data-label="Effect on an opinion">Date. A dated enforcement event.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/judgements/PGL_Order_08_2024.pdf" rel="noopener" target="_blank">fiuindia.gov.in order (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2024-06-19">2024-06-19</time><span class="bl">baseline</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Order 10/DIR/FIU-IND/2024, Binance: penalty of Rs 18,82,00,000.</td><td class="effect" data-label="Effect on an opinion">Date. A dated enforcement event.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/judgements/Binance_Order_10_2024.pdf" rel="noopener" target="_blank">fiuindia.gov.in order (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-01-31">2025-01-31</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Order 15/DIR/FIU-IND/2024, Bybit Fintech Limited: penalty of Rs 9,27,00,000. The orders index page prints 2024; the order itself is dated 31 January 2025.</td><td class="effect" data-label="Effect on an opinion">Date. A dated enforcement event.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/judgements/Bybit_Order_15_2024.pdf" rel="noopener" target="_blank">fiuindia.gov.in order (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-03-06">2025-03-06</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Order 16/DIR/FIU-IND/2024, Coinbase India Private Limited: a warning with directions under s.13(2)(a) PMLA, no monetary penalty. The index page prints 2024; the order is dated 6 March 2025.</td><td class="effect" data-label="Effect on an opinion">Date. A dated enforcement event, never described as a penalty.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/judgements/Coinbase_Order_16_2024.pdf" rel="noopener" target="_blank">fiuindia.gov.in order (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-03-31">2025-03-31</time><span class="bl">snapshot, as of 2025-03-31</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Annual Report 2024-25: 49 VDA service providers registered as on 31 March 2025 (45 onshore, 4 offshore); penalties of Rs 28 crore on VDA service providers in FY 2024-25; FIU-IND describes itself as the single authority for registering and AML/CFT monitoring of VDA service providers.</td><td class="effect" data-label="Effect on an opinion">Date. The baseline count and enforcement total, on the report's own date.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/downloads/AnnualReport2024_25.pdf" rel="noopener" target="_blank">fiuindia.gov.in Annual Report 2024-25 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-09-15">2025-09-15</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Third revision of the circular for registration of VDA service providers as reporting entities (F.No. 9-8/2023/COMPL/FIU-IND-Pt-II): failure to register is itself a non-compliance with the PMLA that attracts action under s.13(2); an in-person meeting is part of the process; VDA takes its meaning from s.2(47A) of the Income-tax Act 1961.</td><td class="effect" data-label="Effect on an opinion">Scope. An India-scope opinion dated after 15 September 2025 addresses registration under this revision. Registration is a PMLA obligation, not a licence, an approval or an endorsement.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/downloads/VDASP15092025.pdf" rel="noopener" target="_blank">FIU-IND circular (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2025-11-13">2025-11-13</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">MeitY</td><td class="event" data-label="Event">Notification G.S.R. 843(E) (Gazette CG-DL-E-14112025-267647) commences the Digital Personal Data Protection Act, 2023 in three tranches: on publication, ss.1(2), 2, 18 to 26, 35, 38 to 43, 44(1) and (3); one year after publication, s.6(9) and s.27(1)(d) (13 November 2026, derived); eighteen months after publication, ss.3 to 5, 6(1) to (8) and (10), 7 to 17, 27 except (1)(d), 28 to 34, 36, 37 and 44(2) (13 May 2027, derived).</td><td class="effect" data-label="Effect on an opinion">Date. Data-fiduciary duties for an Indian counterparty take effect with the eighteen-month tranche. The two derived dates are arithmetic, not stated in the notification.</td><td class="src" data-label="Source"><a href="https://egazette.gov.in/WriteReadData/2025/267647.pdf" rel="noopener" target="_blank">egazette.gov.in G.S.R. 843(E) (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-01-08">2026-01-08</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">AML and CFT Guidelines for reporting entities providing VDA services (updated as on 8 January 2026): obligations are activity-based and apply irrespective of physical presence in India; the Travel Rule carries the originator's PAN and allows no post-facto submission; dealings in anonymity-enhancing crypto tokens are "not permissible"; VDA is still defined by s.2(47A) of the 1961 Act. Parliament cites this document as the registration framework.</td><td class="effect" data-label="Effect on an opinion">Scope and date. The document an India-scope opinion covers after 8 January 2026. Its definition still points to the 1961 Act, repealed from 1 April 2026, a dating point the opinion notes.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/pdfs/downloads/VDA08012026.pdf" rel="noopener" target="_blank">FIU-IND guidelines (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-02-01">2026-02-01</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">Ministry of Finance</td><td class="event" data-label="Event">Budget 2026-27: Finance Bill 2026 clause 87 proposes a substituted s.446 of the Income-tax Act, 2025 with a penalty for the s.509 crypto-asset statement (Rs 200 per day; Rs 50,000 for inaccuracy or a due-diligence failure), effective 1 April 2026. A Lok Sabha answer of 10 August 2026 (Unstarred Question 3579) refers to the Finance Act, 2026 as enacted; the enacted text is unverified.</td><td class="effect" data-label="Effect on an opinion">Date. A reporting obligation with a proposed penalty, marked unverified as enacted law until the Finance Act 2026 text is read.</td><td class="src" data-label="Source"><a href="https://www.indiabudget.gov.in/doc/memo.pdf" rel="noopener" target="_blank">indiabudget.gov.in memorandum (PDF)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.indiabudget.gov.in/doc/Finance_Bill.pdf" rel="noopener" target="_blank">Finance Bill 2026 (PDF)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://elibrary.sansad.in/server/api/core/bitstreams/827ac0b4-fe6b-4267-a78a-b1858856f26d/content" rel="noopener" target="_blank">elibrary.sansad.in answer, 10 August 2026 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-10">2026-03-10</time><span class="bl">snapshot, as of 2026-01 (January 2026)</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">Rajya Sabha (Department of Revenue)</td><td class="event" data-label="Event">Unstarred Question 1986: as of January 2026, 52 offshore VDA service providers had been issued notices under s.13 of the PMLA, with access disallowed under s.79(3)(b) of the IT Act; no delisting guideline exists for privacy coins.</td><td class="effect" data-label="Effect on an opinion">Date. An enforcement figure on its own date, kept separate from the 30 March 2026 takedown list.</td><td class="src" data-label="Source"><a href="https://sansad.in/getFile/annex/270/AU1986_Ku3XXP.pdf?source=pqars" rel="noopener" target="_blank">sansad.in answer (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-20">2026-03-20</time><span class="bl">in force 2026-04-01</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">CBDT</td><td class="event" data-label="Event">Income-tax Rules, 2026 notified, replacing the 1962 Rules, in force from 1 April 2026 (Lok Sabha Unstarred Question 3579, 10 August 2026). The rule and form for the s.509 statement are unverified.</td><td class="effect" data-label="Effect on an opinion">Date. A dating fact for any India-scope opinion that cites the Rules.</td><td class="src" data-label="Source"><a href="https://elibrary.sansad.in/server/api/core/bitstreams/827ac0b4-fe6b-4267-a78a-b1858856f26d/content" rel="noopener" target="_blank">elibrary.sansad.in answer (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-30">2026-03-30</time><span class="bl">snapshot, as of 2026-03-09</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">Lok Sabha (Minister of State for Finance)</td><td class="event" data-label="Event">Unstarred Question 5805: 54 VDA service providers registered with FIU-IND as on 9 March 2026 (Annexure I; nine marked not operational, three conditionally onboarded); 53 offshore platforms directed for takedown (Annexure II); no public portal. The answer states that publishing a public list may create the impression that registered entities are licensed, approved or endorsed by the government.</td><td class="effect" data-label="Effect on an opinion">Date. FIU-IND publishes no register, so a credential naming an Indian counterparty records the registration evidence it saw and its date.</td><td class="src" data-label="Source"><a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU5805_lMTYNK.pdf?source=lsapps" rel="noopener" target="_blank">sansad.in answer (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-04-01">2026-04-01</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">Parliament (Act No. 30 of 2025)</td><td class="event" data-label="Event">The Income-tax Act, 2025 comes into force (s.1(3); assent 21 August 2025; Gazette CG-DL-E-22082025-265620). Section 2(111)(d) extends "virtual digital asset" to any crypto-asset on a cryptographically secured distributed ledger; s.509 creates the crypto-asset reporting statement. The short title is the Income-tax Act, 2025, not "(No. 2)".</td><td class="effect" data-label="Effect on an opinion">Scope and date. An India-scope opinion dated after 1 April 2026 cites the 2025 Act; FIU-IND's 8 January 2026 guidelines still point to the repealed 1961 definition.</td><td class="src" data-label="Source"><a href="https://egazette.gov.in/WriteReadData/2025/265620.pdf" rel="noopener" target="_blank">egazette.gov.in Act No. 30 of 2025 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-10">2026-09-10</time></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">SEBI</td><td class="event" data-label="Event">Press release 56/2026 and its FAQ: Demat 2.0 pilot for tokenised corporate bonds on a private, permissioned DLT owned by the depositories; the token is the corporate bond and remains a security under the Securities Contracts (Regulation) Act, 1956; the depositories hold the private keys.</td><td class="effect" data-label="Effect on an opinion">Context. India's tokenisation reference point. SEBI has published no crypto-asset stance this tracker can cite.</td><td class="src" data-label="Source"><a href="https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/successful-launch-of-demat-2-0-pilot-project-for-tokenised-corporate-bonds_104418.html" rel="noopener" target="_blank">sebi.gov.in press release<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.sebi.gov.in/sebi_data/faqfiles/sep-2026/1789049630065.pdf" rel="noopener" target="_blank">sebi.gov.in Demat 2.0 FAQ (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-16">2026-10-16</time><span class="bl">snapshot, as of 2026-10-16</span></td><td data-label="Jurisdiction">India</td><td data-label="Regulator">FIU-IND</td><td class="event" data-label="Event">Compliance orders page: no order against a VDA service provider dated 2026 is listed; the 2025 heading holds three bank orders. A negative row, re-checked each edition.</td><td class="effect" data-label="Effect on an opinion">Date. An absence stated with its date.</td><td class="src" data-label="Source"><a href="https://fiuindia.gov.in/files/Compliance_Orders/orders.html" rel="noopener" target="_blank">fiuindia.gov.in compliance orders<span class="sr"> (opens in a new tab)</span></a></td></tr>
+</tbody>
+</table>
+</div>
+  </div>
+</section>
+
+<!-- ===== United States ===== -->
+<section class="jur pt56" id="us" aria-labelledby="us-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <h2 id="us-h" class="pkh" style="margin-bottom:14px">United States</h2>
+    <p class="lead2">Official sources only. US coverage is on the LEXI roadmap. These rows date the 2026 instruments a US-scope opinion would have to read.</p>
+<div class="tblwrap">
+<table class="tracker">
+<caption>Corridor regulation tracker 2026, edition 1 · United States · 11 rows · every row re-read at source on 2026-10-11 and verified again on 2026-10-16</caption>
+<thead><tr><th scope="col">Date</th><th scope="col">Jurisdiction</th><th scope="col">Regulator</th><th scope="col">Event</th><th scope="col">Effect on an opinion</th><th scope="col">Source</th></tr></thead>
+<tbody>
+<tr><td data-label="Date"><time datetime="2025-07-18">2025-07-18</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">Congress (Public Law 119-27)</td><td class="event" data-label="Event">GENIUS Act enacted (S. 1582). Section 20: effective on the earlier of 18 months after enactment (18 January 2027 by arithmetic) or 120 days after the final implementing regulations.</td><td class="effect" data-label="Effect on an opinion">Scope and date. Enacted, not in effect. The SEC's 17 March 2026 interpretation records that a payment stablecoin issued by a permitted payment stablecoin issuer is excluded from the definition of a security.</td><td class="src" data-label="Source"><a href="https://www.govinfo.gov/app/details/PLAW-119publ27" rel="noopener" target="_blank">govinfo.gov Public Law 119-27<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-02">2026-03-02</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">OCC</td><td class="event" data-label="Event">Notice of proposed rulemaking implementing the GENIUS Act (comments to 1 May 2026).</td><td class="effect" data-label="Effect on an opinion">Date. Implementing rules in flight.</td><td class="src" data-label="Source"><a href="https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the" rel="noopener" target="_blank">federalregister.gov<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-11">2026-03-11</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">SEC and CFTC</td><td class="event" data-label="Event">Memorandum of Understanding (Release 2026-26): a Joint Harmonization Initiative, including clarifying product definitions through joint interpretations and rulemakings.</td><td class="effect" data-label="Effect on an opinion">Date. Product definitions may move by joint act; an opinion dates its reading.</td><td class="src" data-label="Source"><a href="https://www.sec.gov/newsroom/press-releases/2026-26-sec-cftc-announce-historic-memorandum-understanding-between-agencies" rel="noopener" target="_blank">sec.gov press release<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-17">2026-03-17</time><span class="bl">effective 2026-03-23</span></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">SEC, with CFTC guidance</td><td class="event" data-label="Event">Interpretation, Releases 33-11412 and 34-105020 (effective 23 March 2026; 91 FR 13714): five categories of crypto asset (digital commodities, digital collectibles, digital tools, stablecoins, digital securities). The first three "are not themselves securities", and a non-security crypto asset can still be offered and sold subject to an investment contract. Supersedes the 2019 staff Framework (footnote 21); the CFTC will administer the Commodity Exchange Act consistently with it.</td><td class="effect" data-label="Effect on an opinion">Scope and date. A US-scope opinion issued before 17 March 2026 was written against a superseded framework.</td><td class="src" data-label="Source"><a href="https://www.sec.gov/files/rules/interp/2026/33-11412.pdf" rel="noopener" target="_blank">sec.gov Release 33-11412 (PDF)<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/documents/2026/03/23/2026-05635/application-of-the-federal-securities-laws-to-certain-types-of-crypto-assets-and-certain" rel="noopener" target="_blank">federalregister.gov<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-03-20">2026-03-20</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">CFTC</td><td class="event" data-label="Event">CFTC staff FAQs on crypto assets and blockchain technologies first issued 20 March 2026; the 24 September 2026 update (press release 9303-26) adds tokenised permitted investments and blockchain recordkeeping.</td><td class="effect" data-label="Effect on an opinion">Date. A dating fact.</td><td class="src" data-label="Source"><a href="https://www.cftc.gov/PressRoom/PressReleases/9303-26" rel="noopener" target="_blank">cftc.gov press release<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-08-21">2026-08-21</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">SEC</td><td class="event" data-label="Event">Regulation Crypto Assets proposed (Releases 33-11434 and 34-106150; 91 FR 54510): exemptions of up to $5 million over four years and $75 million per 12 months, and a conditional carve-out under which a crypto asset would be deemed not to be subject to an investment contract; antifraud provisions still apply. Comments due on or before 20 October 2026 (open on 11 October 2026).</td><td class="effect" data-label="Effect on an opinion">Date. A proposal, not a rule, and never read as a live carve-out.</td><td class="src" data-label="Source"><a href="https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets" rel="noopener" target="_blank">federalregister.gov<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.sec.gov/files/rules/proposed/2026/33-11434.pdf" rel="noopener" target="_blank">sec.gov Release 33-11434 (PDF)<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-15">2026-09-15</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">House Financial Services Committee</td><td class="event" data-label="Event">Statement: the Senate cloture vote on the CLARITY Act (H.R. 3633) failed; only Congress can provide lasting legal certainty. A single official source; the tally is unverified.</td><td class="effect" data-label="Effect on an opinion">Scope. No market-structure statute as of 11 October 2026.</td><td class="src" data-label="Source"><a href="https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411233" rel="noopener" target="_blank">financialservices.house.gov statement<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-17">2026-09-17</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">SEC</td><td class="event" data-label="Event">Innovation Exemption for tokenized NMS stock (Release 2026-90; order 34-106402): temporary conditional relief for Tokenized Securities Venues for five years, with smart contracts that are auditable, public and deployed on a public, permissionless distributed ledger.</td><td class="effect" data-label="Effect on an opinion">Date. A dating fact for tokenised securities.</td><td class="src" data-label="Source"><a href="https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment" rel="noopener" target="_blank">sec.gov press release<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-09-30">2026-09-30</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">Treasury</td><td class="event" data-label="Event">Interim final rule on forms and procedures for the review of state certifications (effective 30 September 2026; comments to 30 November 2026). Earlier GENIUS Act steps: FinCEN and OFAC proposals published 10 April 2026; FDIC proposals published 10 April and 5 June 2026; Treasury proposal on issuance, offer and sale 18 August 2026 (comments to 19 October 2026).</td><td class="effect" data-label="Effect on an opinion">Date. The GENIUS implementation timeline; the Section 20 effective-date contingency remains.</td><td class="src" data-label="Source"><a href="https://www.federalregister.gov/documents/2026/09/30/2026-19966/forms-and-procedures-for-review-of-state-certifications-by-the-stablecoin-certification-review" rel="noopener" target="_blank">federalregister.gov interim final rule<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale" rel="noopener" target="_blank">federalregister.gov Treasury proposal<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/d/2026-07033" rel="noopener" target="_blank">FinCEN proposal, 10 April 2026<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/d/2026-06963" rel="noopener" target="_blank">OFAC proposal, 10 April 2026<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/d/2026-06974" rel="noopener" target="_blank">FDIC proposal, 10 April 2026<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/d/2026-11342" rel="noopener" target="_blank">FDIC proposal, 5 June 2026<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-01">2026-10-01</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">SEC</td><td class="event" data-label="Event">Proposal on adviser and fund custody of crypto assets (Release 2026-100; Federal Register 6 October 2026; 60-day comment period): self-custody under certain circumstances; state trust companies as custodians.</td><td class="effect" data-label="Effect on an opinion">Date. A dating fact.</td><td class="src" data-label="Source"><a href="https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal" rel="noopener" target="_blank">sec.gov press release<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/d/2026-20466" rel="noopener" target="_blank">federalregister.gov document 2026-20466<span class="sr"> (opens in a new tab)</span></a></td></tr>
+<tr><td data-label="Date"><time datetime="2026-10-05">2026-10-05</time></td><td data-label="Jurisdiction">US</td><td data-label="Regulator">CFTC</td><td class="event" data-label="Event">Advance notice of proposed rulemaking, Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets (press release 9307-26), on s.2(c)(2)(D) of the Commodity Exchange Act; published in the Federal Register on 13 October 2026 (91 FR 64811, document 2026-20888); comments to 14 December 2026.</td><td class="effect" data-label="Effect on an opinion">Date. A CFTC framework at the pre-proposal stage; an opinion dates its CFTC reading.</td><td class="src" data-label="Source"><a href="https://www.cftc.gov/PressRoom/PressReleases/9307-26" rel="noopener" target="_blank">cftc.gov press release<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.federalregister.gov/api/v1/documents/2026-20888.json" rel="noopener" target="_blank">federalregister.gov document 2026-20888<span class="sr"> (opens in a new tab)</span></a></td></tr>
+</tbody>
+</table>
+</div>
+  </div>
+</section>
+
+<!-- ===== HOW TO READ A ROW ===== -->
+<section class="pt56" id="read" aria-labelledby="read-h">
+  <div class="wrap">
+    <div class="prose">
+      <h2 id="read-h" style="margin-top:0">How to read a row against a credential</h2>
+      <p><strong>As-of date against event date.</strong> A LEXI credential records the opinion's as-of date on-chain. Take that date, go to the opinion's jurisdiction above, and read every row dated after it. A row marked scope means the law the opinion read has moved and the opinion cannot be read to cover the change. A row marked date means a fact the opinion relied on is now dated and should be checked again. An opinion does not update itself after its date; that is why a credential carries an expiry and a status (Live, Expired or Revoked) instead of leaving the date in a PDF footer.</p>
+      <p><strong>Register snapshot against credential status.</strong> A register row (59 licensed VASPs on VARA's register, 370 CASP rows on ESMA's, 54 registered VDA service providers in a parliamentary answer) is a count on its own date. A credential's status is a different fact about a different thing. Check the register as of the date you rely, not as of this tracker's snapshot, and check the credential's status on-chain at the same time.</p>
+      <p><strong>Not published at source.</strong> Where the date cell says so, an opinion that cites the instrument should state which version it read and when, and a relier should treat that statement as part of the opinion's scope.</p>
+      <p><strong>The relier check.</strong> The three steps a relier runs on any credential (status is Live; the scope and opinion hashes match the documents you hold; your entity is a named relier that accepted the reliance terms) are on the <a href="/credential/" data-event="tracker-credential">credential page</a>, and in a listing team's language on <a href="/exchanges/" data-event="tracker-exchanges">the page for exchanges and reliers</a>. The terms this tracker uses (as-of date, named relier, reliance mode, scope hash, status) are defined in the <a href="/glossary/" data-event="tracker-glossary">glossary</a>. Reading public on-chain metadata is free; the relier check runs against mainnet records after the audit, and nothing is on mainnet today.</p>
+      <div class="notice mono">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+
+      <h2 id="download">Download and licence</h2>
+      <p>The CSV holds the same 55 rows as the tables above, one row per event, UTF-8, with the columns <code>date</code>, <code>jurisdiction</code>, <code>regulator</code>, <code>event</code>, <code>source_url</code>, <code>source_date</code>, <code>as_of_date</code>, <code>effect_on_opinion</code>, <code>verified_by</code> and <code>row_type</code> (event, baseline or snapshot). Multiple sources in one row are separated by a semicolon. The rows run from 2023-03-07 to 2026-10-16; the edition window is 30 December 2024 to 16 October 2026, and the 7 earlier rows are marked baseline.</p>
+      <p class="dl-row"><a href="/insights/corridor-tracker-2026/tracker-2026.csv" data-event="tracker-csv">Download the CSV</a><span>·</span><span>55 rows · text/csv · Dataset markup on this page</span></p>
+      <p>The tracker and its CSV are published under the Creative Commons Attribution 4.0 International licence (CC BY 4.0). Reuse them with the attribution "LEXI Protocol, Corridor regulation tracker 2026, edition 1, lexiprotocol.com". The regulator documents the rows cite remain their publishers' own. The tracker is educational commentary, not legal advice, and it speaks as of its edition date.</p>
+
+      <h2 id="changes">Changes since the last edition</h2>
+      <p>Edition 1 is the first edition, so this section holds only the verification pass of 16 October 2026: every row was read again at source; the VARA register snapshot, three EU rows, two India rows and three US rows were corrected or re-dated, and seven source documents were added. Edition 2 is planned for Monday 7 December 2026, the first Monday of December. That is a plan, not a commitment: the next edition lands when every row has been re-read at source again, and it will carry a filled version of this section listing each row added, changed or retired, with the reason. Editions are numbered and dated; a row is never silently re-dated.</p>
+
+      <h2 id="sources">Sources</h2>
+      <p>72 documents, each read at the regulator's, legislature's or Official Journal's own host on 11 October 2026 and again on 16 October 2026, in the order they first appear above.</p>
+      <ol class="srcs">
+<li id="s1"><a href="https://www.uaecma.gov.ae/en/new-cma-law" rel="noopener" target="_blank">https://www.uaecma.gov.ae/en/new-cma-law<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s2"><a href="https://www.uaecma.gov.ae/assets/7bf42556/federal-decree-law-no-32-of-2025-en.aspx" rel="noopener" target="_blank">https://www.uaecma.gov.ae/assets/7bf42556/federal-decree-law-no-32-of-2025-en.aspx<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s3"><a href="https://www.uaecma.gov.ae/assets/56e3ab56/federal-decree-law-no-33-of-2025-en-final-copy-2722026.aspx" rel="noopener" target="_blank">https://www.uaecma.gov.ae/assets/56e3ab56/federal-decree-law-no-33-of-2025-en-final-copy-2722026.aspx<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s4"><a href="https://www.uaecma.gov.ae/assets/4091c81b/1626-en.aspx" rel="noopener" target="_blank">https://www.uaecma.gov.ae/assets/4091c81b/1626-en.aspx<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s5"><a href="https://www.uaecma.gov.ae/assets/3a3eadcb/1626-ar.aspx" rel="noopener" target="_blank">https://www.uaecma.gov.ae/assets/3a3eadcb/1626-ar.aspx<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s6"><a href="https://www.uaecma.gov.ae/en/media-center/news/13/4/2026/%D9%87%D9%8A%D8%A6%D8%A9-%D8%B3%D9%88%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84-%D8%AA%D8%B5%D8%AF%D8%B1-%D8%A5%D8%B7%D8%A7%D8%B1-%D8%AA%D9%86%D8%B8%D9%8A%D9%85-%D8%A7%D9%84%D8%A3%D8%B5%D9%88%D9%84-%D8%A7%D9%84%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A%D8%A9-%D9%85%D8%A4%D8%B3%D9%91%D9%90%D8%B3%D8%A9%D9%8B-%D9%86%D8%B8%D8%A7%D9%85%D8%A7%D9%8B-%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A7%D9%8B-%D9%8A%D8%AA%D9%83%D9%88%D9%91%D9%86-%D9%85%D9%86-%D8%AE%D9%85%D8%B3-%D9%88%D8%AD%D8%AF%D8%A7%D8%AA" rel="noopener" target="_blank">uaecma.gov.ae, press release of 13 April 2026 (Arabic-slug URL)<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s7"><a href="https://rulebooks.vara.ae/node/419" rel="noopener" target="_blank">https://rulebooks.vara.ae/node/419<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s8"><a href="https://rulebooks.vara.ae/rulebook/virtual-asset-issuance-rulebook" rel="noopener" target="_blank">https://rulebooks.vara.ae/rulebook/virtual-asset-issuance-rulebook<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s9"><a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_293_VER20250519.pdf" rel="noopener" target="_blank">https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_293_VER20250519.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s10"><a href="https://rulebooks.vara.ae/rulebook/exchange-services-rulebook" rel="noopener" target="_blank">https://rulebooks.vara.ae/rulebook/exchange-services-rulebook<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s11"><a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_516_VER1.pdf" rel="noopener" target="_blank">https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_516_VER1.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s12"><a href="https://rulebooks.vara.ae/rulebook/i-guidance-topic-0" rel="noopener" target="_blank">https://rulebooks.vara.ae/rulebook/i-guidance-topic-0<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s13"><a href="https://rulebooks.vara.ae/view-revision-updates" rel="noopener" target="_blank">https://rulebooks.vara.ae/view-revision-updates<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s14"><a href="https://media.umbraco.io/dwtc/thylprns/vara-amlctf-business-risk-assessment-guidance.pdf" rel="noopener" target="_blank">https://media.umbraco.io/dwtc/thylprns/vara-amlctf-business-risk-assessment-guidance.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s15"><a href="https://www.vara.ae/en/regulations/regulatory-notices/" rel="noopener" target="_blank">https://www.vara.ae/en/regulations/regulatory-notices/<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s16"><a href="https://media.umbraco.io/dwtc/p1zdm1ig/circular-regarding-reserve-assets-audit-report.pdf" rel="noopener" target="_blank">https://media.umbraco.io/dwtc/p1zdm1ig/circular-regarding-reserve-assets-audit-report.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s17"><a href="https://www.vara.ae/en/licenses-and-register/public-register/" rel="noopener" target="_blank">https://www.vara.ae/en/licenses-and-register/public-register/<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s18"><a href="https://www.esma.europa.eu/sites/default/files/2025-03/JC_2024_28_Guidelines_on_explanations_and_opinions__and_the_standardised_test_for_crypto-assets_under_MiCA.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2025-03/JC_2024_28_Guidelines_on_explanations_and_opinions__and_the_standardised_test_for_crypto-assets_under_MiCA.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s19"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/ESMA35-1872330276-1899_-_Final_report_on_GLs_on_reverse_solicitation_under_MiCA.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2024-12/ESMA35-1872330276-1899_-_Final_report_on_GLs_on_reverse_solicitation_under_MiCA.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s20"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/ESMA75-453128700-1396_Statement_on_MiCA_transitional_measures.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2024-12/ESMA75-453128700-1396_Statement_on_MiCA_transitional_measures.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s21"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1114" rel="noopener" target="_blank">https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32023R1114<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s22"><a href="https://www.esma.europa.eu/sites/default/files/2025-03/ESMA75453128700-1323_Guidelines_on_the_conditions_and_criteria_for_the_qualification_of_CAs_as_FIs.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2025-03/ESMA75453128700-1323_Guidelines_on_the_conditions_and_criteria_for_the_qualification_of_CAs_as_FIs.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s23"><a href="https://www.esma.europa.eu/sites/default/files/2025-12/ESMA75-113276571-1631_Statement_on_end_of_MiCA_transitional_periods.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2025-12/ESMA75-113276571-1631_Statement_on_end_of_MiCA_transitional_periods.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s24"><a href="https://www.esma.europa.eu/publications-data/questions-answers/2220" rel="noopener" target="_blank">https://www.esma.europa.eu/publications-data/questions-answers/2220<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s25"><a href="https://www.centralbank.ie/regulation/markets-in-crypto-assets-regulation" rel="noopener" target="_blank">https://www.centralbank.ie/regulation/markets-in-crypto-assets-regulation<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s26"><a href="https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s27"><a href="https://www.cssf.lu/wp-content/uploads/C_ESMA75-113276571-1710_Public_Statement_MiCA_transitional_period_ends_240626.pdf" rel="noopener" target="_blank">https://www.cssf.lu/wp-content/uploads/C_ESMA75-113276571-1710_Public_Statement_MiCA_transitional_period_ends_240626.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s28"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/List_of_MiCA_grandfathering_periods_art._143_3.pdf" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2024-12/List_of_MiCA_grandfathering_periods_art._143_3.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s29"><a href="https://www.amf-france.org/fr/actualites-publications/communiques/communiques-de-lamf/crypto-actifs-la-fin-de-la-periode-de-transition-entre-la-loi-pacte-et-le-reglement-europeen-mica" rel="noopener" target="_blank">https://www.amf-france.org/fr/actualites-publications/communiques/communiques-de-lamf/crypto-actifs-la-fin-de-la-periode-de-transition-entre-la-loi-pacte-et-le-reglement-europeen-mica<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s30"><a href="https://www.eba.europa.eu/publications-and-media/press-releases/eba-identifies-priorities-review-mica" rel="noopener" target="_blank">https://www.eba.europa.eu/publications-and-media/press-releases/eba-identifies-priorities-review-mica<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s31"><a href="https://www.eba.europa.eu/sites/default/files/2026-09/12cb4f01-0d51-46bf-a561-165ac486698f/EBA%20response%20to%20EC%20targeted%20consultation%20on%20MiCA%20review.pdf" rel="noopener" target="_blank">https://www.eba.europa.eu/sites/default/files/2026-09/12cb4f01-0d51-46bf-a561-165ac486698f/EBA%20response%20to%20EC%20targeted%20consultation%20on%20MiCA%20review.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s32"><a href="https://www.esma.europa.eu/press-news/esma-news/esma-calls-changes-make-mica-clearer-safer-and-ready-emerging-services" rel="noopener" target="_blank">https://www.esma.europa.eu/press-news/esma-news/esma-calls-changes-make-mica-clearer-safer-and-ready-emerging-services<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s33"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2024-12/CASPS.csv<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s34"><a href="https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv" rel="noopener" target="_blank">https://www.esma.europa.eu/sites/default/files/2024-12/NCASP.csv<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s35"><a href="https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised" rel="noopener" target="_blank">https://www.esma.europa.eu/press-news/esma-news/esma-sets-out-supervisory-expectations-services-related-unauthorised<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s36"><a href="https://fiuindia.gov.in/pdfs/downloads/VDASP15092025.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/downloads/VDASP15092025.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s37"><a href="https://fiuindia.gov.in/pdfs/downloads/VDA08012026.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/downloads/VDA08012026.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s38"><a href="https://fiuindia.gov.in/pdfs/judgements/PGL_Order_08_2024.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/judgements/PGL_Order_08_2024.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s39"><a href="https://fiuindia.gov.in/pdfs/judgements/Binance_Order_10_2024.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/judgements/Binance_Order_10_2024.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s40"><a href="https://fiuindia.gov.in/pdfs/judgements/Bybit_Order_15_2024.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/judgements/Bybit_Order_15_2024.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s41"><a href="https://fiuindia.gov.in/pdfs/judgements/Coinbase_Order_16_2024.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/judgements/Coinbase_Order_16_2024.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s42"><a href="https://fiuindia.gov.in/pdfs/downloads/AnnualReport2024_25.pdf" rel="noopener" target="_blank">https://fiuindia.gov.in/pdfs/downloads/AnnualReport2024_25.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s43"><a href="https://egazette.gov.in/WriteReadData/2025/267647.pdf" rel="noopener" target="_blank">https://egazette.gov.in/WriteReadData/2025/267647.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s44"><a href="https://www.indiabudget.gov.in/doc/memo.pdf" rel="noopener" target="_blank">https://www.indiabudget.gov.in/doc/memo.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s45"><a href="https://www.indiabudget.gov.in/doc/Finance_Bill.pdf" rel="noopener" target="_blank">https://www.indiabudget.gov.in/doc/Finance_Bill.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s46"><a href="https://sansad.in/getFile/annex/270/AU1986_Ku3XXP.pdf?source=pqars" rel="noopener" target="_blank">https://sansad.in/getFile/annex/270/AU1986_Ku3XXP.pdf?source=pqars<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s47"><a href="https://elibrary.sansad.in/server/api/core/bitstreams/827ac0b4-fe6b-4267-a78a-b1858856f26d/content" rel="noopener" target="_blank">https://elibrary.sansad.in/server/api/core/bitstreams/827ac0b4-fe6b-4267-a78a-b1858856f26d/content<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s48"><a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU5805_lMTYNK.pdf?source=lsapps" rel="noopener" target="_blank">https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU5805_lMTYNK.pdf?source=lsapps<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s49"><a href="https://egazette.gov.in/WriteReadData/2025/265620.pdf" rel="noopener" target="_blank">https://egazette.gov.in/WriteReadData/2025/265620.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s50"><a href="https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/successful-launch-of-demat-2-0-pilot-project-for-tokenised-corporate-bonds_104418.html" rel="noopener" target="_blank">https://www.sebi.gov.in/media-and-notifications/press-releases/sep-2026/successful-launch-of-demat-2-0-pilot-project-for-tokenised-corporate-bonds_104418.html<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s51"><a href="https://www.sebi.gov.in/sebi_data/faqfiles/sep-2026/1789049630065.pdf" rel="noopener" target="_blank">https://www.sebi.gov.in/sebi_data/faqfiles/sep-2026/1789049630065.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s52"><a href="https://fiuindia.gov.in/files/Compliance_Orders/orders.html" rel="noopener" target="_blank">https://fiuindia.gov.in/files/Compliance_Orders/orders.html<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s53"><a href="https://www.govinfo.gov/app/details/PLAW-119publ27" rel="noopener" target="_blank">https://www.govinfo.gov/app/details/PLAW-119publ27<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s54"><a href="https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the" rel="noopener" target="_blank">https://www.federalregister.gov/documents/2026/03/02/2026-04089/implementing-the-guiding-and-establishing-national-innovation-for-us-stablecoins-act-for-the<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s55"><a href="https://www.sec.gov/newsroom/press-releases/2026-26-sec-cftc-announce-historic-memorandum-understanding-between-agencies" rel="noopener" target="_blank">https://www.sec.gov/newsroom/press-releases/2026-26-sec-cftc-announce-historic-memorandum-understanding-between-agencies<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s56"><a href="https://www.sec.gov/files/rules/interp/2026/33-11412.pdf" rel="noopener" target="_blank">https://www.sec.gov/files/rules/interp/2026/33-11412.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s57"><a href="https://www.federalregister.gov/documents/2026/03/23/2026-05635/application-of-the-federal-securities-laws-to-certain-types-of-crypto-assets-and-certain" rel="noopener" target="_blank">https://www.federalregister.gov/documents/2026/03/23/2026-05635/application-of-the-federal-securities-laws-to-certain-types-of-crypto-assets-and-certain<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s58"><a href="https://www.cftc.gov/PressRoom/PressReleases/9303-26" rel="noopener" target="_blank">https://www.cftc.gov/PressRoom/PressReleases/9303-26<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s59"><a href="https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets" rel="noopener" target="_blank">https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s60"><a href="https://www.sec.gov/files/rules/proposed/2026/33-11434.pdf" rel="noopener" target="_blank">https://www.sec.gov/files/rules/proposed/2026/33-11434.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s61"><a href="https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411233" rel="noopener" target="_blank">https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411233<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s62"><a href="https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment" rel="noopener" target="_blank">https://www.sec.gov/newsroom/press-releases/2026-90-sec-issues-innovation-exemption-facilitate-trading-tokenized-nms-stock-request-comment<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s63"><a href="https://www.federalregister.gov/documents/2026/09/30/2026-19966/forms-and-procedures-for-review-of-state-certifications-by-the-stablecoin-certification-review" rel="noopener" target="_blank">https://www.federalregister.gov/documents/2026/09/30/2026-19966/forms-and-procedures-for-review-of-state-certifications-by-the-stablecoin-certification-review<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s64"><a href="https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale" rel="noopener" target="_blank">https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s65"><a href="https://www.federalregister.gov/d/2026-07033" rel="noopener" target="_blank">https://www.federalregister.gov/d/2026-07033<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s66"><a href="https://www.federalregister.gov/d/2026-06963" rel="noopener" target="_blank">https://www.federalregister.gov/d/2026-06963<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s67"><a href="https://www.federalregister.gov/d/2026-06974" rel="noopener" target="_blank">https://www.federalregister.gov/d/2026-06974<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s68"><a href="https://www.federalregister.gov/d/2026-11342" rel="noopener" target="_blank">https://www.federalregister.gov/d/2026-11342<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s69"><a href="https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal" rel="noopener" target="_blank">https://www.sec.gov/newsroom/press-releases/2026-100-sec-proposal-would-address-how-investment-advisers-funds-can-custody-crypto-assets-under-federal<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s70"><a href="https://www.federalregister.gov/d/2026-20466" rel="noopener" target="_blank">https://www.federalregister.gov/d/2026-20466<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s71"><a href="https://www.cftc.gov/PressRoom/PressReleases/9307-26" rel="noopener" target="_blank">https://www.cftc.gov/PressRoom/PressReleases/9307-26<span class="sr"> (opens in a new tab)</span></a></li>
+<li id="s72"><a href="https://www.federalregister.gov/api/v1/documents/2026-20888.json" rel="noopener" target="_blank">https://www.federalregister.gov/api/v1/documents/2026-20888.json<span class="sr"> (opens in a new tab)</span></a></li>
+      </ol>
+
+      <div class="article-foot">
+        <div class="notice">This briefing is educational commentary, not legal advice, and it speaks as of its published date. For questions about your own structure, obtain advice from licensed counsel in the relevant jurisdictions.</div>
+        <div class="preferred">
+          <p>Want more LEXI briefings in Google's Top Stories? Add lexiprotocol.com as a preferred source in your Google settings.</p>
+          <a class="btn sm" href="https://www.google.com/preferences/source?q=lexiprotocol.com" rel="noopener" target="_blank" data-event="preferred-source">Add LEXI as a preferred source on Google<span class="sr"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">The trust layer for institutional Web3.</h2>
+    <p>The tracker records what regulators did and when. The credential records what a licensed lawyer signed, dated and scope-bound, so the parties it names can check it against rows like these in one call.</p>
+    <div class="ctas"><a class="btn pri lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a><a class="btn lg" href="/contact/" data-event="cta-final-talk">Talk to us</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">For</div>
+        <ul>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

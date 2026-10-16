@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Exchanges Verify a Token Legal Opinion | LEXI Protocol</title>
+<meta name="description" content="What listing teams publish about legal review, what makes an opinion relied on, what a VARA VASP keeps on file, and what a verifiable credential changes.">
+<link rel="canonical" href="https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="LEXI Protocol">
+<meta property="og:title" content="LEXI Protocol · How exchanges verify a token legal opinion">
+<meta property="og:description" content="What listing teams publish about legal review, what makes an opinion relied on, what a VARA VASP keeps on file, and what a verifiable credential changes.">
+<meta property="og:url" content="https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/">
+<meta property="og:image" content="https://lexiprotocol.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<meta property="article:published_time" content="2026-10-11">
+<meta property="article:modified_time" content="2026-10-16">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LEXIprotocol">
+<meta name="twitter:title" content="LEXI Protocol · How exchanges verify a token legal opinion">
+<meta name="twitter:description" content="What listing teams publish about legal review, what makes an opinion relied on, what a VARA VASP keeps on file, and what a verifiable credential changes.">
+<meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
+<meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "name": "Lex Arbitrage",
+      "alternateName": "@lex_arbitrage",
+      "jobTitle": "Co-Founder and CEO",
+      "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+      "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "sameAs": ["https://x.com/lex_arbitrage"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#karthik",
+      "name": "Karthik",
+      "jobTitle": "Co-Founder and CTO",
+      "url": "https://lexiprotocol.com/about/#karthik",
+      "sameAs": ["https://x.com/implied_vol"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "name": "Ben Dhaya Ahmed",
+      "jobTitle": "Co-Founder and CGO",
+      "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lexiprotocol.com/#website",
+      "url": "https://lexiprotocol.com/",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#webpage",
+      "url": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/",
+      "name": "How Exchanges Verify a Token Legal Opinion | LEXI Protocol",
+      "description": "What listing teams publish about legal review, what makes an opinion relied on, what a VARA VASP keeps on file, and what a verifiable credential changes.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#breadcrumb" },
+      "mainEntity": { "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#article" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Briefings", "item": "https://lexiprotocol.com/insights/" },
+        { "@type": "ListItem", "position": 3, "name": "How exchanges verify a token legal opinion", "item": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#article",
+      "headline": "How exchanges verify a token legal opinion",
+      "description": "What listing teams publish about legal review, what makes an opinion relied on, what a VARA VASP keeps on file, and what a verifiable credential changes.",
+      "url": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/",
+      "mainEntityOfPage": { "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#webpage" },
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "author": { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "image": "https://lexiprotocol.com/og.jpg",
+      "datePublished": "2026-10-11",
+      "dateModified": "2026-10-16",
+      "inLanguage": "en",
+      "articleSection": "Briefings"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do exchanges require a legal opinion?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not as a rule. Among the listing pages opened at source on 11 October 2026, only KuCoin publishes a written legal-opinion requirement. Coinbase, Kraken, Gemini Singapore, Bitget, Crypto.com, CoinDCX and Gate US describe an internal legal review and keep their own file; Kraken (for the EEA) and Bybit ask for a MiCA white paper. OKX and HTX publish no requirement that could be found; MEXC's own listing guide lists a legal opinion letter as optional, 'if available'; and Binance's application sits behind a login. Some listing teams require an opinion in writing; most run an internal legal review and keep a file." }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes a legal opinion relied on?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Express authorisation. Under opinion practice a closing opinion may be relied on only by its addressee and any other person the firm expressly authorises, and it speaks as of its date, with no duty on the giver to update it. A party outside the addressee line asks for a reliance letter, which may be refused, limited to the original date, or marked as delivered but not to be relied upon. On a LEXI credential the named-relier list, the reliance mode and the on-chain reliance record carry that authorisation, and the as-of date and expiry carry the date." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a LEXI credential change the check?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It moves three facts out of the PDF and onto Base: whether the opinion is still live, whether the document set has changed since signing, and whether your entity may rely. A named relier checks that the status is Live, not Expired or Revoked; that the scope and opinion hashes match the documents it holds; and that its entity is a named relier that has accepted the reliance terms. Reading the public on-chain metadata is free; reliance access is a fixed USDC fee. V0 runs on Base Sepolia testnet, nothing is live on mainnet, and no reliance attaches to any testnet credential." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-npkJRaznVN8vw-NCvBYwY.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/" aria-current="page">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
+
+<main id="main">
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="pagehead wrap">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href="/insights/">Briefings</a></li>
+    <li aria-current="page">How exchanges verify a token legal opinion</li>
+  </ol>
+  <p class="eyebrow">Briefing · for listing and compliance teams</p>
+  <h1>How exchanges verify a token legal opinion</h1>
+  <p class="lede" style="max-width:66ch">What listing teams publish about legal review, what makes a PDF opinion relied on, what a VARA-licensed VASP keeps on file, and what changes when the opinion is a credential. Written for the people who read opinions, not the people who commission them.</p>
+  <p class="byline">By <a href="https://x.com/lex_arbitrage" rel="noopener" target="_blank">Lex Arbitrage<span class="sr"> (opens in a new tab)</span></a>, Co-Founder and CEO · Published <time datetime="2026-10-11">2026-10-11</time> · Last updated <time datetime="2026-10-16">2026-10-16</time></p>
+</header>
+
+<article>
+
+<!-- ===== 1. THE DEFINITION: the liftable chunk in the first 30% ===== -->
+<section aria-labelledby="pdf-h" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">What a PDF can tell you</p>
+      <h2 id="pdf-h"><span class="fade">What a listing team can check in a PDF opinion.</span></h2>
+    </div>
+    <div class="prose">
+      <div class="chunk" id="definition">
+        <div class="k">In one passage</div>
+        <p>A token legal opinion is a PDF. A listing team can check that it is signed, dated, on letterhead and addressed to someone, and that the white paper it refers to is attached. It cannot check, without asking the law firm, whether the opinion is still current, whether the document set has changed since signing, or whether the exchange itself is authorised to rely on it. A LEXI credential records those three facts on Base as a status, two hash commitments and a named-relier list, so the check takes one call. V0 runs on Base Sepolia testnet; nothing is live on mainnet.</p>
+      </div>
+      <p>Four questions sit under every opinion that lands in a listing file, and the PDF answers none of them on its own.</p>
+      <ul>
+        <li><strong>Reliance.</strong> Opinion practice limits reliance to the addressee and anyone the firm expressly authorises. If the exchange is not named, it asks the firm for a <a href="/glossary/#reliance-letter">reliance letter</a>, and the firm may decline, or grant it only as of the original date.</li>
+        <li><strong>Staleness.</strong> An opinion speaks as of its date, and the giver has no duty to update it. Nothing in the file says whether the facts or the law moved after signing.</li>
+        <li><strong>Bring-down.</strong> A bring-down letter re-confirms an earlier opinion to a later date. It is another PDF, with the same limits, and it restarts the same checks.</li>
+        <li><strong>Bar checks.</strong> The file shows a name and a firm. Checking the licence means finding the right register, which differs by jurisdiction and is sometimes not public at all.</li>
+      </ul>
+      <p>This briefing is written for reliers. It is not a guide to getting listed, and LEXI never sits in a listing decision; it tells you what the opinion covers, who signed it and whether it is still live.</p>
+      <div class="toc">
+        <div class="k">On this page</div>
+        <ol>
+          <li><a href="#published">What the large exchanges publish about legal review</a></li>
+          <li><a href="#kucoin">What the one written requirement checks</a></li>
+          <li><a href="#practice">What opinion practice says about reliance and dates</a></li>
+          <li><a href="#vara">What a VARA-licensed VASP keeps on file</a></li>
+          <li><a href="#eu">What the EU asks a platform to do before admission</a></li>
+          <li><a href="#credential">What a verifiable credential changes</a></li>
+          <li><a href="#today">Where LEXI stands today</a></li>
+          <li><a href="#faq">Questions</a></li>
+          <li><a href="#sources">Sources</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== 2. THE TABLE: published rules, every row checked at source ===== -->
+<section aria-labelledby="published-h" id="published">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Published rules, checked at source</p>
+      <h2 id="published-h" class="pkh">What the large exchanges publish about legal review.</h2>
+      <p>Every row below was opened at source on 11 October 2026. Each exchange is described by its published rule and nothing more: none has tested, accepted or seen a LEXI credential. Among the pages opened, one publishes a written legal-opinion requirement. Most describe an internal legal review and keep their own file; two ask for a regulatory document instead.</p>
+    </div>
+    <div class="tblwrap rv d1">
+      <table style="min-width:880px">
+        <caption>Published listing rules on legal review · every row checked at source on <time datetime="2026-10-11">2026-10-11</time></caption>
+        <thead><tr><th scope="col">Exchange</th><th scope="col">What the published page says</th><th scope="col">Type</th><th scope="col">Source</th></tr></thead>
+        <tbody>
+          <tr><td>Coinbase</td><td>Its listings page describes a due-diligence review with technical security, compliance and legal components, and says its legal review team analyses assets under applicable securities laws, including US securities law as regulated by the SEC. The intake form has no field for a legal opinion. Page undated.</td><td>Internal legal review</td><td><a href="https://www.coinbase.com/listings" rel="noopener" target="_blank">coinbase.com/listings<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Kraken</td><td>Its get-listed page sets out a five-step path in which Legal signs off, and lists regulatory posture in key jurisdictions as one of five criteria. For the EEA, a MiCA white paper must be submitted to a national competent authority at least 20 business days before the target listing date (support page updated 1 October 2026).</td><td>Internal legal review; regulatory document required in the EEA</td><td><a href="https://www.kraken.com/get-listed" rel="noopener" target="_blank">kraken.com/get-listed<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Gemini Digital Payments Singapore</td><td>Its Digital Payment Tokens Listing Framework (16 June 2025), aligned with MAS guidelines, lists a legal analysis of whether each asset is likely to be a security under applicable securities law. The Singapore entity's document, not a group policy.</td><td>Internal legal review</td><td><a href="https://www.gemini.com/legal/digital-payment-tokens-listing-framework" rel="noopener" target="_blank">gemini.com/legal<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Bitget</td><td>Its application page says it reviews the submitted details to confirm the asset meets legal, compliance and technical security standards. Page undated.</td><td>Internal review</td><td><a href="https://www.bitget.com/asia/events/application-for-listing" rel="noopener" target="_blank">bitget.com<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Crypto.com</td><td>Its listing page says an asset must have passed legal and security reviews and that the jurisdictions of listing are at the group's sole discretion. Whose review is not stated. Page undated.</td><td>Internal review</td><td><a href="https://crypto.com/listing" rel="noopener" target="_blank">crypto.com/listing<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>CoinDCX (Neblio Technologies Private Limited)</td><td>Its Listing Guidelines describe a committee's internal due diligence of the white paper and a 7M matrix score, with the right to reject without reasons. No legal-opinion clause. Page undated.</td><td>Internal committee review</td><td><a href="https://coindcx.com/listing-delisting-policy" rel="noopener" target="_blank">coindcx.com<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Bybit</td><td>Its public listing form asks whether the project has a MiCA white paper, asks for its upload, and asks for a project due-diligence document. No legal-opinion field appears in the form's English strings; the due-diligence template was not opened.</td><td>Regulatory document required</td><td><a href="https://www.bybit.com/en/trade/spot/listing-apply" rel="noopener" target="_blank">bybit.com<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Gate US</td><td>Its listing page describes technical, legal and compliance, and market evaluations, and asks that applications be submitted exclusively through its official application link. Gate US only; not read as Gate's global policy.</td><td>Internal review</td><td><a href="https://www.gate.com/en-us/listing" rel="noopener" target="_blank">gate.com/en-us/listing<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>KuCoin</td><td>KuCoin's listing page (updated 16 December 2025) requires a legal opinion letter issued by a reputable law firm in a jurisdiction such as the US, UK, EU, Hong Kong or Singapore, and still links its 2020 guidelines, which add firm-tier, headcount and founding-date bars. An opinion not in English needs a certified English translation. The package also asks for third-party code security review and audit reports.</td><td>Legal opinion required</td><td><a href="https://www.kucoin.com/support/26125293810713" rel="noopener" target="_blank">kucoin.com/support<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Binance.US</td><td>Publishes a Listing Questionnaire (10 April 2025) and states that completing it does not create a business relationship. No legal-opinion requirement published.</td><td>Not published or not verified</td><td><a href="https://support.binance.us/en/articles/9843852-digital-asset-listing-questionnaire-for-project-developers" rel="noopener" target="_blank">support.binance.us<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>Binance</td><td>Application behind a login. Its December 2025 framework is known from press (Cointelegraph and Coinfomania, 17 December 2025): founders apply directly, intermediaries are banned, and a whistleblower bounty applies. Those reports do not mention legal review or a legal opinion; that is our observation, not a quotation.</td><td>Not published or not verified</td><td><a href="https://cointelegraph.com/news/binance-crackdown-fake-token-agents-listing-process" rel="noopener" target="_blank">cointelegraph.com<span class="sr"> (opens in a new tab)</span></a></td></tr>
+          <tr><td>OKX, HTX</td><td>No public listing requirement found at any path tried (checked 11 October 2026, rechecked 16 October 2026). Not filled from press or memory.</td><td>Not published or not verified</td><td>none reachable</td></tr>
+          <tr><td>MEXC</td><td>Its application form publishes no requirements. Its own listing guide (12 October 2026) lists a legal opinion letter under legal documentation as optional, "if available", alongside a recommended contract audit report.</td><td>Legal opinion optional</td><td><a href="https://www.mexc.com/learn/article/how-to-get-listed-on-mexc-a-complete-guide-to-application-process-and-successful-listing-tips/1" rel="noopener" target="_blank">mexc.com/learn<span class="sr"> (opens in a new tab)</span></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fig rv"><b>Fig. 01</b> Published listing rules on legal review. Exchange names describe published rules; none is a user, partner or tester of LEXI. Where an exchange publishes a legal review, it is the exchange's own; where it asks for a document, the document is named. DAXA (Korea) is left out because its guideline text could not be retrieved at source.</p>
+  </div>
+</section>
+
+<!-- ===== 3. THE ONE WRITTEN REQUIREMENT ===== -->
+<section aria-labelledby="kucoin-h" id="kucoin" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">The one written requirement</p>
+      <h2 id="kucoin-h"><span class="fade">What the one written requirement checks.</span></h2>
+    </div>
+    <div class="prose rv d1">
+      <p>KuCoin's <em>Guidelines on the Legal Opinion Required for Projects to Launch on KuCoin</em> are undated on their face. The PDF's metadata is dated 7 May 2020, and the file is still linked from the listing page updated 16 December 2025. Whether its firm-tier, headcount and founding-date bars are applied in 2026 is not published, and nothing here suggests a LEXI co-signing firm would meet them. What the guidelines are useful for is different: they are a written list of what a listing team checks once a PDF opinion lands. Five of the articles map to a field or a flow on the credential.</p>
+      <dl class="glance">
+        <dt>Art. 7 · form, signature, letterhead, seal, date of issue</dt><dd>The signatory and the firm ID are public on-chain fields, and the <a href="/glossary/#as-of-date">as-of date</a> is recorded at signature. A relier reads them without asking anyone.</dd>
+        <dt>Art. 8 · no modification after signing; changes by a separate complementary opinion</dt><dd>Nothing is edited after signing. A refreshed opinion is a new credential, a <a href="/glossary/#re-issue-bring-down">re-issue</a> with its own date, and the old one is left to expire or is revoked.</dd>
+        <dt>Art. 11 · the white paper annexed as the version the opinion covers</dt><dd>The <a href="/glossary/#scope-hash">scope hash</a> binds the exact document set. If a document changes, the hash stops matching, and the second step of the check fails.</dd>
+        <dt>Art. 17 · a clear security or not-security conclusion, not linguistically ambiguous</dt><dd>The conclusion lives in the opinion body, off-chain, encrypted and gated to named reliers. No score, rating or verdict goes on-chain.</dd>
+        <dt>Art. 19 · the issuer or the firm authorises KuCoin to use the opinion, or places no restriction on third-party reliance</dt><dd><a href="/glossary/#reliance-mode">Reliance mode</a> and the named-relier list say who may rely; a <a href="/glossary/#reliance-record">reliance record</a> shows that the relier accepted the terms, on a date.</dd>
+      </dl>
+      <p>The firm-tier and headcount tests have no on-chain equivalent by design: whether a firm clears a relier's bar is the relier's own call.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. OPINION PRACTICE ===== -->
+<section aria-labelledby="practice-h" id="practice" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Opinion practice</p>
+      <h2 id="practice-h"><span class="fade">What opinion practice says about reliance and dates.</span></h2>
+    </div>
+    <div class="prose rv d1">
+      <blockquote>A closing opinion speaks as of its date.<cite>American Bar Association, Business Law Section, Core Opinion Principles, section 4.1 (2017)</cite></blockquote>
+      <p>The Core Opinion Principles go on: the opinion giver has no obligation to update a closing opinion for later events or legal developments (section 4.1), and the opinion may be relied on only by its addressee and any other person expressly authorised to rely (section 4.2). A recipient is also not entitled to rely on an opinion it knows to be incorrect (section 1.4). These are 2017 principles, and the practice behind them is older.</p>
+      <p>A 2021 article in the American Bar Association's Real Property, Trust and Estate Law Section journal <em>Opinions Matters</em> describes how firms handle the parties who were not addressed. Unless the letter says otherwise, only the recipient named in it may rely. Where a firm allows a later party to rely, it generally limits that party to the rights the original addressee had, and only as of the original date. Recipients often ask that an opinion may be delivered to a party without that party being entitled to rely on it; reliance matters to the giver because it generally creates a duty of care.</p>
+      <p>For a listing team this means three things. A PDF that looks current is only dated; its date is the fact. A <a href="/glossary/#reliance-letter">reliance letter</a> is a second negotiation, and it may come back limited to the original date or marked as delivered but not to be relied upon. And a bring-down is a new letter with a new date, which restarts the same checks on the same file.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. THE VARA FILE ===== -->
+<section aria-labelledby="vara-h" id="vara" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">Dubai · VARA</p>
+      <h2 id="vara-h"><span class="fade">What a VARA-licensed VASP keeps on file.</span></h2>
+    </div>
+    <div class="prose rv d1">
+      <p>VARA (Dubai, outside DIFC) licenses VASPs per activity under rulebooks. Part VIII of the Market Conduct Rulebook (version of 19 May 2025) requires every VASP to set standards for the virtual assets it services, to run due diligence before and at all times during the activity, to publish those standards on its website, to keep the assessment records for eight years, and to notify VARA as soon as possible when an asset no longer meets the standards. The factors include securities-law exposure, any regulatory approvals the asset holds, and the issuer's background. One published example: CoinMENA's VA Standards (undated) commit the exchange to understand and document the regulatory treatment of each asset by VARA and other relevant authorities.</p>
+      <p>Part IV of the Broker-Dealer Services Rulebook (same version) is the heavier file, and it belongs to the Licensed Distributor, the VASP through which a Category 2 issuance is placed. The distributor must ensure the quality of each issuer and asset beyond all reasonable doubt (Rule IV.B.1), run comprehensive due diligence on both (IV.B.3 and IV.B.4), and submit to VARA the white paper, the risk disclosure statement, a signed compliance declaration and its due-diligence reports (IV.D.1), after which a fifteen Working Day Submission Period runs (IV.D.2). VARA is never deemed to have approved an asset by virtue of that submission (IV.D.7). Two rules speak directly to staleness: the diligence must stay up to date and accurate at all times (IV.E.1), and on any material change the distributor must redo it and resubmit (IV.E.3).</p>
+      <p>Note what the Category 2 package does not contain. VARA does not require a legal opinion in it; it requires comprehensive audits of all smart contracts used for the asset, with findings remediated (IV.B.3(e)). The one VARA text that names who may sign a legal opinion is narrower still: its Guidance on the Virtual Assets Issuance Rulebook (9 April 2026) covers an asset-referenced virtual asset issuance under Annex 2, and there it expects the issuer to keep that opinion current and to supply a revised or supplemental opinion after a material change. A co-signed opinion with an as-of date, a scope hash and a Live, Expired or Revoked status is evidence a distributor can file and re-check under IV.E.1 and IV.E.3. VARA does not ask for it.</p>
+      <div class="notice mono">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+      <p class="mt24">Clearing a jurisdiction, in LEXI's vocabulary, means obtaining a co-signed legal opinion covering that jurisdiction. The VARA track as a whole is on <a href="/vara-compliance/">VARA compliance (Dubai)</a>; the regulator events since 2024, each with what it does to an opinion's scope or date, are in the <a href="/insights/corridor-tracker-2026/">corridor tracker</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. THE EU ===== -->
+<section aria-labelledby="eu-h" id="eu" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">EU · MiCA · V1, next up</p>
+      <h2 id="eu-h" class="pkh">What the EU asks a platform to do before admission.</h2>
+    </div>
+    <div class="prose rv d1">
+      <p>The EU (MiCA) is V1, next up, for LEXI; nothing below is live coverage. It is here because a listing team at an EEA venue runs a parallel check, and MiCA puts the gatekeeping on the platform rather than on an opinion. Before admitting a crypto-asset to trading, a platform operator must assess the suitability of the asset (Article 76(2)), including the reliability of its technology and any link to illicit or fraudulent activity, taking into account the experience, track record and reputation of the issuer and its development team. For an ordinary crypto-asset, the white paper notification carries an explanation of why the asset is not an excluded asset, an e-money token or an asset-referenced token (Article 8(4)); that is an explanation, not a legal opinion, and the regulation does not say who writes it. MiCA asks for a legal opinion only for asset-referenced tokens (Articles 17(1)(b)(ii) and 18(2)(e)).</p>
+      <p>Two public lists matter to a relier on this side of the corridor: ESMA's interim MiCA register of authorised crypto-asset service providers, and its register of non-compliant entities. Both move weekly, so any check records its snapshot date; the snapshot read for this briefing was 7 October 2026. Kraken's EEA rule, above, shows how a venue turns Article 76 into a file. When V1 reaches MiCA, the credential's as-of date is what a relier compares with the register row and with the white paper's notification date. Until then, this section describes a check other people run.</p>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--top arc--r" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== 7. WHAT A CREDENTIAL CHANGES: the three-step check ===== -->
+<section aria-labelledby="credential-h" id="credential">
+  <div class="wrap">
+    <div class="sh rv">
+      <p class="eyebrow">What changes</p>
+      <h2 id="credential-h"><span class="fade">What a verifiable credential changes.</span></h2>
+      <p>Three of the four questions above move out of the PDF and onto Base. Each step of the relier check reads one on-chain field, in one call, and reading the public metadata is free.</p>
+    </div>
+    <div class="split">
+      <div class="rv d1">
+        <ol class="check">
+          <li><div><h3>Status is Live, not Expired or Revoked.</h3><p>As-of date, expiry and revocation are on-chain.<i>Does it still speak as of a date I accept?</i></p></div></li>
+          <li><div><h3>The scope and opinion hashes match the documents you hold.</h3><p>Hash the PDF and the scope text and compare them with the on-chain commitments.<i>Is this the document the lawyer signed?</i></p></div></li>
+          <li><div><h3>Your entity is a named relier and has accepted the reliance terms.</h3><p>The credential names who may rely on it; the reliance record shows you accepted the terms.<i>Am I expressly authorised to rely?</i></p></div></li>
+        </ol>
+        <p class="dimp mt24" style="max-width:62ch;font-size:.98rem">The <a href="/glossary/#three-step-relier-check">three-step relier check</a> in full, the field table and a specimen are on <a href="/credential/">the credential page</a>. The relier page, <a href="/exchanges/">for exchanges, VASPs and Licensed Distributors</a>, maps a compliance file onto the credential item by item.</p>
+      </div>
+      <div class="prose rv d2">
+        <h3 style="margin-top:0">What you still do yourself</h3>
+        <ul>
+          <li><strong>Read the scope.</strong> The scope text, the assumptions and reservations and the permitted-use terms are public off-chain. The credential records that an opinion exists and what it binds; what it concludes is in the body, for named reliers.</li>
+          <li><strong>Treat Live as dated, not current.</strong> Live means unexpired and unrevoked. The <a href="/glossary/#as-of-date">as-of date</a> and the regulator events after it, listed in the <a href="/insights/corridor-tracker-2026/">corridor tracker</a>, tell you whether the opinion still fits the facts.</li>
+          <li><strong>Check the signer.</strong> The signatory and firm ID are public fields. For a Dubai-registered signatory, the Government of Dubai Legal Affairs Department publishes a <a href="https://lpsprd.legal.dubai.gov.ae/dlad-directory" rel="noopener" target="_blank">public directory of advocates and legal consultants<span class="sr"> (opens in a new tab)</span></a> showing status, registration number and licence issue and expiry dates. It lists lawyers registered with the Dubai department; for a signatory registered elsewhere, ask for the registration certificate.</li>
+          <li><strong>Keep your own file.</strong> Your VA Standards assessment, your suitability assessment or your listing committee's record stays yours. A credential is one dated, verifiable input to it, not a substitute for it.</li>
+          <li><strong>Rely on nothing from testnet.</strong> V0 credentials exist on Base Sepolia (testnet) only. No reliance attaches to any testnet credential.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="route rv"><b>LEXI has not issued a token and is not a listing agent.</b> If you are an exchange, you are a relier: <a href="/exchanges/" data-event="route-exchanges">here is how a credential is read</a>.</p>
+  </div>
+</section>
+
+<!-- ===== WHERE LEXI STANDS TODAY ===== -->
+<section aria-labelledby="today-h" id="today" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Build state</p>
+      <h2 id="today-h" class="pkh">Where LEXI stands today.</h2>
+    </div>
+    <div class="registry rv d1 maxw"><span class="xh" aria-hidden="true"></span>
+      <div class="rh">Where LEXI stands today <span>as of <time datetime="2026-10-11">2026-10-11</time></span></div>
+      <div class="rr"><span class="k">Build state</span><span>V0 runs end to end on Base Sepolia (testnet), confirmed by the founding team on <time datetime="2026-08-04">2026-08-04</time>: documentation in, engine first pass, co-signature flow, credential minted. <em>· dated entries in the <a href="/updates/">build log</a></em></span></div>
+      <div class="rr"><span class="k">Coverage</span><span>VARA (Dubai) first, on testnet. The EU (MiCA) and India (FIU-IND) are V1, next up; US coverage is on the roadmap. <em>· never presented as live until it is</em></span></div>
+      <div class="rr"><span class="k">Mainnet</span><span>Targeted post-audit, Q4 2026. Nothing is live on mainnet, and no contract address or transaction hash is published until the CTO confirms them.</span></div>
+      <div class="rr"><span class="k">Reliers</span><span>No exchange, VASP or Licensed Distributor has tested, accepted or relied on a LEXI credential. No reliance attaches to any testnet credential. <em>· the design-partner relier structure is on <a href="/exchanges/">the relier page</a></em></span></div>
+      <div class="rr"><span class="k">Who signs</span><span>One assigned licensed lawyer co-signs each credential. Compliance officers read credentials; they do not sign them. No AI signs anything.</span></div>
+      <div class="rr"><span class="k">Token</span><span>No $LEXI token has been issued. Reading a credential never requires $LEXI.</span></div>
+    </div>
+    <p class="dimp mt24 maxw">What is true today: a working cross-border legal practice, a proprietary corpus of real regulatory opinions, and a warm pipeline. V0 is live on Base Sepolia (testnet), end to end: documentation in, engine first pass, co-signature flow, credential minted. Nothing is live on mainnet yet, and this page will say so until it is.</p>
+  </div>
+</section>
+
+<!-- ===== 8. FAQ: native details; the schema mirrors this text verbatim ===== -->
+<section aria-labelledby="faq-h" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h" class="pkh">Questions listing teams ask.</h2>
+    </div>
+    <div class="faq maxw rv d1">
+      <details id="faq-require">
+        <summary>Do exchanges require a legal opinion?</summary>
+        <div class="a"><p>Not as a rule. Among the listing pages opened at source on 11 October 2026, only KuCoin publishes a written legal-opinion requirement. Coinbase, Kraken, Gemini Singapore, Bitget, Crypto.com, CoinDCX and Gate US describe an internal legal review and keep their own file; Kraken (for the EEA) and Bybit ask for a MiCA white paper. OKX and HTX publish no requirement that could be found; MEXC's own listing guide lists a legal opinion letter as optional, 'if available'; and Binance's application sits behind a login. Some listing teams require an opinion in writing; most run an internal legal review and keep a file.</p></div>
+      </details>
+      <details id="faq-relied">
+        <summary>What makes a legal opinion relied on?</summary>
+        <div class="a"><p>Express authorisation. Under opinion practice a closing opinion may be relied on only by its addressee and any other person the firm expressly authorises, and it speaks as of its date, with no duty on the giver to update it. A party outside the addressee line asks for a reliance letter, which may be refused, limited to the original date, or marked as delivered but not to be relied upon. On a LEXI credential the named-relier list, the reliance mode and the on-chain reliance record carry that authorisation, and the as-of date and expiry carry the date.</p></div>
+      </details>
+      <details id="faq-change">
+        <summary>How does a LEXI credential change the check?</summary>
+        <div class="a"><p>It moves three facts out of the PDF and onto Base: whether the opinion is still live, whether the document set has changed since signing, and whether your entity may rely. A named relier checks that the status is Live, not Expired or Revoked; that the scope and opinion hashes match the documents it holds; and that its entity is a named relier that has accepted the reliance terms. Reading the public on-chain metadata is free; reliance access is a fixed USDC fee. V0 runs on Base Sepolia testnet, nothing is live on mainnet, and no reliance attaches to any testnet credential.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. SOURCES ===== -->
+<section aria-labelledby="sources-h" id="sources" style="padding-top:0">
+  <div class="wrap">
+    <div class="prose rv">
+      <h2 id="sources-h" class="pkh" style="margin-top:0">Sources, checked at source on 11 October 2026</h2>
+      <ol class="srcs">
+        <li id="s1">Coinbase, Listings page and its "Request a review" intake form (both undated), checked <time datetime="2026-10-11">2026-10-11</time> and <time datetime="2026-10-16">2026-10-16</time>. <a href="https://www.coinbase.com/listings" rel="noopener" target="_blank">coinbase.com/listings<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s2">Kraken, "Get listed on Kraken" (undated) and "Kraken Asset Listings - Whitepapers" (last updated 1 October 2026), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.kraken.com/get-listed" rel="noopener" target="_blank">kraken.com/get-listed<span class="sr"> (opens in a new tab)</span></a> · <a href="https://support.kraken.com/en-us/articles/kraken-asset-listing-whitepapers" rel="noopener" target="_blank">support.kraken.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s3">Gemini Digital Payments Singapore, "Digital Payment Tokens Listing Framework" (16 June 2025), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.gemini.com/legal/digital-payment-tokens-listing-framework" rel="noopener" target="_blank">gemini.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s4">Bitget, "Application for Listing Crypto Projects on Bitget" (undated), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.bitget.com/asia/events/application-for-listing" rel="noopener" target="_blank">bitget.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s5">Crypto.com, listing page (undated), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://crypto.com/listing" rel="noopener" target="_blank">crypto.com/listing<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s6">CoinDCX (Neblio Technologies Private Limited), "Listing/Delisting Policy" (undated), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://coindcx.com/listing-delisting-policy" rel="noopener" target="_blank">coindcx.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s7">Bybit, "Listing Apply" form (undated), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.bybit.com/en/trade/spot/listing-apply" rel="noopener" target="_blank">bybit.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s8">Gate US, listing page (undated), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.gate.com/en-us/listing" rel="noopener" target="_blank">gate.com/en-us/listing<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s9">KuCoin, "Token Listing Application" support page (last updated 16 December 2025) and "Guidelines on the Legal Opinion Required for Projects to Launch on KuCoin" (PDF, metadata dated 7 May 2020, undated on its face), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.kucoin.com/support/26125293810713" rel="noopener" target="_blank">kucoin.com/support<span class="sr"> (opens in a new tab)</span></a> · <a href="https://drive.google.com/file/d/1NuCPSn-H2wYjPFOhTdiERgQxRyu5_QvI/view" rel="noopener" target="_blank">guidelines PDF<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s10">Binance.US, "Digital asset listing questionnaire for project developers" (10 April 2025), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://support.binance.us/en/articles/9843852-digital-asset-listing-questionnaire-for-project-developers" rel="noopener" target="_blank">support.binance.us<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s11">Binance listing framework as reported by Cointelegraph and Coinfomania (17 December 2025); the application itself is behind a login. <a href="https://cointelegraph.com/news/binance-crackdown-fake-token-agents-listing-process" rel="noopener" target="_blank">cointelegraph.com<span class="sr"> (opens in a new tab)</span></a> · <a href="https://www.coinfomania.com/binance-publishes-listing-framework-bans-third-party-middlemen/" rel="noopener" target="_blank">coinfomania.com<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s12">MEXC, "How to Get Listed on MEXC: A Complete Guide to Application Process and Successful Listing Tips" (MEXC Learn, 12 October 2026), checked <time datetime="2026-10-16">2026-10-16</time>. <a href="https://www.mexc.com/learn/article/how-to-get-listed-on-mexc-a-complete-guide-to-application-process-and-successful-listing-tips/1" rel="noopener" target="_blank">mexc.com/learn<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s13">American Bar Association, Business Law Section, Core Opinion Principles (approved 28 March and 7 April 2017), sections 1.4, 4.1 and 4.2. <a href="https://www.scbar.org/media/lqilgxzr/core-opinion-2017.pdf" rel="noopener" target="_blank">scbar.org, PDF<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s14">Robert J. Krapf and Sterling S. Willis, "Reliance Parties to Third-Party Opinion Letters in Commercial Real Estate Finance Transactions", American Bar Association, Real Property, Trust and Estate Law Section, <em>Opinions Matters</em>, Spring/Summer 2021 (19 July 2021), checked <time datetime="2026-10-16">2026-10-16</time>. <a href="https://www.americanbar.org/groups/real_property_trust_estate/resources/opinions-matters/2021-spring-summer/reliance-parties-opinion-letters-commercial-real-estate/" rel="noopener" target="_blank">americanbar.org<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s15">VARA, Market Conduct Rulebook, Part VIII (VARA_EN_190_VER20250519), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://rulebooks.vara.ae/entiresection/211" rel="noopener" target="_blank">rulebooks.vara.ae/entiresection/211<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s16">VARA, Broker-Dealer Services Rulebook, Part IV, Licensed Distribution Services (VARA_EN_226_VER20250519), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://rulebooks.vara.ae/entiresection/441" rel="noopener" target="_blank">rulebooks.vara.ae/entiresection/441<span class="sr"> (opens in a new tab)</span></a> · <a href="https://rulebooks.vara.ae/entiresection/440" rel="noopener" target="_blank">/440<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s17">VARA, Guidance on the Virtual Assets Issuance Rulebook (announced 9 April 2026; VARA_EN_516_VER1; the rulebook page itself carries no date), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://rulebooks.vara.ae/entiresection/516" rel="noopener" target="_blank">rulebooks.vara.ae/entiresection/516<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s18">CoinMENA FZE, Virtual Assets Standards V1 (undated PDF), checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://www.coinmena.com/docs/CoinMENA_virtual_asset_standards.vara.en.71c55033.pdf" rel="noopener" target="_blank">coinmena.com, PDF<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s19">Regulation (EU) 2023/1114 (MiCA), Articles 8, 17, 18 and 76, OJ L 150, 9 June 2023. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114" rel="noopener" target="_blank">eur-lex.europa.eu<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s20">ESMA, interim MiCA register and register of non-compliant entities, snapshot read 7 October 2026. <a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" rel="noopener" target="_blank">esma.europa.eu<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s21">Government of Dubai Legal Affairs Department, directory of advocates and legal consultants, checked <time datetime="2026-10-11">2026-10-11</time>. <a href="https://lpsprd.legal.dubai.gov.ae/dlad-directory" rel="noopener" target="_blank">lpsprd.legal.dubai.gov.ae<span class="sr"> (opens in a new tab)</span></a></li>
+      </ol>
+      <p class="cap">Exchange pages were opened live on 11 October 2026. Where a page is undated, the briefing says so. OKX and HTX returned no listing-requirements page at any path tried; MEXC publishes a guide, not a requirement; DAXA's host did not resolve, so no Korean requirement is cited. Law-firm summaries were not used as sources. Sources were re-checked on 16 October 2026.</p>
+      <div class="article-foot">
+        <div class="notice">This briefing is educational commentary, not legal advice, and it speaks as of its published date. For questions about your own structure, obtain advice from licensed counsel in the relevant jurisdictions.</div>
+        <div class="preferred">
+          <p>Want more LEXI briefings in Google's Top Stories? Add lexiprotocol.com as a preferred source in your Google settings.</p>
+          <a class="btn sm" href="https://www.google.com/preferences/source?q=lexiprotocol.com" rel="noopener" target="_blank" data-event="preferred-source">Add LEXI as a preferred source on Google<span class="sr"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</article>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h"><div class="wrap">
+  <h2 id="final-h">The trust layer for institutional Web3.</h2>
+  <p>Reliers read credentials for free. The specimen, the field table and the three-step check are on the credential page; the relier conversation starts with a message.</p>
+  <div class="ctas"><a class="btn pri lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a><a class="btn lg" href="/contact/?you=an%20exchange" data-event="cta-final-talk">Talk to us</a></div>
+</div></section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+          LEXI<span class="dot">.</span>
+        </a>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
+      </div>
+      <div>
+        <div class="fh">Protocol</div>
+        <ul>
+          <li><a href="/how-it-works/">How it works</a></li>
+          <li><a href="/credential/">The credential</a></li>
+          <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
+          <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">For</div>
+        <ul>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
+          <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Company</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Nothing on this site is legal advice. LEXI is not a law firm, and no attorney-client relationship arises from using this site. Legal opinions are issued by independent licensed professionals to named reliers under a defined scope.</p>
+      <p>$LEXI is designed as the protocol's staking and governance asset. No token is currently offered for sale, and nothing on this site is an offer of securities or a solicitation to invest, in any jurisdiction. Virtual assets carry risk, including the loss of their entire value.</p>
+      <p>A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator.</p>
+      <div class="fmeta">
+        <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
+        <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/site.js" defer></script>
+</body>
+</html>

@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Corridor Briefings | LEXI Protocol</title>
-<meta name="description" content="Sourced regulatory briefings on the India-UAE-US corridor: VARA, the UAE CMA, FIU-IND, and what each change means for Web3 teams.">
+<title>Corridor Briefings: VARA, CMA, MiCA, FIU-IND | LEXI Protocol</title>
+<meta name="description" content="Dated, sourced briefings on the India, UAE and US corridor: what each regulator event does to a legal opinion's scope and date. Tracker and CMA refresh.">
 <link rel="canonical" href="https://lexiprotocol.com/insights/">
 <meta name="theme-color" content="#0A0C12">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LEXI Protocol">
-<meta property="og:title" content="Corridor Briefings | LEXI Protocol">
-<meta property="og:description" content="Sourced regulatory briefings on the India-UAE-US corridor: VARA, the UAE CMA, FIU-IND, and what each change means for Web3 teams.">
+<meta property="og:title" content="LEXI Protocol · Briefings">
+<meta property="og:description" content="Dated, sourced briefings on the India, UAE and US corridor: what each regulator event does to a legal opinion's scope and date. Tracker and CMA refresh.">
 <meta property="og:url" content="https://lexiprotocol.com/insights/">
 <meta property="og:image" content="https://lexiprotocol.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,89 +24,103 @@
 <meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LEXIprotocol">
-<meta name="twitter:title" content="Corridor Briefings | LEXI Protocol">
-<meta name="twitter:description" content="Sourced regulatory briefings on the India-UAE-US corridor: VARA, the UAE CMA, FIU-IND, and what each change means for Web3 teams.">
+<meta name="twitter:title" content="LEXI Protocol · Briefings">
+<meta name="twitter:description" content="Dated, sourced briefings on the India, UAE and US corridor: what each regulator event does to a legal opinion's scope and date. Tracker and CMA refresh.">
 <meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
 <meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://lexiprotocol.com/#organization",
-   "name": "LEXI Protocol",
-   "alternateName": "LEXI",
-   "url": "https://lexiprotocol.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://lexiprotocol.com/apple-touch-icon.png",
-    "width": 180,
-    "height": 180
-   },
-   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
-   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed legal professionals' co-signed legal opinions as verifiable on-chain credentials. It is not a law firm, and it has not launched a token.",
-   "email": "info@lexiprotocol.com",
-   "sameAs": [
-    "https://x.com/LEXIprotocol",
-    "https://www.linkedin.com/company/lexi-protocol/",
-    "https://github.com/Lexi-Protocol"
-   ]
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://lexiprotocol.com/#website",
-   "url": "https://lexiprotocol.com/",
-   "name": "LEXI Protocol",
-   "publisher": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "inLanguage": "en"
-  },
-  {
-   "@type": "CollectionPage",
-   "@id": "https://lexiprotocol.com/insights/#webpage",
-   "url": "https://lexiprotocol.com/insights/",
-   "name": "Corridor Briefings | LEXI Protocol",
-   "isPartOf": {
-    "@id": "https://lexiprotocol.com/#website"
-   },
-   "about": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "datePublished": "2026-08-11",
-   "dateModified": "2026-08-11"
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://lexiprotocol.com/"
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Briefings",
-     "item": "https://lexiprotocol.com/insights/"
-    }
-   ]
-  },
-  {
-   "@type": "ItemList",
-   "@id": "https://lexiprotocol.com/insights/#list",
-   "itemListElement": [
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "name": "Lex Arbitrage",
+      "alternateName": "@lex_arbitrage",
+      "jobTitle": "Co-Founder and CEO",
+      "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.",
+      "url": "https://lexiprotocol.com/about/#lex-arbitrage",
+      "sameAs": ["https://x.com/lex_arbitrage"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
     {
-     "@type": "ListItem",
-     "position": 1,
-     "url": "https://lexiprotocol.com/insights/uae-cma-2026/",
-     "name": "The UAE's federal CMA: what Decree-Laws 32 and 33 of 2025 change for virtual assets"
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#karthik",
+      "name": "Karthik",
+      "jobTitle": "Co-Founder and CTO",
+      "url": "https://lexiprotocol.com/about/#karthik",
+      "sameAs": ["https://x.com/implied_vol"],
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "name": "Ben Dhaya Ahmed",
+      "jobTitle": "Co-Founder and CGO",
+      "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed",
+      "worksFor": { "@id": "https://lexiprotocol.com/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lexiprotocol.com/#website",
+      "url": "https://lexiprotocol.com/",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "publisher": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://lexiprotocol.com/insights/#webpage",
+      "url": "https://lexiprotocol.com/insights/",
+      "name": "Corridor Briefings: VARA, CMA, MiCA, FIU-IND | LEXI Protocol",
+      "description": "Dated, sourced briefings on the India, UAE and US corridor: what each regulator event does to a legal opinion's scope and date. Tracker and CMA refresh.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/insights/#breadcrumb" },
+      "mainEntity": { "@id": "https://lexiprotocol.com/insights/#list" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/insights/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Briefings", "item": "https://lexiprotocol.com/insights/" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://lexiprotocol.com/insights/#list",
+      "name": "LEXI corridor briefings",
+      "numberOfItems": 4,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "url": "https://lexiprotocol.com/insights/why-verifiable-legal-opinions-now/", "name": "Why verifiable legal opinions, now" },
+        { "@type": "ListItem", "position": 2, "url": "https://lexiprotocol.com/insights/how-exchanges-verify-a-token-legal-opinion/", "name": "How exchanges verify a token legal opinion" },
+        { "@type": "ListItem", "position": 3, "url": "https://lexiprotocol.com/insights/corridor-tracker-2026/", "name": "Corridor regulation tracker 2026, edition 1" },
+        { "@type": "ListItem", "position": 4, "url": "https://lexiprotocol.com/insights/uae-cma-2026/", "name": "The UAE's federal CMA in 2026: Decree-Laws 32 and 33, the April framework and Resolution 16" }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -114,65 +129,133 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Hub list: the Latest row plus a one-line standfirst under the headline (no such row exists in site.css). */
+.hub .list a{grid-template-areas:"d t go" "h h go" "s s go"}
+.hub .list .s{grid-area:s;color:var(--dim);font-size:.97rem;line-height:1.55;max-width:62ch}
+@media(max-width:1000px){.hub .list a{grid-template-areas:"d t" "h h" "s s" "go go"}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap"><div class="navrow">
-    <a class="brand" href="/" aria-label="LEXI Protocol home">
-      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
-      LEXI<span class="dot">.</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-    <div class="nl" id="nav-list">
-      <a href="/how-it-works/">How it works</a>
-      <a href="/crypto-legal-opinion/">Legal opinions</a>
-      <a href="/vara-compliance/">VARA compliance</a>
-      <a href="/protocols/">For protocols</a>
-      <a href="/legal-professionals/">For legal professionals</a>
-      <a href="/token/">$LEXI</a>
-      <a href="/about/">About</a>
-      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
-    </div>
-  </div></div>
-</nav>
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/" aria-current="page">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
 
 <main id="main">
-<header class="pagehead wrap" style="max-width:900px">
-  <p class="crumbs"><a href="/">Home</a> / Briefings</p>
+
+<!-- ===== PAGE HEADER ===== -->
+<header class="pagehead wrap">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">Briefings</li>
+  </ol>
   <p class="eyebrow">Corridor briefings</p>
   <h1>Briefings</h1>
-  <p class="lede">Sourced analyses of regulatory change on the India-UAE-US corridor. One entry per real event, each dated and cited.</p>
+  <p class="lede" style="max-width:66ch">Sourced analyses of regulatory change on the India, UAE and US corridor. One entry per real regulator event, each dated, cited at source and framed around what it does to a legal opinion's scope and date. Written by Lex Arbitrage, Co-Founder and CEO.</p>
+  <p class="dimp" style="max-width:66ch;margin-top:14px">The briefings track the regulators wherever they move. LEXI's own coverage is narrower: VARA (Dubai) first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up; US coverage is on the roadmap. Nothing is live on mainnet.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
 </header>
 
-<section style="padding-top:30px"><div class="wrap" style="max-width:900px">
-  <div class="registry rv"><span class="xh" aria-hidden="true"></span>
-    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center">
-      <div style="max-width:640px">
-        <p class="eyebrow">UAE · 2026-07-03</p>
-        <h2 style="font-size:1.35rem"><a href="/insights/uae-cma-2026/">The UAE's federal CMA: what Decree-Laws 32 and 33 of 2025 change for virtual assets</a></h2>
-        <p style="color:var(--dim);font-weight:300;margin-top:8px">The SCA became the Capital Market Authority on 1 January 2026, and virtual assets now sit inside a federal perimeter alongside VARA. What Decree-Laws 32 and 33 of 2025 change for Web3 teams structuring in Dubai.</p>
-      </div>
-      <a class="btn" href="/insights/uae-cma-2026/" data-event="briefing-read">Read the briefing</a>
+<!-- ===== THE BRIEFINGS: dated rows, newest first, the path in mono ===== -->
+<section class="latest hub pt0" aria-labelledby="hub-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">The briefings</p>
+      <h2 id="hub-h" class="pkh">Dated, sourced, one entry per event.</h2>
+    </div>
+    <div class="list rv">
+      <a href="/insights/why-verifiable-legal-opinions-now/" data-event="hub-why-now"><span class="d">Published <time datetime="2026-10-11">2026-10-11</time> · Lex Arbitrage</span><span class="t">Briefing</span><span class="h">Why verifiable legal opinions, now</span><span class="s">Regulators now ask who signed, when, on what assumptions, and whether an opinion is current. Why an opinion needs a date, a scope and a status that the parties it names can check.</span><span class="go">/insights/why-verifiable-legal-opinions-now/ &rarr;</span></a>
+      <a href="/insights/how-exchanges-verify-a-token-legal-opinion/" data-event="hub-exchanges-verify"><span class="d">Published <time datetime="2026-10-11">2026-10-11</time> · Lex Arbitrage</span><span class="t">Briefing</span><span class="h">How exchanges verify a token legal opinion</span><span class="s">What listing teams publish about legal review, what makes an opinion relied on, what a VARA-licensed VASP keeps on file, and what a verifiable credential changes.</span><span class="go">/insights/how-exchanges-verify-a-token-legal-opinion/ &rarr;</span></a>
+      <a href="/insights/corridor-tracker-2026/" data-event="hub-tracker"><span class="d">Published <time datetime="2026-10-12">2026-10-12</time> · Lex Arbitrage</span><span class="t">Tracker · Edition 1</span><span class="h">Corridor regulation tracker 2026, edition 1</span><span class="s">Dated regulator events on the India, UAE, US and EU corridor, each with its source and what it does to a legal opinion's scope or date. 55 rows, re-read at every source on 11 October 2026, with the same rows as a CSV.</span><span class="go">/insights/corridor-tracker-2026/ &rarr;</span></a>
+      <a href="/insights/uae-cma-2026/" data-event="hub-cma"><span class="d">Published <time datetime="2026-07-03">2026-07-03</time> · Updated <time datetime="2026-10-11">2026-10-11</time> · Lex Arbitrage</span><span class="t">Briefing</span><span class="h">The UAE's federal CMA in 2026: Decree-Laws 32 and 33, the April framework and Resolution 16</span><span class="s">On 1 January 2026 the SCA became the Capital Market Authority, and Decree-Law 33 of 2025 brought virtual assets inside the federal perimeter. What the April framework and Resolution 16/2026 add, and what it does to an opinion's scope and date.</span><span class="go">/insights/uae-cma-2026/ &rarr;</span></a>
+    </div>
+    <p class="cap rv" style="margin-top:18px">New briefings land with each real regulatory event on the corridor: VARA rulebook changes, CMA decisions, FIU-IND actions. The tracker moves by edition, never by silent re-dating.</p>
+  </div>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== HOW THESE BRIEFINGS ARE MADE: one framed fact block ===== -->
+<section class="pt56" aria-labelledby="line-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">How these briefings are made</p>
+      <h2 id="line-h" class="pkh">The editorial line.</h2>
+    </div>
+    <div class="registry rv maxw"><span class="xh" aria-hidden="true"></span>
+      <div class="rh">Editorial line <span>applies to every briefing</span></div>
+      <div class="rr"><span class="k">Author</span><span>Every briefing is by <a href="/about/#lex-arbitrage" data-event="line-author">Lex Arbitrage</a>, Co-Founder and CEO, and carries that byline with a visible Published date.</span></div>
+      <div class="rr"><span class="k">Sources</span><span>Every fact names its regulator or statutory source and the date it was checked at source. Law-firm summaries are named in a Sources block when used, never linked. <em>Where a regulator has not published a text, the briefing says so instead of guessing.</em></span></div>
+      <div class="rr"><span class="k">Dates</span><span>Published and Last updated dates describe the page, not the regulation. A briefing is never re-dated without a substantive change. The tracker ships as numbered editions with a visible changes section.</span></div>
+      <div class="rr"><span class="k">Frame</span><span>Each entry is a regulator event stated as a fact, with what it does to a legal opinion's scope and date. <em>The briefings do not say whether a given project is licensable and do not describe licensing steps. That is a question for counsel.</em></span></div>
+      <div class="rr"><span class="k">Reference</span><span>The terms the briefings use (as-of date, named relier, reliance mode, scope hash, status) are defined in the <a href="/glossary/" data-event="line-glossary">glossary</a>. What runs on testnet today is recorded, dated, in the <a href="/updates/" data-event="line-updates">build log</a>.</span></div>
+    </div>
+    <div class="notice maxw mt24">These briefings are educational commentary, not legal advice, and each speaks as of its published date. LEXI is not a law firm. For questions about your own structure, obtain advice from licensed counsel in the relevant jurisdictions.</div>
+    <div class="preferred maxw">
+      <p>Want more LEXI briefings in Google's Top Stories? Add lexiprotocol.com as a preferred source in your Google settings.</p>
+      <a class="btn sm" href="https://www.google.com/preferences/source?q=lexiprotocol.com" rel="noopener" target="_blank" data-event="preferred-source">Add LEXI as a preferred source on Google<span class="sr"> (opens in a new tab)</span></a>
     </div>
   </div>
-  <p class="updated" style="margin-top:40px">New briefings land with each real regulatory event on the corridor: VARA rulebook changes, CMA decisions, FIU-IND actions.</p>
-</div></section>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">The trust layer for institutional Web3.</h2>
+    <p>The briefings record what regulators did. The credential records what a licensed lawyer signed, dated and scope-bound, so the parties it names can check it in one call.</p>
+    <div class="ctas"><a class="btn pri lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a><a class="btn lg" href="/contact/" data-event="cta-final-talk">Talk to us</a></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
-          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
           LEXI<span class="dot">.</span>
         </a>
-        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
-        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET OCT 2026, WEEK 4</span>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
       </div>
       <div>
         <div class="fh">Protocol</div>
@@ -180,27 +263,29 @@
           <li><a href="/how-it-works/">How it works</a></li>
           <li><a href="/credential/">The credential</a></li>
           <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
-          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
           <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
         </ul>
       </div>
       <div>
-        <div class="fh">Audiences</div>
+        <div class="fh">For</div>
         <ul>
-          <li><a href="/protocols/">For protocols</a></li>
-          <li><a href="/legal-professionals/">For legal professionals</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
           <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Company</div>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#team">Team</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
-          <li><a href="https://www.linkedin.com/company/lexi-protocol/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/terms/">Terms</a></li>
         </ul>
@@ -213,6 +298,8 @@
       <div class="fmeta">
         <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
         <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
       </div>
     </div>
   </div>

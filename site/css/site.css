@@ -1,374 +1,850 @@
-/* LEXI Protocol: Gateway design system, website v2
-   Palette and type are brand law (Brand Guidelines v2).
-   Aqua #18E0C6 is reserved for verified/live states; at launch it appears
-   only in the mark's node and the wordmark dot. Nothing pulses pre-launch. */
+/* ============================================================================
+   LEXI Protocol, website v3: the Gateway design system (dark only).
+   One geometry (the open gate ring, path #gp) is the page's structure.
+   Palette, type and the mark are brand law. Aqua and the Ion-to-Aqua gradient
+   are brand energy, never a live or verified state: status dots are Sky and
+   still, nothing pulses, nothing is green.
+   Sections: 1 fonts · 2 tokens · 3 reset · 4 type · 5 atmosphere · 6 header
+   7 buttons · 8 reveal · 9 gate ring · 10 hero + credential card · 11 ledger
+   12 arc rule · 13 corridor · 14 flow · 15 anatomy · 16 relier check · 17 for
+   band · 18 truth + architecture · 19 roadmap · 20 revenue · 21 team
+   22 latest · 23 closing · 24 footer · 25 subpage header · 26 prose/article
+   27 registry, cards, notices · 28 tables, glossary, tracker · 29 FAQ
+   30 explorer record + verify mock · 31 forms · 32 utilities · 33 responsive
+   34 reduced motion · 35 print
+   ========================================================================== */
 
-/* ---------- Fonts (self-hosted, latin subsets, OFL) ---------- */
+/* 1 ---- Fonts: self-hosted latin subsets, swap, metric-matched fallbacks ---- */
 @font-face{font-family:'Space Grotesk';src:url('/fonts/SpaceGrotesk-var-latin.woff2') format('woff2');font-weight:300 700;font-display:swap}
 @font-face{font-family:'Inter';src:url('/fonts/Inter-var-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
 @font-face{font-family:'IBM Plex Mono';src:url('/fonts/IBMPlexMono-400-latin.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:'IBM Plex Mono';src:url('/fonts/IBMPlexMono-500-latin.woff2') format('woff2');font-weight:500;font-display:swap}
-/* Metric-matched fallbacks to hold layout while webfonts load */
 @font-face{font-family:'SG Fallback';src:local('Arial');size-adjust:104%;ascent-override:98%;descent-override:29%}
 @font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22%}
 
-/* ---------- Tokens ---------- */
+/* 2 ---- Tokens ---- */
 :root{
-  /* surfaces (elevation = surface step + hairline, never shadows) */
-  --void:#0A0C12; --surface:#12141F; --surface-2:#181B29; --surface-3:#1E2231;
-  --line:rgba(234,240,255,.08); --line-strong:rgba(234,240,255,.14);
-  /* brand */
-  --blue:#2E6BFF; --aqua:#18E0C6; --sky:#5FA0FF; --ink:#EAF0FF;
-  --dim:#8A93B2; --faint:#7A849E;
-  --grad:linear-gradient(105deg,#2E6BFF 0%,#18E0C6 100%);
-  /* type */
+  --void:#0A0C12;--surface:#12141F;--surface-2:#181B29;--surface-3:#1E2231;
+  --blue:#2E6BFF;--aqua:#18E0C6;--sky:#5FA0FF;--ink:#EAF0FF;--dim:#8A93B2;--faint:#7A849E;
+  --line:rgba(234,240,255,.08);--line-2:rgba(234,240,255,.13);--line-3:rgba(234,240,255,.24);
+  --grad:linear-gradient(90deg,#2E6BFF 0%,#18E0C6 58%);
   --disp:'Space Grotesk','SG Fallback',sans-serif;
   --sans:'Inter','Inter Fallback',-apple-system,'Segoe UI',sans-serif;
   --mono:'IBM Plex Mono','SFMono-Regular',Consolas,monospace;
-  /* motion */
-  --ease:cubic-bezier(.22,.61,.36,1);
-  --t-fast:160ms; --t-reveal:400ms;
-  /* layout */
-  --wrap:1160px; --prose:720px; --radius:14px; --radius-s:9px;
+  --ease:cubic-bezier(.22,.61,.36,1);--t-fast:160ms;--t-reveal:400ms;
+  --wrap:1280px;--gut:32px;--prose:72ch;--r:12px;--r-lg:16px;
 }
 
-/* ---------- Reset ---------- */
+/* 3 ---- Reset ---- */
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--void);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,svg{max-width:100%;height:auto;display:block}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-behavior:smooth}
+body{background:var(--void);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
 a{color:var(--sky);text-decoration:none;transition:color var(--t-fast)}
 a:hover{color:var(--ink)}
 ::selection{background:var(--blue);color:var(--ink)}
 :focus-visible{outline:2px solid var(--sky);outline-offset:3px;border-radius:3px}
 button{font:inherit;cursor:pointer}
-
-.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--void);padding:10px 18px;z-index:200;font-weight:600;border-radius:0 0 8px 0}
+ol,ul{list-style:none}
+time{font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--void);padding:12px 18px;z-index:200;font-weight:600;border-radius:0 0 8px 0}
 .skip:focus{left:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ---------- Atmosphere (electric Gateway: Ion Blue glow + Aqua counter-glow.
-   Founder override 2026-07-04 relaxes the launch aqua-austerity for ambience;
-   aqua as atmosphere is fine, aqua as a fake live/verified state is not.) ---------- */
-.bg{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(880px 480px at 84% 2%,rgba(46,107,255,.17),transparent 60%),
-             radial-gradient(720px 560px at 2% 98%,rgba(24,224,198,.10),transparent 62%),var(--void)}
-.bggrid{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(95,160,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(95,160,255,.045) 1px,transparent 1px);
-  background-size:62px 62px;
-  mask-image:radial-gradient(ellipse 75% 55% at 70% 16%,#000 16%,transparent 72%);
-  -webkit-mask-image:radial-gradient(ellipse 75% 55% at 70% 16%,#000 16%,transparent 72%)}
-.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* 4 ---- Type scale (six to one: 75px display over 12px mono) ---- */
+h1,h2,h3,h4,.disp{font-family:var(--disp);font-weight:600;letter-spacing:-.025em;line-height:1.02;text-wrap:balance}
+h1{font-size:clamp(2.6rem,5.2vw,4.7rem)}
+h2{font-size:clamp(1.9rem,3.5vw,3.2rem);line-height:1.06}
+h3{font-size:1.5rem;letter-spacing:-.015em;line-height:1.2}
+h4{font-size:1.1rem;letter-spacing:-.01em;line-height:1.3}
+.em{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.fade{background:linear-gradient(180deg,#EAF0FF 0%,rgba(234,240,255,.88) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* Two h2 tiers: chapter h2 (the h2 default, 50 px at 1440, carries .fade: white to 88% white, restarting on every line) and packet h2 (.pkh, 34 px, no fade). */
+.pkh{font-size:clamp(1.7rem,2.5vw,2.125rem);line-height:1.1}
+p{font-weight:400}
+strong,b{font-weight:600}
+.lede{font-size:1.19rem;line-height:1.55;color:var(--ink);max-width:48ch}
+.dimp{color:var(--dim)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);font-weight:500;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--line-2);flex:none}
+.eyebrow.bare::before{display:none}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.cap{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);line-height:1.7}
+.fig{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:18px;line-height:1.7}
+.fig b{color:var(--dim);font-weight:500}
+.badge{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;white-space:nowrap}
+.lab{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;text-transform:uppercase}
+.lab.off{color:var(--faint)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut);position:relative}
+section{position:relative;padding:84px 0}
+/* Packet sections (For, Roadmap + revenue, Team, Latest) sit tighter than chapters. */
+.for,.road,.team{padding:64px 0}
+.latest{padding:40px 0 64px}
+.sh{max-width:720px;margin-bottom:48px}
+.sh p{color:var(--dim);font-size:1.08rem;margin-top:18px;max-width:62ch}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
 
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 30px;position:relative;z-index:2}
-main{position:relative;z-index:2}
+/* 5 ---- Atmosphere: one ambient bloom per page, top-left, Sky at 9% ---- */
+.bloom{position:absolute;pointer-events:none;z-index:0}
+.bloom--page{inset:0;background:radial-gradient(640px 520px at 8% 0%,rgba(95,160,255,.09),transparent 64%)}
 
-/* ---------- Nav ---------- */
-.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(10,12,18,.78);border-bottom:1px solid transparent;transition:border-color .3s}
-.nav.on{border-color:var(--line)}
-.navrow{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.brand{display:flex;align-items:center;gap:11px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:.03em;color:var(--ink)}
+/* 6 ---- Header: the nav row pins; the status band below it scrolls with the page ---- */
+.top{position:sticky;top:0;z-index:60;transition:background 300ms,border-color 300ms;border-bottom:1px solid transparent;background:var(--void)}
+.top.on{background:rgba(10,12,18,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.navrow{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:.02em;color:var(--ink);min-height:44px}
 .brand:hover{color:var(--ink)}
 .brand .dot{color:var(--aqua)}
-.nl{display:flex;gap:20px;align-items:center;font-size:14.5px}
-.nl a{color:var(--dim)}
-.nl a:hover,.nl a[aria-current="page"]{color:var(--ink)}
-.nl a[aria-current="page"]{border-bottom:1px solid var(--blue);padding-bottom:2px}
-.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:8px;padding:9px 12px;color:var(--ink)}
+.brand .badge{margin-left:10px;font-weight:400}
+.nl{display:flex;gap:22px;align-items:center;font-size:14px}
+.nl a{color:var(--dim);white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.nl a:hover{color:var(--ink)}
+.nl a[aria-current="page"]{color:var(--ink);box-shadow:inset 0 -1px 0 var(--sky)}
+.nl .btn{min-height:44px;padding:0 18px;font-size:14px}
+.nl .btn[aria-current="page"]{box-shadow:none}
+.menu{display:none;background:none;border:1px solid var(--line-2);border-radius:8px;padding:0 14px;min-height:44px;min-width:44px;color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.3px;text-transform:uppercase}
+.status{border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);line-height:1.5;position:relative;z-index:1;background:var(--void)}
+.status .wrap{display:flex;align-items:flex-start;gap:12px;padding-top:9px;padding-bottom:9px}
+.status .dt{width:7px;height:7px;border-radius:50%;background:var(--sky);flex:none;margin-top:6px}
+.status .s{flex:1 1 auto;min-width:0}
+.status .r{margin-left:auto;color:var(--faint);white-space:nowrap}
 
-/* ---------- Buttons ----------
-   Primary is solid Aqua Signal with near-black text: ~11:1 contrast (WCAG AAA).
-   This is a brand action surface, not a verified/live status claim. */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-size:15px;font-weight:600;padding:13px 24px;border-radius:var(--radius-s);border:1px solid var(--line-strong);background:transparent;color:var(--ink);transition:border-color var(--t-fast),background var(--t-fast),color var(--t-fast),transform var(--t-fast);min-height:44px}
-.btn:hover{border-color:var(--sky);color:var(--ink)}
-.btn:active{transform:scale(.98)}
-.btn.primary{background:var(--aqua);color:var(--void);border-color:var(--aqua);font-weight:700}
-.btn.primary:hover{background:#39ecd4;border-color:#39ecd4;color:var(--void);box-shadow:0 0 0 4px rgba(24,224,198,.16)}
-.btn.small{padding:9px 16px;font-size:13.5px;min-height:38px}
+/* 7 ---- Buttons: primary solid aqua + Void text, crisp 1 px aqua edge and a tight aqua bloom; secondary 20% Sky fill + inset ring ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.28px;padding:0 24px;min-height:48px;border-radius:var(--r);border:0;color:var(--ink);background:rgba(95,160,255,.2);box-shadow:inset 0 0 0 1px rgba(95,160,255,.45);transition:background var(--t-fast),box-shadow var(--t-fast),transform var(--t-fast),color var(--t-fast);white-space:nowrap;text-align:center}
+.btn:hover{background:rgba(95,160,255,.3);color:var(--ink)}
+.btn:active{transform:translateY(1px)}
+.btn.pri{background:var(--aqua);color:var(--void);box-shadow:0 0 0 1px rgba(24,224,198,.35),0 10px 28px -10px rgba(24,224,198,.5)}
+.btn.pri:hover{background:#3BEAD3;color:var(--void);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(24,224,198,.45),0 12px 30px -10px rgba(24,224,198,.6)}
+.btn.pri:active{transform:translateY(1px)}
+/* External links carry a visible new-tab cue; the HTML adds an sr-only "(opens in a new tab)". */
+a[target="_blank"]:not(.btn)::after{content:" \2197" / "";font-size:.85em}
+.btn.lg{min-height:58px;padding:0 30px;font-size:16px}
+.btn.sm{min-height:44px;padding:0 18px;font-size:14px}
+.btn:disabled{opacity:.6;cursor:default}
+.ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.tlink{font-size:14px;color:var(--dim)}
+/* Text links in a sentence are 44 px targets: an inline-flex box with negative vertical margins keeps the line height. */
+.tlink a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px;margin:-12px 0;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:var(--line-2)}
+.tlink a:hover{text-decoration-color:var(--sky);color:var(--sky)}
+.ul a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(95,160,255,.55)}
 
-/* ---------- Type ---------- */
-h1,h2,h3,.disp{font-family:var(--disp);font-weight:600;letter-spacing:-.02em;line-height:1.1}
-h1{font-size:clamp(2.4rem,5.6vw,4.1rem);line-height:1.06;margin-bottom:22px}
-h2{font-size:clamp(1.85rem,3.6vw,2.6rem);line-height:1.14;margin-bottom:14px}
-h3{font-size:1.18rem;letter-spacing:-.01em;line-height:1.3;margin-bottom:8px}
-h1 em,h2 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-p{font-weight:300}
-strong{font-weight:600}
-.lede{font-size:1.13rem;color:var(--dim);font-weight:300;max-width:560px}
+/* 8 ---- Reveal: JS-gated so the page reads with JS off; a CSS fallback shows everything after 2.8 s regardless ---- */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity var(--t-reveal) var(--ease),transform var(--t-reveal) var(--ease);animation:rv-fb 1ms 2.8s forwards}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:70ms}.js .rv.d2{transition-delay:140ms}.js .rv.d3{transition-delay:210ms}
+@keyframes rv-fb{to{opacity:1;transform:none}}
+
+/* 9 ---- The gate ring: one geometry, two defs. #gp (vector-effect non-scaling-stroke) draws the hairline crops and the
+   hero ring in screen pixels; #gpm is the same path with pathLength 100 and no vector-effect, for the small marks that
+   are drawn to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke, so dashes on #gp
+   never give quarters). Structural crops are a 1.5 px hairline; the 12 px gradient stroke belongs to the mark and the hero only. ---- */
+.gate{position:absolute;pointer-events:none;aspect-ratio:1;max-width:none}
+.gate use{stroke-linecap:round;fill:none;stroke:var(--line-2);stroke-width:1.5}
+.gate .node{fill:var(--aqua)}
+.gate .halo{fill:var(--aqua);opacity:.12}
+.gate--left{width:1180px;left:calc(50% - 640px - 440px);top:50%;transform:translateY(-50%);z-index:0}
+.gate--left use{stroke:rgba(234,240,255,.22)}
+.gate--close{width:1000px;left:50%;top:-70px;transform:translateX(-50%);z-index:0}
+.gate--close use{stroke:rgba(234,240,255,.26)}
+.gate--close .halo{opacity:.16}
+/* Arc rules: three different crops of the one ring, used as section dividers (at most three per page).
+   .arc--top shows the ring's crown as a shallow arch; .arc--r the same crown, smaller and set right of centre;
+   .arc--gap the lower-right opening, taller than the other two so both round caps and the node are in the crop. */
+.arc{height:150px;margin:-30px 0;position:relative;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+.arc svg{position:absolute;aspect-ratio:1;max-width:none}
+.arc use{fill:none;stroke:rgba(234,240,255,.3);stroke-width:1.5;stroke-linecap:round}
+.arc .node{fill:var(--aqua)}
+.arc .halo{fill:var(--aqua);opacity:.14}
+.arc--top svg{width:2600px;left:50%;top:-334px;transform:translateX(-50%)}
+.arc--r svg{width:1600px;left:64%;top:-194px;transform:translateX(-50%)}
+.arc--gap{height:280px;mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent),linear-gradient(180deg,transparent,#000 12%);mask-composite:intersect;-webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent),linear-gradient(180deg,transparent,#000 12%);-webkit-mask-composite:source-in}
+.arc--gap svg{width:1000px;left:calc(68% - 755px);top:-590px}
+/* Ring mark: the gate (#gpm) drawn to a state (stroke-dasharray over pathLength 100: 25, 50, 75 or the full ring) with a mono label
+   inside. Flow steps and roadmap versions. Stroke widths are in user units (2.5 px at 56 px, 2 px at 52 px). */
+.rk{width:56px;height:56px;position:relative;flex:none}
+.rk svg{width:56px;height:56px}
+.rk use{fill:none;stroke:url(#g);stroke-width:8.93;stroke-linecap:round}
+.rk .track{stroke:rgba(234,240,255,.1)}
+.rk .n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500}
+.mark{width:52px;height:52px;position:relative}
+.mark svg{width:52px;height:52px}
+.mark use{fill:none;stroke:url(#g);stroke-width:7.7;stroke-linecap:round}
+.mark .node{fill:var(--aqua)}
+.mark .in{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--ink);font-weight:500}
+
+/* 10 ---- Hero: the headline across the grid, the credential inside the gate, the ring cut by the viewport ----
+   Composition at 1440 x 900. The H1 spans the full 1216 px grid at 84 px in two lines (one forced break after
+   "opinion,"), the research scale that a half column cannot hold [gw:F5, F11, sd11; dt:F3]. Beneath it the grid
+   splits: deck, CTA pair, co-sign link and disclosure on the left; the specimen card on the right, pulled up into
+   the headline's second row so the first screen reads as one object. The gate ring is one <use> of #gp, --rw wide
+   (radius .36 x --rw), anchored to the card's lower-right corner: that corner sits on the stroke's centreline at
+   55 degrees, inside the open gap between the aqua node (45) and the lower cap (70), so the card leaves the ring
+   through the gap beside the node at every width, without measuring the card (right = r cos55 - rw/2,
+   bottom = r sin55 - rw/2). The ring is cut by the viewport on the right (its right side leaves the canvas below the
+   headline and the upper cap stays off-canvas, so no stub re-enters), by the fold and the hero's bottom edge, and it
+   is faded out above the headline's second line so the 12 px brand stroke never sits on type [gw:F9, sd2, sd4;
+   C-NOTES 3]. What stays visible is the arc running down the gutter between the copy and the card, lit from the node
+   by a radial mask (full around the gap, settling to 42 percent far from it: one light source [gw:F14, F17, F19]),
+   and the node beside the card's corner. The deck is held to about 48 characters so the arc never passes behind it;
+   every text box in the hero sits on plain Void. Two blooms in the viewport (the page bloom top-left and the gate
+   bloom at the gap, Ion .28 gone by 86 percent, inside Keyring's envelope [gw:F1, sd5]); one halo per surface
+   (the ring's drop-shadow, the card's black halo, the primary CTA's bloom). One ambient motion: the dotted orbit
+   just outside the stroke, 90 s. The inner hairline circle is dropped: one object, one orbit. */
+.hero{padding:24px 0 70px;overflow:clip;--fade0:33%;--fade1:39%;--rw:clamp(1080px,calc(1220px - (1440px - 100vw) * .875),1220px);--sx:min(0px,calc((100vw - 1440px) * .28));--r:calc(var(--rw) * .36);--cosr:.574;--sinr:.819;--f0:calc(var(--rw) * .557 - 277px);--f1:calc(var(--rw) * .557 - 217px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:24px;row-gap:0;align-items:start;min-height:0}
+.hero h1{grid-column:1/-1;grid-row:1;position:relative;z-index:3;margin:0 0 40px;max-width:none;font-size:min(84px,5.9vw);line-height:.96;letter-spacing:-.03em;text-wrap:initial}
+.hb{display:none}
+.hero .copy{grid-column:1;grid-row:2;position:relative;z-index:3;max-width:560px}
+.hero .lede{max-width:488px;margin-bottom:32px}
+.hero .ctas{margin-bottom:18px}
+.hero .tlink{margin-bottom:26px}
+.disc{font-size:14px;color:var(--dim);max-width:52ch;line-height:1.55}
+.hero .disc{max-width:50ch}
+/* The stage is the card's own box (no flex centring, no fixed height): the ring, the orbit and the bloom hang off its
+   lower-right corner. It spans both grid rows so the card's top sits beside the headline's shorter second line, and
+   --sx slides it left between 1440 and 1280 so the node stays at least 40 px inside the viewport. */
+.stage{grid-column:2;grid-row:1/3;align-self:start;position:relative;z-index:1;display:block;width:456px;max-width:100%;margin:99px 20px 0 0;padding:0;transform:translateX(var(--sx));--rx:0deg;--ry:0deg}
+.hero .card{width:100%;max-width:none;transform:perspective(1200px) rotateX(calc(2deg + var(--rx,0deg))) rotateY(calc(-3deg + var(--ry,0deg)));transform-origin:50% 50%;box-shadow:0 0 0 1px rgba(234,240,255,.12),inset 0 1px 0 rgba(234,240,255,.12),0 44px 72px -18px rgba(0,0,0,.8)}
+/* Ring, orbit and bloom share one box anchored to the card's corner. */
+.ringwrap,.gate--orbit,.gateglow{position:absolute;inset:auto;right:calc(var(--r) * var(--cosr) - var(--rw) / 2);bottom:calc(var(--r) * var(--sinr) - var(--rw) / 2);width:var(--rw);height:var(--rw);aspect-ratio:1;transform:none;z-index:0;pointer-events:none}
+.gate--hero{position:absolute;inset:0;width:100%;height:100%;transform:none}
+.gate--hero use.ring{stroke:url(#g);stroke-width:12}
+/* Node and halos keep the pixel size they have on the mark (8.8 px node radius at --rw 1220: 6.1 px per unit). */
+.gate--hero .node{r:1.45px;fill:var(--aqua)}
+.gate--hero .halo{r:2.9px;fill:var(--aqua);opacity:.14}
+.gate--hero .halo2{r:5.5px;fill:var(--aqua);opacity:.05}
+/* The one halo on the ring surface, and the mask that keeps a 1,220 px brand stroke premium rather than loud. Two layers,
+   intersected. Layer 1, one light source: a radial falloff centred on the node (75.5 percent of the box), full within
+   about 300 px of it, settling to 42 percent where the arc runs up the gutter toward the headline. Layer 2, the top
+   fade: transparent above the point where the ring's right side leaves the viewport (y 350 at 1440, 382 at 1280, so no
+   stub of the right arc re-enters beside the card) and full 60 px lower; --f0 and --f1 are measured from the box's
+   top and track --rw (.557 x --rw - 277 px fits the three measured widths), so neither the stroke nor its glow
+   touches the headline, the LCP element. The same mask sits on the orbit. */
+.ringwrap,.gate--orbit{mask-image:linear-gradient(180deg,transparent var(--fade0),#000 var(--fade1));-webkit-mask-image:linear-gradient(180deg,transparent var(--fade0),#000 var(--fade1))}
+.ringwrap{filter:drop-shadow(0 0 22px rgba(24,224,198,.28))}
+/* The orbit: one faint dotted ring just outside the stroke (76 units: 24 px outside at --rw 1220), the one ambient motion. */
+.gate--orbit .orbit{transform-origin:100px 100px;animation:orbit 90s linear infinite}
+.gate--orbit .orbit circle{r:76px;fill:none;stroke:rgba(95,160,255,.34);stroke-width:1;stroke-dasharray:1.2 5;vector-effect:non-scaling-stroke}
+.gate--orbit .inner{display:none}
+/* The gate bloom sits at the gap, not at the ring's centre; its radius ends under the headline's first line. */
+.gateglow{background:radial-gradient(480px 480px at 72% 73%,rgba(46,107,255,.28) 0%,rgba(46,107,255,.1) 42%,rgba(24,224,198,.04) 62%,transparent 86%)}
+@keyframes orbit{to{transform:rotate(360deg)}}
+.play .gate--hero .node,.play .gate--hero .halo,.play .gate--hero .halo2{animation:fadein 400ms 320ms ease both}
+@keyframes fadein{from{opacity:0}}
+.play .card{animation:rise 400ms 90ms var(--ease) both}
+@keyframes rise{from{opacity:0;transform:perspective(1200px) rotateX(2deg) rotateY(-3deg) translateY(16px)}}
+/* In the hero the card's row rhythm is tightened by a few px per row (the markup and the type sizes are untouched, zoom 1),
+   so the signatory row, the status row, the relier check and the caption's first sentence sit inside a 900 px fold.
+   /credential/ keeps the base rhythm. */
+.hero .card .hd{padding:11px 22px}
+.hero .card .fs{padding:11px 22px 5px;gap:8px 16px}
+.hero .card .sig{padding:9px 22px}
+.hero .card .st{padding:8px 22px}
+.hero .card .chk .hd2{padding:8px 22px 6px}
+.hero .card .chk li{padding:4px 22px;line-height:1.4}
+.hero .card .caprow{padding:8px 22px 10px;line-height:1.5}
+
+/* The card itself: the EAS construction (85 percent surface, 60 px blur, 1 px ring, 1 px top highlight, the 4 percent sheen,
+   one deep black halo), flat at rest; the pointer tilt (site.js, capped at 3 degrees) is the only transform. */
+.card{position:relative;z-index:2;width:464px;max-width:100%;border-radius:var(--r-lg);background:rgba(18,20,31,.85);backdrop-filter:blur(60px);-webkit-backdrop-filter:blur(60px);box-shadow:0 0 0 1px rgba(234,240,255,.12),inset 0 1px 0 rgba(234,240,255,.12),0 30px 44px rgba(0,0,0,.8);transform:perspective(1200px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));font-variant-numeric:tabular-nums;transition:transform 200ms var(--ease)}
+/* Sheen peak stays at 4%: at 8% the faint field labels in the first row fell under 4.5:1. */
+.card .sheen{position:absolute;inset:0;border-radius:var(--r-lg);pointer-events:none;background:linear-gradient(180deg,rgba(234,240,255,.04),rgba(234,240,255,0) 36%)}
+.card .hd{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 22px;border-bottom:1px solid var(--line)}
+.card .hd .t{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:.01em}
+.card .tag{font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--sky);background:transparent;box-shadow:inset 0 0 0 1px rgba(95,160,255,.45);border-radius:4px;padding:3px 8px;font-weight:500;white-space:nowrap;text-transform:uppercase}
+.card .fs{padding:13px 22px 7px;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.card .f{min-width:0}
+.card .f.w{grid-column:1/-1}
+.card .k{font-family:var(--mono);font-size:11px;letter-spacing:.3px;text-transform:uppercase;color:var(--faint);margin-bottom:3px}
+.card .v{font-family:var(--mono);font-size:13px;color:rgba(234,240,255,.82);overflow-wrap:anywhere;line-height:1.45}
+.card .v.de{color:var(--dim)}
+.card .v.hi{color:var(--ink);font-weight:500}
+.card .v.scope{font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--dim)}
+.card .sig{border-top:1px solid var(--line);padding:11px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.card .sig .nm{font-family:var(--disp);font-size:18px;font-weight:600;letter-spacing:-.01em}
+.card .sig .bar{font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--sky);margin-top:2px;text-transform:uppercase}
+.card .sig .frag{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right;line-height:1.5}
+.card .st{border-top:1px solid var(--line);padding:10px 22px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.3px;text-transform:uppercase;color:var(--dim)}
+.card .st .dt{width:8px;height:8px;border-radius:50%;background:var(--sky);flex:none}
+.card .chk{border-top:1px solid var(--line)}
+.card .chk .hd2{display:flex;justify-content:space-between;gap:12px;padding:9px 22px 7px;font-family:var(--mono);font-size:11px;letter-spacing:.3px;text-transform:uppercase;color:var(--faint)}
+.card .chk .hd2 b{color:var(--sky);font-weight:500}
+.card .chk li{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;padding:6px 22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--dim);line-height:1.45}
+.card .chk li .n{color:var(--sky);font-weight:500}
+/* The field each step reads, as faint mono notation (never a checkbox: nothing on the specimen is a control or a state). */
+.card .chk li .ind{font-size:11px;letter-spacing:.3px;color:var(--faint);white-space:nowrap}
+.card .caprow{border-top:1px solid var(--line);padding:10px 22px 12px;font-family:var(--mono);font-size:12px;letter-spacing:.2px;color:var(--faint);line-height:1.6}
+.card .caprow b{color:var(--dim);font-weight:500}
+
+/* 11 ---- Diligence ledger: three hairline columns of keyed, dated, linked rows ---- */
+.ledger{padding:8px 0 64px}
+.ledger .eyebrow{margin-bottom:14px}
+.reg3{display:grid;grid-template-columns:1.15fr 1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reg3 .col{padding:18px 24px 6px 0;margin-right:24px;border-right:1px solid var(--line)}
+.reg3 .col:last-child{border-right:0;margin-right:0}
+.reg3 h3{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;display:flex;justify-content:space-between;gap:10px;margin-bottom:6px;line-height:1.5}
+.reg3 h3 span{color:var(--faint);font-weight:400}
+.reg3 .row{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink);min-height:44px;align-items:start}
+.reg3 a.row:hover .v{color:var(--sky)}
+.reg3 .row .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);padding-top:2px;overflow-wrap:anywhere}
+.reg3 .row .v{color:var(--ink);transition:color var(--t-fast)}
+.reg3 .row .v em{font-style:normal;color:var(--dim)}
+
+/* 13 ---- The corridor: one gradient-faded line, three nodes, the gate at the UAE node ---- */
+.corr{padding-top:56px;overflow:clip}
+.corr .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end}
+.corr .intro h2{max-width:14ch}
+.corr .intro p{color:var(--dim);max-width:56ch}
+/* Geometry: the dots sit on the line (--ly from the top), labels stack above them. The gate ring is centred up and
+   left of the UAE dot so the UAE labels sit inside it and its gap straddles the line to the right: the node is on
+   the line --gx right of the UAE dot (--gx = ring radius / root 2), the caps 30 px below and 48 px above it. The line
+   runs Sky into the ring and turns Ion to Aqua as it leaves through the gap. */
+.cor{position:relative;height:330px;margin:40px 0 0;--ly:230px;--gx:92px;--rw:360px}
+.cor .bloom{width:900px;height:900px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(95,160,255,.11),transparent 70%)}
+.cor .line,.cor .line2{position:absolute;left:0;right:0;top:var(--ly);height:1px;background:linear-gradient(90deg,rgba(95,160,255,0) 0%,rgba(95,160,255,.35) 8%,#5FA0FF 46%,#5FA0FF calc(50% + var(--gx) - 28px),#2E6BFF calc(50% + var(--gx) - 10px),#18E0C6 76%,rgba(24,224,198,.3) 88%,rgba(24,224,198,0) 98%)}
+.cor .line2{top:calc(var(--ly) - 6px);height:12px;opacity:.16;filter:blur(7px)}
+.cor .gate--cor{width:var(--rw);left:calc(50% - 10px);top:calc(var(--ly) - var(--gx));transform:translate(-50%,-50%);z-index:1}
+.cor .gate--cor use{stroke:rgba(95,160,255,.6);stroke-width:1.5}
+.cor .gate--cor .halo{fill:var(--aqua);opacity:.16}
+.cor .nodes{position:absolute;inset:0;z-index:2}
+.cor .nodes li{position:absolute;top:var(--ly);transform:translate(-50%,-100%);width:200px;text-align:center}
+.cor .nodes li:nth-child(1){left:14%}
+.cor .nodes li:nth-child(2){left:50%}
+.cor .nodes li:nth-child(3){left:86%}
+.cor .nodes .dot{display:block;width:9px;height:9px;border-radius:50%;margin:14px auto -4.5px;background:linear-gradient(180deg,#EAF0FF,rgba(234,240,255,.4));box-shadow:0 0 0 7px var(--void),0 0 0 8px rgba(234,240,255,.16)}
+.cor .nodes .hub .dot{background:var(--sky);box-shadow:0 0 0 7px var(--void),0 0 0 8px rgba(95,160,255,.5)}
+.cor .nodes b{display:block;font-family:var(--disp);font-weight:600;font-size:1.7rem;letter-spacing:-.02em;line-height:1;margin-top:8px}
+.cor .nodes i{display:block;margin-top:8px;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim)}
+.cor .nodes em{display:inline-block;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);text-transform:uppercase}
+.cor .nodes .off em{color:var(--faint)}
+.corr .fig{margin-top:8px}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-top:40px;border-top:1px solid var(--line)}
+.figs>div{padding-top:22px}
+.figs>div+div{border-left:1px solid var(--line);padding-left:32px}
+.figs .m{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);display:block;margin-bottom:12px}
+.figs strong{font-family:var(--disp);font-weight:600;font-size:clamp(2.1rem,4vw,3.4rem);letter-spacing:-.03em;line-height:1;display:block}
+.figs .fn{display:block;font-size:14px;color:var(--dim);margin-top:12px;max-width:40ch;line-height:1.55}
+
+/* 14 ---- How it works: four steps on one rail, the same ring (.rk) drawn a quarter further each step, the number inside ---- */
+.flow .rail{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.flow .step{padding:30px 28px 10px 0;margin-right:28px;border-right:1px solid var(--line);position:relative}
+.flow .step:last-child{border-right:0;margin-right:0}
+.flow .step .rk{margin-bottom:22px}
+.flow .step h3{font-size:1.25rem;margin-bottom:10px}
+.flow .step p{color:var(--dim);font-size:.98rem}
+.flow .step p b{color:var(--ink);font-weight:500}
+.flow .after{display:flex;gap:28px;align-items:baseline;flex-wrap:wrap;margin-top:40px}
+.flow .after p{color:var(--dim);font-size:.98rem;max-width:64ch}
+
+/* 15 ---- The credential anatomy: three stacked slabs with field chips, inside the left ring crop ---- */
+.anat{overflow:clip;padding:96px 0}
+.anat .bloom{width:900px;height:900px;left:calc(50% - 640px - 420px);top:50%;transform:translateY(-50%);background:radial-gradient(circle,rgba(46,107,255,.14),transparent 62%)}
+.anat .wrap{z-index:1}
+.anat .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:56px;align-items:start}
+.slab{position:relative;background:var(--surface);border:1px solid var(--line-2);border-radius:14px;padding:18px 22px 20px}
+.slab+.slab{margin-top:12px}
+.slab.s1{background:var(--surface-3);margin-right:64px}
+.slab.s2{background:var(--surface-2);margin-left:32px;margin-right:32px}
+.slab.s3{margin-left:64px}
+.slab .sh2{display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.slab .sh2 b{color:var(--ink);font-weight:500}
+.slab .sh2 .tg{color:var(--sky)}
+.slab .sh2 .tg.gated{color:var(--ink);background:rgba(95,160,255,.2);box-shadow:inset 0 0 0 1px rgba(95,160,255,.45);padding:3px 8px;border-radius:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-family:var(--mono);font-size:12.5px;color:rgba(234,240,255,.78);background:rgba(10,12,18,.5);border:1px solid var(--line);border-radius:5px;padding:5px 9px;line-height:1.4}
+.chips li.hi{color:var(--ink);border-color:var(--line-3)}
+.slab.s3 .chips li{color:var(--dim)}
+.contrast{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;margin-top:28px;overflow:hidden}
+.contrast>div{padding:22px 24px}
+.contrast>div+div{border-left:1px solid var(--line);background:var(--surface)}
+.contrast .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-bottom:10px;text-transform:uppercase}
+.contrast p{font-size:.98rem;color:var(--dim)}
+.contrast p b{color:var(--ink);font-weight:500}
+.contrast q{quotes:"\201C" "\201D"}
+.shield{font-size:14px;color:var(--dim);margin-top:20px;max-width:70ch;line-height:1.6}
+.shield b{color:var(--ink);font-weight:500}
+
+/* 16 ---- For reliers: the three-step check and the pricing model ---- */
+.rel .grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:start}
+.check{counter-reset:s;border-top:1px solid var(--line)}
+.check li{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.check li::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);padding-top:5px;font-weight:500}
+.check h3{font-size:1.2rem;margin-bottom:6px}
+.check p{color:var(--dim);font-size:.98rem}
+.check p i{font-style:normal;color:var(--faint);font-family:var(--mono);font-size:12.5px;display:block;margin-top:6px}
+.price{border:1px solid var(--line-2);border-radius:14px;padding:24px 28px 26px;background:var(--surface)}
+.price .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-bottom:6px;display:flex;justify-content:space-between;gap:12px}
+.price .k b{color:var(--sky);font-weight:500;text-transform:uppercase}
+.price dl{display:grid;grid-template-columns:1fr auto;gap:0 18px;font-size:15px}
+.price dt{color:var(--dim);padding:11px 0;border-top:1px solid var(--line)}
+.price dd{font-family:var(--mono);font-size:12.5px;color:var(--ink);text-align:right;white-space:nowrap;padding:11px 0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:flex-end}
+.price .note{font-size:13.5px;color:var(--dim);margin-top:16px;line-height:1.55;border-top:1px solid var(--line);padding-top:14px}
+.price .ctas{margin:22px 0 0}
+.route{font-size:14px;color:var(--dim);margin-top:18px;line-height:1.55}
+.route b{color:var(--ink);font-weight:500}
+
+/* 17 ---- "For" band: four hairline columns, each one block link ---- */
+.for{padding-top:56px}
+.for .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.for a.c{display:flex;flex-direction:column;gap:12px;padding:30px 26px 32px 0;margin-right:26px;border-right:1px solid var(--line);color:var(--ink);min-height:44px}
+.for a.c:last-child{border-right:0;margin-right:0}
+.for a.c .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);text-transform:uppercase}
+.for a.c h3{font-size:1.3rem;transition:color var(--t-fast)}
+.for a.c p{color:var(--dim);font-size:.95rem;flex:1}
+.for a.c .go{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500}
+.for a.c:hover h3{color:var(--sky)}
+
+/* 18 ---- Truth block + the architecture in three lines ---- */
+.truthsec{text-align:center;padding-top:96px}
+.truth{max-width:760px;margin:0 auto;padding:36px 40px;border:1px solid var(--line-2);border-radius:var(--r-lg);background:var(--surface);text-align:left}
+.truth .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;margin-bottom:14px;text-transform:uppercase}
+.truth p{font-size:1.08rem;color:var(--ink);line-height:1.6}
+.arch{max-width:760px;margin:44px auto 0;text-align:left}
+.arch ol{border-top:1px solid var(--line)}
+.arch li{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);font-size:.98rem;color:var(--dim)}
+.arch li .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;padding-top:3px;text-transform:uppercase}
+.arch li b{color:var(--ink);font-weight:500}
+.chain{margin-top:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);line-height:1.6}
+.chain b{color:var(--ink);font-weight:500}
+.arch .fig{text-align:left}
+
+/* 19 ---- Roadmap: three columns, each version drawn as the ring at its build state, bracketed maturity labels ---- */
+.road .cols{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.road .col{padding:28px 28px 28px 0;margin-right:28px;border-right:1px solid var(--line)}
+.road .col:last-child{border-right:0;margin-right:0}
+.road .kr{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.road h3{font-size:1.3rem;margin-bottom:10px}
+.road p{color:var(--dim);font-size:.97rem}
+.road .meta{margin-top:30px;font-size:13.5px;color:var(--faint);max-width:78ch;line-height:1.6}
+.road .meta .cap{display:block;margin-top:10px}
+
+/* 20 ---- Where revenue goes: a sub-rail of the roadmap band, three neutral cells ---- */
+.rev{margin-top:56px}
+.rev .rh{display:flex;align-items:baseline;gap:12px 28px;flex-wrap:wrap;margin-bottom:20px}
+.rev .rh .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;text-transform:uppercase}
+.rev .rh h3{font-size:1.35rem}
+.rev .row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev .row>div{padding:26px 26px 26px 0;margin-right:26px;border-right:1px solid var(--line)}
+.rev .row>div:last-child{border-right:0;margin-right:0}
+.rev .n{font-family:var(--disp);font-size:2.4rem;font-weight:600;letter-spacing:-.03em;line-height:1}
+.rev .l{font-size:.95rem;color:var(--dim);margin-top:10px;max-width:30ch}
+.rev .note{font-size:14px;color:var(--dim);margin-top:20px}
+.rev .note a{border-bottom:1px solid var(--line-2)}
+
+/* 21 ---- Team: three hairline columns, ring marks, linked handles ---- */
+.team .founders{font-size:1.02rem;color:var(--dim);max-width:70ch;margin-top:-26px;margin-bottom:40px}
+.team .founders b{color:var(--ink);font-weight:500}
+.members{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.member{padding:28px 28px 28px 0;margin-right:28px;border-right:1px solid var(--line)}
+.member:last-child{border-right:0;margin-right:0}
+.member .mark{margin-bottom:18px}
+.member h3{font-size:1.25rem}
+.member .role{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);margin:6px 0 12px;text-transform:uppercase}
+.member p{color:var(--dim);font-size:.95rem}
+.member .x{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:6px;display:inline-flex;align-items:center;min-height:44px;min-width:44px;padding-right:8px}
+.member a.x:hover{color:var(--sky)}
+.pseudonym{font-size:14px;color:var(--dim);margin-top:14px;line-height:1.6;max-width:60ch}
+
+/* 22 ---- Latest: dated rows ---- */
+.latest .list{border-top:1px solid var(--line)}
+/* Each entry is two lines (date and type on the first, the headline on the second) with the path marker beside them. */
+.latest .list a{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"d t go" "h h go";gap:6px 24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);color:var(--ink);min-height:44px}
+.latest .list .d{grid-area:d;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint)}
+.latest .list .t{grid-area:t;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);text-transform:uppercase}
+.latest .list .h{grid-area:h;font-family:var(--disp);font-weight:600;letter-spacing:-.015em;font-size:1.1rem;line-height:1.3;max-width:62ch}
+.latest .list .go{grid-area:go;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);white-space:nowrap}
+.latest .list a:hover .h{color:var(--sky)}
+
+/* 23 ---- Closing: the tagline at hero scale inside the third ring crop ---- */
+.close{text-align:center;overflow:clip;padding:150px 0 140px}
+.close .bloom{left:50%;top:60%;width:1100px;height:700px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(46,107,255,.16),rgba(24,224,198,.04) 60%,transparent 100%)}
+.close .wrap{z-index:1}
+.close h2{font-size:clamp(2.5rem,5vw,4.5rem);max-width:14ch;margin:0 auto 22px;line-height:1.02}
+.close .tag2{font-family:var(--disp);font-size:clamp(1.2rem,1.7vw,1.5rem);font-weight:500;color:var(--dim);letter-spacing:-.01em;margin-bottom:40px}
+.close .ctas{justify-content:center}
+.close .tlink{margin-top:18px}
+
+/* 24 ---- Footer ---- */
+footer{border-top:1px solid var(--line);padding:60px 0 44px;font-size:14px;position:relative;z-index:1;background:var(--void)}
+.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;margin-bottom:44px}
+.fbrand p{color:var(--dim);font-size:13.5px;max-width:34ch;margin-top:16px;line-height:1.6}
+.fh{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);font-weight:500;margin-bottom:10px;text-transform:uppercase}
+.fgrid li{margin:0}
+.fgrid li a{color:var(--dim);font-size:14px;display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+.fgrid li a:hover{color:var(--ink)}
+.legal{border-top:1px solid var(--line);padding-top:26px;font-size:13px;line-height:1.75;color:var(--faint);max-width:92ch}
+.legal p{margin-bottom:10px}
+.fmeta{display:flex;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;margin-top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint)}
+.fmeta a{color:var(--dim);display:inline-flex;align-items:center;min-height:36px}
+.fstatus{margin-top:22px;display:flex;align-items:flex-start;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);line-height:1.6}
+.fstatus .dt{width:7px;height:7px;border-radius:50%;background:var(--sky);flex:none;margin-top:6px}
+
+/* 25 ---- Subpage header ---- */
+.pagehead{padding:56px var(--gut) 24px}
+.pagehead h1{font-size:clamp(2.2rem,4.4vw,3.8rem);max-width:22ch;margin:14px 0 20px}
+.pagehead .lede{margin-bottom:8px}
+.crumbs{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-bottom:22px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.crumbs a{color:var(--faint);min-height:36px;display:inline-flex;align-items:center}
+.crumbs a:hover{color:var(--sky)}
+.crumbs li{display:inline-flex;align-items:center;gap:8px}
+.crumbs li+li::before{content:"/";color:var(--line-3)}
+.byline{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:18px;line-height:1.7}
+.byline a{color:var(--dim)}
+.byline a:hover{color:var(--sky)}
+.reviewed{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:18px}
+.pagehead .status-inline{margin-top:20px}
+
+/* 26 ---- Prose and articles (briefings, legal pages) ---- */
 .prose{max-width:var(--prose)}
-.prose p,.prose ul,.prose ol{margin-bottom:1.1em;color:var(--dim)}
-.prose ul,.prose ol{padding-left:22px}
+.prose p,.prose ul,.prose ol{margin-bottom:1.1em;color:var(--dim);font-size:1.02rem;line-height:1.7}
+.prose ul,.prose ol{padding-left:22px;list-style:disc}
+.prose ol{list-style:decimal}
 .prose li{margin:.45em 0}
-.prose h2{margin-top:2.2em}
-.prose h3{margin-top:1.6em;color:var(--ink)}
+.prose li::marker{color:var(--faint)}
+.prose h2{margin-top:2.2em;margin-bottom:.5em;font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.prose h3{margin-top:1.6em;margin-bottom:.4em;color:var(--ink);font-size:1.3rem}
+.prose h4{margin-top:1.4em;margin-bottom:.3em}
 .prose a{border-bottom:1px solid rgba(95,160,255,.35)}
+.prose a:hover{border-color:var(--sky)}
+.prose strong{color:var(--ink);font-weight:600}
+.prose blockquote{border-left:2px solid var(--sky);padding:4px 0 4px 22px;margin:1.4em 0;color:var(--ink);font-size:1.05rem}
+.prose blockquote cite{display:block;font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:10px}
+.prose code,.prose .mono{font-family:var(--mono);font-size:.92em;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.prose hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+.prose sup{font-size:.68em;line-height:0;margin-left:1px}
+.prose sup a{border-bottom:none;color:var(--sky)}
+.prose .lead{font-size:1.19rem;color:var(--ink);line-height:1.55}
+.prose figure{margin:1.6em 0}
+.prose figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-top:12px;line-height:1.7}
+.srcs{font-size:.9rem}
+.srcs li{color:var(--faint);overflow-wrap:anywhere}
+.srcs a{color:var(--dim)}
+.toc{border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;margin:0 0 2em;background:var(--surface)}
+.toc .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin-bottom:10px;text-transform:uppercase}
+.toc ol{list-style:none;padding:0;margin:0;font-size:.95rem}
+.toc li{margin:0}
+.toc a{display:inline-flex;align-items:center;min-height:36px;border-bottom:0;color:var(--dim)}
+.toc a:hover{color:var(--sky)}
+.chunk{border:1px solid var(--line-2);border-left:2px solid var(--sky);border-radius:0 var(--r) var(--r) 0;background:var(--surface);padding:20px 24px;margin:1.6em 0}
+.chunk p{margin:0;color:var(--ink);font-size:1.02rem}
+.chunk .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;margin-bottom:8px;text-transform:uppercase}
+.glance{display:grid;grid-template-columns:minmax(150px,220px) 1fr;border-top:1px solid var(--line);margin:0 0 1.6em}
+.glance dt,.glance dd{padding:12px 0;border-bottom:1px solid var(--line)}
+.glance dt{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);padding-right:18px;padding-top:15px}
+.glance dd{color:var(--dim)}
+.article-foot{border-top:1px solid var(--line);margin-top:48px;padding-top:24px}
+.preferred{border-top:1px solid var(--line);margin-top:40px;padding-top:24px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between}
+.preferred p{color:var(--dim);font-size:15px;max-width:56ch;margin:0}
 
-/* Mono microlabels: uppercase tracks wide (brand register),
-   mixed-case data tracks tight */
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:22px;height:2px;border-radius:1px;background:var(--grad);display:inline-block}
-.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.data{font-family:var(--mono);font-size:.85rem;letter-spacing:.04em;color:var(--dim);font-variant-numeric:tabular-nums}
-
-section{padding:110px 0;position:relative}
-.shead{max-width:680px;margin-bottom:54px}
-.shead.ctr{margin-left:auto;margin-right:auto;text-align:center}
-.shead p{color:var(--dim);font-weight:300;font-size:1.08rem}
-
-/* ---------- Reveal (one-shot, reduced-motion safe) ---------- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity var(--t-reveal) var(--ease),transform var(--t-reveal) var(--ease)}
-.rv.in{opacity:1;transform:none}
-.d1{transition-delay:60ms}.d2{transition-delay:120ms}.d3{transition-delay:180ms}
-
-/* ---------- Cards / panels ---------- */
-.card{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;transition:border-color var(--t-fast),transform 220ms var(--ease),box-shadow 220ms var(--ease)}
-.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity var(--t-fast)}
-.card:hover{border-color:var(--line-strong);transform:translateY(-3px);box-shadow:0 16px 44px -20px rgba(46,107,255,.4)}
-.card:hover::before{opacity:.85}
-.card p{color:var(--dim);font-size:.97rem;font-weight:300}
-.card .idx{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;color:var(--sky);text-transform:uppercase;margin-bottom:14px;display:block}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-
-/* Registry panel: hairline rules with crosshair corners */
-.registry{position:relative;border:1px solid var(--line);border-radius:2px;padding:34px 32px}
-.registry::before,.registry::after,
-.registry>.xh::before,.registry>.xh::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none;
-  background:linear-gradient(rgba(234,240,255,.35),rgba(234,240,255,.35)) center/9px 1px no-repeat,
-             linear-gradient(rgba(234,240,255,.35),rgba(234,240,255,.35)) center/1px 9px no-repeat}
+/* 27 ---- Registry panel, cards, notices ---- */
+.registry{position:relative;border:1px solid var(--line);border-radius:2px;padding:30px 32px;background:var(--surface)}
+.registry::before,.registry::after,.registry>.xh::before,.registry>.xh::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none;background:linear-gradient(rgba(234,240,255,.35),rgba(234,240,255,.35)) center/9px 1px no-repeat,linear-gradient(rgba(234,240,255,.35),rgba(234,240,255,.35)) center/1px 9px no-repeat}
 .registry::before{top:-5px;left:-5px}
 .registry::after{top:-5px;right:-5px}
 .registry>.xh::before{bottom:-5px;left:-5px}
 .registry>.xh::after{bottom:-5px;right:-5px}
+.registry .rh{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}
+.registry .rh span{color:var(--faint);font-weight:400;text-transform:none}
+.registry .rr{display:grid;grid-template-columns:minmax(120px,180px) 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.5;color:var(--ink)}
+.registry .rr .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);padding-top:2px}
+.registry .rr em{font-style:normal;color:var(--dim)}
+.cardp{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 28px 30px}
+.cardp .idx{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;margin-bottom:12px;display:block;text-transform:uppercase}
+.cardp h3{font-size:1.25rem;margin-bottom:8px}
+.cardp p{color:var(--dim);font-size:.97rem}
+.cardp ul{margin-top:14px}
+.cardp li{padding:9px 0;border-top:1px solid var(--line);color:var(--dim);font-size:.95rem}
+.cardp .btn{margin-top:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.cols3>div{padding:26px 26px 26px 0;margin-right:26px;border-right:1px solid var(--line)}
+.cols3>div:last-child{border-right:0;margin-right:0}
+.cols3 h3{font-size:1.2rem;margin-bottom:8px}
+.cols3 p{color:var(--dim);font-size:.95rem}
+.notice{border:1px solid var(--line);border-left:2px solid var(--sky);border-radius:0 10px 10px 0;background:var(--surface);padding:16px 20px;font-size:.92rem;color:var(--dim);line-height:1.6}
+.notice b{color:var(--ink);font-weight:500}
+.notice.mono{font-family:var(--mono);font-size:.8rem;line-height:1.8}
+.banner{background:var(--surface);border-bottom:1px solid var(--line);color:var(--sky);font-size:14px;line-height:1.55}
+.banner .wrap{padding-top:12px;padding-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+.banner .badge{flex:none;margin-top:1px}
+.banner p{margin:0;color:var(--dim)}
+.banner p b{color:var(--sky);font-weight:500}
+.teaser{border:1px solid var(--line-2);border-radius:var(--r-lg);background:var(--surface);padding:30px 32px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.teaser>div{max-width:640px}
+.teaser h3{font-size:1.35rem;margin:8px 0 8px}
+.teaser p{color:var(--dim)}
+.final{text-align:center;padding:120px 0 110px}
+.final h2{max-width:16ch;margin:0 auto 18px}
+.final p{color:var(--dim);max-width:60ch;margin:0 auto 32px}
+.final .ctas{justify-content:center}
 
-/* ---------- Arc motif (the open gate ring as structural device) ---------- */
-.arcstep{width:44px;height:44px;flex:none}
-
-/* ---------- Facts strip (honest mono data band) ---------- */
-.facts{display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.fact{flex:1 1 220px;padding:24px 26px;border-right:1px solid var(--line)}
-.fact:last-child{border-right:none}
-.fact .n{font-family:var(--disp);font-size:1.45rem;font-weight:600;letter-spacing:-.01em;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.fact .l{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-top:6px}
-
-/* ---------- Hero ---------- */
-.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;padding:66px 0 84px;min-height:calc(88vh - 72px)}
-.hero .chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--sky);border:1px solid var(--line-strong);border-radius:30px;padding:6px 14px;margin-bottom:26px}
-.hero .chip .dt{width:7px;height:7px;border-radius:50%;background:var(--aqua)}
-.hero .lede{margin:0 0 30px}
-.ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
-.ctas .btn{padding:15px 27px;font-size:15.5px}
-.alt-path{font-size:13.5px;color:var(--faint);margin-bottom:40px}
-.alt-path a{color:var(--dim);border-bottom:1px solid var(--line-strong)}
-.alt-path a:hover{color:var(--sky)}
-
-/* ---------- Credential specimen ---------- */
-.specimen{background:rgba(18,20,31,.72);backdrop-filter:blur(9px) saturate(1.1);-webkit-backdrop-filter:blur(9px) saturate(1.1);border:1px solid var(--line-strong);border-radius:var(--radius);padding:0;max-width:470px;width:100%;font-variant-numeric:tabular-nums;position:relative}
-.specimen .shead-row{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
-.specimen .shead-row .t{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:600;font-size:14.5px;letter-spacing:.02em}
-.specimen .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--void);background:var(--sky);border-radius:4px;padding:3px 8px;font-weight:500}
-.specimen .fields{padding:18px 22px;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
-.specimen .f{min-width:0}
-.specimen .f.w{grid-column:1/-1}
-.specimen .f .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
-.specimen .f .v{font-family:var(--mono);font-size:12.5px;color:var(--ink);letter-spacing:.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.specimen .f .v.deemp{color:var(--dim)}
-.specimen .f .v.scope{font-family:var(--sans);font-size:12.5px;color:var(--dim);font-weight:300;line-height:1.55;white-space:normal;overflow:visible;text-overflow:clip}
-.specimen .sig{border-top:1px solid var(--line);padding:14px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center}
-.specimen .sig .who .nm{font-family:var(--disp);font-size:13px;font-weight:600}
-.specimen .sig .who .bar{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--faint)}
-.specimen .sig .frag{font-family:var(--mono);font-size:10px;color:var(--faint);text-align:right;line-height:1.5}
-.specimen .status{border-top:1px solid var(--line);padding:13px 22px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
-.specimen .status .sdot{width:8px;height:8px;border-radius:50%;background:var(--sky)}
-.spec-cap{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.03em;margin-top:14px;max-width:470px;line-height:1.7}
-
-/* Specimen entrance: draw + settle, one-shot */
-.stage{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
-.stage>.specimen,.stage>.spec-cap{position:relative;z-index:2}
-.play .specimen{animation:rise .7s .5s var(--ease) both}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-
-/* Hero gate ring: the mark at architectural scale, framing the specimen (v2.1).
-   Continuous slow orbit is sanctioned brand motion, not a live-status signal. */
-.herogate{position:absolute;top:calc(50% - 20px);left:51%;transform:translate(-50%,-50%);width:clamp(660px,64vw,980px);aspect-ratio:1;z-index:0;pointer-events:none;filter:drop-shadow(0 0 34px rgba(24,224,198,.26)) drop-shadow(0 0 96px rgba(46,107,255,.16))}
-.herogate .ring{stroke-dasharray:100;stroke-dashoffset:100}
-.play .herogate .ring{animation:draw 1.6s .15s var(--ease) forwards}
-.herogate .orbit{transform-origin:100px 100px}
-.play .herogate .orbit{animation:orbit 48s linear infinite}
-.herogate .el,.herogate .node,.herogate .glow{opacity:0}
-.play .herogate .el{animation:fadein .6s 1s ease forwards}
-.play .herogate .node,.play .herogate .glow{animation:fadein .7s 1.35s ease forwards}
-@keyframes orbit{to{transform:rotate(360deg)}}
-.gatemark .ring{stroke-dasharray:100;stroke-dashoffset:100}
-.play .gatemark .ring{animation:draw 1.2s .1s var(--ease) forwards}
-.gatemark .el,.gatemark .node{opacity:0}
-.play .gatemark .el{animation:fadein .5s .9s ease forwards}
-.play .gatemark .node{animation:fadein .5s 1.25s ease forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-@keyframes fadein{to{opacity:1}}
-
-/* ---------- Code block (draft interface) ---------- */
-.code{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-variant-numeric:tabular-nums}
-.code .bar{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
-.code pre{padding:18px 20px;font-family:var(--mono);font-size:13px;line-height:1.75;color:var(--dim);overflow-x:auto}
-.code .c1{color:var(--faint)} .code .c2{color:var(--sky)} .code .c3{color:var(--ink)}
-
-/* ---------- Steps (arc segments completing, never closing) ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.step{padding:26px 24px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
-.step .k{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.step .k .n{font-family:var(--mono);font-size:12px;letter-spacing:.13em;color:var(--sky)}
-.step h3{font-size:1.06rem;margin-bottom:7px}
-.step p{color:var(--dim);font-size:.93rem;font-weight:300}
-
-/* ---------- Layers ---------- */
-.layers{display:flex;flex-direction:column;gap:16px;max-width:860px;margin:0 auto}
-.layer{display:grid;grid-template-columns:64px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-left:2px solid var(--blue);border-radius:0 12px 12px 0;padding:28px 30px;align-items:center}
-.layer .ln{font-family:var(--disp);font-size:1.4rem;font-weight:700;color:transparent;-webkit-text-stroke:1px var(--blue);text-align:center}
-.layer h3 span{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);font-weight:500;margin-bottom:6px}
-.layer p{color:var(--dim);font-size:.97rem;font-weight:300}
-
-/* ---------- Split cards ---------- */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.aud{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px 32px;display:flex;flex-direction:column}
-.aud ul{list-style:none;margin:18px 0 26px}
-.aud li{padding-left:30px;position:relative;margin:12px 0;color:var(--dim);font-weight:300;font-size:.98rem}
-.aud li::before{content:"";position:absolute;left:0;top:5px;width:15px;height:15px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='b' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232E6BFF'/%3E%3Cstop offset='1' stop-color='%2318E0C6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M124.6 167.7 A72 72 0 1 1 167.7 124.6' fill='none' stroke='url(%23b)' stroke-width='22' stroke-linecap='round'/%3E%3Ccircle cx='151' cy='151' r='16' fill='%2318E0C6'/%3E%3C/svg%3E") no-repeat center/contain}
-.aud .btn{margin-top:auto;align-self:flex-start}
-
-/* ---------- Tables ---------- */
-.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+/* 28 ---- Tables, glossary, tracker ---- */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:.94rem}
-th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);text-align:left;font-weight:500}
-th,td{padding:13px 18px;border-bottom:1px solid var(--line)}
+caption{text-align:left;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);padding:12px 18px;caption-side:top}
+th{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);text-align:left;font-weight:500;background:var(--surface-2);vertical-align:bottom}
+th,td{padding:13px 18px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-td{color:var(--dim);font-weight:300}
-td:first-child{color:var(--ink);font-weight:400}
-thead tr{background:var(--surface)}
+td{color:var(--dim)}
+td:first-child,th:first-child{color:var(--ink);font-weight:400}
+td .mono{font-size:12.5px;color:var(--ink)}
+td time{font-family:var(--mono);font-size:12.5px;color:var(--ink);white-space:nowrap}
+.tracker td:nth-child(1){white-space:nowrap}
+.tracker .src a{font-family:var(--mono);font-size:12px;letter-spacing:.3px;overflow-wrap:anywhere}
+.tracker .effect{color:var(--ink)}
+.stack td{display:block}
+.glossary{border-top:1px solid var(--line);max-width:var(--prose)}
+.glossary .term{padding:26px 0;border-bottom:1px solid var(--line);scroll-margin-top:120px}
+.glossary dt{font-family:var(--disp);font-weight:600;font-size:1.3rem;letter-spacing:-.015em;line-height:1.2;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.glossary dt .idx{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500}
+.glossary dd{color:var(--dim);margin-top:10px;font-size:1.02rem;line-height:1.7}
+.glossary dd a{border-bottom:1px solid rgba(95,160,255,.35)}
+.glossary .anchor{font-family:var(--mono);font-size:12px;color:var(--faint);margin-left:auto;display:inline-flex;align-items:center;justify-content:center;min-height:36px;min-width:36px}
+.glossary .anchor:hover{color:var(--sky)}
+.az{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 28px;font-family:var(--mono);font-size:12px;letter-spacing:.3px}
+.az a{color:var(--dim);display:inline-flex;align-items:center;min-height:36px}
+.az a:hover{color:var(--sky)}
+.dl-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);margin:14px 0 24px}
 
-/* ---------- FAQ ---------- */
-details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:12px}
-summary{cursor:pointer;padding:19px 24px;font-family:var(--disp);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--mono);color:var(--sky);font-size:1.1rem;flex:none;transition:transform var(--t-fast)}
-details[open] summary::after{transform:rotate(45deg)}
-details .a{padding:0 24px 20px;color:var(--dim);font-weight:300;font-size:.97rem}
-details .a a{border-bottom:1px solid rgba(95,160,255,.35)}
+/* 29 ---- FAQ: native details ---- */
+.faq details{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);margin-bottom:12px}
+.faq summary{cursor:pointer;padding:18px 24px;font-family:var(--disp);font-weight:600;font-size:1.05rem;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--sky);font-size:1.1rem;flex:none;transition:transform var(--t-fast)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details .a{padding:0 24px 20px;color:var(--dim);font-size:.98rem;line-height:1.65}
+.faq details .a p{margin-bottom:.8em}
+.faq details .a p:last-child{margin-bottom:0}
+.faq details .a a{border-bottom:1px solid rgba(95,160,255,.35)}
 
-/* ---------- Team ---------- */
-.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.member{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px}
-.member .av{width:56px;height:56px;border-radius:50%;background:var(--void);border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:600;color:var(--sky);margin-bottom:16px;font-size:15px}
-.member .role{font-size:12px;color:var(--sky);font-family:var(--mono);letter-spacing:.08em;margin-bottom:10px}
-.member p{color:var(--dim);font-size:.93rem;font-weight:300}
-.member .x{font-size:12px;color:var(--faint);font-family:var(--mono);margin-top:12px}
+/* 30 ---- Proof surfaces: mock explorer record and the verify mock (static, labelled, never green) ---- */
+.record{border:1px solid var(--line-2);border-radius:var(--r);background:var(--surface-2);font-family:var(--mono);font-size:12.5px;overflow:hidden}
+.record .bar{display:flex;justify-content:space-between;gap:12px;padding:10px 18px;border-bottom:1px solid var(--line);color:var(--faint);font-size:12px;letter-spacing:.3px;flex-wrap:wrap}
+.record .bar b{color:var(--sky);font-weight:500;text-transform:uppercase}
+.record dl{display:grid;grid-template-columns:minmax(120px,160px) 1fr}
+.record dt{color:var(--faint);padding:10px 18px;border-bottom:1px solid var(--line);text-transform:uppercase;font-size:11px;letter-spacing:.3px}
+.record dd{color:var(--ink);padding:10px 18px 10px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.record dd.de{color:var(--dim)}
+.record .cap{padding:12px 18px}
+.verify{border:1px solid var(--line-2);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.verify .vh{display:flex;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);flex-wrap:wrap}
+.verify .vh b{color:var(--sky);font-weight:500;text-transform:uppercase}
+.verify .vrow{display:grid;grid-template-columns:36px 1fr auto;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line)}
+.verify .vrow .n{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500}
+.verify .vrow h3{font-size:1.05rem;margin-bottom:4px}
+.verify .vrow p{font-size:.92rem;color:var(--dim)}
+.verify .vrow .ind{font-family:var(--mono);font-size:11px;letter-spacing:.3px;color:var(--faint);border:1px solid var(--line-2);border-radius:4px;padding:4px 8px;white-space:nowrap}
+.verify .vfoot{padding:14px 22px;font-size:14px;color:var(--dim);line-height:1.55}
+.verify .vfoot b{color:var(--ink);font-weight:500}
 
-/* ---------- Notice / disclaimer blocks ---------- */
-.notice{border:1px solid var(--line);border-left:2px solid var(--blue);border-radius:0 10px 10px 0;background:var(--surface);padding:18px 22px;font-size:.92rem;color:var(--dim);font-weight:300}
-.notice.mono{font-family:var(--mono);font-size:.8rem;line-height:1.8;letter-spacing:.01em}
-.truth{border:1px solid var(--line-strong);border-radius:12px;padding:26px 28px;background:var(--surface)}
-.truth .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:12px}
-.truth p{color:var(--dim);font-size:.96rem}
-
-/* ---------- Final CTA ---------- */
-.final{text-align:center;background:radial-gradient(700px 340px at 50% 0%,rgba(46,107,255,.12),transparent 65%)}
-.final h2{max-width:760px;margin:0 auto 16px}
-.final p{color:var(--dim);max-width:600px;margin:0 auto 32px;font-weight:300}
-
-/* ---------- Footer ---------- */
-footer{border-top:1px solid var(--line);padding:56px 0 40px;position:relative;z-index:2;font-size:14px}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
-.fgrid h4,.fgrid .fh{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:14px}
-.fgrid ul{list-style:none}
-.fgrid li{margin:9px 0}
-.fgrid a{color:var(--dim);font-size:13.5px}
-.fgrid a:hover{color:var(--ink)}
-.fbrand p{color:var(--faint);font-size:13px;max-width:300px;margin-top:14px;font-weight:300}
-.status-line{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--faint);border:1px solid var(--line);border-radius:30px;display:inline-flex;align-items:center;gap:8px;padding:7px 14px;margin-top:18px}
-.status-line .dt{width:7px;height:7px;border-radius:50%;background:var(--sky)}
-.legal{border-top:1px solid var(--line);padding-top:26px;font-family:var(--mono);font-size:11.5px;line-height:1.85;color:var(--faint);letter-spacing:.01em}
-.legal p{margin-bottom:10px;font-weight:400}
-.fmeta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px;color:var(--faint);font-size:12.5px;font-family:var(--mono)}
-
-/* ---------- Page headers (subpages) ---------- */
-.pagehead{padding-top:84px;padding-bottom:30px}
-.pagehead .lede{margin-top:6px}
-.crumbs{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--faint);margin-bottom:26px}
-.crumbs a{color:var(--faint)}
-.crumbs a:hover{color:var(--sky)}
-.updated{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:18px}
-.updated a,.ul a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(95,160,255,.55)}
-
-/* ---------- Forms ---------- */
+/* 31 ---- Forms ---- */
 .form{display:flex;flex-direction:column;gap:18px;max-width:640px}
-.form label{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:8px}
-.form input,.form select,.form textarea{width:100%;background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius-s);color:var(--ink);font:inherit;font-size:15px;padding:13px 15px;min-height:44px}
+.form label{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--dim);display:block;margin-bottom:8px}
+.form label .opt{color:var(--faint)}
+.form input,.form select,.form textarea{width:100%;background:var(--surface);border:1px solid var(--line-2);border-radius:var(--r);color:var(--ink);font:inherit;font-size:15px;padding:12px 15px;min-height:48px}
+.form select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%235FA0FF' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:40px}
 .form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--sky);outline-offset:1px;border-color:transparent}
 .form textarea{min-height:130px;resize:vertical}
-.form .hint{font-size:12.5px;color:var(--faint);margin-top:6px;font-weight:300}
+.form .hint{font-size:12.5px;color:var(--faint);margin-top:6px;line-height:1.5}
 .form .err{color:#FF8A8A;font-size:13px;margin-top:6px;display:none}
 .form .invalid input,.form .invalid textarea,.form .invalid select{border-color:#FF8A8A}
 .form .invalid .err{display:block}
-.compose-out{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:20px;font-family:var(--mono);font-size:12.5px;line-height:1.8;color:var(--dim);white-space:pre-wrap;display:none}
+.form .submit-err{color:#FF8A8A;font-size:13.5px;margin-top:10px}
+.compose-out{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r);padding:20px;font-family:var(--mono);font-size:12.5px;line-height:1.8;color:var(--dim);white-space:pre-wrap;display:none}
+.routes{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;border-top:1px solid var(--line)}
+.routes>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.routes .k{font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--sky);font-weight:500;margin-bottom:4px;text-transform:uppercase}
+.routes p{font-size:.95rem;color:var(--dim)}
 
-/* ---------- Utility ---------- */
+/* 32 ---- Utilities ---- */
 .mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}.mt64{margin-top:64px}
-.center{text-align:center}
-.pill{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line-strong);border-radius:30px;padding:5px 12px;color:var(--dim)}
+.mb0{margin-bottom:0}.center{text-align:center}.right{text-align:right}
+.pt0{padding-top:0}.pt32{padding-top:32px}.pt56{padding-top:56px}
+.maxw{max-width:var(--prose)}
+.hr{border:0;border-top:1px solid var(--line);margin:0}
+.pill{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;letter-spacing:.3px;border:1px solid var(--line-2);border-radius:4px;padding:4px 9px;color:var(--dim)}
+.pill.on{color:var(--void);background:var(--sky);border-color:var(--sky)}
+.status-inline{display:inline-flex;align-items:flex-start;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.3px;color:var(--faint);line-height:1.6}
+.status-inline .dt{width:7px;height:7px;border-radius:50%;background:var(--sky);flex:none;margin-top:6px}
 
-/* ---------- Responsive ---------- */
-@media(max-width:960px){
-  .hero{grid-template-columns:1fr;min-height:auto;padding:36px 0 60px}
-  .stage{order:-1;margin-bottom:8px}
-  .herogate{width:min(150vw,560px);filter:drop-shadow(0 0 22px rgba(24,224,198,.2))}
-  .grid3,.grid4,.team,.split,.steps{grid-template-columns:1fr}
-  .grid2{grid-template-columns:1fr}
+/* 33 ---- Responsive ---- */
+@media(min-width:1280px){.hb{display:inline}}
+/* 1280 to 1439: the grid is fixed at 1216 px, so the stage slides left (--sx, 45 px at 1280) to keep the node inside the viewport, the ring eases from 1220 to 1080 px so the gutter arc still clears the deck, and the h1 scales with the viewport (5.9vw, 75 px at 1280) so its second line clears the card.
+   Below 1280 the two-column hero cannot hold the h1, the card and the ring, so the hero stacks: headline, copy, then the card centred in an 820 px ring (no mask: the ring's top sits below the copy). */
+@media(max-width:1279px){
+  .hero{padding:36px 0 56px;--rw:820px;--sx:0px}
+  .hero .wrap{grid-template-columns:1fr;grid-template-rows:none;gap:8px}
+  .hero h1{grid-column:1;grid-row:auto;font-size:clamp(2.6rem,5.2vw,4.7rem);max-width:16ch;margin:0 0 26px;line-height:1.02;letter-spacing:-.025em;text-wrap:balance}
+  .hero .copy{grid-column:1;grid-row:auto;max-width:620px}
+  .hero .lede{max-width:48ch}
+  .stage{grid-column:1;grid-row:auto;display:flex;justify-content:center;align-items:center;width:100%;margin:40px 0 0;padding:120px 0 110px;transform:none}
+  .hero .card{width:100%;max-width:480px;transform:none}
+  .ringwrap,.gate--orbit,.gateglow{left:50%;top:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);mask-image:none;-webkit-mask-image:none}
+  .gate--orbit .orbit circle{r:94px;stroke-dasharray:1.6 9}
+  .gate--hero .node{r:2.15px}
+  .gate--hero .halo{r:4.3px}
+  .gate--hero .halo2{r:8.2px}
+  .gateglow{background:radial-gradient(110px 110px at 75.5% 75.5%,rgba(24,224,198,.2),transparent 70%),radial-gradient(circle at 50% 50%,rgba(46,107,255,.34) 0%,rgba(46,107,255,.14) 36%,rgba(24,224,198,.06) 60%,transparent 86%)}
+}
+@media(max-width:1180px){
+  .nl{display:none}
+  .js .nl.open,html:not(.js) .nl{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--void);border-bottom:1px solid var(--line);padding:16px var(--gut) 22px;gap:4px;z-index:70}
+  /* Open menu rows stretch edge to edge, so every link is a full-width 44 px target. */
+  .js .nl.open{align-items:stretch}
+  .js .nl.open a{min-width:44px}
+  html:not(.js) .nl{position:static;flex-direction:row;flex-wrap:wrap;border:0;padding:0 0 12px;gap:4px 18px}
+  html:not(.js) .navrow{height:auto;min-height:68px;flex-wrap:wrap;padding-top:8px}
+  .menu{display:inline-flex;align-items:center;justify-content:center}
+  html:not(.js) .menu{display:none}
+}
+@media(max-width:1000px){
+  section{padding:80px 0}
+  .for,.road,.team{padding:64px 0}
+  .latest{padding:40px 0 64px}
+  .status .r{display:none}
+  .hero h1{max-width:14ch}
+  .reg3{grid-template-columns:1fr}
+  .reg3 .col{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-right:0}
+  .reg3 .col:last-child{border-bottom:0}
+  .corr .intro,.anat .grid,.rel .grid,.split{grid-template-columns:1fr;gap:28px}
+  .cor{height:300px;--ly:210px;--gx:76px;--rw:300px}
+  .gate--left{left:-700px;width:1000px;top:38%}
+  .gate--left .node,.gate--left .halo{display:none}
+  .gate--left use{stroke:rgba(234,240,255,.1)}
+  .anat .bloom{left:-560px}
+  .flow .rail{grid-template-columns:1fr 1fr}
+  .flow .step{border-bottom:1px solid var(--line);padding-bottom:26px}
+  .flow .step:nth-child(2n){border-right:0;margin-right:0}
+  .for .cards{grid-template-columns:1fr 1fr}
+  .for a.c{border-bottom:1px solid var(--line)}
+  .for a.c:nth-child(2n){border-right:0;margin-right:0}
+  .road .cols,.members,.rev .row,.cols3,.grid3{grid-template-columns:1fr}
+  .road .col,.member,.rev .row>div,.cols3>div{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-right:0}
+  .road .col:last-child,.member:last-child,.rev .row>div:last-child,.cols3>div:last-child{border-bottom:0}
+  .latest .list a{grid-template-columns:auto 1fr;grid-template-areas:"d t" "h h" "go go";gap:6px 16px}
   .fgrid{grid-template-columns:1fr 1fr}
-  .nl{display:none}
-  .nl.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--void);border-bottom:1px solid var(--line);padding:20px 30px;gap:18px;align-items:flex-start;z-index:60}
-  .menu-btn{display:block}
-  section{padding:64px 0}
-  .fact{border-right:none;border-bottom:1px solid var(--line);flex-basis:100%}
-  .fact:last-child{border-bottom:none}
-  .layer{grid-template-columns:1fr;gap:10px}
+  /* The closing crop keeps its gap and node beside the CTAs: at 900 px the node sits about 60 px under the buttons' right end. */
+  .gate--close{width:900px;top:-140px}
+  .grid2,.routes{grid-template-columns:1fr}
+  .arc{height:120px;margin:-24px 0}
+  .arc--top svg{width:1800px;top:-222px}
+  .arc--r svg{width:1200px;top:-138px}
+  .arc--gap{height:215px}
+  .arc--gap svg{width:760px;left:calc(70% - 574px);top:-448px}
 }
-@media(min-width:961px) and (max-width:1160px){
-  .steps{grid-template-columns:repeat(2,1fr)}
-}
-/* Nav: 7 links + CTA need ~1090px of row; collapse to the menu below 1161px (added 2026-10-04) */
-.nl a{white-space:nowrap}
-@media(max-width:1160px){
-  .nl{display:none}
-  .nl.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--void);border-bottom:1px solid var(--line);padding:20px 30px;gap:18px;align-items:flex-start;z-index:60}
-  .menu-btn{display:block}
+@media(max-width:600px){
+  :root{--gut:20px}
+  body{font-size:16px}
+  /* Phone fold: the headline at the mobile scale, the deck, both CTAs, the link and the disclosure, with the spacing tightened so the
+     specimen card's header enters the first screen (the artifact is in the fold, not a scroll away). */
+  .hero{padding:12px 0 48px;--rw:150vw;--cosr:.819;--sinr:.574}
+  .hero h1{max-width:12ch;font-size:clamp(2.45rem,11.5vw,3rem);margin-bottom:16px}
+  .lede{font-size:1.05rem;max-width:none}
+  .hero .lede{max-width:none;margin-bottom:20px}
+  .hero .ctas{gap:10px;margin-bottom:12px}
+  .hero .tlink{margin-bottom:14px}
+  /* Shorter mobile hero: the relier-check rail and the long caption live on /credential/; the specimen keeps its fields, signatory, status and the first caption sentence. */
+  .stage{padding:0 0 44px;margin-top:12px}
+  .card .chk,.card .caprow .more{display:none}
+  .card .hd{flex-wrap:wrap;gap:8px 12px}
+  .card .fs{grid-template-columns:1fr 1fr;padding:14px 18px 8px}
+  .card .hd,.card .sig,.card .st,.card .chk li,.card .chk .hd2,.card .caprow{padding-left:18px;padding-right:18px}
+  .hero .card .hd{padding:11px 18px}
+  .hero .card .fs{padding:11px 18px 5px}
+  .hero .card .sig,.hero .card .st,.hero .card .chk li,.hero .card .chk .hd2,.hero .card .caprow{padding-left:18px;padding-right:18px}
+  /* Phone ring: 150vw, anchored to the card's lower-right corner at 35 degrees, so it sits behind the card's lower half (through the glass)
+     and its node and lower cap show under the corner; its top stays below the disclosure, so it never runs behind text. The stage's
+     44 px bottom padding is added to the anchor so the lower cap clears the hero's edge. */
+  .ringwrap,.gate--orbit,.gateglow{left:auto;top:auto;right:calc(var(--r) * var(--cosr) - var(--rw) / 2);bottom:calc(var(--r) * var(--sinr) - var(--rw) / 2 + 44px);transform:none;mask-image:none;-webkit-mask-image:none}
+  .gate--orbit .orbit circle{r:80px}
+  .gate--hero .node{r:3.1px}
+  .gate--hero .halo{r:6.2px}
+  .gate--hero .halo2{r:12px}
+  .gateglow{background:radial-gradient(circle at 75.5% 75.5%,rgba(46,107,255,.3) 0%,rgba(46,107,255,.12) 30%,transparent 60%)}
+  .card .sig{flex-direction:column;align-items:flex-start;gap:8px}
+  .card .sig .frag{text-align:left}
+  .card .chk .hd2{flex-direction:column;gap:2px}
+  .reg3 .row{grid-template-columns:1fr;gap:3px;font-size:14px}
+  .reg3 .row .k{padding-top:0}
+  .slab .sh2{flex-wrap:wrap}
+  .slab .sh2 .tg{white-space:nowrap}
+  .price .k{flex-direction:column;gap:2px}
+  /* Phone: a 200 px ring (radius 72) still encloses the UAE labels and sits 4 px left of centre; India at 12% and the US at 86%
+     keep their labels clear of the stroke and inside the viewport (the 108 px label column lets a long rulebook name wrap). */
+  .cor{height:250px;--ly:180px;--gx:51px;--rw:200px}
+  .cor .gate--cor{left:calc(50% - 4px)}
+  .cor .nodes li{width:108px}
+  .cor .nodes li:nth-child(1){left:12%}
+  .cor .nodes li:nth-child(3){left:86%}
+  .cor .nodes b{font-size:1.15rem}
+  .cor .nodes i,.cor .nodes em{font-size:10.5px;letter-spacing:0}
+  .rev .rh{flex-direction:column;gap:6px}
+  .figs{grid-template-columns:1fr;gap:0}
+  .figs>div+div{border-left:0;padding-left:0;border-top:1px solid var(--line);margin-top:22px}
+  .flow .rail{grid-template-columns:1fr}
+  .flow .step{border-right:0;margin-right:0;padding-right:0}
+  .slab.s1,.slab.s2,.slab.s3{margin-left:0;margin-right:0}
+  .contrast{grid-template-columns:1fr}
+  .contrast>div+div{border-left:0;border-top:1px solid var(--line)}
+  .check li{grid-template-columns:40px 1fr}
+  .price{padding:20px 20px 22px}
+  .price dl{grid-template-columns:1fr;gap:0}
+  .price dt{border-top:1px solid var(--line);padding-bottom:2px}
+  .price dd{border-top:0;text-align:left;justify-content:flex-start;padding-top:0;white-space:normal}
+  .for .cards{grid-template-columns:1fr}
+  .for a.c{border-right:0;margin-right:0;padding-right:0}
+  .for a.c:last-child{border-bottom:0}
+  .truth{padding:26px 22px}
+  .arch li{grid-template-columns:1fr;gap:6px}
+  .close{padding:110px 0 100px}
+  .gate--close{width:150vw;top:200px}
+  .fgrid{grid-template-columns:1fr;gap:20px}
+  .btn.lg{min-height:54px;width:100%}
+  .hero .ctas,.close .ctas{width:100%}
+  .arc{height:96px;margin:-20px 0}
+  .arc--top svg{width:1300px;top:-156px}
+  .arc--r svg{width:900px;top:-100px;left:58%}
+  .arc--gap{height:158px}
+  .arc--gap svg{width:560px;left:calc(72% - 423px);top:-330px}
+  .registry{padding:22px 18px}
+  .registry .rr{grid-template-columns:1fr;gap:4px}
+  .record dl{grid-template-columns:1fr}
+  .record dt{border-bottom:0;padding-bottom:0}
+  .record dd{padding-left:18px}
+  .verify .vrow{grid-template-columns:28px 1fr;gap:10px}
+  .verify .vrow .ind{grid-column:2}
+  .glance{grid-template-columns:1fr}
+  .glance dt{border-bottom:none;padding-bottom:0}
+  .teaser{padding:22px 20px}
+  th,td{padding:11px 14px}
+  .pagehead{padding-top:36px}
 }
 
-/* ---------- Reduced motion: everything settles instantly ---------- */
+/* 34 ---- Reduced motion: durations removed, the orbit stopped, the tilt replaced by a 150 ms opacity change ---- */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
-  .rv{opacity:1;transform:none}
-  .gatemark .ring{stroke-dashoffset:0}
-  .gatemark .el,.gatemark .node{opacity:1}
-  .herogate .ring{stroke-dashoffset:0}
-  .herogate .el,.herogate .node,.herogate .glow{opacity:1}
-  .play .herogate .orbit{animation:none}
-  .play .specimen{animation:none;opacity:1;transform:none}
+  .js .rv{opacity:1;transform:none;transition:none;animation:none}
+  .gate--orbit .orbit{animation:none}
+  .play .card,.play .gate--hero .node,.play .gate--hero .halo,.play .gate--hero .halo2{animation:none}
+  .card{transition:none}
+  .card .sheen{transition:opacity 150ms linear}
+  .card:hover .sheen{opacity:.6}
+  .btn,a,.nl a,.for a.c h3,.reg3 .row .v,.top,.faq summary::after{transition-duration:1ms}
+  .btn:active,.btn.pri:hover,.btn.pri:active{transform:none}
 }
 
-/* ---------- Print ---------- */
+/* 35 ---- Print: evidence export, no atmosphere ---- */
 @media print{
-  .bg,.bggrid,.grain,.nav,.ctas,footer .fgrid{display:none}
-  body{background:#fff;color:#0A0C12}
+  .top,.gate,.gateglow,.ringwrap,.bloom,.arc,.ctas,.menu,.skip,.preferred,footer .fgrid{display:none !important}
+  body{background:#fff;color:#0A0C12;font-size:12pt}
+  a{color:#0A0C12;text-decoration:underline}
+  .card{background:#fff;box-shadow:none;border:1px solid #999;transform:none;backdrop-filter:none;width:100%}
+  .card .v,.card .k,.card .st,.card .chk li,.card .caprow,.reg3 .row .k,.reg3 .row .v,.price dt,.price dd,.arch li,.legal,.cap,.fig,.eyebrow,td,th,.prose p,.glossary dd{color:#222 !important}
+  .em,.fade{-webkit-text-fill-color:#0A0C12;color:#0A0C12;background:none}
+  .status{color:#222}
+  section{padding:24pt 0;break-inside:avoid}
+  .slab,.price,.truth,.registry,.record,.verify,.notice,.cardp{background:#fff;border-color:#999}
+  .chips li{color:#222;background:#fff;border-color:#999}
 }
-.glance{display:grid;grid-template-columns:minmax(150px,210px) 1fr;border-top:1px solid var(--line);margin:0 0 1.4em}
-.glance dt,.glance dd{padding:12px 0;border-bottom:1px solid var(--line)}
-.glance dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-right:18px;padding-top:15px}
-.glance dd{color:var(--dim)}
-@media(max-width:640px){.glance{grid-template-columns:1fr}.glance dt{border-bottom:none;padding-bottom:0}}
-.prose sup{font-size:.68em;line-height:0;margin-left:1px}
-.prose sup a{border-bottom:none;color:var(--sky)}
-.srcs{font-size:.86rem}
-.srcs li{color:var(--faint)}

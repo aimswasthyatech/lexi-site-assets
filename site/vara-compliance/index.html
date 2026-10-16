@@ -3,19 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VARA Compliance Legal Opinions for Web3 Protocols | LEXI</title>
-<meta name="description" content="Where a co-signed legal opinion fits in Dubai's VARA framework, the federal CMA layer, and how VARA analysis becomes a verifiable on-chain credential.">
+<title>VARA Compliance in Dubai for Web3 Protocols | LEXI</title>
+<meta name="description" content="Dubai's VARA regulation: per-activity licences, the Issuance Rulebook's Category 1, Category 2 and Exempt tracks, and where a legal opinion fits.">
 <link rel="canonical" href="https://lexiprotocol.com/vara-compliance/">
 <meta name="theme-color" content="#0A0C12">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/SpaceGrotesk-var-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/Inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LEXI Protocol">
-<meta property="og:title" content="VARA compliance for Web3 protocols">
-<meta property="og:description" content="Where a co-signed legal opinion fits in Dubai's VARA framework, the federal CMA layer, and how VARA analysis becomes a verifiable on-chain credential.">
+<meta property="og:title" content="LEXI Protocol · VARA compliance in Dubai: regulation, rulebooks and where a legal opinion fits">
+<meta property="og:description" content="Dubai's VARA regulation: per-activity licences, the Issuance Rulebook's Category 1, Category 2 and Exempt tracks, and where a legal opinion fits.">
 <meta property="og:url" content="https://lexiprotocol.com/vara-compliance/">
 <meta property="og:image" content="https://lexiprotocol.com/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,103 +24,83 @@
 <meta property="og:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@LEXIprotocol">
-<meta name="twitter:title" content="VARA compliance for Web3 protocols">
-<meta name="twitter:description" content="Where a co-signed legal opinion fits in Dubai's VARA framework, the federal CMA layer, and how VARA analysis becomes a verifiable on-chain credential.">
+<meta name="twitter:title" content="LEXI Protocol · VARA compliance in Dubai: regulation, rulebooks and where a legal opinion fits">
+<meta name="twitter:description" content="Dubai's VARA regulation: per-activity licences, the Issuance Rulebook's Category 1, Category 2 and Exempt tracks, and where a legal opinion fits.">
 <meta name="twitter:image" content="https://lexiprotocol.com/og.jpg">
 <meta name="twitter:image:alt" content="LEXI Protocol logo with the line 'Compliance, made portable.' and lexiprotocol.com">
 <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Organization",
-   "@id": "https://lexiprotocol.com/#organization",
-   "name": "LEXI Protocol",
-   "alternateName": "LEXI",
-   "url": "https://lexiprotocol.com/",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://lexiprotocol.com/apple-touch-icon.png",
-    "width": 180,
-    "height": 180
-   },
-   "description": "LEXI Protocol is compliance infrastructure that turns co-signed legal opinions into dated, scope-bound, verifiable on-chain credentials for Web3 teams operating across India, the UAE and the US. Built on Base.",
-   "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed legal professionals' co-signed legal opinions as verifiable on-chain credentials. It is not a law firm, and it has not launched a token.",
-   "email": "info@lexiprotocol.com",
-   "sameAs": [
-    "https://x.com/LEXIprotocol",
-    "https://www.linkedin.com/company/lexi-protocol/",
-    "https://github.com/Lexi-Protocol"
-   ]
-  },
-  {
-   "@type": "WebSite",
-   "@id": "https://lexiprotocol.com/#website",
-   "url": "https://lexiprotocol.com/",
-   "name": "LEXI Protocol",
-   "publisher": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "inLanguage": "en"
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://lexiprotocol.com/vara-compliance/#webpage",
-   "url": "https://lexiprotocol.com/vara-compliance/",
-   "name": "VARA Compliance Legal Opinions for Web3 Protocols | LEXI",
-   "isPartOf": {
-    "@id": "https://lexiprotocol.com/#website"
-   },
-   "about": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "datePublished": "2026-07-03",
-   "dateModified": "2026-09-24"
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Home",
-     "item": "https://lexiprotocol.com/"
+      "@type": "Organization",
+      "@id": "https://lexiprotocol.com/#organization",
+      "name": "LEXI Protocol",
+      "alternateName": "LEXI",
+      "url": "https://lexiprotocol.com/",
+      "logo": { "@type": "ImageObject", "url": "https://lexiprotocol.com/apple-touch-icon.png", "width": 180, "height": 180 },
+      "description": "LEXI Protocol is Web3 compliance infrastructure on Base. A licensed lawyer runs their own diligence and co-signs a legal opinion, and LEXI records it as a dated, scope-bound, non-transferable on-chain credential that the parties it names can verify. VARA (Dubai) first. The V0 prototype runs end to end on Base Sepolia testnet, and mainnet follows a security audit. EU (MiCA) and India (FIU-IND) are V1, next up. No $LEXI token has been issued.",
+      "disambiguatingDescription": "LEXI Protocol (lexiprotocol.com) is Web3 compliance infrastructure on Base that records licensed lawyers' co-signed legal opinions as dated, scope-bound, non-transferable on-chain credentials. It is not a law firm, it has not issued a token, and it is not affiliated with other companies or products that use the names LEXI, Lexi or LexiAI.",
+      "sameAs": ["https://x.com/LEXIprotocol", "https://www.linkedin.com/company/lexi-protocol", "https://github.com/Lexi-Protocol"],
+      "contactPoint": { "@type": "ContactPoint", "email": "info@lexiprotocol.com", "contactType": "general enquiries" },
+      "founder": [
+        { "@id": "https://lexiprotocol.com/about/#lex-arbitrage" },
+        { "@id": "https://lexiprotocol.com/about/#karthik" },
+        { "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed" }
+      ]
+    },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#lex-arbitrage", "name": "Lex Arbitrage", "alternateName": "@lex_arbitrage", "jobTitle": "Co-Founder and CEO", "description": "Co-Founder and CEO of LEXI Protocol. Lex Arbitrage is a working pseudonym.", "url": "https://lexiprotocol.com/about/#lex-arbitrage", "sameAs": ["https://x.com/lex_arbitrage"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#karthik", "name": "Karthik", "jobTitle": "Co-Founder and CTO", "url": "https://lexiprotocol.com/about/#karthik", "sameAs": ["https://x.com/implied_vol"], "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "Person", "@id": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "name": "Ben Dhaya Ahmed", "jobTitle": "Co-Founder and CGO", "url": "https://lexiprotocol.com/about/#ben-dhaya-ahmed", "worksFor": { "@id": "https://lexiprotocol.com/#organization" } },
+    { "@type": "WebSite", "@id": "https://lexiprotocol.com/#website", "url": "https://lexiprotocol.com/", "name": "LEXI Protocol", "alternateName": "LEXI", "publisher": { "@id": "https://lexiprotocol.com/#organization" }, "inLanguage": "en" },
+    {
+      "@type": "WebPage",
+      "@id": "https://lexiprotocol.com/vara-compliance/#webpage",
+      "url": "https://lexiprotocol.com/vara-compliance/",
+      "name": "VARA Compliance in Dubai for Web3 Protocols | LEXI",
+      "description": "Dubai's VARA regulation: per-activity licences, the Issuance Rulebook's Category 1, Category 2 and Exempt tracks, and where a legal opinion fits.",
+      "isPartOf": { "@id": "https://lexiprotocol.com/#website" },
+      "about": { "@id": "https://lexiprotocol.com/#organization" },
+      "inLanguage": "en",
+      "datePublished": "2026-07-03",
+      "dateModified": "2026-10-16",
+      "breadcrumb": { "@id": "https://lexiprotocol.com/vara-compliance/#breadcrumb" }
     },
     {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "VARA compliance",
-     "item": "https://lexiprotocol.com/vara-compliance/"
+      "@type": "BreadcrumbList",
+      "@id": "https://lexiprotocol.com/vara-compliance/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lexiprotocol.com/" },
+        { "@type": "ListItem", "position": 2, "name": "VARA compliance (Dubai)", "item": "https://lexiprotocol.com/vara-compliance/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://lexiprotocol.com/vara-compliance/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does a LEXI credential replace a VARA licence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. If an activity requires a VARA licence, the entity needs the licence. A LEXI credential records a licensed lawyer's scoped legal opinion, which may cover questions such as whether an activity requires a licence and how a structure maps to the rulebooks. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by VARA." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does VARA coverage go live on LEXI?",
+          "acceptedAnswer": { "@type": "Answer", "text": "V0 is live on Base Sepolia (testnet) now, VARA first. Mainnet is targeted post-audit, Q4 2026, behind hardening and the audit. Nothing is live on mainnet, and this page will say so until it is." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a Category 2 issuance in Dubai approved by VARA?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Rule I.E.5 of the Virtual Asset Issuance Rulebook says no virtual asset issued under Category 2 shall be deemed in any way to have been approved by VARA. The Licensed Distributor's submission opens a fifteen Working Day Submission Period, and VARA's silence at the end of that period is not an approval. The same applies to a LEXI credential: it is a co-signed legal opinion committed on-chain, not a VARA approval." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does LEXI's corridor cover teams working between India and Dubai?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Teams structuring between India and the UAE are the centre of LEXI's corridor. V0 covers VARA (Dubai) and runs on Base Sepolia (testnet). India (FIU-IND) and the EU (MiCA) are V1, next up, so one opinion can then span more than one jurisdiction in the same flow. Until V1 ships, India-side questions sit outside what a V0 credential covers." }
+        }
+      ]
     }
-   ]
-  },
-  {
-   "@type": "Service",
-   "@id": "https://lexiprotocol.com/vara-compliance/#service",
-   "name": "VARA compliance credentialing",
-   "serviceType": "On-chain credentialing infrastructure for co-signed regulatory legal opinions",
-   "provider": {
-    "@id": "https://lexiprotocol.com/#organization"
-   },
-   "areaServed": {
-    "@type": "Country",
-    "name": "United Arab Emirates"
-   },
-   "audience": {
-    "@type": "Audience",
-    "audienceType": "Web3 protocols and foundations"
-   }
-  },
-  {
-   "@type": "FAQPage",
-   "@id": "https://lexiprotocol.com/vara-compliance/#faq",
-   "mainEntity": [
-    {"@type": "Question", "name": "Does a LEXI credential replace a VARA licence?", "acceptedAnswer": {"@type": "Answer", "text": "No. If your activity requires a licence, you need the licence. A credential records a professional's scoped opinion, which may cover questions like whether your activity requires a licence and how your structure maps to the rulebooks."}},
-    {"@type": "Question", "name": "When does VARA coverage go live on LEXI?", "acceptedAnswer": {"@type": "Answer", "text": "V0 is live on Base Sepolia (testnet) now, VARA first, with a small founding cohort. Mainnet is targeted for the fourth week of October 2026, behind hardening and the audit. The protocols page covers what early access includes."}},
-    {"@type": "Question", "name": "We are an Indian team operating from Dubai. Is that the corridor you mean?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. India-UAE teams are the center of LEXI's corridor: UAE structuring first, with India-side questions joining the same flow at V1 instead of a second unconnected engagement. India (FIU-IND) lands in V1 alongside the EU (MiCA), and one opinion can then span both."}}
-   ]
-  }
- ]
+  ]
 }
 </script>
 <!-- Privacy-friendly analytics by Plausible -->
@@ -128,83 +109,301 @@
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="bg" aria-hidden="true"></div><div class="bggrid" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient></defs></svg>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap"><div class="navrow">
-    <a class="brand" href="/" aria-label="LEXI Protocol home">
-      <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="10" fill="#18E0C6"/></svg>
-      LEXI<span class="dot">.</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="nav-list">Menu</button>
-    <div class="nl" id="nav-list">
-      <a href="/how-it-works/">How it works</a>
-      <a href="/crypto-legal-opinion/">Legal opinions</a>
-      <a href="/vara-compliance/" aria-current="page">VARA compliance</a>
-      <a href="/protocols/">For protocols</a>
-      <a href="/legal-professionals/">For legal professionals</a>
-      <a href="/token/">$LEXI</a>
-      <a href="/about/">About</a>
-      <a class="btn primary small" href="/contact/" data-event="cta-nav">Request early access</a>
-    </div>
-  </div></div>
-</nav>
+<!-- One geometry: the open gate ring, referenced everywhere with <use>. The node sits in the gap at 151,151.
+     #gp (non-scaling stroke) draws the hairline crops and the hero ring; #gpm, the same path with pathLength 100, draws the
+     small marks to a state with stroke-dasharray (Chromium ignores pathLength under non-scaling-stroke). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E6BFF"/><stop offset="1" stop-color="#18E0C6"/></linearGradient>
+    <path id="gp" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" vector-effect="non-scaling-stroke"/>
+    <path id="gpm" d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" pathLength="100"/>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <nav class="navrow" aria-label="Main">
+      <a class="brand" href="/" aria-label="LEXI Protocol home">
+        <svg viewBox="0 0 200 200" width="30" height="30" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
+        LEXI<span class="dot">.</span><span class="badge">[TESTNET]</span>
+      </a>
+      <button class="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <div class="nl" id="nav-list">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/credential/">Credential</a>
+        <a href="/exchanges/">For exchanges</a>
+        <a href="/protocols/">For protocols</a>
+        <a href="/legal-professionals/">For legal professionals</a>
+        <a href="/insights/">Insights</a>
+        <a href="/about/">About</a>
+        <a class="btn" href="/contact/" data-event="cta-nav">Request early access</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- The status band scrolls with the page; only the nav row pins. -->
+<div class="status" role="note" aria-label="Build status">
+  <div class="wrap"><span class="dt" aria-hidden="true"></span><span class="s">PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span><span class="r">BUILT ON BASE · BASE SEPOLIA (TESTNET)</span></div>
+</div>
 
 <main id="main">
+
 <header class="pagehead wrap">
-  <p class="crumbs"><a href="/">Home</a> / VARA compliance</p>
-  <p class="eyebrow">Jurisdiction · UAE / Dubai</p>
-  <h1>VARA compliance for Web3 protocols</h1>
-  <p class="lede">Dubai's Virtual Assets Regulatory Authority runs the most specific rulebook regime in the corridor, and it is where LEXI's V0 opens. Here is how the framework fits together, and where a co-signed legal opinion fits in it.</p>
-  <div class="notice mt24"><strong>Read this first.</strong> LEXI is not licensed or endorsed by VARA. A LEXI credential is a co-signed legal opinion, not a VARA licence or approval, and this page is general information, not legal advice.</div>
+  <ol class="crumbs" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">VARA compliance (Dubai)</li>
+  </ol>
+  <p class="eyebrow">Jurisdiction · Dubai, UAE</p>
+  <h1>VARA compliance in Dubai: regulation, rulebooks and where a legal opinion fits</h1>
+  <p class="lede">Dubai's Virtual Assets Regulatory Authority licenses virtual-asset activity under a per-activity rulebook regime, and it is the jurisdiction LEXI's V0 covers on Base Sepolia (testnet). This page sets out how VARA regulation is built, what the Virtual Asset Issuance Rulebook asks of each issuance track, and where a licensed lawyer's legal opinion appears. LEXI is not licensed or endorsed by VARA.</p>
+  <p class="byline">By <a href="https://x.com/lex_arbitrage" rel="noopener" target="_blank">Lex Arbitrage<span class="sr"> (opens in a new tab)</span></a>, Co-Founder and CEO · Published <time datetime="2026-07-03">2026-07-03</time> · Last updated <time datetime="2026-10-16">2026-10-16</time></p>
+  <div class="ctas mt24">
+    <a class="btn pri lg" href="/how-it-works/" data-event="cta-head-how">See how it works</a>
+    <a class="btn lg" href="/credential/" data-event="cta-head-verify">Verify a credential</a>
+  </div>
+  <p class="disc mt24">LEXI is not a law firm. A credential is not a licence, a registration, or an approval by any regulator. This page is general information, checked at source on 16 October 2026, not legal advice.</p>
+  <p class="reviewed">Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></p>
 </header>
 
-<section style="padding-top:30px"><div class="wrap prose">
-  <h2 id="what-is-vara">What VARA is</h2>
-  <p>The Virtual Assets Regulatory Authority regulates virtual asset activities in the Emirate of Dubai (outside DIFC). It licenses virtual asset service providers per activity, under a rulebook regime: compulsory rulebooks that apply to every VASP, plus an activity rulebook per licensed activity, from advisory and broker-dealer services to custody, exchange, lending and transfer.</p>
-  <p>Since January 2026 there is also a federal layer. The Securities and Commodities Authority became the Capital Market Authority under Federal Decree-Laws 32 and 33 of 2025, and virtual assets sit explicitly inside the federal perimeter. Teams structuring in Dubai now read two levels of rulebook, not one. Our <a href="/insights/uae-cma-2026/">CMA briefing</a> covers what changed.</p>
-
-  <h2 id="where-opinion-fits">Where a legal opinion fits in a VARA journey</h2>
-  <p>Whether you are scoping if your activity needs a licence at all, preparing a licensing application, or answering a counterparty who asks "are you allowed to do this in Dubai?", the load-bearing artifact is the same: <a href="/crypto-legal-opinion/">a scoped legal opinion</a> from a licensed professional. Exchanges ask for one before listing. Banks ask for one before opening accounts. Partners ask for one before integrating.</p>
-  <p>Today that opinion is a PDF in a data room. Nobody downstream can verify it without emails and phone calls, and it goes stale silently.</p>
-
-  <h2 id="how-lexi-helps">What LEXI does differently</h2>
-  <ul>
-    <li><strong>The engine watches the rulebooks.</strong> V0 engine coverage is built on the live VARA rulebooks, so the checklist your case is measured against reflects the current text, not last year's.</li>
-    <li><strong>A licensed professional signs.</strong> The output that matters is a <a href="/crypto-legal-opinion/">crypto legal opinion</a> co-signed by a licensed professional who ran their own diligence.</li>
-    <li><strong>The opinion becomes a credential.</strong> Scope, dates and reliers are committed on Base. When your counterparty asks, you hand them a <a href="/credential/">credential they can verify</a>, not a PDF and a promise.</li>
-  </ul>
-
-  <h2 id="faq-vara">Common questions</h2>
-  <h3>Does a LEXI credential replace a VARA licence?</h3>
-  <p>No. If your activity requires a licence, you need the licence. A credential records a professional's scoped opinion, which may cover questions like whether your activity requires a licence and how your structure maps to the rulebooks.</p>
-  <h3>When does VARA coverage go live on LEXI?</h3>
-  <p>V0 is live on Base Sepolia (testnet) now, VARA first, with a small founding cohort. Mainnet is targeted for the fourth week of October 2026, behind hardening and the audit. The <a href="/protocols/">protocols page</a> covers what early access includes.</p>
-  <h3>We are an Indian team operating from Dubai. Is that the corridor you mean?</h3>
-  <p>Yes. India-UAE teams are the center of LEXI's corridor: UAE structuring first, with India-side questions joining the same flow at V1 instead of a second unconnected engagement. India (FIU-IND) lands in V1 alongside the EU (MiCA), and one opinion can then span both.</p>
-
-  <div class="mt40" style="display:flex;gap:14px;flex-wrap:wrap">
-    <a class="btn primary" href="/contact/" data-event="cta-vara-page">Request early access</a>
-    <a class="btn" href="/how-it-works/">See the full flow</a>
+<!-- ===== 1. VARA REGULATION: copy beside a crosshair registry panel ===== -->
+<section aria-labelledby="reg-h">
+  <div class="bloom bloom--page" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="sh" style="margin-bottom:28px">
+          <p class="eyebrow">VARA regulation</p>
+          <h2 id="reg-h"><span class="fade">One regulator, eight activities, licensed activity by activity.</span></h2>
+        </div>
+        <div class="prose">
+          <div class="chunk">
+            <div class="k">In one passage</div>
+            <p>VARA, the Virtual Assets Regulatory Authority, is Dubai's virtual-asset regulator. In its own words it is <q>the sole authority regulating virtual assets across Dubai's free zones and mainland, except within the jurisdiction of Dubai International Financial Centre (DIFC)</q>. It licenses virtual asset service providers per activity under a rulebook regime, and its Virtual Asset Issuance Rulebook (19 May 2025 edition) sorts token issuances into Category 1, Category 2 and Exempt tracks. On LEXI, a licensed lawyer's co-signed legal opinion on a VARA question becomes a dated, scope-bound credential on Base; V0 runs on Base Sepolia (testnet), mainnet is targeted post-audit, Q4 2026, and a credential is not a licence, a registration, or an approval by VARA.</p>
+          </div>
+          <p>VARA's Virtual Assets and Related Activities Regulations 2023 were first issued on 7 February 2023; the current 19 May 2025 edition is effective from 19 June 2025 per the rulebook site. VARA's licensing page says a VASP <q>must apply for and receive a licence from VARA before undertaking VA activities in Dubai</q>, and that a VASP may be licensed for several activities and aggregate them under a single overarching licence, Custody Services excepted. The eight VA Activities are Advisory Services, Broker-Dealer Services, Custody Services, Exchange Services, Lending and Borrowing Services, Management and Investment Services, Transfer and Settlement Services, and VA Issuance (Category 1). A custodian must be a distinct legal entity with a standalone licence.</p>
+          <p>Each licensed activity carries its own activity rulebook, and every VASP is bound by the compulsory rulebooks (Company, Compliance and Risk Management, Technology and Information, Market Conduct). The Exchange Services Rulebook was re-issued effective 31 March 2026, with a Part V on exchange-traded derivative services. VARA keeps a public revision feed for every rulebook, which is why a legal opinion on a VARA question speaks as of a date: the text it read may change after it is signed. The <a href="/glossary/#as-of-date">as-of date</a> is one of the fields a LEXI credential carries on-chain.</p>
+          <p>Marketing is regulated separately. VARA's Regulations on the Marketing of Virtual Assets and Related Activities 2024 (current version 1 October 2024) apply to Marketing <q>in or targeting the UAE</q> (Regulation I.B.1, as VARA's own marketing guidance reads it), whether or not the marketer is licensed by VARA.</p>
+        </div>
+      </div>
+      <div>
+        <div class="registry"><span class="xh" aria-hidden="true"></span>
+          <div class="rh">VARA at a glance <span>checked 16 Oct 2026</span></div>
+          <div class="rr"><span class="k">Regulator</span><span>Virtual Assets Regulatory Authority, Dubai <em>· every zone of the Emirate, excluding the DIFC</em></span></div>
+          <div class="rr"><span class="k">Licensing</span><span>Licensed per VA Activity <em>· eight activities, aggregated under one licence; custody stands alone</em></span></div>
+          <div class="rr"><span class="k">Issuance Rulebook</span><span>19 May 2025 edition <em>· effective 19 June 2025 per the rulebook site; Category 1, Category 2 and Exempt tracks</em></span></div>
+          <div class="rr"><span class="k">Guidance</span><span>Guidance on the Virtual Asset Issuance Rulebook, 9 April 2026 <em>· indicative, by its own introduction</em></span></div>
+          <div class="rr"><span class="k">Marketing</span><span>Marketing Regulations 2024 <em>· current version 1 October 2024</em></span></div>
+          <div class="rr"><span class="k">Public register</span><span>59 licensed VASPs on 16 October 2026 <em>· <a href="https://www.vara.ae/en/licenses-and-register/public-register/" rel="noopener" target="_blank" data-event="vara-register">vara.ae public register<span class="sr"> (opens in a new tab)</span></a></em></span></div>
+          <div class="rr"><span class="k">Federal layer</span><span>The Capital Market Authority, since 1 January 2026 <em>· Financial Free Zones excluded under Decree-Law 33, Art. 2(4)(d)</em></span></div>
+          <div class="rr"><span class="k">On LEXI</span><span>V0 covers VARA (Dubai) on Base Sepolia (testnet) <em>· LEXI is not licensed or endorsed by VARA</em></span></div>
+        </div>
+        <p class="fig"><b>Fig. 01</b> VARA's regime as read at vara.ae and rulebooks.vara.ae on 16 October 2026. The register changes; every citation on this page is dated.</p>
+      </div>
+    </div>
   </div>
-  <p class="updated">Last updated: 2026-09-24</p>
-</div></section>
+</section>
+
+<div class="arc arc--top" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== 2. THE ISSUANCE RULEBOOK: three tracks in one table, then the two rules that matter most ===== -->
+<section aria-labelledby="rb-h">
+  <div class="wrap">
+    <div class="sh">
+      <p class="eyebrow">The Issuance Rulebook</p>
+      <h2 id="rb-h"><span class="fade">Three issuance tracks, and where a legal opinion appears.</span></h2>
+      <p>The Virtual Asset Issuance Rulebook (19 May 2025 edition; the rulebook site shows it effective from 19 June 2025) sorts every issuance by an entity in the Emirate into one of three tracks under Rule I.C.1. Only one of them, and only one annex of it, asks for a legal opinion at all.</p>
+    </div>
+    <div class="tblwrap">
+      <table>
+        <caption class="sr">The three issuance tracks of VARA's Virtual Asset Issuance Rulebook, 19 May 2025 edition</caption>
+        <thead><tr><th>Track</th><th>What it covers</th><th>Prior requirement</th><th>Where a legal opinion appears</th></tr></thead>
+        <tbody>
+          <tr><td>Category 1</td><td>Fiat-Referenced Virtual Assets (FRVAs), Asset-Referenced Virtual Assets (ARVAs), and other virtual assets VARA may determine.</td><td>A VARA licence for Category 1 VA Issuance (Rule I.D.1), plus VARA's prior approval of each FRVA or ARVA it issues (Annex 1 Rule I.B.2; Annex 2 Part I).</td><td>Annex 2 (ARVAs): a legal opinion may be required (Rule III.B.2) and shall be required from issuers holding Reserve Assets (Rule III.C.4). Annex 1 (FRVAs): no legal-opinion rule.</td></tr>
+          <tr><td>Category 2</td><td>Any virtual asset that is neither a Category 1 issuance nor an Exempt VA.</td><td>No VARA licence and no VARA approval, provided all placement and distribution is carried out by a Licensed Distributor (Rule I.E.1).</td><td>None prescribed by the rulebook. The Licensed Distributor's due-diligence duty is open-ended, so a scoped opinion can sit in its file.</td></tr>
+          <tr><td>Exempt VAs</td><td>Non-Transferable Virtual Assets, Redeemable Closed-Loop Virtual Assets, and others VARA may determine.</td><td>No requirements prior to issuance.</td><td>None prescribed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fig"><b>Fig. 02</b> Rule I.C.1 of the Virtual Asset Issuance Rulebook, read at rulebooks.vara.ae on 16 October 2026. Which track an asset falls into is a question for counsel, not a conclusion this page gives.</p>
+
+    <div class="split" style="margin-top:56px">
+      <div class="prose">
+        <h3 style="margin-top:0">Category 1: licence, Whitepaper approval, and for ARVAs a legal opinion</h3>
+        <p>A Category 1 issuer holds a VARA licence for the activity of VA Issuance and obtains VARA's prior approval of each asset before issuing it (Annex 1 Rule I.B.2). Annex 1 adds rules for FRVAs; its assurance tools are independent audits and attestations, not legal opinions. Annex 2 adds rules for ARVAs, and this is where the rulebook names a signer: VASPs licensed to issue ARVAs may be required to provide VARA with a legal opinion (Rule III.B.2), and shall be required to provide one confirming compliance with the Reserve Asset segregation and protection rule, Rule III.C.3, where they hold Reserve Assets (Rule III.C.4).</p>
+        <p>VARA's Guidance on the Virtual Asset Issuance Rulebook (9 April 2026) says a legal opinion given to VARA on an asset-referenced virtual asset issuance must be prepared and signed by a duly registered practising lawyer, not the issuer's in-house counsel. The guidance also asks for that opinion to be dated, signed and issued on the firm's letterhead, and for a revised or supplemental opinion on any material change. The guidance describes itself as indicative and <q>not a substitute for the Regulations, Rulebooks, Directives or independent legal advice</q>. A LEXI credential is not a filing with VARA and is not designed to satisfy Annex 2.</p>
+      </div>
+      <div class="prose">
+        <h3 style="margin-top:0">Category 2: no licence, no approval, a Licensed Distributor in between</h3>
+        <p>A Category 2 issuer needs no VARA licence and no VARA approval. It publishes a Whitepaper and a Risk Disclosure Statement itself, and every placement and distribution runs through a Licensed Distributor, which Schedule 2 defines as <q>a VASP Licensed by VARA to carry out Broker-Dealer Services</q>. The distributor, under Part IV of the Broker-Dealer Services Rulebook, runs due diligence on both the issuer and the asset, then submits the Whitepaper, the Risk Disclosure Statement, its due-diligence reports and a signed declaration to VARA. A fifteen Working Day Submission Period follows, during which nothing may be placed. VARA's silence at the end of it is not an approval, and the distributor's diligence must stay current for as long as it distributes.</p>
+        <blockquote>Entities in the Emirate may only issue Virtual Assets that fall within Category 2 above provided that, all placement and distribution is carried out by a Licensed Distributor.<cite>Virtual Asset Issuance Rulebook, Rule I.E.1, 19 May 2025 edition</cite></blockquote>
+        <blockquote>No Virtual Asset issued under Category 2 shall be deemed in any way to have been approved by VARA and may not be construed or considered as such. VARA makes no representation and does not provide any warranties regarding any Issuer or Virtual Asset including, but not limited to, their fitness for purpose, suitability or regulatory status in any jurisdiction.<cite>Virtual Asset Issuance Rulebook, Rule I.E.5, 19 May 2025 edition</cite></blockquote>
+      </div>
+    </div>
+    <p class="shield">Licensed Distributors are a relier audience on LEXI: the rulebook makes them responsible for <q>assuring and validating that the Issuer complies</q>, and a credential they can verify is built for that file. How a distributor or an exchange reads one: <a href="/exchanges/">for exchanges, VASPs and reliers</a>.</p>
+  </div>
+</section>
+
+<div class="arc arc--top arc--r" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/></svg></div>
+
+<!-- ===== 3. THE FEDERAL LAYER: two sentences and the briefing teaser ===== -->
+<section class="pt0" aria-labelledby="cma-h">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="sh" style="margin-bottom:24px">
+          <p class="eyebrow">The federal layer</p>
+          <h2 id="cma-h" class="pkh">Since 1 January 2026, a second level of rulebook: the CMA.</h2>
+        </div>
+        <div class="prose">
+          <p>On 1 January 2026 the UAE's Securities and Commodities Authority became the Capital Market Authority (CMA) under Federal Decree-Law No. 32 of 2025, and Federal Decree-Law No. 33 of 2025 brought virtual assets inside the federal capital-market perimeter, listing <q>Activities and services related to Virtual Assets</q> and <q>Promotion</q> among its licensable Financial Activities. Decree-Law 33 excludes the Financial Free Zones (Art. 2(4)(d)) and reaches any person targeting clients within the State, even from abroad or from a Financial Free Zone (Art. 2(1)(d)); for an entity in Dubai outside the DIFC, VARA stays the virtual-asset regulator, and a legal opinion dated after 1 January 2026 names which of the two perimeters it read.</p>
+          <p>A team structuring in Dubai now reads two levels of rulebook, not one. Which one an activity sits under, and whether it sits under both, is a scope question for counsel. The events that move that scope are logged, with sources, in the <a href="/insights/corridor-tracker-2026/">corridor regulation tracker</a>.</p>
+        </div>
+      </div>
+      <div>
+        <div class="teaser">
+          <div><p class="eyebrow bare">Briefing · Published <time datetime="2026-07-03">2026-07-03</time></p><h3>The UAE's federal CMA in 2026</h3><p>Decree-Laws 32 and 33, the framework the CMA announced on 13 April 2026, Resolution 16 of June 2026, and what each does to an opinion's scope and date.</p></div>
+          <a class="btn" href="/insights/uae-cma-2026/" data-event="teaser-cma">Read the briefing on the UAE CMA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. WHERE A LEGAL OPINION FITS: three moments, then what LEXI records, shielded beside the claim ===== -->
+<section aria-labelledby="fit-h" style="overflow:clip">
+  <div class="bloom" aria-hidden="true" style="width:900px;height:900px;left:calc(50% - 640px - 420px);top:50%;transform:translateY(-50%);background:radial-gradient(circle,rgba(46,107,255,.14),transparent 62%)"></div>
+  <svg class="gate gate--left" viewBox="0 0 200 200" aria-hidden="true"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg>
+  <div class="wrap" style="z-index:1">
+    <div class="sh rv">
+      <p class="eyebrow">Where a legal opinion fits</p>
+      <h2 id="fit-h"><span class="fade">Three moments in VARA compliance where the artifact is a legal opinion.</span></h2>
+      <p>Whatever the track, the question a counterparty eventually asks is whether an entity may do what it does in Dubai. The answer that carries weight is a scoped legal opinion from a licensed lawyer. Today it is a PDF in a data room that nobody downstream can verify without emails and calls, and it goes stale silently.</p>
+    </div>
+    <div class="cols3 rv d1">
+      <div>
+        <h3>Scoping, before any application</h3>
+        <p>Whether an activity falls inside one of the eight VA Activities at all, and which rulebooks then apply, is a legal question answered on the facts of the structure. The specimen credential on this site carries exactly that scope: whether the activities described in the submitted documentation require a VASP licence under the VARA framework.</p>
+      </div>
+      <div>
+        <h3>Inside a Category 1 file</h3>
+        <p>For an ARVA issuance, Annex 2 lets VARA require a legal opinion, and the April 2026 guidance sets its form: dated, signed, on letterhead, included in the Whitepaper submission package. That opinion is addressed to VARA. A LEXI credential is a separate artifact for the parties it names; it is not that filing.</p>
+      </div>
+      <div>
+        <h3>When a counterparty asks</h3>
+        <p>Licensed Distributors, exchanges, banks and integration partners ask for evidence before they act. Some listing teams require an opinion in writing; others run an internal legal review and keep a file. A credential gives that file a status, two hashes and a reliance list they can check on-chain.</p>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:64px">
+      <div class="prose rv">
+        <h3 style="margin-top:0">What LEXI records for a VARA question</h3>
+        <p>A protocol submits its documentation once and picks VARA (Dubai) as the jurisdiction. The LEXI engine, in development on a proprietary corpus of real regulatory work, runs the first pass: a checklist, a document review, a risk read, measured against the VARA rulebooks as published. That first pass is work product, not an opinion, and no AI signs anything. A licensed lawyer then takes over, runs their own diligence against the current rulebook text and co-signs the legal opinion with a stake behind the signature. In LEXI's vocabulary that is <a href="/glossary/#cleared-jurisdiction">clearing</a> the jurisdiction: obtaining a co-signed legal opinion covering it. One credential equals one cleared jurisdiction.</p>
+        <p>The opinion then becomes a <a href="/credential/">LEXI credential</a>. On-chain, anyone can read the firm ID, the signatory, the jurisdiction (AE · VARA (Dubai)), the as-of date, the expiry, the status (Live, Expired or Revoked), the reliance mode, the governing law, and the scope and opinion hashes. The opinion body stays off-chain, encrypted, open only to the reliers the credential names. A Licensed Distributor or an exchange verifies it in <a href="/glossary/#three-step-relier-check">three steps</a>, and reading the public metadata is free. The full flow, step by step: <a href="/how-it-works/">how it works</a>.</p>
+      </div>
+      <div class="rv d1">
+        <div class="notice mono">A LEXI credential is a co-signed legal opinion committed on-chain. It is not a licence, a registration, or an approval by any regulator. LEXI is not licensed or endorsed by VARA.</div>
+        <div class="registry" style="margin-top:20px"><span class="xh" aria-hidden="true"></span>
+          <div class="rh">Coverage <span>build state</span></div>
+          <div class="rr"><span class="k">V0 · on testnet</span><span>VARA (Dubai) <em>· the base jurisdiction, on Base Sepolia (testnet)</em></span></div>
+          <div class="rr"><span class="k">V1 · next up</span><span>The EU (MiCA) and India (FIU-IND) <em>· one opinion spanning more than one jurisdiction</em></span></div>
+          <div class="rr"><span class="k">US</span><span>On the roadmap <em>· no date</em></span></div>
+          <div class="rr"><span class="k">Mainnet</span><span>Targeted post-audit, Q4 2026 <em>· nothing is live on mainnet</em></span></div>
+        </div>
+        <p class="route">Checking a counterparty's licence: VARA's <a href="https://www.vara.ae/en/licenses-and-register/public-register/" rel="noopener" target="_blank" data-event="vara-register-2">public register<span class="sr"> (opens in a new tab)</span></a> lists every licensed VASP and its activities. Checking a signatory's licence: the on-chain <a href="/glossary/#signatory-and-firm-id">signatory and firm ID</a> are public fields, and a relier checks the lawyer with the issuing bar or register.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="arc arc--gap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#gp"/><circle class="halo" cx="151" cy="151" r="3"/><circle class="node" cx="151" cy="151" r="1.1"/></svg></div>
+
+<!-- ===== 5. FAQ: native details, mirrored verbatim by the FAQPage node ===== -->
+<section class="pt0" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sh rv" style="margin-bottom:28px">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h" class="pkh">Four short answers on VARA and LEXI.</h2>
+    </div>
+    <div class="faq maxw rv d1">
+      <details id="faq-licence">
+        <summary>Does a LEXI credential replace a VARA licence?</summary>
+        <div class="a"><p>No. If an activity requires a VARA licence, the entity needs the licence. A LEXI credential records a licensed lawyer's scoped legal opinion, which may cover questions such as whether an activity requires a licence and how a structure maps to the rulebooks. It is not a licence, a registration, or an approval by any regulator, and LEXI is not licensed or endorsed by VARA.</p></div>
+      </details>
+      <details id="faq-live">
+        <summary>When does VARA coverage go live on LEXI?</summary>
+        <div class="a"><p>V0 is live on Base Sepolia (testnet) now, VARA first. Mainnet is targeted post-audit, Q4 2026, behind hardening and the audit. Nothing is live on mainnet, and this page will say so until it is.</p></div>
+      </details>
+      <details id="faq-category-2">
+        <summary>Is a Category 2 issuance in Dubai approved by VARA?</summary>
+        <div class="a"><p>No. Rule I.E.5 of the Virtual Asset Issuance Rulebook says no virtual asset issued under Category 2 shall be deemed in any way to have been approved by VARA. The Licensed Distributor's submission opens a fifteen Working Day Submission Period, and VARA's silence at the end of that period is not an approval. The same applies to a LEXI credential: it is a co-signed legal opinion committed on-chain, not a VARA approval.</p></div>
+      </details>
+      <details id="faq-corridor">
+        <summary>Does LEXI's corridor cover teams working between India and Dubai?</summary>
+        <div class="a"><p>Yes. Teams structuring between India and the UAE are the centre of LEXI's corridor. V0 covers VARA (Dubai) and runs on Base Sepolia (testnet). India (FIU-IND) and the EU (MiCA) are V1, next up, so one opinion can then span more than one jurisdiction in the same flow. Until V1 ships, India-side questions sit outside what a V0 credential covers.</p></div>
+      </details>
+    </div>
+    <p class="tlink rv d2" style="margin-top:24px">What a token legal opinion covers, who writes one and why it goes stale: <a href="/crypto-legal-opinion/" data-event="vara-hub">token and crypto legal opinions</a>. More short answers: <a href="/faq/" data-event="vara-faq">the LEXI FAQ</a>.</p>
+  </div>
+</section>
+
+<!-- ===== 6. SOURCES, checked at source ===== -->
+<section class="pt0" aria-labelledby="src-h">
+  <div class="wrap">
+    <div class="prose">
+      <div class="sh" style="margin-bottom:20px">
+        <p class="eyebrow">Sources</p>
+        <h2 id="src-h" class="pkh">Sources, checked at source on 16 October 2026.</h2>
+      </div>
+      <ol class="srcs">
+        <li id="s1">VARA, About VARA (the <q>sole authority</q> sentence): <a href="https://www.vara.ae/en/about-vara/" rel="noopener" target="_blank">vara.ae/en/about-vara<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s2">VARA, Licensed activities (the eight VA Activities, one licence per activity, the standalone custodian licence): <a href="https://www.vara.ae/en/licenses-and-register/licensed-activities/" rel="noopener" target="_blank">vara.ae/en/licenses-and-register/licensed-activities<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s3">VARA, Public register (59 results on 16 October 2026): <a href="https://www.vara.ae/en/licenses-and-register/public-register/" rel="noopener" target="_blank">vara.ae/en/licenses-and-register/public-register<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s4">VARA, Virtual Asset Issuance Rulebook, 19 May 2025 edition, effective 19 June 2025 (Rules I.C.1, I.C.3, I.D.1, I.E.1 to I.E.5; Annex 1 Rule I.B.2; Annex 2 Rules III.B.2, III.C.3 and III.C.4; Schedule 2): <a href="https://rulebooks.vara.ae/rulebook/virtual-asset-issuance-rulebook" rel="noopener" target="_blank">rulebooks.vara.ae/rulebook/virtual-asset-issuance-rulebook<span class="sr"> (opens in a new tab)</span></a>, PDF <a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_293_VER20250619.pdf" rel="noopener" target="_blank">VARA_EN_293_VER20250619.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s5">VARA, Guidance on the Virtual Asset Issuance Rulebook, 9 April 2026 (Introduction; Items 4, 8, 9, 32 and 34; Example D): <a href="https://rulebooks.vara.ae/rulebook/guidance-virtual-asset-issuance-rulebook" rel="noopener" target="_blank">rulebooks.vara.ae/rulebook/guidance-virtual-asset-issuance-rulebook<span class="sr"> (opens in a new tab)</span></a>, PDF <a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_516_VER1.pdf" rel="noopener" target="_blank">VARA_EN_516_VER1.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s6">VARA, Broker-Dealer Services Rulebook, effective 19 June 2025, Part IV Licensed Distribution Services Rules (Rules IV.B, IV.D.1 to IV.D.3, IV.D.7, IV.E): <a href="https://rulebooks.vara.ae/rulebook/part-iv-licensed-distribution-services-rules" rel="noopener" target="_blank">rulebooks.vara.ae/rulebook/part-iv-licensed-distribution-services-rules<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s7">VARA, Exchange Services Rulebook, effective 31 March 2026: <a href="https://rulebooks.vara.ae/rulebook/exchange-services-rulebook" rel="noopener" target="_blank">rulebooks.vara.ae/rulebook/exchange-services-rulebook<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s8">VARA, Regulations on the Marketing of Virtual Assets and Related Activities 2024, current version 1 October 2024: <a href="https://rulebooks.vara.ae/rulebook/marketing-regulations-0" rel="noopener" target="_blank">rulebooks.vara.ae/rulebook/marketing-regulations-0<span class="sr"> (opens in a new tab)</span></a>; the <q>in or targeting the UAE</q> reading is in VARA's Guidance on the Marketing Regulations, 31 August 2024, PDF <a href="https://rulebooks.vara.ae/sites/default/files/en_net_file_store/VARA_EN_388_VER1.pdf" rel="noopener" target="_blank">VARA_EN_388_VER1.pdf<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s9">UAE Capital Market Authority, Federal Decree-Law No. (32) of 2025 on the Capital Market Authority: <a href="https://www.uaecma.gov.ae/assets/7bf42556/federal-decree-law-no-32-of-2025-en.aspx" rel="noopener" target="_blank">uaecma.gov.ae, Decree-Law 32 (English)<span class="sr"> (opens in a new tab)</span></a></li>
+        <li id="s10">UAE Capital Market Authority, Federal Decree-Law No. (33) of 2025 on the Regulation of the Capital Market (Art. 2(1)(d), Art. 2(4)(d), Art. 3(1), Art. 85): <a href="https://www.uaecma.gov.ae/assets/56e3ab56/federal-decree-law-no-33-of-2025-en-final-copy-2722026.aspx" rel="noopener" target="_blank">uaecma.gov.ae, Decree-Law 33 (English)<span class="sr"> (opens in a new tab)</span></a></li>
+      </ol>
+      <p class="dimp" style="font-size:.92rem">Rule numbers and dates are quoted from the documents above as read on 16 October 2026. VARA's FAQ page is not cited: it still describes the pre-2025 Category 2 approval model. LEXI's own vocabulary for the fields named on this page is in the <a href="/glossary/">glossary</a>.</p>
+      <div class="article-foot">
+        <div class="notice">This page is educational commentary, not legal advice, and it speaks as of its last-updated date. For questions about your own structure, obtain advice from licensed counsel in the relevant jurisdictions.</div>
+        <div class="preferred">
+          <p>Want more LEXI briefings in Google's Top Stories? Add lexiprotocol.com as a preferred source in your Google settings.</p>
+          <a class="btn sm" href="https://www.google.com/preferences/source?q=lexiprotocol.com" rel="noopener" target="_blank" data-event="preferred-source">Add LEXI as a preferred source on Google<span class="sr"> (opens in a new tab)</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <h2 id="final-h">The trust layer for institutional Web3.</h2>
+    <p>If you are building in Dubai, or relying on someone who is, tell us the jurisdictions in play. Replies are one to one, from the founders, and contacting LEXI does not create an attorney-client relationship.</p>
+    <div class="ctas"><a class="btn pri lg" href="/contact/?you=a%20protocol" data-event="cta-final-access">Request early access</a><a class="btn lg" href="/credential/" data-event="cta-final-verify">Verify a credential</a></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="/" style="font-size:17px" aria-label="LEXI Protocol home">
-          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="11" fill="#18E0C6"/></svg>
+        <a class="brand" href="/" style="font-size:18px" aria-label="LEXI Protocol home">
+          <svg viewBox="0 0 200 200" width="26" height="26" aria-hidden="true"><path d="M124.6 167.7 A72 72 0 1 1 167.7 124.6" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/><path d="M76 60 V124 H120" fill="none" stroke="#EAF0FF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="151" cy="151" r="8" fill="#18E0C6"/></svg>
           LEXI<span class="dot">.</span>
         </a>
-        <p>Compliance infrastructure that turns co-signed legal opinions into verifiable on-chain credentials. Built on Base.</p>
-        <span class="status-line"><span class="dt" aria-hidden="true"></span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGET OCT 2026, WEEK 4</span>
+        <p>LEXI Protocol is compliance infrastructure for crypto on the India, UAE and US corridor. It turns a licensed lawyer's co-signed legal opinion into a dated, scope-bound credential on Base that the parties it names can verify in one call. VARA first, running on Base Sepolia testnet today; the EU (MiCA) and India (FIU-IND) are V1, next up. Mainnet is targeted post-audit, Q4 2026.</p>
+        <div class="fstatus"><span class="dt" aria-hidden="true"></span><span>PRE-LAUNCH · V0 LIVE ON TESTNET · MAINNET TARGETED POST-AUDIT, Q4 2026</span></div>
       </div>
       <div>
         <div class="fh">Protocol</div>
@@ -212,27 +411,29 @@
           <li><a href="/how-it-works/">How it works</a></li>
           <li><a href="/credential/">The credential</a></li>
           <li><a href="/crypto-legal-opinion/">Crypto legal opinions</a></li>
-          <li><a href="/vara-compliance/">VARA compliance</a></li>
+          <li><a href="/vara-compliance/">VARA compliance (Dubai)</a></li>
           <li><a href="/token/">$LEXI token</a></li>
+          <li><a href="/glossary/">Glossary</a></li>
         </ul>
       </div>
       <div>
-        <div class="fh">Audiences</div>
+        <div class="fh">For</div>
         <ul>
-          <li><a href="/protocols/">For protocols</a></li>
-          <li><a href="/legal-professionals/">For legal professionals</a></li>
-          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/exchanges/">Exchanges and reliers</a></li>
+          <li><a href="/protocols/">Protocols</a></li>
+          <li><a href="/legal-professionals/">Legal professionals</a></li>
           <li><a href="/insights/">Briefings</a></li>
+          <li><a href="/updates/">Build log</a></li>
+          <li><a href="/faq/">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Company</div>
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="/#team">Team</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol</a></li>
-          <li><a href="https://www.linkedin.com/company/lexi-protocol/" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="https://x.com/LEXIprotocol" rel="me noopener" target="_blank">X / @LEXIprotocol<span class="sr"> (opens in a new tab)</span></a></li>
+          <li><a href="https://www.linkedin.com/company/lexi-protocol" rel="me noopener" target="_blank">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
           <li><a href="/privacy/">Privacy</a></li>
           <li><a href="/terms/">Terms</a></li>
         </ul>
@@ -245,6 +446,8 @@
       <div class="fmeta">
         <span>&copy; <span data-year>2026</span> LEXI Protocol Foundation · info@lexiprotocol.com</span>
         <span>Contracts are audited before mainnet.</span>
+        <span>For AI assistants: read <a href="/llms.txt">/llms.txt</a></span>
+        <span>Page last reviewed: <time datetime="2026-10-16">2026-10-16</time></span>
       </div>
     </div>
   </div>
